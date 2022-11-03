@@ -36,7 +36,7 @@ export default function HeroSection() {
           <div className="relative flex-col flex items-center justify-center gap-y-10">
             <div className="w-20 h-20 ">
               <Image
-                src="/forms/Polygon 3.svg"
+                src="/indexForms/forms/Polygon 3.svg"
                 alt="white spider logo"
                 layout="fill"
               />
@@ -54,7 +54,7 @@ export default function HeroSection() {
           <div className="relative flex-col flex items-center justify-center gap-y-10">
             <div className="w-20 h-20 ">
               <Image
-                src="/forms/Polygon 4.svg"
+                src="/indexForms/forms/Polygon 4.svg"
                 alt="white spider logo"
                 layout="fill"
               />
@@ -76,7 +76,7 @@ export default function HeroSection() {
           <div className="relative flex-col flex items-center justify-center gap-y-10">
             <div className="w-20 h-20 ">
               <Image
-                src="/forms/Polygon 2.svg"
+                src="/indexForms/forms/Polygon 2.svg"
                 alt="white spider logo"
                 layout="fill"
               />
@@ -98,7 +98,7 @@ export default function HeroSection() {
           <div className="relative flex-col flex items-center justify-center gap-y-10">
             <div className="w-20 h-20 ">
               <Image
-                src="/forms/Polygon 1.svg"
+                src="/indexForms/forms/Polygon 1.svg"
                 alt="white spider logo"
                 layout="fill"
               />
