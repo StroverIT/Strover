@@ -3,7 +3,7 @@ import Image from "next/legacy/image";
 export default function Navigation() {
   return (
     // THIS MUST BE ONLY FOR HOME ROUTE !!!!!
-    <div className="w-screen  nav-bg-color text-white sticky top-0">
+    <div className="w-screen  nav-bg-color text-white sticky top-0 z-50">
       <div className="container flex justify-between py-5">
         <div className="flex items-center justify-center">
           <div className="relative h-14 w-14">
