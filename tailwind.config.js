@@ -18,9 +18,23 @@ const customColors = {
     700: "#66FCF1",
     750: "#163B9A",
     800: "#0C245F",
+    850: "#174D8C",
+  },
+  border: {
+    DEFAULT: "#FFF3F3",
+  },
+  pink: {
+    DEFAULT: "#FF33A4",
+    100: "#FA008A",
+    150: "#FB31FF",
+    200: "#830149",
+    250: "#C7006E",
+  },
+  orange: {
+    DEFAULT: "#D76525",
   },
   black: {
-    DEFAULT: "#00000",
+    DEFAULT: "#000000",
   },
   white: {
     DEFAULT: "#ffffff",
