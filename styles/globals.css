@@ -44,6 +44,13 @@ html {
 .digital-bg {
   background: #c74f80;
 }
+.digital-font h1,
+.digital-font h2,
+.digital-font h3,
+.digital-font h4,
+.digital-font h5 {
+  font-family: "Days One", sans-serif;
+}
 #bg {
   background: rgba(255, 150, 162, 1);
   bottom: 0;
@@ -52,7 +59,7 @@ html {
   position: absolute;
   right: 0;
   top: 0;
-  transition: background 0.6s ease;
+  /* transition: background 0.6s ease; */
   width: 100%;
 }
 #bg .top {
