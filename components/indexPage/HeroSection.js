@@ -1,4 +1,5 @@
 import Image from "next/legacy/image";
+import Link from "next/link";
 import React from "react";
 
 export default function HeroSection() {
@@ -33,21 +34,27 @@ export default function HeroSection() {
         </div>
         {/* Web */}
         <div className="  absolute left-[280px] top-[50px] text-white  ">
-          <div className="relative flex-col flex items-center justify-center gap-y-10">
-            <div className="w-20 h-20 ">
-              <Image
-                src="/indexForms/forms/Polygon 3.svg"
-                alt="white spider logo"
-                layout="fill"
-              />
+          <Link href="/web">
+            <div className="relative flex-col flex items-center justify-center gap-y-10">
+              <div className="w-20 h-20 ">
+                <Image
+                  src="/indexForms/forms/Polygon 3.svg"
+                  alt="white spider logo"
+                  layout="fill"
+                />
+              </div>
+              <div className="text-xl font-semibold absolute w-16 h-16">
+                <Image
+                  src="/icons/coding.png"
+                  layout="fill"
+                  alt="acadamey hat"
+                />
+              </div>
+              <div className="text-xl font-semibold absolute top-20 mt-2 ">
+                Web
+              </div>
             </div>
-            <div className="text-xl font-semibold absolute w-16 h-16">
-              <Image src="/icons/coding.png" layout="fill" alt="acadamey hat" />
-            </div>
-            <div className="text-xl font-semibold absolute top-20 mt-2 ">
-              Web
-            </div>
-          </div>
+          </Link>
         </div>
         {/* Transport */}
         <div className="  absolute left-[500px] top-[200px] text-white  ">
@@ -95,25 +102,27 @@ export default function HeroSection() {
         </div>
         {/* Digital */}
         <div className="  absolute left-[100px] top-[290px] text-white  ">
-          <div className="relative flex-col flex items-center justify-center gap-y-10">
-            <div className="w-20 h-20 ">
-              <Image
-                src="/indexForms/forms/Polygon 1.svg"
-                alt="white spider logo"
-                layout="fill"
-              />
+          <Link href="/digital">
+            <div className="relative flex-col flex items-center justify-center gap-y-10">
+              <div className="w-20 h-20 ">
+                <Image
+                  src="/indexForms/forms/Polygon 1.svg"
+                  alt="white spider logo"
+                  layout="fill"
+                />
+              </div>
+              <div className="text-xl font-semibold absolute w-16 h-16 top-2">
+                <Image
+                  src="/icons/social-media.png"
+                  layout="fill"
+                  alt="acadamey hat"
+                />
+              </div>
+              <div className="text-xl font-semibold absolute top-20 mt-2 ml-1">
+                Digital
+              </div>
             </div>
-            <div className="text-xl font-semibold absolute w-16 h-16 top-2">
-              <Image
-                src="/icons/social-media.png"
-                layout="fill"
-                alt="acadamey hat"
-              />
-            </div>
-            <div className="text-xl font-semibold absolute top-20 mt-2 ml-1">
-              Digital
-            </div>
-          </div>
+          </Link>
         </div>
       </div>
     </section>
