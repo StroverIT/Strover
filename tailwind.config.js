@@ -20,6 +20,9 @@ const customColors = {
     800: "#0C245F",
     850: "#174D8C",
   },
+  blue: {
+    DEFAULT: "#2596BE",
+  },
   border: {
     DEFAULT: "#FFF3F3",
   },
