@@ -22,17 +22,24 @@ const customColors = {
   },
   blue: {
     DEFAULT: "#2596BE",
+    50: "#00BCFF",
+    100: "#2596BE",
+    150: "#196580",
+    200: "#3E75DF",
+    250: "#1223BA",
   },
   border: {
     DEFAULT: "#FFF3F3",
   },
   pink: {
     DEFAULT: "#FF33A4",
+    50: "#EB90A7",
     100: "#FA008A",
     150: "#FB31FF",
     200: "#830149",
     250: "#C7006E",
   },
+  transparent: "transparent",
   orange: {
     DEFAULT: "#D76525",
   },
@@ -85,5 +92,6 @@ module.exports = {
         },
       });
     },
+    require("tailwind-scrollbar"),
   ],
 };
