@@ -33,6 +33,10 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
+/* Fonts */
+.days-one-font {
+  font-family: "Days One", sans-serif;
+}
 .index-bg {
   background: linear-gradient(
     172.62deg,
@@ -45,13 +49,23 @@ html {
 .digital-bg {
   background: #c74f80;
 }
+.web-bg {
+  background: linear-gradient(
+    180deg,
+    #0a5fdd 0%,
+    #0b3c8e 23.79%,
+    #113a8a 51.56%,
+    #132a71 71.87%,
+    #0a22a2 100%
+  );
+}
 .digital-font h1,
-.digital-font h2,
-.digital-font h3,
-.digital-font h4,
-.digital-font h5 {
+.digital-font h2 {
   font-family: "Days One", sans-serif;
 }
+/* .digital-font h3, */
+/* .digital-font h4, */
+/* .digital-font h5 { */
 #bg {
   background: rgba(255, 150, 162, 1);
   bottom: 0;
@@ -144,6 +158,7 @@ li {
 .btn-web-bg-color {
   background: linear-gradient(180deg, #76c5f1 0%, #179de8 100%);
 }
+
 .btn-digital-bg-color {
   background: linear-gradient(
     180deg,
