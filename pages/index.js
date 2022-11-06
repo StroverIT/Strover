@@ -27,7 +27,13 @@ export default function Home() {
         <AboutUs />
         <Services />
         <FirmsWhoTrust />
-        <Brands />
+        <Brands
+          logistics={true}
+          digital={true}
+          web={true}
+          bg="bg-brands-index-color"
+          py="py-56"
+        />
       </main>
     </div>
   );

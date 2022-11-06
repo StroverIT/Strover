@@ -1,40 +1,40 @@
 import Head from "next/head";
 import Image from "next/legacy/image";
 import React from "react";
+import Brands from "../components/Brands";
+import ContactUs from "../components/ContactUs";
+import HeroSection from "../components/digital/HeroSection";
+import MoreServices from "../components/digital/MoreServices";
+import Navigation from "../components/digital/Navigation";
+import Services from "../components/digital/Services";
 
 export default function Digital() {
   return (
     <>
       <Head></Head>
-      <main>
+      <main className="text-white ">
         <section id="bg">
           <div className="top"></div>
           <div className="bottom"></div>
         </section>
-        <nav className="sticky top-0 flex justify-between items-center container ">
-          <div className="py-8">
-            <ul className="flex space-x-5">
-              <li>Начало</li>
-              <li>Ценоразпис</li>
-              <li>Услуги</li>
-            </ul>
-          </div>
-          <div className="w-2 h-2">
-            <Image
-              src="/logos/white-spider.svg"
-              alt="white spider logo brand"
-              layout="fill"
-            />
-          </div>
-          <div>
-            <ul className="flex space-x-5">
-              <li>БРАНДОВЕ</li>
-              <li>За нас</li>
-              <li>Контакти</li>
-            </ul>
-          </div>
-        </nav>
-        <section className="relative"></section>
+        <Navigation />
+        <section className="relative digital-font">
+          <HeroSection />
+          <Services />
+          <MoreServices />
+          <ContactUs
+            color="border-pink"
+            btnColor="bg-pink"
+            bgColor="bg-pink-50"
+            number="+359 89 631 5555"
+          />
+          <Brands
+            web={true}
+            logistics={true}
+            bg="bg-pink-50"
+            py="pb-24 pt-16"
+          />
+        </section>
       </main>
     </>
   );

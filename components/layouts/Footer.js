@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 
 // Icons
-import { BsFacebook, BsInstagram, BsTelephone } from "react-icons/bs";
-import { AiOutlineCopyright, AiOutlineMail } from "react-icons/ai";
+import { BsFacebook, BsInstagram } from "react-icons/bs";
+import { HiOutlineMail } from "react-icons/hi";
+import { AiOutlineCopyright } from "react-icons/ai";
+import { FiPhoneCall } from "react-icons/fi";
 import { RiGlobalLine } from "react-icons/ri";
 import { useRouter } from "next/router";
 
@@ -19,7 +21,6 @@ export default function Footer() {
     setInputs(e.target.value);
   };
   useEffect(() => {
-    console.log(router);
     if (router.pathname == "/") {
       setColors({
         bgColor: "bg-primaryBlue-650",
@@ -33,6 +34,13 @@ export default function Footer() {
         button: "bg-pink-150",
         markers: "marker:text-pink-200",
         copyRight: "bg-pink-250",
+      });
+    } else if (router.pathname == "/web") {
+      setColors({
+        bgColor: "bg-blue-100",
+        button: "bg-blue-50",
+        markers: "marker:text-blue-50",
+        copyRight: "bg-blue-150",
       });
     }
   }, [router]);
@@ -124,11 +132,11 @@ export default function Footer() {
               <div className="border-l border-border ml-1">
                 <ul className="leading-8 pl-4">
                   <li className="flex items-center">
-                    <BsTelephone />
+                    <FiPhoneCall />
                     <span className="pl-1">+359 87 623 7725</span>
                   </li>
                   <li className="flex items-center">
-                    <AiOutlineMail />
+                    <HiOutlineMail />
                     <span className="pl-1">contact@strover.bg</span>
                   </li>
                   <li className="flex items-center">

@@ -17,6 +17,8 @@ export default function Layout({ children }) {
       body.classList.add("index-bg");
     } else if (router.pathname == "/digital") {
       body.classList.add("digital-bg");
+    } else if (router.pathname == "/web") {
+      body.classList.add("web-bg");
     }
   }, [router]);
   return (
