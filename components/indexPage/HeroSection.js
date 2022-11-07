@@ -4,7 +4,7 @@ import React from "react";
 
 export default function HeroSection() {
   return (
-    <section className="grid grid-cols-2 container">
+    <section className="grid grid-cols-2 container min-h-[0vh]" id="index">
       <div className=" text-white flex  justify-center flex-col">
         <div className=" text-7xl font-bold">Strovers&apos;</div>
         <div className="text-primaryBlue-700 text-5xl font-bold">Brands</div>

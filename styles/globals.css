@@ -32,6 +32,7 @@ font-family: 'Tomorrow', sans-serif; */
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
+  scroll-padding-top: 200px;
 }
 /* Fonts */
 .days-one-font {

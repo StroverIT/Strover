@@ -2,7 +2,10 @@ import React from "react";
 
 export default function Services() {
   return (
-    <section className="bg-[url('/indexForms/background.svg')] no-repeat w-full h-[420px] bg-no-repeat relative">
+    <section
+      className="bg-[url('/indexForms/background.svg')] no-repeat w-full h-[420px] bg-no-repeat relative"
+      id="services"
+    >
       <div className="pt-5">
         <h1 className="ml-10 text-5xl font-semibold text-center text-white">
           Брандовe и услуги

@@ -3,7 +3,10 @@ import React from "react";
 
 export default function AboutUs() {
   return (
-    <section className="container relative flex flex-col text-center my-80 ">
+    <section
+      className="container relative flex flex-col text-center my-80 "
+      id="aboutUs"
+    >
       <div className="">
         <div className="relative w-full h-[1000px]">
           <Image

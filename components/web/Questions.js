@@ -1,5 +1,10 @@
+import React, { useState } from "react";
+
+// Nextjs
 import Image from "next/legacy/image";
-import React from "react";
+
+// Framer motion
+import { motion, AnimatePresence } from "framer-motion";
 
 const questionData = [
   {
@@ -26,7 +31,7 @@ const questionData = [
     title: "КАК КЛИЕНТИТЕ ЩЕ ДОСТИГАТ ДО МЕН",
     text: `Въжмосностите са безкрайни затова избираме най-оптималният начин, спрямо вашият бизнес и технологии за изграждането на сайта.`,
     isBorder: false,
-    _id: "1231312",
+    _id: "1231sada211s",
   },
 ];
 export default function Questions() {
@@ -58,7 +63,7 @@ export default function Questions() {
         </section>
 
         {/* Questions */}
-        <section className=" mt-10  px-48 max-w-7xl flex flex-col mx-auto">
+        <section className=" mt-10  px-48 max-w-7xl flex flex-col mx-auto z-20 relative">
           <div className="flex-center">
             <div className="bg-blue-250 w-4 h-4 rounded-full"></div>
             <div className="bg-blue-250 w-full h-1"></div>
@@ -97,12 +102,42 @@ export default function Questions() {
   );
 }
 
+const variants = {
+  hide: { opacity: 0, transition: { duration: 0.5 } },
+  // You can do whatever you want here, if you just want it to stop completely use `rotate: 0`
+  show: { opacity: 1, transition: { duration: 0.5 } },
+};
+
 function Question({ title, text, isBorder = true }) {
+  const [isOpen, setOpen] = useState(false);
+
   return (
-    <section className={`p-4 ${isBorder ? "border-b-2 border-blue-250" : ""}`}>
-      <div>
+    <section className={`p-4 ${isBorder ? "border-b-2 border-blue-250" : ""} `}>
+      <div onClick={() => setOpen(!isOpen)} className="cursor-pointer">
         <h4 className="uppercase font-semibold text-lg">{title}</h4>
-        <p className="mt-1">{text}</p>
+        <motion.div
+          animate={isOpen ? "show" : "hide"}
+          transition={{
+            type: "spring",
+            duration: 2,
+            stiffness: 260,
+            damping: 20,
+          }}
+          variants={variants}
+        >
+          <AnimatePresence>
+            {isOpen && (
+              <motion.p
+                exit={{
+                  opacity: 0,
+                }}
+                className="mt-1"
+              >
+                {text}
+              </motion.p>
+            )}
+          </AnimatePresence>
+        </motion.div>
       </div>
     </section>
   );

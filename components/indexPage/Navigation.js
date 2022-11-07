@@ -18,9 +18,15 @@ export default function Navigation() {
         {/* Links */}
         <div className="">
           <ul className="flex h-full items-center justify-center gap-x-10 ">
-            <li>Начало</li>
-            <li>За нас</li>
-            <li>Услуги</li>
+            <li>
+              <a href="#index">Начало</a>
+            </li>
+            <li>
+              <a href="#aboutUs">За нас</a>
+            </li>
+            <li>
+              <a href="#services">Услуги</a>
+            </li>
             <li>Контакти</li>
             <li className="text-primaryBlue-150 border border-primaryBlue-150 px-5 py-1">
               Брандове
