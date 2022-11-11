@@ -112,7 +112,7 @@ const icon4 = {
 export default function HeroSection() {
   return (
     <section
-      className="flex-center h-[80vh] lg:h-auto lg:grid grid-cols-2 container "
+      className="flex-center h-screen text-center md:text-left lg:h-auto lg:grid grid-cols-2 container "
       id="index"
     >
       <div className="flex flex-col justify-center text-white ">

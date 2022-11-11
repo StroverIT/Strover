@@ -367,6 +367,9 @@ li {
 .invertColor {
   filter: invert(100);
 }
+.hypens-auto {
+  hyphens: auto;
+}
 .color {
   color: hsl(152, 76%, 78%);
 }

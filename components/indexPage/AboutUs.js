@@ -35,12 +35,15 @@ export default function AboutUs() {
         <Line setSecondCont={setSecondCont} setThirdCont={setThirdCont} />
       </div>
 
-      <section className="zeroToXl:flex-col zeroToXl:text-left zeroToXl:flex-center zeroToXl:gap-y-10">
+      <section className="zeroToXl:flex-col zeroToXl:flex-center zeroToXl:gap-y-10">
         <div className="xl:flex-center flex-col xl:mr-10 xl:absolute xl:-top-20 xl:left-[380px]">
           <h5 className="mb-2 text-xl md:text-3xl font-medium text-primaryBlue-450">
             КОИ СМЕ НИЕ?
           </h5>
-          <p className="max-w-xl text-lg leading-8 text-white ">
+          <p
+            className="max-w-xl text-lg leading-8 text-white text-justify hypens-auto"
+            lang="bg"
+          >
             Ние сме Strover, млади, амбициозни и креативни интернет паяци, които
             са готови да се учат от всичко и всички. Плетем мрежата си около
             онлайн търговията, уеб дизайна, онлайн маркетинга и SEO
