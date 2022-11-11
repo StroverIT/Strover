@@ -370,6 +370,11 @@ li {
 .hypens-auto {
   hyphens: auto;
 }
+@media screen (max: 768px) {
+  .hypens-auto {
+    hyphens: none;
+  }
+}
 .color {
   color: hsl(152, 76%, 78%);
 }
