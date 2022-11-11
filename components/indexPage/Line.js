@@ -36,11 +36,11 @@ export default function Line({ setSecondCont, setThirdCont }) {
   }
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: false });
-    window.addEventListener("mousewheel", wheel, false);
+    // window.addEventListener("mousewheel", wheel, false);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("mousewheel", wheel);
+      // window.removeEventListener("mousewheel", wheel);
     };
   }, []);
   useEffect(() => {
