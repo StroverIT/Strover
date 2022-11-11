@@ -61,9 +61,9 @@ export default function Services() {
       <div className="pt-5" ref={title}>
         <motion.h1
           animate={titleAnim}
-          className="ml-10 text-5xl font-semibold text-center text-white"
+          className="xl:ml-10 text-4xl md:text-5xl font-semibold text-center text-white md:flex-center"
         >
-          Брандовe и услуги
+          Брандовe
         </motion.h1>
       </div>
       <motion.section
