@@ -5,7 +5,9 @@ import Image from "next/legacy/image";
 
 // Framer motion
 import { motion, AnimatePresence } from "framer-motion";
-
+import TextAnimation from "../../libs/TextAnimation";
+// Icons
+import { AiOutlinePlus } from "react-icons/ai";
 const questionData = [
   {
     title: "КОЛКО ПАРИ ЩЕ МИ СТРУВА",
@@ -37,11 +39,11 @@ const questionData = [
 export default function Questions() {
   return (
     <section>
-      <div className="-mb-[350px]">
-        <div className="relative w-full h-96  z-10">
+      <div className="-mb-[310px] lg:-mb-[350px]">
+        <div className="relative z-10 w-full h-96">
           <Image src="/web/questions/upperLayer.svg" layout="fill" alt="Adad" />
         </div>
-        <div className="relative w-full h-96 -mb-[300px] -mt-[320px] z-10">
+        <div className="relative w-full h-96 -mt-[370px] lg:-mt-[320px] z-10">
           <Image
             src="/web/questions/upperDownLayer.svg"
             layout="fill"
@@ -49,13 +51,21 @@ export default function Questions() {
           />
         </div>
       </div>
-      <section className="mt-28 relative bg-blue-200 w-full pb-36">
+
+      <section className="relative w-full bg-blue-200 mt-28 pb-36">
         <section className="container pt-28">
-          <div className="flex-center flex-col">
-            <h1 className="text-4xl font-semibold  text-blue-50">
-              ЧЕСТО ЗАДАВАНИ ВЪПРОСИ
-            </h1>
-            <p className="max-w-lg text-center mt-1">
+          <div className="flex-col flex-center">
+            <div className="text-4xl font-semibold text-blue-50">
+              <TextAnimation
+                placeholderText={[
+                  {
+                    type: "heading1",
+                    text: "ЧЕСТО ЗАДАВАНИ ВЪПРОСИ",
+                  },
+                ]}
+              />
+            </div>
+            <p className="max-w-lg mt-1 text-center">
               Какви са най-често задаваните въпроси, които вълнуват нашите
               клиенти преди да започнем съвместната си работа
             </p>
@@ -63,34 +73,35 @@ export default function Questions() {
         </section>
 
         {/* Questions */}
-        <section className=" mt-10  px-48 max-w-7xl flex flex-col mx-auto z-20 relative">
+        <section className="relative z-20 flex flex-col mx-auto mt-10 lg:px-48 max-w-7xl">
           <div className="flex-center">
-            <div className="bg-blue-250 w-4 h-4 rounded-full"></div>
-            <div className="bg-blue-250 w-full h-1"></div>
-            <div className="bg-blue-250 w-4 h-4 rounded-full"></div>
+            <div className="w-4 h-4 rounded-full bg-blue-250"></div>
+            <div className="w-full h-1 bg-blue-250"></div>
+            <div className="w-4 h-4 rounded-full bg-blue-250"></div>
           </div>
-          {questionData.map((question) => {
+          {questionData.map((question, index) => {
             return (
               <Question
                 key={question._id}
                 title={question.title}
                 text={question.text}
                 isBorder={question.isBorder}
+                index={index}
               />
             );
           })}
           <div className="flex-center">
-            <div className="bg-blue-250 w-4 h-4 rounded-full"></div>
-            <div className="bg-blue-250 w-full h-1"></div>
-            <div className="bg-blue-250 w-4 h-4 rounded-full"></div>
+            <div className="w-4 h-4 rounded-full bg-blue-250"></div>
+            <div className="w-full h-1 bg-blue-250"></div>
+            <div className="w-4 h-4 rounded-full bg-blue-250"></div>
           </div>
         </section>
       </section>
-      <div className="-mt-[14rem]">
-        <div className="relative w-full h-96  z-10">
+      <div className="-mt-[13rem] lg:-mt-[14rem]">
+        <div className="relative z-10 w-full h-96">
           <Image src="/web/questions/upperLayer.svg" layout="fill" alt="Adad" />
         </div>
-        <div className="relative w-full h-96 -mb-[300px] -mt-[320px] z-10">
+        <div className="relative w-full h-96 -mt-[365px] lg:-mt-[320px] z-10">
           <Image
             src="/web/questions/upperDownLayer.svg"
             layout="fill"
@@ -103,18 +114,36 @@ export default function Questions() {
 }
 
 const variants = {
-  hide: { opacity: 0, transition: { duration: 0.5 } },
+  hide: { opacity: 0, y: -10, transition: { duration: 0.5 } },
   // You can do whatever you want here, if you just want it to stop completely use `rotate: 0`
-  show: { opacity: 1, transition: { duration: 0.5 } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
-
-function Question({ title, text, isBorder = true }) {
-  const [isOpen, setOpen] = useState(false);
+const iconVariants = {
+  closed: { rotate: 0 },
+  open: {
+    rotate: "135deg",
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
+function Question({ title, text, isBorder = true, index }) {
+  console.log(index);
+  const [isOpen, setOpen] = useState(index == 0 ? true : false);
 
   return (
     <section className={`p-4 ${isBorder ? "border-b-2 border-blue-250" : ""} `}>
       <div onClick={() => setOpen(!isOpen)} className="cursor-pointer">
-        <h4 className="uppercase font-semibold text-lg">{title}</h4>
+        <div className="flex items-center justify-between">
+          <h4 className="text-lg font-semibold uppercase">{title}</h4>
+          <motion.div
+            animate={isOpen ? "open" : "closed"}
+            variants={iconVariants}
+            className={`text-xl ${isOpen ? "text-lightGreen" : "text-white"}`}
+          >
+            <AiOutlinePlus />
+          </motion.div>
+        </div>
         <motion.div
           animate={isOpen ? "show" : "hide"}
           transition={{

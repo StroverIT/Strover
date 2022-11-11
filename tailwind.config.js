@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 
 const customColors = {
+  lightGreen: {
+    DEFAULT: "hsl(152, 76%, 78%)",
+  },
   primaryBlue: {
     DEFAULT: "#468DDF",
     100: "#A5EDFD",
@@ -27,6 +30,7 @@ const customColors = {
     150: "#196580",
     200: "#3E75DF",
     250: "#1223BA",
+    300: "#203c8c",
   },
   border: {
     DEFAULT: "#FFF3F3",
@@ -42,6 +46,9 @@ const customColors = {
   transparent: "transparent",
   orange: {
     DEFAULT: "#D76525",
+  },
+  red: {
+    DEFAULT: "#DD0004",
   },
   black: {
     DEFAULT: "#000000",
@@ -59,8 +66,12 @@ module.exports = {
   ],
   theme: {
     screens: {
+      zeroToXl: { max: "1280px" },
       xs: { min: "350px" },
       sm: { min: "640px" },
+      "max-sm": {
+        max: "640px",
+      },
       // => @media (min-width: 640px) { ... }
 
       md: { min: "768px" },

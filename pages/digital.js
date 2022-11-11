@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/legacy/image";
 import React from "react";
-import Brands from "../components/Brands";
+import Brands from "../components/Brands/ListBrands";
 import ContactUs from "../components/ContactUs";
 import HeroSection from "../components/digital/HeroSection";
 import MoreServices from "../components/digital/MoreServices";
@@ -31,7 +31,7 @@ export default function Digital() {
           <Brands
             web={true}
             logistics={true}
-            bg="bg-pink-50"
+            bg="bg-pink-200"
             py="pb-24 pt-16"
           />
         </section>

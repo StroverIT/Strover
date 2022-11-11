@@ -22,18 +22,65 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-
   font-family: "Tomorrow", "Montserrat", sans-serif;
+  overflow-x: hidden;
+
+  /* height: 100vh;
+  width: 100vw; */
 }
 /* font-family: 'Days One', sans-serif;
 font-family: 'Mochiy Pop One', sans-serif;
 font-family: 'Montserrat', sans-serif;
 font-family: 'Tomorrow', sans-serif; */
 html {
-  overflow-x: hidden;
   scroll-behavior: smooth;
-  scroll-padding-top: 200px;
+  scroll-padding-top: 10rem;
+  width: 100vw;
 }
+.sticky {
+  position: -webkit-sticky;
+}
+@media screen and (min-width: 1280px) {
+  html {
+    scroll-padding-top: 12.5rem;
+  }
+}
+html::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+.index::-webkit-scrollbar-track {
+  background: theme("colors.primaryBlue.750");
+}
+.index::-webkit-scrollbar-thumb {
+  background: theme("colors.primaryBlue.400");
+  border-radius: 16px;
+  box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),
+    inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+}
+.web::-webkit-scrollbar-thumb {
+  background: theme("colors.primaryBlue.400");
+  border-radius: 16px;
+  box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),
+    inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+}
+.web::-webkit-scrollbar-track {
+  background: theme("colors.primaryBlue.750");
+}
+.digital::-webkit-scrollbar-thumb {
+  background: theme("colors.pink.DEFAULT");
+  border-radius: 16px;
+  box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),
+    inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+}
+/* html::-webkit-scrollbar-thumb {
+  background: theme("colors.primaryBlue.400");
+  border-radius: 16px;
+  box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),
+    inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+} */
+
 /* Fonts */
 .days-one-font {
   font-family: "Days One", sans-serif;
@@ -170,6 +217,156 @@ li {
 .btn-logistics-bg-color {
   background: linear-gradient(180deg, #f0884d 0%, #e65300 100%);
 }
-.colros {
-  color: #000000;
+
+.wavySvg path {
+  animation: oceanWave 7s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.wavySvg path:nth-child(2) {
+  animation-delay: 1s;
+}
+.wavySvg path:nth-child(3) {
+  animation-delay: 3s;
+}
+.wavySvg path:nth-child(4) {
+  animation-play-state: paused;
+}
+/* @keyframes oceanWave {
+  0% {
+    
+    d: path(
+      "M562 511.5c-192 9.004-446.042 60.161-623 211.511h344.5L1947 636.839l10-634.828c-139-25-136 190.5-260 234 98 1420.5 195 1332.2 535.755 989 428c-343.201-107.755-235 74.496-427 83.5Z"
+    );
+  }
+  20% {
+    d: path(
+      "M562 511.5c-192 9.004-446.042 60.161-623 211.511h344.5L1947 636.839l10-634.828c-20-25-136 190.5-260 234.5S1634 98 1420.5 195 1332.2 535.755 989 428c-343.201-107.755-235 74.496-427 83.5Z"
+    );
+  }
+  24% {
+    d: path(
+      "M562 511.5c-192 9.004-446.042 60.161-623 211.511h344.5L1947 636.839l10-634.828c-139-25-120 190.5-260 234.5S1634 98 1420.5 195 1332.2 535.755 989 428c-343.201-107.755-235 74.496-427 83.5Z"
+    );
+  }
+  30% {
+    d: path(
+      "M562 511.5c-192 9.004-446.042 60.161-623 211.511h344.5L1947 636.839l10-634.828c-139-25-90 190.5-260 234.5S1634 98 1420.5 195 1332.2 535.755 989 428c-343.201-107.755-235 74.496-427 83.5Z"
+    );
+  }
+  40% {
+    d: path(
+      "M562 511.5c-192 9.004-446.042 60.161-623 211.511h344.5L1947 636.839l10-634.828c-139-25-136 190.5-260 234.5S1550 80 1420.5 195 1332.2 535.755 989 428c-343.201-107.755-235 74.496-427 83.5Z"
+    );
+  }
+  50% {
+    d: path(
+      "M562 511.5c-192 9.004-446.042 60.161-623 211.511h344.5L1947 636.839l10-634.828c-139-25-136 190.5-260 234.5S1634 98 1425.5 195 1332.2 535.755 989 428c-343.201-107.755-235 74.496-427 83.5Z"
+    );
+  }
+  60% {
+    d: path(
+      "M562 511.5c-192 9.004-446.042 60.161-623 211.511h344.5L1947 636.839l10-634.828c-139-25-136 190.5-260 234.5S1634 98 1420.5 195 1300.2 535.755 989 428c-343.201-107.755-235 74.496-427 83.5Z"
+    );
+  }
+  70% {
+    d: path(
+      "M562 511.5c-192 9.004-446.042 60.161-623 211.511h344.5L1947 636.839l10-634.828c-139-25-136 190.5-260 234.5S1634 98 1420.5 195 1332.2 535.755 989 428c-343.201-107.755-235 74.496-427 83.5Z"
+    );
+  }
+  80% {
+    d: path(
+      "M562 511.5c-192 9.004-446.042 60.161-623 211.511h344.5L1947 636.839l10-634.828c-139-25-136 190.5-260 234.5S1634 98 1420.5 195 1332.2 535.755 989 428c-343.201-107.755-235 74.496-427 83.5Z"
+    );
+  }
+  90% {
+    d: path(
+      "M562 511.5c-192 9.004-446.042 60.161-623 211.511h344.5L1947 636.839l10-634.828c-139-25-136 190.5-260 234.5S1634 98 1420.5 195 1332.2 535.755 989 428c-343.201-107.755-235 74.496-427 83.5Z"
+    );
+  }
+  100% {
+    d: path(
+      "M562 511.5c-192 9.004-446.042 60.161-623 211.511h344.5L1947 636.839l10-634.828c-139-25-136 190.5-260 234.5S1634 98 1420.5 195 1332.2 535.755 989 428c-343.201-107.755-235 74.496-427 83.5Z"
+    );
+  }
+} */
+
+@keyframes oceanWave {
+  0% {
+    d: path(
+      "M0,192 C220,100,440,100,660,192 C880,290,1100,290,1320,192 L1320 500 L0 500"
+    );
+  }
+  25% {
+    d: path(
+      "M0,100 C220,100,440,292,660,292 C880,292,1100,100,1320,100 L1320 500 L0 500"
+    );
+  }
+  50% {
+    d: path(
+      "M0,192 C220,290,440,290,660,192 C880,100,1100,100,1320,192 L1320 500 L0 500"
+    );
+  }
+  75% {
+    d: path(
+      "M0,292 C220,292,440,100,660,100 C880,100,1100,292,1320,292 L1320 500 L0 500"
+    );
+  }
+  100% {
+    d: path(
+      "M0,192 C220,100,440,100,660,192 C880,290,1100,290,1320,192 L1320 500 L0 500"
+    );
+  }
+}
+
+.firstPath {
+  background: linear-gradient(
+    162.74deg,
+    rgba(20, 72, 150, 0.58) 17.5%,
+    #083962 69.08%,
+    rgba(7, 84, 107, 0) 83.67%,
+    rgba(44, 119, 142, 0) 83.67%,
+    #0c354f 83.67%
+  );
+}
+.secondPath {
+  fill: linear-gradient(
+    148.32deg,
+    #084b85 49.53%,
+    rgba(20, 93, 155, 0.53125) 54.92%,
+    rgba(18, 76, 143, 0.541867) 74.37%,
+    rgba(12, 71, 159, 0.55) 89.28%
+  );
+}
+.thirdPath {
+  background: linear-gradient(162.04deg, #136fbe 49.88%, #5fa4de 139%);
+}
+.fourthPath {
+  background: linear-gradient(
+    180deg,
+    #5da0d8 0.6%,
+    rgba(25, 111, 184, 0.635417) 56.77%,
+    rgba(29, 49, 236, 0) 119.13%
+  );
+  color: #ffffff;
+}
+.rotate-x-180 {
+  transform: rotateX(180deg);
+}
+
+.bg-hidden {
+  overflow: hidden !important;
+}
+
+.card-preview-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.invertColor {
+  filter: invert(100);
+}
+.color {
+  color: hsl(152, 76%, 78%);
 }

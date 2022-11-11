@@ -1,0 +1,65 @@
+import React, { useEffect, useState } from "react";
+import AnimatedText from "./AnimatedText";
+
+import { motion, useAnimation } from "framer-motion";
+
+import { useInView } from "react-intersection-observer";
+
+const variants = {
+  visible: {
+    transition: {
+      staggerChildren: 0.025,
+    },
+  },
+};
+
+export default function TextAnimation({
+  placeholderText,
+  delay,
+  threshhold = 0.8,
+  durationAnim = 0.75,
+  durationHid = 0.85,
+  isShowed = true,
+}) {
+  const [start, setStart] = useState(isShowed);
+
+  const [items, itemsView] = useInView({ threshhold });
+
+  useEffect(() => {
+    let timeOut;
+    if (itemsView) {
+      console.log(delay);
+      timeOut = setTimeout(() => {
+        setStart(true);
+      }, delay * 1000);
+    } else {
+      setStart(true);
+    }
+    if (!itemsView) setStart(false);
+    return () => {
+      clearTimeout(timeOut);
+    };
+  }, [itemsView]);
+  return (
+    <motion.div
+      initial="hidden"
+      ref={items}
+      // animate="visible"
+      animate={start ? "visible" : "hidden"}
+      variants={variants}
+    >
+      <div>
+        {placeholderText.map((item, index) => {
+          return (
+            <AnimatedText
+              {...item}
+              key={index}
+              durationAnim={durationAnim}
+              durationHid={durationHid}
+            />
+          );
+        })}
+      </div>
+    </motion.div>
+  );
+}

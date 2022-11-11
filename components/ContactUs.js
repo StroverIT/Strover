@@ -21,8 +21,10 @@ export default function ContactUs({ color, bgColor, btnColor, number }) {
   // border-pink
   // bg-pink-50
   return (
-    <section className={`flex-center border-8 ${color} mx-96 border-dashed`}>
-      <section className={`grid grid-cols-2 py-32  w-full px-28 ${bgColor}`}>
+    <section className={`flex-center border-8 ${color} lg:mx-96 border-dashed`}>
+      <section
+        className={`grid lg:grid-cols-2 py-14 lg:py-32  w-full px-5 lg:px-28 ${bgColor}`}
+      >
         <section className="">
           <h4>
             <span
@@ -31,10 +33,10 @@ export default function ContactUs({ color, bgColor, btnColor, number }) {
               Свържи се с нас!
             </span>
           </h4>
-          <p className="pt-3 max-w-[15rem]">
+          <p className="pt-3 lg:max-w-[15rem]">
             Очакваме с нетърпение нашите общи проекти!
           </p>
-          <form action="" className="mt-12 flex flex-col ">
+          <form action="" className="flex flex-col mt-12 ">
             <Input
               placeholder="Вашето име"
               id="name"
@@ -49,14 +51,14 @@ export default function ContactUs({ color, bgColor, btnColor, number }) {
               onChange={handler}
               iconType="email"
             />
-            <div className="relative mb-5">
+            <div className="relative lg:mb-5">
               <div className="absolute left-0 z-10 top-2.5 text-lg">
                 <InputIcons iconType="message" />
               </div>
-              {/* className="w-full bg-transparent h-2 border-b border-white px-4 pt-2 scrollbar scrollbar-thumb-pink-100 scrollbar-track-pink-200 focus:outline-none" */}
+              {/* className="w-full h-2 px-4 pt-2 bg-transparent border-b border-white scrollbar scrollbar-thumb-pink-100 scrollbar-track-pink-200 focus:outline-none" */}
 
               <textarea
-                className="w-full px-6 py-2 leading-tight h-10 placeholder-transparent border-b appearance-none placeholder:pl-10 peer text-gray-darker focus:outline-none focus:shadow-outline bg-transparent scrollbar scrollbar-thumb-pink-100 scrollbar-track-pink-200"
+                className="w-full h-10 px-6 py-2 leading-tight placeholder-transparent bg-transparent border-b appearance-none placeholder:pl-10 peer text-gray-darker focus:outline-none focus:shadow-outline scrollbar scrollbar-thumb-pink-100 scrollbar-track-pink-200"
                 id="comment"
                 placeholder="Вашият коментар"
                 name="comment"
@@ -73,7 +75,7 @@ export default function ContactUs({ color, bgColor, btnColor, number }) {
             <button className={`${btnColor} px-10 py-1 mt-4`}>Изпрати</button>
           </form>
         </section>
-        <section className="flex space-y-3 mt-7 mx-auto flex-col focus:border-transparent">
+        <section className="flex flex-col mx-auto space-y-3 mt-7 focus:border-transparent">
           <div className="flex items-center">
             <div className="text-2xl ">
               <HiOutlineMail />

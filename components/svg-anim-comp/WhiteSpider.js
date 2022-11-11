@@ -2,16 +2,6 @@ import React from "react";
 
 import { motion } from "framer-motion";
 
-const svgVariants = {
-  hidden: { rotate: -130 },
-  visible: {
-    rotate: 0,
-    transition: {
-      duration: 1,
-      delay: 1,
-    },
-  },
-};
 const pathVariants = {
   hidden: {
     opacity: 0,
@@ -36,7 +26,7 @@ const pathVariants2 = {
     opacity: { duration: 2 },
     pathLength: 1,
     transition: {
-      duration: 4.5,
+      duration: 2.8,
       ease: "easeInOut",
     },
   },
@@ -50,7 +40,7 @@ const circleVariant = {
     opacity: 1,
     pathLength: 1,
     transition: {
-      delay: 1.8,
+      delay: 1,
       duration: 1,
       ease: "easeInOut",
     },

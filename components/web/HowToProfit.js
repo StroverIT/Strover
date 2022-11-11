@@ -1,113 +1,72 @@
 import Image from "next/legacy/image";
 import React, { useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
 
+import TextAnimation from "../../libs/TextAnimation";
+
+import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
+const sectionVariant = {
+  animate: {
+    transition: { staggerChildren: 0.3 },
+  },
+};
+const divVariant = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      duration: 2.5,
+      type: "spring",
+    },
+  },
+};
 export default function HowToProfit() {
-  const { ref, inView } = useInView({
-    threshold: 0.2,
-  });
-  const { ref: header, inView: headerView } = useInView({
-    threshold: 0.2,
-  });
+  const [section, sectionView] = useInView({ threshold: 0.2 });
 
-  const headerAnim = useAnimation();
-  const paraAnim = useAnimation();
-
-  const textAnim1 = useAnimation();
-  const textAnim2 = useAnimation();
-  const textAnim3 = useAnimation();
+  const sectionAnim = useAnimation();
 
   useEffect(() => {
-    if (inView) {
-      textAnim1.start({
-        x: 0,
-        transition: {
-          type: "spring",
-          duration: 1,
-          bounce: 0.3,
-          delay: 0.3,
-        },
-      });
-      textAnim2.start({
-        x: 0,
-        transition: {
-          type: "spring",
-          duration: 1,
-          bounce: 0.3,
-          delay: 0.5,
-        },
-      });
-      textAnim3.start({
-        x: 0,
-        transition: {
-          type: "spring",
-          duration: 1,
-          bounce: 0.3,
-          delay: 0.8,
-        },
-      });
-    }
-    if (!inView) {
-      textAnim1.start({
-        x: "-100vw",
-      });
-      textAnim2.start({
-        x: "-100vw",
-      });
-      textAnim3.start({
-        x: "-100vw",
-      });
-    }
-  }, [inView]);
+    if (sectionView) sectionAnim.start("animate");
+    if (!sectionView) sectionAnim.start("initial");
+  }, [sectionView]);
 
-  useEffect(() => {
-    if (headerView) {
-      headerAnim.start({
-        opacity: 1,
-        transition: {
-          type: "spring",
-          duration: 1,
-          bounce: 0.3,
-        },
-      });
-      paraAnim.start({
-        opacity: 1,
-        transition: {
-          type: "spring",
-          duration: 1,
-          bounce: 0.3,
-          delay: 0.3,
-        },
-      });
-    }
-    if (!headerView) {
-      headerAnim.start({
-        opacity: 0,
-      });
-      paraAnim.start({
-        opacity: 0,
-      });
-    }
-  }, [headerView]);
   return (
-    <section className="mt-96 pt-14 container text-center">
-      <div className="flex-center flex-col" ref={header}>
-        <motion.h2
-          animate={headerAnim}
-          className="text-blue-50 text-4xl uppercase font-semibold"
-        >
-          как сайтът ви ще печели за вас
-        </motion.h2>
-        <motion.p animate={paraAnim} className="text-lg max-w-xl mt-2">
-          В днешни дни не е достатъчно да притежавате просто сайт, трябва Ви Уеб
-          сайт, който развива бизнеса Ви онлайн.
-        </motion.p>
+    <section className="container relative z-10 text-center pt-14 xl:-mt-96 -mt-28">
+      <div className="flex-col flex-center">
+        <div className="text-4xl font-semibold uppercase text-blue-50">
+          <TextAnimation
+            placeholderText={[
+              {
+                type: "heading1",
+                text: "как сайтът ви ще печели за вас",
+              },
+            ]}
+          />
+        </div>
+        <div className="max-w-2xl mt-2 text-lg">
+          <TextAnimation
+            delay="1"
+            placeholderText={[
+              {
+                type: "paragraph",
+                text: "В днешни дни не е достатъчно да притежавате просто сайт, трябва Ви Уеб сайт, който развива бизнеса Ви онлайн.",
+                // text: "Това е повече от уебсайт. Това си е твоя бизнес.",
+              },
+            ]}
+          />
+        </div>
       </div>
       {/* gap-x-28 */}
-      <section className="grid grid-cols-3 mt-14 gap-x-10" ref={ref}>
-        <motion.div animate={textAnim1} className="">
+      <motion.section
+        animate={sectionAnim}
+        variants={sectionVariant}
+        className="grid lg:grid-cols-3 mt-14 gap-x-10 max-sm:gap-y-10"
+        ref={section}
+      >
+        <motion.div variants={divVariant}>
           <div className="flex-center">
             <div className="relative h-28 w-28">
               <Image
@@ -117,7 +76,7 @@ export default function HowToProfit() {
               />{" "}
             </div>
           </div>
-          <h5 className="text-xl font-semibold mt-5">
+          <h5 className="mt-5 text-xl font-semibold">
             Денонощно сайта работи за вас
           </h5>
           <p className="mt-2 ">
@@ -127,13 +86,13 @@ export default function HowToProfit() {
             това, което предлагате.
           </p>
         </motion.div>
-        <motion.div animate={textAnim2}>
+        <motion.div variants={divVariant}>
           <div className="flex-center">
             <div className="relative h-28 w-28">
               <Image src="/icons/trust.png" layout="fill" alt="24 hours icon" />{" "}
             </div>
           </div>
-          <h5 className="text-lg font-semibold mt-5">
+          <h5 className="mt-5 text-lg font-semibold">
             Изграждане на доверието в клиентите Ви
           </h5>
           <p className="mt-2">
@@ -142,7 +101,7 @@ export default function HowToProfit() {
             не се доверява “на сляпо”, всеки иска да провери с кого ще работи.
           </p>
         </motion.div>
-        <motion.div animate={textAnim3}>
+        <motion.div variants={divVariant}>
           <div className="flex-center">
             <div className="relative h-28 w-28">
               <Image
@@ -152,7 +111,7 @@ export default function HowToProfit() {
               />{" "}
             </div>
           </div>
-          <h5 className="text-lg font-semibold mt-5">
+          <h5 className="mt-5 text-lg font-semibold">
             Разширяване обхвата на бизнеса Ви
           </h5>
           <p className="mt-2">
@@ -161,7 +120,7 @@ export default function HowToProfit() {
             неограничен брой хора и да достигнете до повече клиенти.
           </p>
         </motion.div>
-      </section>
+      </motion.section>
     </section>
   );
 }

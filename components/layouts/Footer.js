@@ -7,6 +7,7 @@ import { AiOutlineCopyright } from "react-icons/ai";
 import { FiPhoneCall } from "react-icons/fi";
 import { RiGlobalLine } from "react-icons/ri";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 export default function Footer() {
   const router = useRouter();
@@ -17,6 +18,7 @@ export default function Footer() {
     markers: "",
     copyRight: "",
   });
+  const [border, setBorder] = useState("");
   const handler = (e) => {
     setInputs(e.target.value);
   };
@@ -30,11 +32,12 @@ export default function Footer() {
       });
     } else if (router.pathname == "/digital") {
       setColors({
-        bgColor: "bg-pink-100",
-        button: "bg-pink-150",
+        bgColor: "bg-pink-200",
+        button: "bg-pink-100",
         markers: "marker:text-pink-200",
         copyRight: "bg-pink-250",
       });
+      setBorder("border-t pt-7 border-pink");
     } else if (router.pathname == "/web") {
       setColors({
         bgColor: "bg-blue-100",
@@ -45,82 +48,87 @@ export default function Footer() {
     }
   }, [router]);
   return (
-    <footer className="w-full z-50">
-      <section className={`${colors.bgColor}`}>
-        <section className="grid grid-cols-[30%70%]  container text-white gap-x-16">
+    <footer className={`${colors.bgColor} ${border}   z-10 w-full`}>
+      <section className={` pb-10`}>
+        <section className="flex flex-col-reverse xl:grid xl:grid-cols-[30%70%]  container text-white gap-x-16">
           <section>
-            <h5 className="uppercase font-semibold mt-5 mb-8  ">
+            <h5 className="mt-5 mb-8 font-semibold uppercase ">
               Абонирай се за нашите оферти
             </h5>
             <input
               type="text"
-              className="w-full h-7 text-black placeholder:text-dark p-2 border-none "
-              placeholder="Вашият и-мейл"
+              className="w-full px-2 py-5 text-sm text-black border-none rounded-sm h-7 placeholder:text-black"
+              placeholder="Email"
               value={input}
               onChange={handler}
             />
-            <div className="flex-center mt-2">
-              <button className={`${colors.button} w-full py-1`}>
-                Абонирай ме
+            <div className="mt-2 flex-center">
+              <button className={`${colors.button} w-full py-1 rounded-sm`}>
+                Абонирай ме!
               </button>
             </div>
-            <h5 className="uppercase font-semibold mt-10">Социални мрежи</h5>
-            <div className="flex gap-x-5 ">
-              <div className="flex-center">
-                <div>
+            <h5 className="mt-4 font-semibold uppercase">Социални мрежи</h5>
+            <div className="flex mt-2 gap-x-5">
+              <div className="transition-transform cursor-pointer flex-center hover:scale-125 hover:text-primaryBlue-450">
+                <div className="text-2xl">
                   <BsFacebook />
                 </div>
-                <div className="pl-1">Facebook</div>
+                {/* <div className="pl-2">Facebook</div> */}
               </div>
-              <div className="flex-center">
-                <div>
+              <div className="transition-all cursor-pointer flex-center hover:scale-125 hover:text-primaryBlue-450">
+                <div className="text-2xl">
                   <BsInstagram />
                 </div>
-                <div className="pl-1">Instagram</div>
+                {/* <div className="pl-2">Instagram</div> */}
               </div>
             </div>
           </section>
-          <section className="grid grid-cols-3 ">
+
+          <section className="grid-cols-3 xl:grid ">
             <section>
-              <h5 className="mt-5 font-semibold text-lg">Брандове</h5>
+              <h5 className="mt-5 text-lg font-semibold">Брандове</h5>
               <ul className={`list-disc  ${colors.markers} leading-8 ml-4`}>
                 <li className="cursor-default">
-                  <span className="border-b border-border pb-1 cursor-pointer">
-                    Web
-                  </span>
+                  <Link href="/web" scroll={false}>
+                    <span className="pb-1 border-b cursor-pointer border-border">
+                      Web
+                    </span>
+                  </Link>
                 </li>
                 <li className="cursor-default">
-                  <span className="border-b border-border pb-1 cursor-pointer">
-                    Digital
-                  </span>
+                  <Link href="/digital" scroll={false}>
+                    <span className="pb-1 border-b cursor-pointer border-border">
+                      Digital
+                    </span>
+                  </Link>
                 </li>
                 <li className="cursor-default">
-                  <span className="border-b border-border pb-1 cursor-pointer">
+                  <span className="pb-1 border-b cursor-pointer border-border">
                     Transport
                   </span>
                 </li>
                 <li className="cursor-default">
-                  <span className="border-b border-border pb-1 cursor-pointer">
+                  <span className="pb-1 border-b cursor-pointer border-border">
                     Academy
                   </span>
                 </li>
               </ul>
             </section>
             <section>
-              <h5 className="mt-5 font-semibold text-lg">За STROVER</h5>
+              <h5 className="mt-5 text-lg font-semibold">За STROVER</h5>
               <ul className={`list-disc ${colors.markers} pb-1 leading-8 ml-4`}>
                 <li className="cursor-default">
-                  <span className="border-b border-border pb-1 cursor-pointer">
+                  <span className="pb-1 border-b cursor-pointer border-border">
                     Екипа ни
                   </span>
                 </li>
                 <li className="cursor-default">
-                  <span className="border-b border-border pb-1 cursor-pointer">
+                  <span className="pb-1 border-b cursor-pointer border-border">
                     Оферти
                   </span>
                 </li>
                 <li className="cursor-default">
-                  <span className="border-b border-border pb-1 cursor-pointer">
+                  <span className="pb-1 border-b cursor-pointer border-border">
                     Условия за ползване
                   </span>
                 </li>
@@ -128,9 +136,9 @@ export default function Footer() {
               </ul>
             </section>
             <section>
-              <h5 className="mt-5 font-semibold text-lg">Контакти</h5>
-              <div className="border-l border-border ml-1">
-                <ul className="leading-8 pl-4">
+              <h5 className="mt-5 text-lg font-semibold">Контакти</h5>
+              <div className="ml-1 border-l border-border">
+                <ul className="pl-4 leading-8">
                   <li className="flex items-center">
                     <FiPhoneCall />
                     <span className="pl-1">+359 87 623 7725</span>
@@ -148,9 +156,14 @@ export default function Footer() {
           </section>
         </section>
       </section>
-      <section className={`${colors.copyRight} flex-center py-5 text-white`}>
-        <AiOutlineCopyright />
-        2022 Stover Всички права запазени.
+      <section
+        className={`${colors.copyRight} flex-center py-5 text-white flex-wrap max-sm:flex-col`}
+      >
+        <div className="flex-center">
+          <AiOutlineCopyright />
+          2022 Stover
+        </div>
+        <div className="sm:pl-1">Всички права запазени.</div>
       </section>
     </footer>
   );

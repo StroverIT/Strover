@@ -1,28 +1,73 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Image from "next/legacy/image";
 import { BsArrowRight } from "react-icons/bs";
 
+import { motion, useAnimation } from "framer-motion";
+
+import { useInView } from "react-intersection-observer";
+import { useIsSmall } from "../../libs/FramerMediaQueryFn";
+
 export default function FirmsWhoTrust() {
+  const [firstImage, firstImageView] = useInView({ threshold: 0.8 });
+  const [secondImage, secondImageView] = useInView({ threshold: 0.8 });
+
+  const isSmall = useIsSmall();
+
+  const firstImageAnim = useAnimation();
+  const secondImgAnim = useAnimation();
+
+  useEffect(() => {
+    if (firstImageView) {
+      isSmall &&
+        firstImageAnim.start({
+          rotate: 0,
+        });
+    }
+    if (!firstImageView) {
+      isSmall &&
+        firstImageAnim.start({
+          rotate: -20,
+        });
+    }
+  }, [firstImageView]);
+  useEffect(() => {
+    if (secondImageView) {
+      isSmall &&
+        secondImgAnim.start({
+          rotate: 0,
+        });
+    }
+    if (!secondImageView) {
+      isSmall &&
+        secondImgAnim.start({
+          rotate: 20,
+        });
+    }
+  }, [secondImageView]);
   return (
-    <section>
+    <section className="mt-32">
       <h5 className="text-4xl font-semibold text-center text-white">
         Фирми, които ни се довериха
       </h5>
-      <section className="container">
-        <section className="relative flex mt-10 ">
-          <div className="relative w-full h-96">
+      <section className="mt-32 xl:container">
+        <section className="relative flex mt-10 zeroToXl:flex-col-reverse">
+          <motion.div
+            animate={firstImageAnim}
+            className="relative w-full max-sm:-mt-36 h-96"
+            ref={firstImage}
+          >
             <Image
               src="/firms/softoffice.png"
               alt="Софт офис е компания, създадена през 2008,  занимаваща се със стоки и услуги,  и по-конкретно с материали и консумативи."
               layout="fill"
               objectFit="contain"
             />
-          </div>
-          <div className="w-full rounded-[11rem] -ml-96 -mt-8 bg-primaryBlue-650 h-[26rem]">
-            <div className="grid grid-cols-[40%60%] h-full">
+          </motion.div>
+          <div className="w-full rounded-[3rem] sm:rounded-[11rem] xl:-ml-96 -mt-8 bg-primaryBlue-650 h-[19rem] max-sm:pb-10 sm:h-[26rem]">
+            <div className="xl:grid grid-cols-[40%60%] h-full flex-center">
               <div></div>
-              <div className="flex flex-col justify-center">
+              <div className="flex flex-col justify-center zeroToXl:text-center zeroToXl:container">
                 <h5 className="text-2xl font-bold text-primaryBlue-100">
                   SoftOffice
                 </h5>
@@ -30,7 +75,7 @@ export default function FirmsWhoTrust() {
                   Софт офис е компания, създадена през 2008, занимаваща се със
                   стоки и услуги, и по-конкретно с материали и консумативи.
                 </p>
-                <div className="z-10 inline-flex items-center mt-4 text-primaryBlue-100 grow-0">
+                <div className="z-10 inline-flex mt-4 zeroToXl:justify-center xl:items-center text-primaryBlue-100 grow-0">
                   <div className="peer">
                     <button className="z-10 font-bold cursor-pointer">
                       Виж сайта
@@ -44,9 +89,9 @@ export default function FirmsWhoTrust() {
             </div>
           </div>
         </section>
-        <section className="relative flex mx-auto mt-10 ">
-          <div className="w-full rounded-[11rem] ml-28 -mt-8 bg-primaryBlue-650 h-[26rem]">
-            <div className="grid grid-cols-[10%90%] h-full">
+        <section className="relative flex mx-auto zeroToXl:flex-col lg:mt-72 ">
+          <div className="w-full rounded-[3rem] sm:rounded-[11rem] xl:ml-28 -mt-8 bg-primaryBlue-650 h-[19rem] max-sm:pb-10 sm:h-[26rem]">
+            <div className="xl:grid grid-cols-[10%90%] h-full zeroToXl:flex-center zeroToXl:text-center">
               <div></div>
               <div className="flex flex-col justify-center">
                 <h5 className="text-2xl font-bold text-primaryBlue-100">
@@ -57,7 +102,7 @@ export default function FirmsWhoTrust() {
                   сферата на търговията със строителни материали, инструменти,
                   крепежни елементи и други.
                 </p>
-                <div className="z-10 inline-flex items-center mt-4 text-primaryBlue-100 grow-0">
+                <div className="z-10 inline-flex items-center mt-4 zeroToXl:justify-center text-primaryBlue-100 grow-0">
                   <div className="peer">
                     <button className="z-10 font-bold cursor-pointer">
                       Виж сайта
@@ -70,14 +115,18 @@ export default function FirmsWhoTrust() {
               </div>
             </div>
           </div>
-          <div className="relative w-full h-96 -ml-44">
+          <motion.div
+            animate={secondImgAnim}
+            ref={secondImage}
+            className="relative w-full h-96 xl:-ml-44 max-sm:-mt-36"
+          >
             <Image
               src="/firms/ivdageo.png"
               alt="Софт офис е компания, създадена през 2008,  занимаваща се със стоки и услуги,  и по-конкретно с материали и консумативи."
               layout="fill"
               objectFit="contain"
             />
-          </div>
+          </motion.div>
         </section>
       </section>
     </section>
