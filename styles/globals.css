@@ -40,11 +40,7 @@ html {
 .sticky {
   position: -webkit-sticky;
 }
-@media screen and (min-width: 1280px) {
-  html {
-    scroll-padding-top: 12.5rem;
-  }
-}
+
 html::-webkit-scrollbar {
   width: 16px;
   height: 16px;
@@ -370,11 +366,19 @@ li {
 .hypens-auto {
   hyphens: auto;
 }
-@media screen (max: 768px) {
+
+.color {
+  color: hsl(152, 76%, 78%);
+}
+@media screen and (min-width: 1280px) {
+  html {
+    scroll-padding-top: 12.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* here we will add the stles we want
+  for the screen with min -width of 746 px*/
   .hypens-auto {
     hyphens: none;
   }
-}
-.color {
-  color: hsl(152, 76%, 78%);
 }
