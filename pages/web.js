@@ -1,6 +1,5 @@
 import Head from "next/head";
-import Image from "next/legacy/image";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Brands from "../components/Brands/ListBrands";
 import ContactUs from "../components/ContactUs";
 import HeroSection from "../components/web/HeroSection";
@@ -16,14 +15,16 @@ import Questions from "../components/web/Questions";
 export default function Web() {
   return (
     <>
-      <Head></Head>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
       <main className="relative text-white ">
         <section className="bg-[url('/web/bgheroV3.svg')] bg-no-repeat w-full h-full  absolute -z-10  top-[-550px] lg:top-[-150px] left-0"></section>
         <Navigation />
         <section className="">
           <HeroSection />
         </section>
-        <section className=" lg:mt-96 md:mt-80 w-full  bg-no-repeat relative z-20 -top-[100px] left-0">
+        <section className=" lg:mt-96 md:mt-80 w-full  bg-no-repeat relative z-20  -top-[155px] md:-top-[100px] left-0">
           <WaveSvg />
           <WaveSvgDown />
           {/* <Background /> */}
