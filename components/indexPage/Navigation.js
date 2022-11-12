@@ -5,6 +5,7 @@ import { AnimatePresence, motion, useAnimation } from "framer-motion";
 import { Sling as Hamburger } from "hamburger-react";
 import { useRouter } from "next/router";
 import MenuBrands from "../Brands/MenuBrands";
+import Link from "next/link";
 
 const listsVariants = {
   animate: { transition: { staggerChildre: 4 } },
@@ -111,13 +112,7 @@ export default function Navigation() {
             >
               <a href="#index">Начало</a>
             </motion.li>
-            <motion.li
-              variants={listVariant}
-              initial="hidden"
-              animate="visible"
-            >
-              <a href="#aboutUs">За нас</a>
-            </motion.li>
+
             <motion.li
               variants={listVariant}
               initial="hidden"
@@ -130,7 +125,19 @@ export default function Navigation() {
               initial="hidden"
               animate="visible"
             >
-              Контакти
+              <Link href="/contactUs" scroll={false}>
+                Контакти
+              </Link>
+            </motion.li>
+
+            <motion.li
+              variants={listVariant}
+              initial="hidden"
+              animate="visible"
+            >
+              <Link href="/aboutUs" scroll={false}>
+                За нас
+              </Link>
             </motion.li>
             <motion.li
               variants={listVariant}
@@ -185,19 +192,26 @@ export default function Navigation() {
                   >
                     Начало
                   </motion.li>
-                  <motion.li
-                    variants={hamburgerList}
-                    onClick={() => handleNav("#aboutUs")}
-                  >
-                    За нас
-                  </motion.li>
+
                   <motion.li
                     variants={hamburgerList}
                     onClick={() => handleNav("#services")}
                   >
                     Услуги
                   </motion.li>
-                  <motion.li variants={hamburgerList}>Контакти</motion.li>
+                  <motion.li variants={hamburgerList}>
+                    <Link href="/contactUs" scroll={false}>
+                      Контакти
+                    </Link>
+                  </motion.li>
+                  <motion.li
+                    variants={hamburgerList}
+                    onClick={() => handleNav("#aboutUs")}
+                  >
+                    <Link href="/aboutUs" scroll={false}>
+                      За нас
+                    </Link>
+                  </motion.li>
                   <motion.li
                     variants={hamburgerList}
                     onClick={brandsHandler}
