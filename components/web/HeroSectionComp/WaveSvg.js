@@ -2,7 +2,7 @@ import React from "react";
 
 export default function WaveSvg() {
   return (
-    <svg viewBox="0 -150 1320 500" className="wavySvg">
+    <svg viewBox="0 -150 1320 500" className="wavySvg relative">
       <defs>
         <linearGradient id="firstPath">
           <stop offset="17.5" stopColor="rgba(20, 72, 150, 0.58)" />
