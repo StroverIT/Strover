@@ -4,8 +4,8 @@ import TextAnimation from "../../libs/TextAnimation";
 
 export default function MoreServices() {
   return (
-    <section className="container mt-56">
-      <div className="text-4xl font-semibold text-center uppercase text-blue-50">
+    <section className="container mt-24 lg:mt-56">
+      <div className="text-xl font-semibold text-center uppercase lg:text-4xl text-blue-50">
         <TextAnimation
           placeholderText={[
             {
@@ -24,10 +24,10 @@ export default function MoreServices() {
               layout="fill"
             />
           </div>
-          <h5 className="mt-3 text-2xl font-semibold">
+          <h5 className="mt-3 text-lg font-semibold lg:text-2xl">
             Създаване на онлайн брошури
           </h5>
-          <p className="max-w-sm mt-1 text-center card-preview-text">
+          <p className="max-w-sm mt-1 text-center max-lg:text-sm card-preview-text">
             Брошурите и листовките могат да бъдат, подобно на почти всички
             документи и хартиени композиции, без да харчите цяло състояние за
             правене на тестови разпечатки, малки количества флаери или за
@@ -42,8 +42,10 @@ export default function MoreServices() {
           <div className="relative h-28 w-28">
             <Image src="/icons/brand.png" alt="Maintance" layout="fill" />
           </div>
-          <h5 className="mt-3 text-2xl font-semibold">Ребрандиране</h5>
-          <p className="max-w-sm mt-1 text-center">
+          <h5 className="mt-3 text-xl font-semibold lg:text-2xl">
+            Ребрандиране
+          </h5>
+          <p className="max-w-sm mt-1 text-center max-lg:text-sm">
             При “Ребрандирането”, ние ще променим вече съществуващите елементи с
             нови, като преди това проучим пазара и конкуренцията, за да разберем
             какво търси вашата аудитория.
@@ -56,10 +58,10 @@ export default function MoreServices() {
           <div className="relative h-28 w-28">
             <Image src="/icons/photo.png" alt="Maintance" layout="fill" />
           </div>
-          <h5 className="mt-3 text-2xl font-semibold">
+          <h5 className="mt-3 font-semibold text-md lg:text-2xl">
             Създаване на снимки за уебсайт
           </h5>
-          <p className="max-w-sm mt-1 text-center">
+          <p className="max-w-sm mt-1 text-center max-lg:text-sm">
             Както всички знаем, красотата продават, затова е важно да имате
             професионално направени снимки.
           </p>
@@ -75,8 +77,8 @@ export default function MoreServices() {
               layout="fill"
             />
           </div>
-          <h5 className="mt-3 text-2xl font-semibold">Редизайн </h5>
-          <p className="max-w-sm mt-1 text-center card-preview-text">
+          <h5 className="mt-3 text-lg font-semibold lg:text-2xl">Редизайн </h5>
+          <p className="max-w-sm mt-1 text-center card-preview-text max-lg:text-sm">
             Това е в същността си основен ремонт, правещ значителна промяна на
             елементи като кода, съдържанието, структурата и визуалните елементи
             на текущия уебсайт. Ревизирането и променянето на съставните

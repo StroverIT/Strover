@@ -3,14 +3,20 @@ import React from "react";
 
 export default function HeroSection() {
   return (
-    <section className="max-sm:mt-10 flex items-center     text-center lg:left-1/2 lg:-translate-x-1/2 z-10 h-[70vh] lg:absolute lg:-translate-y-[4rem] md:top-28 ">
+    <section className="max-sm:mt-10 flex items-center    max-lg:flex-center text-center lg:left-1/2 lg:-translate-x-1/2 z-30 h-screen md:h-[70vh] lg:absolute lg:-translate-y-[4rem] md:top-28 ">
       <section className="relative z-30 ">
-        <h1 className="font-bold text-7xl text-blue-50">Strover Web</h1>
-        <p className="max-w-xl mt-3 text-md">
+        <h1 className="font-bold text-5xl md:text-7xl text-blue-50">
+          Strover Web
+        </h1>
+        <p className="max-w-xl mt-3 text-md max-md:container  ">
+          В Strover Web ще научите всичко за изработването и поддръжането на
+          един успешен сайт
+        </p>
+        {/* <p className="max-w-xl mt-3 text-md container text-justify hypens-auto">
           В Strover Web ще научите за нашите услуги в областта на разработването
           на уеб сайтове, поддържане и ребрандиране на вече същестуващи такива,
           както и SEO оптимизация.
-        </p>
+        </p> */}
         <div className="mt-10">
           <button className="px-8 py-3 text-lg font-semibold rounded-lg btn-bg-color">
             Научи повече

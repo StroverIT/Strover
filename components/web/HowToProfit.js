@@ -5,6 +5,7 @@ import TextAnimation from "../../libs/TextAnimation";
 
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import FadeIn from "../layouts/animations/onView/FadeIn";
 
 const sectionVariant = {
   animate: {
@@ -34,9 +35,9 @@ export default function HowToProfit() {
   }, [sectionView]);
 
   return (
-    <section className="container relative z-10 text-center pt-14 xl:-mt-96 -mt-28">
+    <section className=" max-lg:container relative z-10 text-center pt-14 xl:-mt-96 -mt-28">
       <div className="flex-col flex-center">
-        <div className="text-4xl font-semibold uppercase text-blue-50">
+        <div className="lg:text-4xl font-semibold uppercase text-blue-50 hidden lg:flex ">
           <TextAnimation
             placeholderText={[
               {
@@ -46,27 +47,24 @@ export default function HowToProfit() {
             ]}
           />
         </div>
-        <div className="max-w-2xl mt-2 text-lg">
-          <TextAnimation
-            delay="1"
-            placeholderText={[
-              {
-                type: "paragraph",
-                text: "В днешни дни не е достатъчно да притежавате просто сайт, трябва Ви Уеб сайт, който развива бизнеса Ви онлайн.",
-                // text: "Това е повече от уебсайт. Това си е твоя бизнес.",
-              },
-            ]}
-          />
+        <div className="text-3xl font-semibold uppercase text-blue-50 lg:hidden">
+          как сайтът ви печели за вас
         </div>
+        <FadeIn duration={0.85} delay={0.4}>
+          <div className="max-w-2xl max-lg:mt-2 text-lg ">
+            В днешни дни не е достатъчно да притежавате просто сайт, трябва Ви
+            Уеб сайт, който развива бизнеса Ви онлайн
+          </div>
+        </FadeIn>
       </div>
       {/* gap-x-28 */}
       <motion.section
         animate={sectionAnim}
         variants={sectionVariant}
-        className="grid lg:grid-cols-3 mt-14 gap-x-10 max-sm:gap-y-10"
+        className="grid lg:grid-cols-3 mt-20 lg:gap-x-28  lg:px-28 max-sm:gap-y-10"
         ref={section}
       >
-        <motion.div variants={divVariant}>
+        <FadeIn duration={0.85}>
           <div className="flex-center">
             <div className="relative h-28 w-28">
               <Image
@@ -76,50 +74,59 @@ export default function HowToProfit() {
               />{" "}
             </div>
           </div>
-          <h5 className="mt-5 text-xl font-semibold">
+          <h5 className="mt-5 text-lg lg:text-xl font-semibold">
             Денонощно сайта работи за вас
           </h5>
-          <p className="mt-2 ">
+          <p className="mt-2">
             За разлика от Вас, сайтът Ви няма нужда от почивка. Сайтът ще
             представя бизнеса Ви денонощно, за да може до Вас винаги да достигат
             повече потребители и потенциални клиенти, които се интересуват от
             това, което предлагате.
           </p>
-        </motion.div>
-        <motion.div variants={divVariant}>
-          <div className="flex-center">
-            <div className="relative h-28 w-28">
-              <Image src="/icons/trust.png" layout="fill" alt="24 hours icon" />{" "}
+        </FadeIn>
+        <FadeIn duration={0.85} delay={0.2} className="">
+          <div>
+            <div className="flex-center">
+              <div className="relative h-28 w-28">
+                <Image
+                  src="/icons/trust.png"
+                  layout="fill"
+                  alt="24 hours icon"
+                />{" "}
+              </div>
             </div>
+            <h5 className="mt-5 text-lg font-semibold">
+              Изграждане на доверието в клиентите Ви
+            </h5>
+            <p className="mt-2">
+              Всеки ваш потенциален клиент, ще желае да види вашата “дигитална
+              следа”, това ще рече социални мрежи и Уеб сайт. Защо ли? Вече
+              никой не се доверява “на сляпо”, всеки иска да провери с кого ще
+              работи.
+            </p>
           </div>
-          <h5 className="mt-5 text-lg font-semibold">
-            Изграждане на доверието в клиентите Ви
-          </h5>
-          <p className="mt-2">
-            Всеки ваш потенциален клиент, ще желае да види вашата “дигитална
-            следа”, това ще рече социални мрежи и Уеб сайт. Защо ли? Вече никой
-            не се доверява “на сляпо”, всеки иска да провери с кого ще работи.
-          </p>
-        </motion.div>
-        <motion.div variants={divVariant}>
-          <div className="flex-center">
-            <div className="relative h-28 w-28">
-              <Image
-                src="/icons/expansion.png"
-                layout="fill"
-                alt="24 hours icon"
-              />{" "}
+        </FadeIn>
+        <FadeIn duration={0.85} delay={0.4} className="">
+          <div>
+            <div className="flex-center">
+              <div className="relative h-28 w-28">
+                <Image
+                  src="/icons/expansion.png"
+                  layout="fill"
+                  alt="24 hours icon"
+                />{" "}
+              </div>
             </div>
+            <h5 className="mt-5 text-lg font-semibold">
+              Разширяване обхвата на бизнеса Ви
+            </h5>
+            <p className="mt-2">
+              Забравете вече за териториалните ограничения, вие разполагате с
+              целият интернет. Сайтът Ви има възможноста да се срещне с
+              неограничен брой хора и да достигнете до повече клиенти.
+            </p>
           </div>
-          <h5 className="mt-5 text-lg font-semibold">
-            Разширяване обхвата на бизнеса Ви
-          </h5>
-          <p className="mt-2">
-            Забравете вече за териториалните ограничения, вие разполагате с
-            целият интернет. Сайтът Ви има възможноста да се срещне с
-            неограничен брой хора и да достигнете до повече клиенти.
-          </p>
-        </motion.div>
+        </FadeIn>
       </motion.section>
     </section>
   );
