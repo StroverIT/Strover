@@ -1,12 +1,31 @@
-import React, { useState } from "react";
+import React, { use, useEffect, useState } from "react";
 
 import { FiPhoneCall } from "react-icons/fi";
 import { HiOutlineMail } from "react-icons/hi";
 import InputIcons from "./form/Icons";
 
 import Input from "./form/Input";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
+const variants = {
+  initial: {
+    borderRadius: "0%",
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+
+    borderRadius: ["100%", "0%"],
+    transition: {
+      duration: 1,
+    },
+  },
+};
 export default function ContactUs({ color, bgColor, btnColor, number }) {
+  const [box, boxView] = useInView();
+  const boxAnim = useAnimation();
+
   const [inputs, setInputs] = useState({
     name: "",
     email: "",
@@ -20,8 +39,17 @@ export default function ContactUs({ color, bgColor, btnColor, number }) {
   };
   // border-pink
   // bg-pink-50
+  useEffect(() => {
+    if (boxView) boxAnim.start("animate");
+    if (!boxView) boxAnim.start("initial");
+  }, [boxView]);
   return (
-    <section className={`flex-center border-8 ${color} lg:mx-96 border-dashed`}>
+    <motion.section
+      ref={box}
+      animate={boxAnim}
+      variants={variants}
+      className={`flex-center border-8 ${color} lg:mx-96 border-dashed`}
+    >
       <section
         className={`grid lg:grid-cols-2 py-14 lg:py-32  w-full px-5 lg:px-28 ${bgColor}`}
       >
@@ -90,6 +118,6 @@ export default function ContactUs({ color, bgColor, btnColor, number }) {
           </div>
         </section>
       </section>
-    </section>
+    </motion.section>
   );
 }
