@@ -67,11 +67,14 @@ const AnimatedCharacters = (props) => {
                   style={{
                     overflow: "hidden",
                     display: "inline-block",
+                    paddingBottom: props.paddingBottom,
                   }}
                   key={index}
                 >
                   <motion.span
-                    style={{ display: "inline-block" }}
+                    style={{
+                      display: "inline-block",
+                    }}
                     variants={item}
                   >
                     {element}

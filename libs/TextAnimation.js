@@ -16,6 +16,7 @@ const variants = {
 export default function TextAnimation({
   placeholderText,
   delay,
+  spanPaddingBottom,
   threshhold = 0.8,
   durationAnim = 0.75,
   durationHid = 0.85,
@@ -28,7 +29,6 @@ export default function TextAnimation({
   useEffect(() => {
     let timeOut;
     if (itemsView) {
-      console.log(delay);
       timeOut = setTimeout(() => {
         setStart(true);
       }, delay * 1000);
@@ -56,6 +56,7 @@ export default function TextAnimation({
               key={index}
               durationAnim={durationAnim}
               durationHid={durationHid}
+              spanPaddingBottom={spanPaddingBottom}
             />
           );
         })}
