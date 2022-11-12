@@ -23,7 +23,11 @@ export default function Footer() {
     setInputs(e.target.value);
   };
   useEffect(() => {
-    if (router.pathname == "/") {
+    if (
+      router.pathname == "/" ||
+      router.pathname == "/contactUs" ||
+      router.pathname == "/aboutUs"
+    ) {
       setColors({
         bgColor: "bg-primaryBlue-650",
         button: "bg-primaryBlue-400",
@@ -34,10 +38,10 @@ export default function Footer() {
       setColors({
         bgColor: "bg-pink-200",
         button: "bg-pink-100",
-        markers: "marker:text-pink-200",
+        markers: "marker:text-pink-150",
         copyRight: "bg-pink-250",
       });
-      setBorder("border-t pt-7 border-pink");
+      setBorder("border-t pt-5 border-pink");
     } else if (router.pathname == "/web") {
       setColors({
         bgColor: "bg-blue-100",
@@ -48,11 +52,11 @@ export default function Footer() {
     }
   }, [router]);
   return (
-    <footer className={`${colors.bgColor} ${border}   z-10 w-full`}>
+    <footer className={`${colors.bgColor} ${border}  pt-2 z-10 w-full`}>
       <section className={` pb-10`}>
         <section className="flex flex-col-reverse xl:grid xl:grid-cols-[30%70%]  container text-white gap-x-16">
           <section>
-            <h5 className="mt-5 mb-8 font-semibold uppercase ">
+            <h5 className="mt-5 mb-3 font-semibold uppercase ">
               Абонирай се за нашите оферти
             </h5>
             <input
@@ -67,7 +71,7 @@ export default function Footer() {
                 Абонирай ме!
               </button>
             </div>
-            <h5 className="mt-4 font-semibold uppercase">Социални мрежи</h5>
+            <h5 className="mt-8 font-semibold uppercase">Социални мрежи</h5>
             <div className="flex mt-2 gap-x-5">
               <div className="transition-transform cursor-pointer flex-center hover:scale-125 hover:text-primaryBlue-450">
                 <div className="text-2xl">

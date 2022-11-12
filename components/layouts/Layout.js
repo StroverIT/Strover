@@ -17,7 +17,11 @@ export default function Layout({ children }) {
     html.style.scrollBehavior = "auto";
     html.classList.remove("index", "web", "digital");
 
-    if (router.pathname == "/") {
+    if (
+      router.pathname == "/" ||
+      router.pathname == "/contactUs" ||
+      router.pathname == "/aboutUs"
+    ) {
       body.classList.add("index-bg");
       html.classList.add("index");
     } else if (router.pathname == "/digital") {
