@@ -30,7 +30,7 @@ On subcribe "to save email inside a MONGOSEE DB" [x]
 
 When everything is submited to show notificatoin that everything is send succesfully or not - toastify [x]
 
-Fix text in Условия за ползване - terms-and-conditions []
+Fix text in Условия за ползване - terms-and-conditions [x]
 
 Web ценоразпис []
 
