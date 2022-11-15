@@ -84,18 +84,30 @@ export default function ContactUsPage() {
             <div className="pt-2">
               <h3 className="text-lg">Намерете ни в Социалните мрежи:</h3>
               <div className="flex mt-2 gap-x-5">
-                <div className="transition-transform cursor-pointer flex-center hover:scale-125 hover:text-primaryBlue-450">
-                  <div className="text-2xl">
-                    <BsFacebook />
+                <a
+                  href="https://www.facebook.com/profile.php?id=100085497228053"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="transition-transform cursor-pointer flex-center hover:scale-125 hover:text-primaryBlue-450">
+                    <div className="text-2xl">
+                      <BsFacebook />
+                    </div>
+                    {/* <div className="pl-2">Facebook</div> */}
                   </div>
-                  {/* <div className="pl-2">Facebook</div> */}
-                </div>
-                <div className="transition-all cursor-pointer flex-center hover:scale-125 hover:text-primaryBlue-450">
-                  <div className="text-2xl">
-                    <BsInstagram />
+                </a>
+                <a
+                  href="https://www.instagram.com/stroverbg/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="transition-all cursor-pointer flex-center hover:scale-125 hover:text-primaryBlue-450">
+                    <div className="text-2xl">
+                      <BsInstagram />
+                    </div>
+                    {/* <div className="pl-2">Instagram</div> */}
                   </div>
-                  {/* <div className="pl-2">Instagram</div> */}
-                </div>
+                </a>
               </div>
             </div>
           </section>
