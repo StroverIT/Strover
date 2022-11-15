@@ -4,6 +4,14 @@ const customColors = {
   lightGreen: {
     DEFAULT: "hsl(152, 76%, 78%)",
   },
+  gray: {
+    DEFAULT: "hsl(0, 0%, 95%)",
+    100: "hsl(0, 0%, 50%)",
+    150: "hsl(0, 0%, 35%)",
+    200: "hsl(0, 0%, 94%)",
+    250: "hsl(0, 0%, 97%)",
+    300: "hsl(0, 0%, 95%)",
+  },
   primaryBlue: {
     DEFAULT: "#468DDF",
     100: "#A5EDFD",
@@ -34,6 +42,9 @@ const customColors = {
   },
   border: {
     DEFAULT: "#FFF3F3",
+  },
+  green: {
+    DEFAULT: "hsl(110, 67%, 30%)",
   },
   pink: {
     DEFAULT: "#FF33A4",
