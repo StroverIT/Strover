@@ -1,7 +1,7 @@
 import React from "react";
 import Brand from "./Brand";
 import TextAnimation from "../../libs/TextAnimation";
-import FadeIn from "../layouts/animations/onView/fadeIn";
+import FadeIn from "../layouts/animations/onView/FadeIn";
 
 export default function ListBrands({ digital, web, logistics, py, bg }) {
   const duration = 1.5;

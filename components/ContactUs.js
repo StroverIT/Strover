@@ -1,4 +1,4 @@
-import React, { use, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { FiPhoneCall } from "react-icons/fi";
 import { HiOutlineMail } from "react-icons/hi";
@@ -7,6 +7,9 @@ import InputIcons from "./form/Icons";
 import Input from "./form/Input";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+
+import { toastSuccess, toastError } from "../libs/Notifications";
+import sendMesage from "../fetches/sendingMessage";
 
 const variants = {
   initial: {
@@ -22,15 +25,26 @@ const variants = {
     },
   },
 };
-export default function ContactUs({ color, bgColor, btnColor, number }) {
+const inputsInit = {
+  name: "",
+  email: "",
+  message: "",
+};
+export default function ContactUs({
+  color,
+  bgColor,
+  btnColor,
+  number,
+  scrollBarThumb,
+  scrollBarTrack,
+  typePage,
+}) {
+  const [inputs, setInputs] = useState(inputsInit);
+
+  const [isLoading, setLoading] = useState(false);
   const [box, boxView] = useInView();
   const boxAnim = useAnimation();
 
-  const [inputs, setInputs] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
   const handler = (e) => {
     setInputs((prevState) => ({
       ...prevState,
@@ -39,19 +53,41 @@ export default function ContactUs({ color, bgColor, btnColor, number }) {
   };
   // border-pink
   // bg-pink-50
+  const submitHandler = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    // Valdiator
+    if (!inputs.name || !inputs.email || !inputs.message) {
+      setLoading(false);
+      return toastError("Моля попълнете всички полета!");
+    }
+
+    const data = await sendMesage(inputs, typePage);
+    if (data.message) {
+      setInputs(inputsInit);
+      toastSuccess(data.message);
+    }
+    if (data.error) {
+      toastError(data.error);
+    }
+
+    setLoading(false);
+  };
   useEffect(() => {
     if (boxView) boxAnim.start("animate");
     if (!boxView) boxAnim.start("initial");
   }, [boxView]);
+
   return (
     <motion.section
       ref={box}
       animate={boxAnim}
       variants={variants}
-      className={`flex-center border-8 ${color} lg:mx-96 border-dashed`}
+      className={`flex-center border-8 ${color} lg:mx-56 2xl:mx-96 border-dashed`}
     >
       <section
-        className={`grid lg:grid-cols-2 py-14 lg:py-32  w-full px-5 lg:px-28 ${bgColor}`}
+        className={`grid lg:grid-cols-2 py-14 lg:py-32  w-full px-5 xl:px-28 ${bgColor}`}
       >
         <section className="">
           <h4>
@@ -64,7 +100,11 @@ export default function ContactUs({ color, bgColor, btnColor, number }) {
           <p className="pt-3 lg:max-w-[15rem]">
             Очакваме с нетърпение нашите общи проекти!
           </p>
-          <form action="" className="flex flex-col mt-12 ">
+          <form
+            action=""
+            className="flex flex-col mt-12 "
+            onSubmit={submitHandler}
+          >
             <Input
               placeholder="Вашето име"
               id="name"
@@ -86,11 +126,11 @@ export default function ContactUs({ color, bgColor, btnColor, number }) {
               {/* className="w-full h-2 px-4 pt-2 bg-transparent border-b border-white scrollbar scrollbar-thumb-pink-100 scrollbar-track-pink-200 focus:outline-none" */}
 
               <textarea
-                className="w-full h-10 px-6 py-2 leading-tight placeholder-transparent bg-transparent border-b appearance-none placeholder:pl-10 peer text-gray-darker focus:outline-none focus:shadow-outline scrollbar scrollbar-thumb-pink-100 scrollbar-track-pink-200"
-                id="comment"
+                className={`w-full h-10 px-6 py-2 leading-tight placeholder-transparent bg-transparent border-b appearance-none placeholder:pl-10 peer text-gray-darker focus:outline-none focus:shadow-outline scrollbar ${scrollBarThumb} ${scrollBarTrack}`}
+                id="message"
                 placeholder="Вашият коментар"
-                name="comment"
-                value={inputs.comment}
+                name="message"
+                value={inputs.message}
                 onChange={handler}
               />
               <label
@@ -100,7 +140,12 @@ export default function ContactUs({ color, bgColor, btnColor, number }) {
                 Вашият коментар
               </label>
             </div>
-            <button className={`${btnColor} px-10 py-1 mt-4`}>Изпрати</button>
+            <button
+              className={`${btnColor} px-10 py-1 mt-4 flex-center`}
+              type="submit"
+            >
+              {isLoading ? <div className="loader"></div> : "Изпрати"}
+            </button>
           </form>
         </section>
         <section className="flex flex-col mx-auto space-y-3 mt-7 focus:border-transparent">

@@ -18,16 +18,19 @@ const boxVariants = {
 };
 export default function HeroSection() {
   return (
-    <section className="flex items-center container h-[90vh] relative">
+    <section className="flex items-center max-lg:justify-center max-lg:mt-10 container h-screen lg:h-[90vh] relative">
       <motion.section
         variants={titleBoxVariants}
         initial="initial"
         animate="animate"
       >
-        <motion.h1 variants={boxVariants} className="text-7xl">
+        <motion.h1 variants={boxVariants} className="text-4xl lg:text-7xl">
           Strover Digital
         </motion.h1>
-        <motion.p variants={boxVariants} className="max-w-xl mt-3 text-md">
+        <motion.p
+          variants={boxVariants}
+          className="max-w-xl mt-3 text-sm lg:text-md"
+        >
           предлага услуги в областта на дигиталният маркетинг, цялостно
           интегриране на бизнеса ви в желаните от Вас социални мрежи и достигане
           до повече клиенти и следователно до по-голям приход.
@@ -36,7 +39,7 @@ export default function HeroSection() {
           variants={boxVariants}
           className="px-16 py-2 mt-10 font-bold bg-pink-100 border border-white rounded-lg "
         >
-          Виж повече
+          <a href="#services">Виж повече</a>
         </motion.button>
       </motion.section>
       <section className="absolute -right-[1050px] hidden lg:flex">
