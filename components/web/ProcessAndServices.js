@@ -56,9 +56,6 @@ export default function ProcessAndServices() {
             Най-напред извършваме консултация, където ще поговорим за вашите
             идеи и как ние можем да ви помогнем.
           </p>
-          <button className="px-10 py-2 mt-8 rounded-full bg-blue-50">
-            Научи повече
-          </button>
         </div>
         {/* Development */}
         <div className="flex-center flex-col lg:absolute lg:top-[320px] lg:right-[390px] ">
@@ -76,9 +73,6 @@ export default function ProcessAndServices() {
             След като разберем почече за вашите цел и посока, започваме
             разботката на перфектия за ваш уебсайт.
           </p>
-          <button className="px-10 py-2 mt-8 rounded-full bg-blue-50">
-            Научи повече
-          </button>
         </div>
         {/* Seo optimization */}
         <div className="flex-center flex-col lg:absolute lg:bottom-[-200px] lg:right-[170px] ">
@@ -93,9 +87,6 @@ export default function ProcessAndServices() {
             потребители и потенциални клиенти. Това се извършва, чрез търсачките
             или т.н. SEO (Search Engine Optimization)
           </p>
-          <button className="px-10 py-2 mt-8 rounded-full bg-blue-50">
-            Научи повече
-          </button>
         </div>
         {/* Online writing products */}
         <div className="flex-center flex-col lg:absolute lg:bottom-[-230px] lg:left-[710px] ">
@@ -114,9 +105,6 @@ export default function ProcessAndServices() {
             дигитални продукти, чрез Admin Panel, който е разработен от нас за
             вас.
           </p>
-          <button className="px-10 py-2 mt-8 rounded-full bg-blue-50">
-            Научи повече
-          </button>
         </div>
         {/* Maintance */}
         <div className="flex-center flex-col lg:absolute lg:bottom-[-230px] lg:left-[157px] ">
@@ -135,9 +123,6 @@ export default function ProcessAndServices() {
             винаги защитен от атаки и винаги в изправност и готов да достигне до
             нови висоти.
           </p>
-          <button className="px-10 py-2 mt-8 rounded-full bg-blue-50">
-            Научи повече
-          </button>
         </div>
       </section>
       <section className="container mt-20 lg:mt-80">

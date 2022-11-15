@@ -5,6 +5,7 @@ import { Sling as Hamburger } from "hamburger-react";
 import { AnimatePresence, motion } from "framer-motion";
 
 import MenuBrands from "../Brands/MenuBrands";
+import { useRouter } from "next/router";
 const hamburgerVariants = {
   animate: { transition: { staggerChildren: 0.1, delay: 1 } },
 };
@@ -23,11 +24,47 @@ const hamburgerList = {
   },
 };
 export default function Navigation() {
+  const router = useRouter();
   const [isOpen, setOpen] = useState(false);
   const [brandsOpen, setOpenBrands] = useState(false);
+
+  const handleNav = (hash) => {
+    setOpen(false);
+    let timer;
+    if (hash) {
+      const item = document.querySelector(hash);
+
+      timer = setTimeout(() => {
+        if (item) {
+          item.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+            inline: "nearest",
+          });
+        }
+      }, 500);
+    }
+    return () => clearTimeout(timer);
+  };
   const brandsHandler = () => {
     setOpenBrands(true);
   };
+  useEffect(() => {
+    console.log(isOpen, brandsOpen);
+    const html = document.querySelector("html");
+
+    if (isOpen || brandsOpen) {
+      html.style.overflowY = "hidden";
+    }
+    if (!isOpen && !brandsOpen) {
+      html.style.overflowY = "auto";
+    }
+  }, [isOpen, brandsOpen]);
+  useEffect(() => {
+    const html = document.querySelector("html");
+
+    html.style.overflowY = "auto";
+  }, [router.pathname]);
   return (
     <nav className="fixed top-0 z-50 w-screen bg-pink-200 shadow-xl">
       <section className="container items-center justify-between hidden md:flex ">
@@ -38,8 +75,8 @@ export default function Navigation() {
                 Начало
               </Link>
             </li>
-            <li>Ценоразпис</li>
             <li>Услуги</li>
+            <li>Портфолио</li>
           </ul>
         </div>
         <div className="relative ">
@@ -47,8 +84,12 @@ export default function Navigation() {
         </div>
         <div>
           <ul className="flex items-center space-x-5">
-            <li>За нас</li>
-            <li>Контакти</li>
+            <Link href="/aboutUs" scroll={false}>
+              <li>За нас</li>
+            </Link>
+            <Link href="/contactUs" scroll={false}>
+              <li>Контакти</li>
+            </Link>
             <li
               className="px-5 py-1 border text-primaryBlue-150 border-primaryBlue-150"
               onClick={brandsHandler}
@@ -104,19 +145,18 @@ export default function Navigation() {
                 >
                   Начало
                 </motion.li>
-                <motion.li
-                  variants={hamburgerList}
-                  onClick={() => handleNav("#aboutUs")}
-                >
-                  За нас
-                </motion.li>
+                <Link href="/aboutUs" scroll={false}>
+                  <motion.li variants={hamburgerList}>За нас</motion.li>
+                </Link>
                 <motion.li
                   variants={hamburgerList}
                   onClick={() => handleNav("#services")}
                 >
                   Услуги
                 </motion.li>
-                <motion.li variants={hamburgerList}>Контакти</motion.li>
+                <Link href="/contactUs" scroll={false}>
+                  <motion.li variants={hamburgerList}>Контакти</motion.li>
+                </Link>
                 <motion.li
                   variants={hamburgerList}
                   onClick={brandsHandler}

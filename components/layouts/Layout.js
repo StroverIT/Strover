@@ -19,8 +19,8 @@ export default function Layout({ children }) {
 
     if (
       router.pathname == "/" ||
-      router.pathname == "/contactUs" ||
-      router.pathname == "/aboutUs"
+      router.pathname == "/aboutUs" ||
+      router.pathname == "/contactUs"
     ) {
       body.classList.add("index-bg");
       html.classList.add("index");
@@ -30,6 +30,12 @@ export default function Layout({ children }) {
     } else if (router.pathname == "/web") {
       body.classList.add("web-bg");
       html.classList.add("web");
+    }
+    if (
+      router.pathname == "/privacy-policy" ||
+      router.pathname == "/terms-and-conditions"
+    ) {
+      html.classList.add("index");
     }
   }, [router]);
   useEffect(() => {

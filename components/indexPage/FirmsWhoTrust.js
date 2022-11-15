@@ -48,7 +48,7 @@ export default function FirmsWhoTrust() {
   }, [secondImageView]);
   return (
     <section className="mt-32">
-      <div className="text-2xl md:text-4xl font-semibold text-center text-white max-sm:px-16">
+      <div className="text-2xl font-semibold text-center text-white md:text-4xl max-sm:px-16">
         <TextAnimation
           placeholderText={[
             {
@@ -94,7 +94,13 @@ export default function FirmsWhoTrust() {
                 <div className="z-10 inline-flex mt-4 zeroToXl:justify-center xl:items-center text-primaryBlue-100 grow-0">
                   <div className="peer">
                     <button className="z-10 font-bold cursor-pointer">
-                      Виж сайта
+                      <a
+                        href="https://softoffice.bg"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Виж сайта
+                      </a>
                     </button>
                   </div>
                   <div className="pl-1 my-auto transition-all opacity-0 peer-hover:opacity-100 peer-hover:translate-x-2 ">
@@ -128,7 +134,13 @@ export default function FirmsWhoTrust() {
                 <div className="z-10 inline-flex items-center mt-4 zeroToXl:justify-center text-primaryBlue-100 grow-0">
                   <div className="peer">
                     <button className="z-10 font-bold cursor-pointer">
-                      Виж сайта
+                      <a
+                        href="https://ivdageopaint.bg"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Виж сайта
+                      </a>
                     </button>
                   </div>
                   <div className="pl-1 my-auto transition-all opacity-0 peer-hover:opacity-100 peer-hover:translate-x-2 ">

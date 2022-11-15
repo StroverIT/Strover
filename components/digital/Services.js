@@ -1,9 +1,10 @@
 import Image from "next/legacy/image";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 
 import { useInView } from "react-intersection-observer";
 import TextAnimation from "../../libs/TextAnimation";
+import HeaderSpider from "../HeaderSpider";
 
 const dataServices = [
   {
@@ -25,7 +26,7 @@ const dataServices = [
     _id: "zxczxc141241",
   },
   {
-    title: "",
+    title: "Съдържание",
     text: `Създаване на креативно и интерактивно съдържание, което отговаря на нуждите на Вашата потенцуална аудитория.`,
     lines: 4,
 
@@ -33,9 +34,9 @@ const dataServices = [
     _id: "sadagzxc213",
   },
   {
-    title: "",
-    text: `Проучване, анализ, планиране. Важни стъпки за намиране на силните и слабите ви страни.`,
-    lines: 4,
+    title: "П.П.А.",
+    text: `Проучване, планиране и анализ. Важни стъпки за намиране на силните и слабите Ви страни.`,
+    lines: 3,
 
     link: "none",
     _id: "asdasfas1212agsd1231",
@@ -43,7 +44,7 @@ const dataServices = [
 
   {
     title: "Ежемесечен планинг за съдържанието, което ще публикуваме.",
-    text: `Календар с идеи и ясен план за дойствие. Поставяме си цели и ги постигаме с помощта на креативни публикации и кампании..
+    text: `Календар с идеи и ясен план за дойствие. Поставяме си цели и ги постигаме с помощта на креативни публикации и кампании.
 `,
     lines: 0,
 
@@ -66,21 +67,28 @@ const boxVariant = {
 
 export default function Services() {
   return (
-    <section className="">
-      <section className="container items-center text-4xl font-semibold text-center">
-        <TextAnimation
+    <section className="mt-20 lg:mt-36" id="services">
+      <section className="container items-center text-2xl font-semibold text-center lg:text-4xl">
+        <div className="flex-col flex-center">
+          <HeaderSpider
+            title="Процеса и услугите ни"
+            size="max-lg:container text-4xl lg:text-5xl"
+            lineColor="bg-pink-200"
+          />
+        </div>
+        {/* <TextAnimation
           placeholderText={[
             { type: "heading1", text: "Процеса и услугите ни" },
           ]}
-        />
+        /> */}
       </section>
 
-      <section>
+      <section className="flex flex-col mt-5 gap-y-10">
         {dataServices.map((service, index) => {
           return (
             <Service
               key={service._id}
-              numb={index + 1}
+              index={index}
               lines={service.lines}
               title={service.title}
               text={service.text}
@@ -91,7 +99,10 @@ export default function Services() {
     </section>
   );
 }
-function Service({ numb, lines, title, text, link }) {
+function Service({ index, lines, title, text, link }) {
+  const [isAnimated, setAnimated] = useState(false);
+
+  boxVariant.animate.transition.delay = index / 10;
   let arr = [];
   for (let i = 0; i < lines; i++) {
     arr.push(i);
@@ -101,8 +112,11 @@ function Service({ numb, lines, title, text, link }) {
   const itemsAnim = useAnimation();
 
   useEffect(() => {
-    if (itemsView) itemsAnim.start("animate");
-    if (!itemsView) itemsAnim.start("initial");
+    if (itemsView) {
+      itemsAnim.start("animate");
+      setAnimated(true);
+    }
+    if (!itemsView) !isAnimated && itemsAnim.start("initial");
   }, [itemsView]);
 
   return (
@@ -115,7 +129,7 @@ function Service({ numb, lines, title, text, link }) {
             layout="fill"
           />
           <div className="absolute text-5xl death-center text-blue days-one-font">
-            {numb}
+            {index + 1}
           </div>
           <div className="flex-col pt-32 flex-center">
             {arr.length > 0 && <div className="w-2 h-5 bg-pink-100 "></div>}
@@ -129,20 +143,23 @@ function Service({ numb, lines, title, text, link }) {
         variants={boxesVariant}
         ref={items}
         animate={itemsAnim}
-        className="container pt-16"
+        className="container lg:pt-16"
       >
-        <motion.h5 variants={boxVariant} className="text-2xl font-semibold">
+        <motion.h5
+          variants={boxVariant}
+          className="text-lg font-semibold lg:text-2xl"
+        >
           {title}
         </motion.h5>
-        <motion.p variants={boxVariant} className="pt-3">
+        <motion.p variants={boxVariant} className="pt-1 max-lg:text-sm">
           {text}
         </motion.p>
-        <motion.button
+        {/* <motion.button
           variants={boxVariant}
-          className="py-2 mt-10 transition-all bg-pink-100 rounded-full px-9 hover:drop-shadow-lg hover:-translate-y-1"
+          className="py-2 mt-4 transition-all bg-pink-100 rounded-full lg:mt-5 max-lg:text-sm px-9 hover:drop-shadow-lg hover:-translate-y-1"
         >
           Виж повече
-        </motion.button>
+        </motion.button> */}
       </motion.section>
     </section>
   );

@@ -112,7 +112,7 @@ const icon4 = {
 export default function HeroSection() {
   return (
     <section
-      className="flex-center h-screen text-center md:text-left lg:h-auto lg:grid grid-cols-2 container "
+      className="container h-screen grid-cols-2 text-center flex-center md:text-left lg:h-auto lg:grid "
       id="index"
     >
       <div className="flex flex-col justify-center text-white ">
@@ -120,7 +120,7 @@ export default function HeroSection() {
           variants={header1}
           initial="hidden"
           animate="visible"
-          className="font-bold text-6xl md:text-7xl"
+          className="text-6xl font-bold md:text-7xl"
         >
           Strovers&apos;
         </motion.div>
@@ -152,7 +152,7 @@ export default function HeroSection() {
             whileTap={{ scale: 0.8 }}
             className="px-8 py-3 text-lg font-semibold rounded-lg btn-bg-color"
           >
-            Научи повече
+            <a href="#services">Научи повече</a>
           </motion.button>
         </motion.div>
       </div>

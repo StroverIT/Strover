@@ -1,5 +1,6 @@
 import Head from "next/head";
 import React from "react";
+import IdeasInWebsite from "../components/Banners/IdeasInWebsite";
 import Brands from "../components/Brands/ListBrands";
 import ContactUs from "../components/ContactUs";
 import HeroSection from "../components/web/HeroSection";
@@ -33,13 +34,20 @@ export default function Web() {
         <HowToProfit />
         <ProcessAndServices />
         <MoreServices />
+        <section className="mt-20 lg:my-20 lg:mt-44">
+          <IdeasInWebsite />
+        </section>
         <Questions />
+        {/* Here must be the pricing or packages to choose */}
         <section className=" lg:mt-56">
           <ContactUs
             color="border-blue-50"
             btnColor="bg-blue-50"
             bgColor="bg-blue-200"
             number="+359 87 623 7725"
+            scrollBarThumb="scrollbar-thumb-primaryBlue-150"
+            scrollBarTrack="scrollbar-track-primaryBlue-500"
+            typePage="Web"
           />
         </section>
         <section className="w-full">

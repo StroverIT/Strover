@@ -16,13 +16,13 @@ const Input = ({
         <InputIcons iconType={iconType} />
       </div>
       <input
-        className="w-full px-6 py-2 leading-tight placeholder-transparent border-b appearance-none placeholder:pl-10 peer text-gray-darker focus:outline-none focus:shadow-outline bg-transparent"
+        className="w-full px-6 py-2 leading-tight placeholder-transparent bg-transparent border-b appearance-none placeholder:pl-10 peer text-gray-darker focus:outline-none focus:shadow-outline"
         id={id}
         type={type}
         placeholder={placeholder}
         required={isReq}
         name={id}
-        val={val}
+        value={val}
         onChange={onChange}
       />
       <label

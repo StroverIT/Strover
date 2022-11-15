@@ -1,11 +1,17 @@
 import "../styles/globals.css";
 import Layout from "../components/layouts/Layout";
+import Head from "next/head";
+import { ToastContainer } from "react-toastify";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <>
+      <Head></Head>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+      <ToastContainer />
+    </>
   );
 }
 

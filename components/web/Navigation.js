@@ -93,8 +93,12 @@ export default function Navigation() {
         </div>
         <div>
           <ul className="flex items-center space-x-5">
-            <li>За нас</li>
-            <li>Контакти</li>
+            <Link href="/aboutUs" scroll={false}>
+              <li>За нас</li>
+            </Link>
+            <Link href="/contactUs" scroll={false}>
+              <li>Контакти</li>
+            </Link>
             <li
               className="px-5 py-1 border text-primaryBlue-150 border-primaryBlue-150"
               onClick={brandsHandler}
@@ -165,7 +169,9 @@ export default function Navigation() {
                 >
                   Въпроси
                 </motion.li>
-                <motion.li variants={hamburgerList}>Контакти</motion.li>
+                <Link href="/contactUs" scroll={false}>
+                  <motion.li variants={hamburgerList}>Контакти</motion.li>
+                </Link>
                 <motion.li
                   variants={hamburgerList}
                   onClick={brandsHandler}

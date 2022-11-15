@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-import FadeIn from "../../layouts/animations/onView/fadeIn";
+import FadeIn from "../../layouts/animations/onView/FadeIn";
 
 export default function Container({
   title,
