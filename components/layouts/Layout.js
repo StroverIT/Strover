@@ -36,6 +36,8 @@ export default function Layout({ children }) {
       router.pathname == "/terms-and-conditions"
     ) {
       html.classList.add("index");
+    } else if (router.pathname == "/academy") {
+      body.classList.add("bg-academy");
     }
   }, [router]);
   useEffect(() => {

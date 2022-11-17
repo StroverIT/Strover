@@ -112,7 +112,7 @@ const icon4 = {
 export default function HeroSection() {
   return (
     <section
-      className="container h-screen grid-cols-2 text-center flex-center md:text-left lg:h-auto lg:grid "
+      className="container h-screen grid-cols-2 text-center flex-center md:text-left lg:grid "
       id="index"
     >
       <div className="flex flex-col justify-center text-white ">
@@ -239,25 +239,27 @@ export default function HeroSection() {
           animate="visible"
           className="  absolute left-[400px] top-[400px] text-white  "
         >
-          <div className="relative flex flex-col items-center justify-center gap-y-10">
-            <div className="w-20 h-20 ">
-              <Image
-                src="/indexForms/forms/Polygon 2.svg"
-                alt="white spider logo"
-                layout="fill"
-              />
+          <Link href="/academy" scroll={false}>
+            <div className="relative flex flex-col items-center justify-center gap-y-10">
+              <div className="w-20 h-20 ">
+                <Image
+                  src="/indexForms/forms/Polygon 2.svg"
+                  alt="white spider logo"
+                  layout="fill"
+                />
+              </div>
+              <div className="absolute w-16 h-16 text-xl font-semibold top-4">
+                <Image
+                  src="/icons/mortarboard.png"
+                  layout="fill"
+                  alt="acadamey hat"
+                />
+              </div>
+              <div className="absolute mt-2 ml-1 text-xl font-semibold top-20">
+                Academy
+              </div>
             </div>
-            <div className="absolute w-16 h-16 text-xl font-semibold top-4">
-              <Image
-                src="/icons/mortarboard.png"
-                layout="fill"
-                alt="acadamey hat"
-              />
-            </div>
-            <div className="absolute mt-2 ml-1 text-xl font-semibold top-20">
-              Academy
-            </div>
-          </div>
+          </Link>
         </motion.div>
         {/* Digital */}
         <motion.div

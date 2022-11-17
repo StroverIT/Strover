@@ -7,6 +7,7 @@ import Brands from "../components/Brands/ListBrands";
 import AboutUs from "../components/indexPage/AboutUs";
 import FirmsWhoTrust from "../components/indexPage/FirmsWhoTrust";
 import HeroSection from "../components/indexPage/HeroSection";
+import MoreInfo from "../components/indexPage/MoreInfo/MoreInfo";
 import Navigation from "../components/indexPage/Navigation";
 import Services from "../components/indexPage/Services";
 
@@ -22,8 +23,9 @@ export default function Home() {
       </Head>
       <Navigation />
 
-      <main className="mt-5 lg:mt-56 ">
+      <main className="mt-5 ">
         <HeroSection />
+        {/* <MoreInfo /> */}
         <AboutUs />
         <Services />
         <FirmsWhoTrust />

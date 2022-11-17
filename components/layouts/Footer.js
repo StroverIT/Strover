@@ -72,6 +72,13 @@ export default function Footer() {
         markers: "marker:text-blue-50",
         copyRight: "bg-blue-150",
       });
+    } else if (router.pathname == "/academy") {
+      setColors({
+        bgColor: "bg-red-300",
+        button: "bg-red-150",
+        markers: "marker:text-red-150",
+        copyRight: "bg-red-350",
+      });
     }
   }, [router]);
   return (
@@ -167,7 +174,7 @@ export default function Footer() {
                   </span>
                 </li>
                 <li className="cursor-default">
-                  <Link href="/offers">
+                  <Link href="/offers" scroll={false}>
                     <span className="pb-1 border-b cursor-pointer border-border">
                       Оферти
                     </span>

@@ -32,13 +32,21 @@ When everything is submited to show notificatoin that everything is send succesf
 
 Fix text in Условия за ползване - terms-and-conditions [x]
 
-Web ценоразпис []
-
-Comming soon on academy []
+Comming soon on academy [x]
 Create beatiful animation for academy - "Очаквайте скоро!" [x]
 
 Link to social media on {
 Contact us
 Footer
 About Us
-} [ ] - NOT DONE YET!
+} [x] - NOT DONE YET!
+
+ProcessAndServices - web fix the positioning
+
+Web ценоразпис []
+
+Index page from start to show how we benefit from other companies. Something like "WE have all services you need in one place to succeed your business ONLINE"
+
+Create google reviw and with bugger buget add google ADS
+
+Fix SEO optimization

@@ -232,10 +232,7 @@ export default function AboutUs() {
               </div>
             </Link>
             {/* Fourth */}
-            <div
-              className="flex-col py-10 flex-center bg-orange rounded-xl"
-              onClick={() => openForm(true)}
-            >
+            <div className="flex-col py-10 flex-center bg-orange rounded-xl">
               <div className="relative w-20 h-20">
                 <Image src="/icons/job.png" alt="phone calling" layout="fill" />
               </div>

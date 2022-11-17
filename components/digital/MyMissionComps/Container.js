@@ -14,7 +14,7 @@ export default function Container({ imageUrl, text, isRev = false }) {
         </div>
       </div>
       <div className="flex-center">
-        <div className="relative w-48 h-48 lg:h-96 lg:w-96 ">
+        <div className="relative w-48 h-48 lg:h-80 lg:w-80  ">
           <Image
             src={`/digitalAssets/icons/${imageUrl}.png`}
             alt="this is image from flat icon"

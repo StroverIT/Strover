@@ -59,7 +59,13 @@ const customColors = {
     DEFAULT: "#D76525",
   },
   red: {
-    DEFAULT: "#DD0004",
+    DEFAULT: "hsl(359, 100%, 42%)",
+    100: "#FF5349",
+    150: "#FF281B",
+    200: "#EC0D00",
+    250: "#BE0A00",
+    300: "#900800",
+    350: "#620500",
   },
   black: {
     DEFAULT: "#000000",
