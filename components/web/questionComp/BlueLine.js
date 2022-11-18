@@ -26,7 +26,7 @@ export default function BlueLine() {
   }, [lineView]);
 
   return (
-    <div className=" flex-center py-2">
+    <div className="py-2  flex-center">
       <div className="w-4 h-4 rounded-full bg-blue-250"></div>
 
       <motion.div

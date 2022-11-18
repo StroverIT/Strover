@@ -27,11 +27,11 @@ export default function Questions() {
         </div>
       </div>
 
-      <section className="relative w-full bg-blue-200 mt-28 pb-36  ">
+      <section className="relative w-full bg-blue-200 mt-28 pb-36 ">
         <section className="container pt-28">
           <div className="flex-col flex-center">
             <div
-              className="text-4xl font-semibold text-blue-50 hidden lg:flex"
+              className="hidden text-4xl font-semibold text-blue-50 lg:flex"
               id="questions"
             >
               <TextAnimation
@@ -45,12 +45,12 @@ export default function Questions() {
             </div>
 
             <div
-              className="text-xl lg:text-4xl font-semibold text-blue-50  max-lg:text-center lg:hidden"
+              className="text-xl font-semibold lg:text-4xl text-blue-50 max-lg:text-center lg:hidden"
               id="questions"
             >
               ЧЕСТО ЗАДАВАНИ ВЪПРОСИ
             </div>
-            <p className="max-lg:text-sm max-w-lg mt-1 text-center ">
+            <p className="max-w-lg mt-1 text-center max-lg:text-sm ">
               Какви са най-често задаваните въпроси, които вълнуват нашите
               клиенти преди да започнем съвместната си работа
             </p>
@@ -112,7 +112,7 @@ function Question({ title, text, isBorder = true, index }) {
     <section className={`p-4 ${isBorder ? "border-b-2 border-blue-250" : ""} `}>
       <div onClick={() => setOpen(!isOpen)} className="cursor-pointer">
         <div className="flex items-center justify-between">
-          <h4 className="text-md lg:text-lg font-semibold uppercase">
+          <h4 className="font-semibold uppercase text-md lg:text-lg">
             {title}
           </h4>
           <motion.div
