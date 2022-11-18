@@ -105,46 +105,48 @@ export default function Navigation() {
             animate={listsAnim}
             className="flex items-center justify-center h-full gap-x-10 "
           >
-            <motion.li
-              variants={listVariant}
-              initial="hidden"
-              animate="visible"
-            >
-              <a href="#index">Начало</a>
-            </motion.li>
-
-            <motion.li
-              variants={listVariant}
-              initial="hidden"
-              animate="visible"
-            >
-              <a href="#services">Услуги</a>
-            </motion.li>
-            <motion.li
-              variants={listVariant}
-              initial="hidden"
-              animate="visible"
-            >
-              <Link href="/contactUs" scroll={false}>
+            <a href="#index">
+              <motion.li
+                variants={listVariant}
+                initial="hidden"
+                animate="visible"
+              >
+                Начало
+              </motion.li>
+            </a>
+            <a href="#services">
+              <motion.li
+                variants={listVariant}
+                initial="hidden"
+                animate="visible"
+              >
+                Услуги
+              </motion.li>
+            </a>
+            <Link href="/contactUs" scroll={false}>
+              <motion.li
+                variants={listVariant}
+                initial="hidden"
+                animate="visible"
+              >
                 Контакти
-              </Link>
-            </motion.li>
-
-            <motion.li
-              variants={listVariant}
-              initial="hidden"
-              animate="visible"
-            >
-              <Link href="/aboutUs" scroll={false}>
+              </motion.li>
+            </Link>
+            <Link href="/aboutUs" scroll={false}>
+              <motion.li
+                variants={listVariant}
+                initial="hidden"
+                animate="visible"
+              >
                 За нас
-              </Link>
-            </motion.li>
+              </motion.li>
+            </Link>
             <motion.li
               variants={listVariant}
               initial="hidden"
               animate="visible"
               onClick={brandsHandler}
-              className="px-5 py-1 border text-primaryBlue-150 border-primaryBlue-150"
+              className="px-5 py-1 font-semibold tracking-[0.15rem] border-2 text-primaryBlue-150 border-primaryBlue-150"
             >
               Брандове
             </motion.li>
@@ -215,7 +217,7 @@ export default function Navigation() {
                   <motion.li
                     variants={hamburgerList}
                     onClick={brandsHandler}
-                    className="px-5 py-1 border text-primaryBlue-150 border-primaryBlue-150"
+                    className="px-5 py-1 font-semibold tracking-[0.15rem] border-2 text-primaryBlue-150 border-primaryBlue-150"
                   >
                     Брандове
                   </motion.li>

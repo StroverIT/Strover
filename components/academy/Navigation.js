@@ -100,7 +100,7 @@ export default function Navigation() {
               <li className="">Контакти</li>
             </Link>
             <li
-              className="px-5 py-1 border text-primaryBlue-150 border-primaryBlue-150"
+              className="px-5 py-1 font-semibold tracking-[0.15rem] border-2 text-red-150 border-red-150"
               onClick={brandsHandler}
             >
               БРАНДОВЕ
@@ -140,7 +140,7 @@ export default function Navigation() {
                   clipPath: "polygon(50% 0,50% 0,50% 100%, 50% 100%)",
                 },
               }}
-              className="fixed top-0 left-0 w-screen h-screen bg-blue"
+              className="fixed top-0 left-0 w-screen h-screen bg-red-350"
             >
               <motion.ul
                 variants={hamburgerVariants}
@@ -175,7 +175,7 @@ export default function Navigation() {
                 <motion.li
                   variants={hamburgerList}
                   onClick={brandsHandler}
-                  className="px-5 py-1 border text-primaryBlue-150 border-primaryBlue-150"
+                  className="px-5 py-1 font-semibold tracking-[0.15rem] border-2 text-red-150 border-red-150"
                 >
                   Брандове
                 </motion.li>
@@ -187,7 +187,7 @@ export default function Navigation() {
       <MenuBrands
         brandsOpen={brandsOpen}
         setOpenBrands={setOpenBrands}
-        bgColor="bg-blue"
+        bgColor="bg-red-300"
       />
     </nav>
   );

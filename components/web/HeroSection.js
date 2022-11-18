@@ -3,7 +3,7 @@ import React from "react";
 
 export default function HeroSection() {
   return (
-    <section className="max-sm:mt-10 flex items-center    max-lg:flex-center text-center lg:left-1/2 lg:-translate-x-1/2 z-30 h-screen md:h-[70vh] lg:absolute lg:-translate-y-[4rem] md:top-28 ">
+    <section className="max-sm:mt-10 flex items-center    max-lg:flex-center text-center lg:left-1/2 lg:-translate-x-1/2 z-30  h-[70vh]  lg:absolute lg:-translate-y-[4rem] md:top-28 ">
       <section className="relative z-30 ">
         <h1 className="text-5xl font-bold md:text-7xl text-blue-50">
           Strover Web
@@ -18,9 +18,11 @@ export default function HeroSection() {
           както и SEO оптимизация.
         </p> */}
         <div className="mt-10">
-          <button className="px-8 py-3 text-lg font-semibold rounded-lg btn-bg-color">
-            <a href="#services">Научи повече</a>
-          </button>
+          <a href="#services" className="inline-flex">
+            <button className="px-8 py-3 text-lg font-semibold rounded-lg btn-bg-color">
+              Научи повече
+            </button>
+          </a>
         </div>
       </section>
       {/* <section className="absolute -right-[940px]">

@@ -216,7 +216,9 @@ li {
 .btn-logistics-bg-color {
   background: linear-gradient(180deg, #f0884d 0%, #e65300 100%);
 }
-
+.btn-academy-bg-color {
+  background: linear-gradient(180deg, #f0604d 0%, #e60000 100%);
+}
 .wavySvg path {
   animation: oceanWave 7s;
   animation-timing-function: linear;

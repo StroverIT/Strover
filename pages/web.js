@@ -25,7 +25,7 @@ export default function Web() {
         <section className="">
           <HeroSection />
         </section>
-        <section className=" lg:mt-96 md:mt-80 w-full  bg-no-repeat relative z-20  -top-[155px] md:-top-[100px] left-0">
+        <section className=" lg:mt-96  w-full  bg-no-repeat relative z-20  -top-[155px] lg:-top-[100px] left-0">
           <WaveSvg />
           <WaveSvgDown />
           {/* <Background /> */}

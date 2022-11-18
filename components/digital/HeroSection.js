@@ -23,6 +23,7 @@ export default function HeroSection() {
         variants={titleBoxVariants}
         initial="initial"
         animate="animate"
+        className="relative z-20"
       >
         <motion.h1 variants={boxVariants} className="text-4xl lg:text-7xl">
           Strover Digital
@@ -35,14 +36,18 @@ export default function HeroSection() {
           интегриране на бизнеса ви в желаните от Вас социални мрежи и достигане
           до повече клиенти и следователно до по-голям приход.
         </motion.p>
-        <motion.button
-          variants={boxVariants}
-          className="px-16 py-2 mt-10 font-bold bg-pink-100 border border-white rounded-lg "
-        >
-          <a href="#services">Виж повече</a>
-        </motion.button>
+        <div className="mt-10 ">
+          <a href="#services" className="inline-flex">
+            <motion.button
+              variants={boxVariants}
+              className="px-16 py-2 font-bold bg-pink-100 border border-white rounded-lg "
+            >
+              Виж повече
+            </motion.button>
+          </a>
+        </div>
       </motion.section>
-      <section className="absolute -right-[1050px] hidden lg:flex">
+      <section className="absolute -right-[1050px] hidden lg:flex z-10">
         <motion.section
           animate={{
             rotate: [100, 0],

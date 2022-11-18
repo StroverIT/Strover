@@ -20,7 +20,7 @@ export default function Services() {
           ]}
         />
       </div>
-      <section className="container grid items-center justify-center md:t-20 text-white zeroToXl:text-center grid-cols xl:grid-cols-3 xl:space-x-10 xl:mt-24 zeroToXl:gap-y-10">
+      <section className="container grid items-center justify-center text-white md:t-20 zeroToXl:text-center grid-cols xl:grid-cols-3 xl:space-x-10 xl:mt-24 zeroToXl:gap-y-10">
         {/* Web container */}
 
         <Container
@@ -40,11 +40,12 @@ export default function Services() {
         />
 
         {/* Logistics container */}
+        {/* \n */}
         <Container
-          title="Logistics"
-          p={`Трябват ви доставки за вашият онлайн магазин?\nИ за това имаме решение!`}
-          link="/digital"
-          btnColor="btn-logistics-bg-color"
+          title="Academy"
+          p={`В нашата академия ще ви помогнем да научите програмине и/или digital marketing`}
+          link="/academy"
+          btnColor="btn-academy-bg-color"
           moreClasses="md:flex md:justify-end md:items-end md:text-end md:flex-col text-center"
           delay={0.4}
         />

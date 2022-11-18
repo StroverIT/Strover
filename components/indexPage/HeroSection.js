@@ -147,13 +147,15 @@ export default function HeroSection() {
           animate="visible"
           className="mt-10"
         >
-          <motion.button
-            whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 0.8 }}
-            className="px-8 py-3 text-lg font-semibold rounded-lg btn-bg-color"
-          >
-            <a href="#services">Научи повече</a>
-          </motion.button>
+          <a href="#services" className="inline-flex h-full">
+            <motion.button
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.8 }}
+              className="h-full px-8 py-3 text-lg font-semibold rounded-lg btn-bg-color"
+            >
+              Научи повече
+            </motion.button>
+          </a>
         </motion.div>
       </div>
       {/* Outer polygon */}
@@ -202,7 +204,7 @@ export default function HeroSection() {
           </Link>
         </motion.div>
         {/* Transport */}
-        <motion.div
+        {/* <motion.div
           variants={icon2}
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.8 }}
@@ -229,7 +231,7 @@ export default function HeroSection() {
               Transport
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
         {/* Academy */}
         <motion.div
           variants={icon3}
@@ -237,7 +239,7 @@ export default function HeroSection() {
           whileTap={{ scale: 0.8 }}
           initial="hidden"
           animate="visible"
-          className="  absolute left-[400px] top-[400px] text-white  "
+          className="  absolute left-[500px] top-[300px] text-white  "
         >
           <Link href="/academy" scroll={false}>
             <div className="relative flex flex-col items-center justify-center gap-y-10">

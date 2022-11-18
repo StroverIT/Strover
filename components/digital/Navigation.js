@@ -91,7 +91,7 @@ export default function Navigation() {
               <li>Контакти</li>
             </Link>
             <li
-              className="px-5 py-1 border text-primaryBlue-150 border-primaryBlue-150"
+              className="px-5 py-1 font-semibold tracking-[0.15rem] border-2 text-pink border-pink"
               onClick={brandsHandler}
             >
               БРАНДОВЕ
@@ -160,7 +160,7 @@ export default function Navigation() {
                 <motion.li
                   variants={hamburgerList}
                   onClick={brandsHandler}
-                  className="px-5 py-1 border text-primaryBlue-150 border-primaryBlue-150"
+                  className="px-5 py-1 font-semibold tracking-[0.15rem] border-2 text-pink border-pink"
                 >
                   Брандове
                 </motion.li>

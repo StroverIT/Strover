@@ -58,12 +58,12 @@ export default function ListBrands({ digital, web, logistics, py, bg }) {
         {logistics && (
           <Brand
             altImage="Tech spider logo for strovers' brands"
-            imageLink="/logos/transport-spider.svg"
+            imageLink="/logos/academy-spider.svg"
             title="Transport"
-            p="Както транспортни услуги, предлагаме също и хамалски услуги от опитни и сръчни професионалисти"
+            p="Предлагаме онлайн обучение в сферата на Дигиталният маркетинг, Уеб разработката и Уеб дизайна"
             link="/digital"
-            borderColor="bg-orange"
-            textColor="text-orange"
+            borderColor="bg-red-150"
+            textColor="text-red-150"
             mt="mt-10"
             delay={0.4}
             duration={duration}

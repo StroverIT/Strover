@@ -79,12 +79,12 @@ export default function MenuBrands({ brandsOpen, setOpenBrands, bgColor }) {
                   <span className="pl-1">Digital</span>
                 </motion.li>
               </Link>
-              <Link href="/trasnport">
+              {/* <Link href="/trasnport">
                 <motion.li variants={hamburgerList} className="flex-center">
                   <FaCarSide />
                   <span className="pl-1">Transport</span>
                 </motion.li>
-              </Link>
+              </Link> */}
               <Link href="/academy">
                 <motion.li variants={hamburgerList} className="flex-center">
                   <HiOutlineAcademicCap />

@@ -5,20 +5,6 @@ import Navigation from "../components/academy/Navigation";
 import { motion } from "framer-motion";
 
 export default function Academy() {
-  const [innerProps, setInnerProps] = useState({
-    height: 0,
-    width: 0,
-  });
-  let newq;
-  let h, w, nh, nw, s;
-
-  function newPosition() {
-    h = window.innerHeight - 50;
-    w = window.innerWidth - 50;
-    nh = Math.floor(Math.random() * h);
-    nw = Math.floor(Math.random() * w);
-    return [nh, nw];
-  }
   const schnatszVariants = {
     initial: {},
     animate: {
@@ -27,13 +13,6 @@ export default function Academy() {
       transition: { repeat: Infinity, duration: 6, type: "spring" },
     },
   };
-
-  useEffect(() => {
-    setInnerProps({
-      height: window.innerHeight - 50,
-      width: window.innerWidth - 50,
-    });
-  }, []);
 
   return (
     <>

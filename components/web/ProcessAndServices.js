@@ -34,8 +34,8 @@ export default function ProcessAndServices() {
           уеб сайт.
         </p>
       </section>
-      <section className="relative max-lg:flex max-lg:flex-col mt-14 max-lg:gap-y-20">
-        <div className="hidden lg:flex">
+      <section className="relative max-3xl:flex max-3xl:flex-wrap max-3xl:items-center max-3xl:justify-center mt-14 max-3xl:gap-y-20 sm:gap-y-10 sm:gap-x-40">
+        <div className="hidden 3xl:flex">
           <div className="relative h-[1020px] w-full">
             <Image
               src="/web/lines.svg"
@@ -45,7 +45,7 @@ export default function ProcessAndServices() {
           </div>
         </div>
         {/* Analyze */}
-        <div className="flex-center flex-col lg:absolute lg:top-[320px] lg:left-[300px] ">
+        <div className="flex-center flex-col 3xl:absolute lg:top-[320px] lg:left-[300px] ">
           <div className="relative h-28 w-28">
             <Image src="/icons/analyze.png" alt="analyze icon" layout="fill" />
           </div>
@@ -58,7 +58,7 @@ export default function ProcessAndServices() {
           </p>
         </div>
         {/* Development */}
-        <div className="flex-center flex-col lg:absolute lg:top-[320px] lg:right-[390px] ">
+        <div className="flex-center flex-col 3xl:absolute lg:top-[320px] lg:right-[390px] ">
           <div className="relative h-28 w-28">
             <Image
               src="/icons/programing.png"
@@ -75,7 +75,7 @@ export default function ProcessAndServices() {
           </p>
         </div>
         {/* Seo optimization */}
-        <div className="flex-center flex-col lg:absolute lg:bottom-[-200px] lg:right-[170px] ">
+        <div className="flex-center flex-col 3xl:absolute lg:bottom-[-120px] lg:right-[170px] ">
           <div className="relative h-28 w-28">
             <Image src="/icons/seo.png" alt="Seo optimization" layout="fill" />
           </div>
@@ -89,7 +89,7 @@ export default function ProcessAndServices() {
           </p>
         </div>
         {/* Online writing products */}
-        <div className="flex-center flex-col lg:absolute lg:bottom-[-230px] lg:left-[710px] ">
+        <div className="flex-center flex-col 3xl:absolute lg:bottom-[-160px] lg:left-[710px] ">
           <div className="relative h-28 w-28">
             <Image
               src="/icons/content.png"
@@ -107,7 +107,7 @@ export default function ProcessAndServices() {
           </p>
         </div>
         {/* Maintance */}
-        <div className="flex-center flex-col lg:absolute lg:bottom-[-230px] lg:left-[157px] ">
+        <div className="flex-center flex-col 3xl:absolute lg:bottom-[-160px] lg:left-[157px] ">
           <div className="relative h-28 w-28">
             <Image
               src="/icons/configuration.png"

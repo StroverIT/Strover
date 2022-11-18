@@ -103,6 +103,10 @@ module.exports = {
       xl: { min: "1280px" },
 
       "2xl": { min: "1536px" },
+      "max-3xl": {
+        max: "1800px",
+      },
+      "3xl": { min: "1800px" },
     },
     colors: customColors,
     backgroundColor: (theme) => ({
