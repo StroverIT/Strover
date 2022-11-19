@@ -159,141 +159,113 @@ export default function HeroSection() {
         </motion.div>
       </div>
       {/* Outer polygon */}
-      <div className=" w-full h-[400px] xl:h-[600px] 2xl:ml-28 relative hidden lg:flex">
-        <Image
-          src="/spider-cobweb-index.svg"
-          alt="inner-polygon"
-          layout="fill"
-        />
-        <div className="death-center w-16 h-16 ml-[15px] -mt-[10px]">
-          <Image
-            src="/logos/white-spider.svg"
-            alt="white spider logo"
-            layout="fill"
-          />
-        </div>
-        {/* Web */}
-        <motion.div
-          variants={icon}
-          whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 0.8 }}
-          initial="hidden"
-          animate="visible"
-          className="  absolute left-[280px] top-[50px] text-white  "
-        >
-          <Link href="/web" scroll={false}>
-            <div className="relative flex flex-col items-center justify-center gap-y-10">
-              <div className="w-20 h-20 ">
-                <Image
-                  src="/indexForms/forms/Polygon 3.svg"
-                  alt="white spider logo"
-                  layout="fill"
-                />
-              </div>
-              <div className="absolute w-16 h-16 text-xl font-semibold">
-                <Image
-                  src="/icons/coding.png"
-                  layout="fill"
-                  alt="acadamey hat"
-                />
-              </div>
-              <div className="absolute mt-2 text-xl font-semibold top-20 ">
-                Web
-              </div>
-            </div>
-          </Link>
-        </motion.div>
-        {/* Transport */}
-        {/* <motion.div
-          variants={icon2}
-          whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 0.8 }}
-          initial="hidden"
-          animate="visible"
-          className="  absolute left-[500px] top-[200px] text-white  "
-        >
-          <div className="relative flex flex-col items-center justify-center gap-y-10">
-            <div className="w-20 h-20 ">
-              <Image
-                src="/indexForms/forms/Polygon 4.svg"
-                alt="white spider logo"
-                layout="fill"
-              />
-            </div>
-            <div className="absolute w-16 h-16 text-xl font-semibold">
-              <Image
-                src="/icons/delivery-truck.png"
-                layout="fill"
-                alt="acadamey hat"
-              />
-            </div>
-            <div className="absolute mt-2 ml-1 text-xl font-semibold top-20">
-              Transport
-            </div>
+      <div className="absolute top-[100px] -right-[50px] ">
+        <div className="relative ">
+          <div className="w-[800px] h-[700px] relative opacity-10 lg:opacity-20">
+            <Image src="/testing.svg" alt="inner-polygon" layout="fill" />
           </div>
-        </motion.div> */}
-        {/* Academy */}
-        <motion.div
-          variants={icon3}
-          whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 0.8 }}
-          initial="hidden"
-          animate="visible"
-          className="  absolute left-[500px] top-[300px] text-white  "
-        >
-          <Link href="/academy" scroll={false}>
-            <div className="relative flex flex-col items-center justify-center gap-y-10">
-              <div className="w-20 h-20 ">
-                <Image
-                  src="/indexForms/forms/Polygon 2.svg"
-                  alt="white spider logo"
-                  layout="fill"
-                />
+
+          {/* <div className="death-center w-16 h-16 ml-[15px] -mt-[10px]">
+            <Image
+              src="/logos/white-spider.svg"
+              alt="white spider logo"
+              layout="fill"
+            />
+          </div> */}
+          {/* Web */}
+          <motion.div
+            variants={icon}
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.8 }}
+            initial="hidden"
+            animate="visible"
+            className="  absolute right-[500px] hidden lg:block top-[50px] text-white  "
+          >
+            <Link href="/web" scroll={false}>
+              <div className="relative flex flex-col items-center justify-center gap-y-10">
+                <div className="w-20 h-20 ">
+                  <Image
+                    src="/indexForms/forms/Polygon 3.svg"
+                    alt="white spider logo"
+                    layout="fill"
+                  />
+                </div>
+                <div className="absolute w-16 h-16 text-xl font-semibold">
+                  <Image
+                    src="/icons/coding.png"
+                    layout="fill"
+                    alt="acadamey hat"
+                  />
+                </div>
+                <div className="absolute mt-2 text-xl font-semibold top-20 ">
+                  Web
+                </div>
               </div>
-              <div className="absolute w-16 h-16 text-xl font-semibold top-4">
-                <Image
-                  src="/icons/mortarboard.png"
-                  layout="fill"
-                  alt="acadamey hat"
-                />
+            </Link>
+          </motion.div>
+          {/* Digital */}
+          <motion.div
+            variants={icon2}
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.8 }}
+            initial="hidden"
+            animate="visible"
+            className="  absolute right-[370px] top-[280px] text-white hidden lg:block "
+          >
+            <Link href="/digital" scroll={false}>
+              <div className="relative flex flex-col items-center justify-center gap-y-10">
+                <div className="w-20 h-20 ">
+                  <Image
+                    src="/indexForms/forms/Polygon 1.svg"
+                    alt="white spider logo"
+                    layout="fill"
+                  />
+                </div>
+                <div className="absolute w-16 h-16 text-xl font-semibold top-2">
+                  <Image
+                    src="/icons/social-media.png"
+                    layout="fill"
+                    alt="acadamey hat"
+                  />
+                </div>
+                <div className="absolute mt-2 ml-1 text-xl font-semibold top-20">
+                  Digital
+                </div>
               </div>
-              <div className="absolute mt-2 ml-1 text-xl font-semibold top-20">
-                Academy
+            </Link>
+          </motion.div>
+          {/* Academy */}
+          <motion.div
+            variants={icon3}
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.8 }}
+            initial="hidden"
+            animate="visible"
+            className="  absolute right-[100px] bottom-[150px] hidden lg:block text-white  "
+          >
+            <Link href="/academy" scroll={false}>
+              <div className="relative flex flex-col items-center justify-center gap-y-10">
+                <div className="w-20 h-20 ">
+                  <Image
+                    src="/indexForms/forms/Polygon 2.svg"
+                    alt="white spider logo"
+                    layout="fill"
+                  />
+                </div>
+                <div className="absolute w-16 h-16 text-xl font-semibold top-4">
+                  <Image
+                    src="/icons/mortarboard.png"
+                    layout="fill"
+                    alt="acadamey hat"
+                  />
+                </div>
+                <div className="absolute mt-2 ml-1 text-xl font-semibold top-20">
+                  Academy
+                </div>
               </div>
-            </div>
-          </Link>
-        </motion.div>
-        {/* Digital */}
-        <motion.div
-          variants={icon4}
-          whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 0.8 }}
-          initial="hidden"
-          animate="visible"
-          className="  absolute left-[100px] top-[290px] text-white  "
-        >
-          <Link href="/digital" scroll={false}>
-            <div className="relative flex flex-col items-center justify-center gap-y-10">
-              <div className="w-20 h-20 ">
-                <Image
-                  src="/indexForms/forms/Polygon 1.svg"
-                  alt="white spider logo"
-                  layout="fill"
-                />
-              </div>
-              <div className="absolute w-16 h-16 text-xl font-semibold top-2">
-                <Image
-                  src="/icons/social-media.png"
-                  layout="fill"
-                  alt="acadamey hat"
-                />
-              </div>
-              <div className="absolute mt-2 ml-1 text-xl font-semibold top-20">
-                Digital
-              </div>
-            </div>
-          </Link>
-        </motion.div>
+            </Link>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
