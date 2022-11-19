@@ -27,9 +27,9 @@ export default function Questions() {
         </div>
       </div>
 
-      <section className="relative w-full bg-blue-200 mt-28 pb-36 ">
+      <section className="relative w-full bg-blue-200 mt-28 pt-28 pb-72">
         <section className="container pt-28">
-          <div className="flex-col flex-center">
+          <div className="flex-col pb-10 flex-center">
             <div
               className="hidden text-4xl font-semibold text-blue-50 lg:flex"
               id="questions"
@@ -50,7 +50,7 @@ export default function Questions() {
             >
               ЧЕСТО ЗАДАВАНИ ВЪПРОСИ
             </div>
-            <p className="max-w-lg mt-1 text-center max-lg:text-sm ">
+            <p className="max-w-xl mt-1 text-center max-lg:text-sm ">
               Какви са най-често задаваните въпроси, които вълнуват нашите
               клиенти преди да започнем съвместната си работа
             </p>
