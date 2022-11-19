@@ -28,13 +28,10 @@ export default function HeroSection() {
         <motion.h1 variants={boxVariants} className="text-4xl lg:text-7xl">
           Strover Digital
         </motion.h1>
-        <motion.p
-          variants={boxVariants}
-          className="max-w-xl mt-3 text-sm lg:text-md"
-        >
+        <motion.p variants={boxVariants} className="max-w-xl mt-3 md:text-lg">
           предлага услуги в областта на дигиталният маркетинг, цялостно
           интегриране на бизнеса ви в желаните от Вас социални мрежи и достигане
-          до повече клиенти и следователно до по-голям приход.
+          до повече клиенти.
         </motion.p>
         <div className="mt-10 ">
           <a href="#services" className="inline-flex">
