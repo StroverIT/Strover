@@ -23,7 +23,7 @@ export default function Home() {
       </Head>
       <Navigation />
 
-      <main className="mt-5 ">
+      <main className="relative mt-5">
         <HeroSection />
         {/* <MoreInfo /> */}
         <AboutUs />
@@ -35,6 +35,7 @@ export default function Home() {
           web={true}
           bg="bg-brands-index-color"
           py="sm:py-56 max-sm:pb-24"
+          totalLen={3}
         />
       </main>
     </div>
