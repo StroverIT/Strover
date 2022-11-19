@@ -3,11 +3,18 @@ import Brand from "./Brand";
 import TextAnimation from "../../libs/TextAnimation";
 import FadeIn from "../layouts/animations/onView/FadeIn";
 
-export default function ListBrands({ digital, web, logistics, py, bg }) {
+export default function ListBrands({
+  digital,
+  web,
+  logistics,
+  py,
+  bg,
+  totalLen = 2,
+}) {
   const duration = 1.5;
   return (
-    <section className={`${py} ${bg}  mt-10`}>
-      <section className="mb-10 text-white">
+    <section className={`${py} ${bg} rounded-t-[15rem] mt-10`}>
+      <section className="mb-24 text-white">
         <FadeIn duration={0.8}>
           <h5 className="text-5xl font-semibold text-center">Брандове</h5>
         </FadeIn>
@@ -23,7 +30,9 @@ export default function ListBrands({ digital, web, logistics, py, bg }) {
         </div>
       </section>
       <section
-        className={`container flex zeroToXl:flex-col xl:items-center xl:justify-center gap-x-14 zeroToXl:gap-y-10`}
+        className={`container flex zeroToXl:flex-col xl:items-center xl:justify-center ${
+          totalLen == 3 ? "gap-x-24" : "gap-x-48"
+        } zeroToXl:gap-y-10`}
       >
         {/* Web */}
         {web && (
@@ -59,7 +68,7 @@ export default function ListBrands({ digital, web, logistics, py, bg }) {
           <Brand
             altImage="Tech spider logo for strovers' brands"
             imageLink="/logos/academy-spider.svg"
-            title="Transport"
+            title="Academy"
             p="Предлагаме онлайн обучение в сферата на Дигиталният маркетинг, Уеб разработката и Уеб дизайна"
             link="/digital"
             borderColor="bg-red-150"
