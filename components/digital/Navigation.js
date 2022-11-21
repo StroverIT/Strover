@@ -6,6 +6,8 @@ import { AnimatePresence, motion } from "framer-motion";
 
 import MenuBrands from "../Brands/MenuBrands";
 import { useRouter } from "next/router";
+import LogoName from "../svg-anim-comp/LogoName";
+
 const hamburgerVariants = {
   animate: { transition: { staggerChildren: 0.1, delay: 1 } },
 };
@@ -66,8 +68,8 @@ export default function Navigation() {
     html.style.overflowY = "auto";
   }, [router.pathname]);
   return (
-    <nav className="fixed top-0 z-50 w-screen bg-pink-200 shadow-xl">
-      <section className="container items-center justify-between hidden md:flex ">
+    <nav className="fixed top-0 z-50 w-screen py-5 bg-pink-200 shadow-xl">
+      <section className="items-center justify-between hidden px-28 md:flex ">
         <div className="py-8">
           <ul className="flex space-x-5">
             <li>
@@ -79,8 +81,13 @@ export default function Navigation() {
             <li>Портфолио</li>
           </ul>
         </div>
-        <div className="relative ">
-          <WhiteSpider />
+        <div className="flex-col flex-center">
+          <div className="relative ">
+            <WhiteSpider width="w-14" />
+          </div>
+          <div className="w-full h-full pl-44">
+            <LogoName viewBox={500} />
+          </div>
         </div>
         <div>
           <ul className="flex items-center space-x-5">
@@ -100,9 +107,13 @@ export default function Navigation() {
         </div>
       </section>
       <section className="container flex items-center justify-between md:hidden">
-        <div className="relative flex-center">
-          <WhiteSpider />
-          <div className="pl-1 text-xl font-bold">Strover</div>
+        <div className="flex items-center justify-center">
+          <div className="relative w-20 h-20">
+            <WhiteSpider />
+          </div>
+          <div className="h-full pl-1 -ml-5 flex-center">
+            <LogoName />
+          </div>
         </div>
         <div className="relative z-10">
           <Hamburger toggled={isOpen} toggle={setOpen} />

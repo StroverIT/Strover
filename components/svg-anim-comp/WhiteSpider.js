@@ -46,9 +46,9 @@ const circleVariant = {
     },
   },
 };
-export default function WhiteSpider() {
+export default function WhiteSpider({ width = "w-20" }) {
   return (
-    <div className="w-20 ">
+    <div className={`${width}`}>
       <svg
         id="Layer_1"
         data-name="Layer 1"

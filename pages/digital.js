@@ -43,6 +43,7 @@ export default function Digital() {
             logistics={true}
             bg="bg-pink-200"
             py="py-24 md:mt-56"
+            rounded="rounded-t-[70rem]"
           />
         </section>
       </main>

@@ -6,6 +6,7 @@ import { Sling as Hamburger } from "hamburger-react";
 import { useRouter } from "next/router";
 import MenuBrands from "../Brands/MenuBrands";
 import Link from "next/link";
+import LogoName from "../svg-anim-comp/LogoName";
 
 const listsVariants = {
   animate: { transition: { staggerChildre: 4 } },
@@ -95,7 +96,9 @@ export default function Navigation() {
           <div className="relative w-20 h-20">
             <WhiteSpider />
           </div>
-          <div className="pl-1 text-xl font-bold">Strover</div>
+          <div className="pl-1  h-full flex-center -ml-5">
+            <LogoName />
+          </div>
         </div>
         {/* Links */}
         <div className="hidden md:flex">

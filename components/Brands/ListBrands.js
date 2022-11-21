@@ -10,10 +10,11 @@ export default function ListBrands({
   py,
   bg,
   totalLen = 2,
+  rounded,
 }) {
   const duration = 1.5;
   return (
-    <section className={`${py} ${bg} rounded-t-[15rem] mt-10`}>
+    <section className={`${py} ${bg} ${rounded} mt-10`}>
       <section className="mb-24 text-white">
         <FadeIn duration={0.8}>
           <h5 className="text-5xl font-semibold text-center">Брандове</h5>
