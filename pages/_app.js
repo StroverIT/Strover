@@ -8,7 +8,9 @@ import { useEffect, useState } from "react";
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Head></Head>
+      <Head>
+        <link rel="icon" href="/logos/web-spider.svg" />
+      </Head>
       <Layout>
         <Component {...pageProps} />
       </Layout>

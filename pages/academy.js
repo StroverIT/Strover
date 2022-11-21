@@ -16,7 +16,13 @@ export default function Academy() {
 
   return (
     <>
-      <Head></Head>
+      <Head>
+        <title>StroverAcademy</title>
+        <meta
+          name="description"
+          content="Академия за дигитални мрежи, изработка на уебсайтове и уеб дизайн"
+        />
+      </Head>
       <Navigation />
       <main className="h-[100vh] relative ">
         <div className="absolute z-10 py-2 text-5xl font-bold text-white -translate-x-1/2 -translate-y-1/2 rounded-full left-1/2 top-1/2 flex-center">

@@ -50,6 +50,13 @@ Index page from start to show how we benefit from other companies. Something lik
 Create google reviw and with bugger buget add google ADS
 
 Fix SEO optimization
+
+SLOGANS ={
+  Свържете се със света тук.
+}
+
+
+
 {/_ <motion.div
 variants={icon2}
 whileHover={{ scale: 1.2 }}

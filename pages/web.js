@@ -17,7 +17,11 @@ export default function Web() {
   return (
     <>
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>StroverWeb</title>
+        <meta
+          name="description"
+          content="Поддръжка, създаване и оптимизиране на уебсайтове"
+        />
       </Head>
       <main className="relative text-white ">
         <section className="bg-[url('/web/bgheroV3.svg')] bg-no-repeat w-full h-full  absolute -z-10  top-[-550px] lg:top-[-150px] left-0"></section>

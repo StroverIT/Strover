@@ -12,7 +12,10 @@ import Services from "../components/digital/Services";
 export default function Digital() {
   return (
     <>
-      <Head></Head>
+      <Head>
+        <title>StroverDigital</title>
+        <meta name="description" content="Създаване на социални мрежи" />
+      </Head>
       <main className="text-white ">
         <section id="bg">
           <div className="top"></div>
