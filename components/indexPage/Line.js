@@ -6,7 +6,7 @@ import { useInView } from "react-intersection-observer";
 
 export default function Line({ setSecondCont, setThirdCont }) {
   const [lineHeight, setLineHeight] = useState(0);
-  const [scrollPosition, setScrollPosition] = useState(0);
+  // const [scrollPosition, setScrollPosition] = useState(0);
 
   // const {
   //   ref: firstLine,
@@ -15,51 +15,48 @@ export default function Line({ setSecondCont, setThirdCont }) {
   // } = useInView({
   //   threshold: 0.5,
   // });
-  const [firstLine, viewFirstLine] = useInView({
-    threshold: 0.2,
-  });
+  // const [firstLine, viewFirstLine] = useInView({
+  //   threshold: 0.2,
+  // });
 
-  const firstLineAnim = useAnimation();
+  // const firstLineAnim = useAnimation();
   // const posY = window.scrollY;
   // const posX = window.scrollX;
   // window.scroll({ top: posY - 20, left: posX, behavior: "smooth" });
-  const handleScroll = () => {
-    const position = window.pageYOffset;
+  // const handleScroll = () => {
+  //   const position = window.pageYOffset;
 
-    window.pageXOffset = window.pageXOffset - 400;
-    setScrollPosition(position);
-  };
-  function wheel(e) {
-    // console.log(e);
-    let delta = 0;
-    console.log(e);
-  }
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: false });
-    // window.addEventListener("mousewheel", wheel, false);
+  //   window.pageXOffset = window.pageXOffset - 400;
+  //   setScrollPosition(position);
+  // };
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      // window.removeEventListener("mousewheel", wheel);
-    };
-  }, []);
-  useEffect(() => {
-    if (viewFirstLine) {
-      if (lineHeight != 1000) {
-        setLineHeight((prevVal) => prevVal + 10);
-      }
-      if (lineHeight == 400) setSecondCont(true);
-      if (lineHeight == 950) setThirdCont(true);
-      // lineHeight, setLineHeight
-    }
-  }, [scrollPosition]);
+  // useEffect(() => {
+  //   window.addEventListener("scroll", handleScroll, { passive: false });
+  //   // window.addEventListener("mousewheel", wheel, false);
+
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //     // window.removeEventListener("mousewheel", wheel);
+  //   };
+  // }, []);
+  // useEffect(() => {
+  //   if (viewFirstLine) {
+  //     if (lineHeight != 1000) {
+  //       setLineHeight((prevVal) => prevVal + 10);
+  //     }
+  //     if (lineHeight == 400) setSecondCont(true);
+  //     if (lineHeight == 950) setThirdCont(true);
+  //     // lineHeight, setLineHeight
+  //   }
+  // }, [scrollPosition]);
   return (
-    <div className="relative ml-20" ref={firstLine}>
+    // ref={firstLine}
+    <div className="relative ml-20">
       <svg
         width={1200}
-        height={lineHeight}
+        height={1000}
         fill="none"
-        animate={firstLineAnim}
+        // animate={firstLineAnim}
         xmlns="http://www.w3.org/2000/svg"
       >
         <path

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import React, { useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 import Navigation from "../components/otherPagesNav/OffersNav";
 import ContactUs from "../components/ContactUs";
@@ -15,8 +15,12 @@ import InfoContainer from "../components/otherPagesNav/AboutUs/InfoContainer";
 import Link from "next/link";
 import FixedForm from "../components/form/FixedForm";
 import { AnimatePresence } from "framer-motion";
+import { useRouter } from "next/router";
 
 export default function AboutUs() {
+  const { asPath } = useRouter();
+
+  const teamRef = useRef();
   const [form, openForm] = useState(false);
 
   const [inputs, setInputs] = useState({
@@ -30,9 +34,27 @@ export default function AboutUs() {
       [e.target.name]: e.target.value,
     }));
   };
+  useEffect(() => {
+    const hash = asPath.split("#")[1];
+    console.log(hash);
+    if (hash == "team") {
+      teamRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
+      });
+    }
+  }, [asPath]);
   return (
     <>
-      <Head></Head>
+      <Head>
+        <title>Strover за нас</title>
+        <meta
+          name="description"
+          content="Изработка и поддръжка на уебсайтове, създаване на социални мрежи, развитие на бизнеси в онлайн пространството"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
       <Navigation />
 
       <main className="pb-10 bg-gray-200 pt-36">
@@ -97,7 +119,7 @@ export default function AboutUs() {
             border={true}
           />
         </section>
-        <section className="flex-col py-48 flex-center">
+        <section className="flex-col py-48 flex-center" ref={teamRef}>
           <div className="flex-center">
             <HeaderSpider title="ЕКИПЪТ" size="text-4xl" />
           </div>

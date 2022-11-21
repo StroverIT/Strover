@@ -50,20 +50,21 @@ Index page from start to show how we benefit from other companies. Something lik
 Create google reviw and with bugger buget add google ADS
 
 Fix SEO optimization
+При абониране да пише в и-мейла, че са се абонирали успешно
+Instagram - да пише, че възможно най-скоро ще им бърнем обаждане - автоматично отговаряне
 
 SLOGANS ={
-  Свържете се със света тук.
+Свържете се със света тук.
 }
 
-
-
-{/_ <motion.div
+{/\_ <motion.div
 variants={icon2}
 whileHover={{ scale: 1.2 }}
 whileTap={{ scale: 0.8 }}
 initial="hidden"
 animate="visible"
 className=" absolute left-[500px] top-[200px] text-white " >
+
 <div className="relative flex flex-col items-center justify-center gap-y-10">
 <div className="w-20 h-20 ">
 <Image
