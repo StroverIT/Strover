@@ -75,11 +75,17 @@ export default function Links({ data }) {
                 clipPath: "polygon(50% 0,50% 0,50% 100%, 50% 100%)",
               },
             }}
-            className="absolute top-0 left-0 z-50 w-screen h-screen bg-primaryBlue-200  overflow-auto"
+            className="absolute top-0 left-0 z-50 w-screen h-screen overflow-auto bg-primaryBlue-200"
           >
-            <div className="lg:container max-lg:px-10 relative  lg:h-full">
+            <div className="relative lg:container max-lg:px-10 ">
+              <div
+                className="absolute right-0 hidden text-4xl cursor-pointer lg:block top-10"
+                onClick={() => setOpen(false)}
+              >
+                <HiX />
+              </div>
               <div className="h-full flex-center ">
-                <ul className="py-28 flex flex-col gap-y-4">
+                <ul className="flex flex-col py-28 gap-y-4">
                   {data.map((data, index) => {
                     return (
                       <li key={data.key}>
