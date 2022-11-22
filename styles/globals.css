@@ -81,6 +81,18 @@ html::-webkit-scrollbar {
 .days-one-font {
   font-family: "Days One", sans-serif;
 }
+.box {
+  --mask: radial-gradient(80.5px at 50% 108px, #000 99%, #0000 101%)
+      calc(50% - 72px) 0/144px 51% repeat-x,
+    radial-gradient(80.5px at 50% -72px, #0000 99%, #000 101%) 50% 36px/144px
+      calc(51% - 36px) repeat-x,
+    radial-gradient(80.5px at 50% calc(100% - 108px), #000 99%, #0000 101%)
+      calc(50% - 72px) 100%/144px 51% repeat-x,
+    radial-gradient(80.5px at 50% calc(100% + 72px), #0000 99%, #000 101%) 50%
+      calc(100% - 36px) / 144px calc(51% - 36px) repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
 .index-bg {
   background: linear-gradient(
     172.62deg,

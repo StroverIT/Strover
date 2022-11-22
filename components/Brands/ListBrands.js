@@ -14,7 +14,7 @@ export default function ListBrands({
 }) {
   const duration = 1.5;
   return (
-    <section className={`${py} ${bg} ${rounded} mt-10`}>
+    <section className={`${py} ${bg} box my-10`}>
       <section className="mb-24 text-white">
         <FadeIn duration={0.8}>
           <h5 className="text-5xl font-semibold text-center">Брандове</h5>
