@@ -164,7 +164,13 @@ export default function HeroSection() {
           <div className="w-[800px] h-[700px] relative opacity-10 lg:opacity-20">
             <Image src="/testing.svg" alt="inner-polygon" layout="fill" />
           </div>
-
+          <div className="absolute lg:top-10 lg:right-0 right-0  bottom-10 -rotate-[40deg] w-96 h-56 opacity-10 lg:opacity-40">
+            <Image
+              src="/logos/white-spider.svg"
+              alt="white spider logo"
+              layout="fill"
+            />
+          </div>
           {/* <div className="death-center w-16 h-16 ml-[15px] -mt-[10px]">
             <Image
               src="/logos/white-spider.svg"
