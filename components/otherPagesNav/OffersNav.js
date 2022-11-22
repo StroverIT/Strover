@@ -71,7 +71,7 @@ export default function Navigation() {
   }, [router.pathname]);
 
   return (
-    <nav className="fixed top-0 z-50 w-screen shadow-xl bg-blue text-white">
+    <nav className="fixed top-0 z-50 w-screen text-white shadow-xl bg-blue">
       <section className="container items-center justify-between hidden md:flex ">
         <div className="py-8">
           <ul className="flex space-x-5">
@@ -149,30 +149,18 @@ export default function Navigation() {
                 variants={hamburgerVariants}
                 initial="initial"
                 animate="animate"
-                className="flex flex-col items-center justify-center h-full text-3xl gap-y-10 relative z-20"
+                className="relative z-20 flex flex-col items-center justify-center h-full text-3xl gap-y-10"
               >
                 <Link href="/">
                   <motion.li variants={hamburgerList}>Начало</motion.li>
                 </Link>
-                <motion.li
-                  variants={hamburgerList}
-                  onClick={() => handleNav("#aboutUs")}
-                >
-                  За нас
-                </motion.li>
-                <motion.li
-                  variants={hamburgerList}
-                  onClick={() => handleNav("#services")}
-                >
-                  Услуги
-                </motion.li>
-                <motion.li
-                  variants={hamburgerList}
-                  onClick={() => handleNav("#questions")}
-                >
-                  Въпроси
-                </motion.li>
-                <motion.li variants={hamburgerList}>Контакти</motion.li>
+                <Link href="/aboutUs" scroll={false}>
+                  <motion.li variants={hamburgerList}>За нас</motion.li>
+                </Link>
+
+                <Link href="/contactUs" scroll={false}>
+                  <motion.li variants={hamburgerList}>Контакти</motion.li>
+                </Link>
                 <motion.li
                   variants={hamburgerList}
                   onClick={brandsHandler}

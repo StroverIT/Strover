@@ -153,7 +153,7 @@ export default function Navigation({ links }) {
                 <Link href="/contactUs" scroll={false}>
                   <motion.li variants={hamburgerList}>Контакти</motion.li>
                 </Link>
-                <Links data={links} />
+                <Links data={links} hambOpen={isOpen} hambSetOpen={setOpen} />
 
                 <motion.li
                   variants={hamburgerList}

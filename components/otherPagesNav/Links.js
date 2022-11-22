@@ -3,16 +3,16 @@ import React, { useEffect, useState } from "react";
 import { HiX } from "react-icons/hi";
 import { AnimatePresence, motion } from "framer-motion";
 
-export default function Links({ data }) {
+export default function Links({ data, hambSetOpen, hambOpen }) {
   const router = useRouter();
 
   const [open, setOpen] = useState(false);
   const handleNav = (hash) => {
     setOpen(false);
+    hambSetOpen(false);
     let timer;
     if (hash) {
       const item = document.querySelector(`#${hash}`);
-      console.log(item);
       timer = setTimeout(() => {
         if (item) {
           const where = {
