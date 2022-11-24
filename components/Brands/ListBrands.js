@@ -1,6 +1,7 @@
-import React from "react";
+import React, { lazy } from "react";
 import Brand from "./Brand";
-import TextAnimation from "../../libs/TextAnimation";
+const TextAnimation = lazy(() => import("../../libs/TextAnimation"));
+
 import FadeIn from "../layouts/animations/onView/FadeIn";
 
 export default function ListBrands({

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, lazy } from "react";
 
 import Image from "next/legacy/image";
 import { BsArrowRight } from "react-icons/bs";
@@ -7,7 +7,7 @@ import { motion, useAnimation } from "framer-motion";
 
 import { useInView } from "react-intersection-observer";
 import { useIsSmall } from "../../libs/FramerMediaQueryFn";
-import TextAnimation from "../../libs/TextAnimation";
+const TextAnimation = lazy(() => import("../../libs/TextAnimation"));
 
 export default function FirmsWhoTrust() {
   const [firstImage, firstImageView] = useInView({ threshold: 0.8 });

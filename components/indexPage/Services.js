@@ -1,7 +1,7 @@
-import React from "react";
+import React, { lazy } from "react";
 
 import Container from "./ServiceComp/Container";
-import TextAnimation from "../../libs/TextAnimation";
+const TextAnimation = lazy(() => import("../../libs/TextAnimation"));
 
 export default function Services() {
   return (
