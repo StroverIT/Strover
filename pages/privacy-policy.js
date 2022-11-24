@@ -40,7 +40,7 @@ export default function PrivacyPolicy() {
               разберете вашите права и възможности за поверителност. Ако не сте
               съгласни с нашите политики и практики, моля, не използвайте нашите
               Услуги. Ако все още имате въпроси или притеснения, моля свържете
-              се с нас на contact@strover.bg
+              се с нас на stroverbg@gmail.com
             </div>
           </section>
           <section className="">
@@ -615,7 +615,7 @@ export default function PrivacyPolicy() {
               деактивираме акаунта и ще предприемем разумни мерки за незабавно
               изтриване на тези данни от нашите записи. Ако научите за някакви
               данни, които може да сме събрали от деца под 18 години, моля,
-              свържете се с нас на contact@strover.bg.
+              свържете се с нас на stroverbg@gmail.com.
             </p>
           </section>
           {/* Десета точка */}
@@ -735,7 +735,7 @@ export default function PrivacyPolicy() {
             <p className="mt-4">
               Ако имате въпроси или коментари относно вашите права за
               поверителност, можете да ни изпратите имейл на
-              administrator@strover.bg.
+              stroverbg@gmail.com.
             </p>
           </section>
           {/* Единадесета точка */}
@@ -824,7 +824,7 @@ export default function PrivacyPolicy() {
             </h3>
             <p className="mt-4">
               Ако имате въпроси или коментари относно това известие, можете да
-              ни изпратите имейл на contact@strover.bg
+              ни изпратите имейл на stroverbg@gmail.com
             </p>
           </section>
           {/* Петнадесета точка */}

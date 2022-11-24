@@ -871,7 +871,7 @@ export default function TermsAndConditions() {
               свържете се с нас на:
             </p>
             <ul className="mt-4 ml-5 list-disc">
-              <li>И-мейл: administrator@strover.bg</li>
+              <li>И-мейл: stroverbg@gmail.com</li>
 
               <li>Телефон: 0876237725</li>
             </ul>
