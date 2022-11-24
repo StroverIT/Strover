@@ -1,6 +1,6 @@
-import React, { lazy } from "react";
+import React from "react";
 import Brand from "./Brand";
-const TextAnimation = lazy(() => import("../../libs/TextAnimation"));
+import TextAnimation from "../../libs/TextAnimation";
 
 import FadeIn from "../layouts/animations/onView/FadeIn";
 
