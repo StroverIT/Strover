@@ -60,25 +60,33 @@ export default function ContactUsPage() {
               <div className="text-2xl ">
                 <HiOutlineMail />
               </div>
-              <div className="pl-1">stroverbg@gmail.com</div>
+              <a href="mailto:stroverbg@gmail.com" className="pl-1">
+                stroverbg@gmail.com
+              </a>
             </div>
             <div className="flex items-center pt-2">
               <div className="text-xl ">
                 <FiPhoneCall />
               </div>
-              <div className="pl-1">Web - +359 87 623 7725</div>
+              <a href="tel:0876237725" className="pl-1">
+                Web - +359 87 623 7725
+              </a>
             </div>
             <div className="flex items-center">
               <div className="text-xl ">
                 <FiPhoneCall />
               </div>
-              <div className="pl-1">Digital - +359 89 631 5555</div>
+              <a href="tel:089 631 5555" className="pl-1">
+                Digital - +359 89 631 5555
+              </a>
             </div>
             <div className="flex items-center">
               <div className="text-xl ">
                 <FiPhoneCall />
               </div>
-              <div className="pl-1">Transport - +359 89 506 3670 </div>
+              <a href="tel:0876237725" className="pl-1">
+                Academy - +359 87 623 7725
+              </a>
             </div>
 
             <div className="pt-2">
