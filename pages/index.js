@@ -37,7 +37,7 @@ export default function Home() {
           digital={true}
           web={true}
           bg="bg-brands-index-color"
-          py="sm:py-56 max-sm:pb-24"
+          py="sm:py-56 max-sm:pb-24 max-lg:py-20"
           totalLen={3}
         />
       </main>
