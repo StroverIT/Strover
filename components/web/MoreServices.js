@@ -1,6 +1,7 @@
 import Image from "next/legacy/image";
 import React, { useState } from "react";
 import TextAnimation from "../../libs/TextAnimation";
+import HeaderSpider from "../HeaderSpider";
 import FadeFromBottom from "../layouts/animations/onView/FadeFromBottom";
 
 export default function MoreServices() {
@@ -8,19 +9,12 @@ export default function MoreServices() {
   const [showSecondText, setShowSecondText] = useState(false);
 
   return (
-    <section className="container mt-24 lg:mt-56">
-      <div className="text-xl font-semibold text-center uppercase lg:text-4xl text-blue-50">
-        <TextAnimation
-          placeholderText={[
-            {
-              type: "heading1",
-              text: "Допълнителни услуги",
-            },
-          ]}
-        />
+    <section className="container mt-24 lg:mt-20">
+      <div className="text-xl font-semibold uppercase flex-center lg:text-4xl text-blue-50 ">
+        <HeaderSpider title="Допълнителни услуги" size="4xl" />
       </div>
-      <section className="grid items-center justify-center mt-20 max-lg:text-center lg:grid-cols-2 gap-y-36 lg:mt-36 max-lg:gap-y-28">
-        <div className="flex-col flex-center ">
+      <section className="grid items-center justify-center mt-20 max-lg:text-center lg:grid-cols-2 gap-y-36 lg:mt-16 max-lg:gap-y-28">
+        {/* <div className="flex-col flex-center ">
           <FadeFromBottom duration={0.5}>
             <div className="relative h-28 w-28">
               <Image
@@ -56,7 +50,7 @@ export default function MoreServices() {
               {showFirstText ? "Скрий текста" : "Виж повече"}
             </button>
           </FadeFromBottom>
-        </div>
+        </div> */}
         <div className="flex-col flex-center ">
           <FadeFromBottom duration={0.5}>
             <div className="relative h-28 w-28">

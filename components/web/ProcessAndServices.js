@@ -1,25 +1,17 @@
 import Image from "next/legacy/image";
 import React from "react";
 import TextAnimation from "../../libs/TextAnimation";
+import HeaderSpider from "../HeaderSpider";
 import FadeFromBottom from "../layouts/animations/onView/FadeFromBottom";
 
 export default function ProcessAndServices() {
   return (
     <section className="mt-20 max-lg:container md:mt-80" id="services">
       <section className="flex-col text-center flex-center">
-        <div className="hidden text-4xl font-semibold uppercase text-blue-50 lg:flex">
-          <TextAnimation
-            placeholderText={[
-              {
-                type: "heading1",
-                text: "Процеса и услугите ни",
-              },
-            ]}
-          />
+        <div className="font-semibold uppercase text-blue-50 flex-center">
+          <HeaderSpider title="Процеса и услугите ни" size="text-4xl" />
         </div>
-        <h1 className="text-xl font-semibold uppercase text-blue-50 lg:hidden">
-          Процеса и услугите ни
-        </h1>
+
         <div className="hidden mt-2 lg:flex">
           <TextAnimation
             placeholderText={[

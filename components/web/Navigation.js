@@ -85,9 +85,9 @@ export default function Navigation() {
               <a href="#services">Услуги</a>
             </li>
             <li>
-              <a href="#questions">Въпроси</a>
+              <a href="#pricing">Ценоразпис</a>
             </li>
-            <li className="invisible">
+            <li>
               <a href="#questions">Въпроси</a>
             </li>
           </ul>
@@ -170,6 +170,12 @@ export default function Navigation() {
                   onClick={() => handleNav("#services")}
                 >
                   Услуги
+                </motion.li>
+                <motion.li
+                  variants={hamburgerList}
+                  onClick={() => handleNav("#pricing")}
+                >
+                  Ценоразпис
                 </motion.li>
                 <Link href="/aboutUs" scroll={false}>
                   <motion.li variants={hamburgerList}>За нас</motion.li>

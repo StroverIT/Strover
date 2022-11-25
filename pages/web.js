@@ -10,6 +10,7 @@ import WaveSvgDown from "../components/web/HeroSectionComp/WaveSvgDown";
 import HowToProfit from "../components/web/HowToProfit";
 import MoreServices from "../components/web/MoreServices";
 import Navigation from "../components/web/Navigation";
+import Pricing from "../components/web/Pricing";
 import ProcessAndServices from "../components/web/ProcessAndServices";
 import Questions from "../components/web/Questions";
 
@@ -38,7 +39,8 @@ export default function Web() {
         <HowToProfit />
         <ProcessAndServices />
         <MoreServices />
-        <section className="mt-20 lg:my-20 lg:mt-44">
+        <Pricing />
+        <section className="-mt-16">
           <IdeasInWebsite />
         </section>
         <Questions />

@@ -82,9 +82,9 @@ export default function FixedForm({
           clipPath: "polygon(50% 0,50% 0,50% 100%, 50% 100%)",
         },
       }}
-      className="fixed top-0 left-0 z-50 "
+      className="fixed top-0 left-0 z-[9999] "
     >
-      <section className="relative w-screen h-screen">
+      <section className="relative w-screen h-screen ">
         <motion.section
           transition={{
             type: "spring",
@@ -105,7 +105,7 @@ export default function FixedForm({
           }}
           className="absolute z-40 -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg lg:w-4/12 left-1/2 top-1/2 flex-center"
         >
-          <section className="relative w-screen lg:w-full">
+          <section className="relative w-screen shadow-2xl lg:w-full">
             <section className="container py-10 lg:px-10 ">
               <HeaderSpider title="Свържи се с нас!" size="text-2xl" />
 
