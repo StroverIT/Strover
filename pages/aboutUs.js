@@ -93,7 +93,7 @@ export default function AboutUs() {
             </div>
           </div>
         </section>
-        <section className="flex flex-col lg:mt-28 ">
+        <section className="flex flex-col  lg:mt-28">
           {/* FIrst sectionis */}
 
           <InfoContainer

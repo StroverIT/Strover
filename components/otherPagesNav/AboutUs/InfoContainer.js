@@ -9,14 +9,14 @@ export default function InfoContainer({ title, p, image, border, isNext }) {
         border ? "lg:border-y" : "lg:border-t"
       } border-primaryBlue-300`}
     >
-      <section className=" grid lg:grid-cols-2 w-full h-full">
+      <section className="grid w-full h-full lg:grid-cols-2">
         <div
-          className={` w-full h-full py-10 ${
-            isNext ? "lg:bg-primaryBlue-850" : "lg:bg-primaryBlue-300"
+          className={` w-full h-full py-4 lg:py-10 ${
+            isNext ? "bg-primaryBlue-850" : "bg-primaryBlue-300"
           }`}
         >
-          <div className="flex items-center justify-end pr-28  ">
-            <div className="relative  w-20 h-20 lg:h-60 lg:w-60">
+          <div className="flex items-center justify-center lg:justify-end lg:pr-28 ">
+            <div className="relative w-20 h-20 lg:h-60 lg:w-60">
               <Image
                 src={`/icons/${image}`}
                 alt="growth for you and your company"
@@ -25,13 +25,11 @@ export default function InfoContainer({ title, p, image, border, isNext }) {
             </div>
           </div>
         </div>
-        <div className="flex-center flex-col ">
-          <section className="flex-center ">
-            <div className="">
-              <HeaderSpider title={title} size="text-2xl" />
-            </div>
+        <div className="flex-col pt-5 pb-10 max-lg:container flex-center">
+          <section className="container flex-center ">
+            <HeaderSpider title={title} size="text-2xl" />
           </section>
-          <h3 className="text-center text-4xl font-medium"></h3>
+          <h3 className="text-4xl font-medium text-center"></h3>
           <p className="mt-4 lg:px-56 max-lg:container">{p}</p>
         </div>
       </section>

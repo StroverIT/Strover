@@ -4,12 +4,12 @@ import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 
 const lineVariants = {
-  initial: { width: 0 },
+  initial: { width: 0, opacity: 0 },
   animate: {
     width: "100%",
-
+    opacity: 1,
     transition: {
-      duration: 4,
+      duration: 2,
       type: "spring",
     },
   },
@@ -35,7 +35,7 @@ export default function HeaderSpider({
       <div className="mt-2 flex-center">
         <motion.div
           variants={lineVariants}
-          className={`h-1 w-full ${lineColor}`}
+          className={`h-1 ${lineColor}`}
         ></motion.div>
         <div className="px-3 text-xl">
           <FaSpider />
@@ -43,7 +43,7 @@ export default function HeaderSpider({
 
         <motion.div
           variants={lineVariants}
-          className={`h-1 w-full ${lineColor}`}
+          className={`h-1  ${lineColor}`}
         ></motion.div>
       </div>
     </motion.div>
