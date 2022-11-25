@@ -14,7 +14,7 @@ const header1 = {
       type: "spring",
       duration: 1,
       bounce: 0.3,
-      delay: 1.5,
+      delay: 1.2,
     },
   },
 };
@@ -27,7 +27,7 @@ const header2 = {
     transition: {
       type: "spring",
       duration: 1,
-      delay: 2,
+      delay: 1.6,
     },
   },
 };
@@ -40,7 +40,7 @@ const paraVariant = {
     transition: {
       type: "spring",
       duration: 1,
-      delay: 2.4,
+      delay: 2,
     },
   },
 };
@@ -53,7 +53,7 @@ const button = {
     transition: {
       type: "spring",
       duration: 1,
-      delay: 2.8,
+      delay: 2.4,
     },
   },
 };
@@ -66,7 +66,7 @@ const icon = {
     transition: {
       type: "spring",
       duration: 1,
-      delay: 3.2,
+      delay: 2.8,
     },
   },
 };
@@ -79,7 +79,7 @@ const icon2 = {
     transition: {
       type: "spring",
       duration: 1,
-      delay: 3.6,
+      delay: 3.2,
     },
   },
 };
@@ -92,7 +92,7 @@ const icon3 = {
     transition: {
       type: "spring",
       duration: 1,
-      delay: 4,
+      delay: 3.6,
     },
   },
 };

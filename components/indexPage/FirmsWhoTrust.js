@@ -8,6 +8,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useIsSmall } from "../../libs/FramerMediaQueryFn";
 import TextAnimation from "../../libs/TextAnimation";
+import FadeFromBottom from "../layouts/animations/onView/FadeFromBottom";
 
 export default function FirmsWhoTrust() {
   const [firstImage, firstImageView] = useInView({ threshold: 0.8 });
@@ -61,18 +62,14 @@ export default function FirmsWhoTrust() {
       </div>
       <section className="mt-20 md:mt-32 xl:container">
         <section className="relative flex mt-10 zeroToXl:flex-col-reverse">
-          <motion.div
-            animate={firstImageAnim}
-            className="relative w-full max-sm:-mt-32 h-96"
-            ref={firstImage}
-          >
+          <div className="relative w-full max-sm:-mt-32 h-96" ref={firstImage}>
             <Image
               src="/firms/softoffice.png"
               alt="Софт офис е компания, създадена през 2008,  занимаваща се със стоки и услуги,  и по-конкретно с материали и консумативи."
               layout="fill"
               objectFit="contain"
             />
-          </motion.div>
+          </div>
           <div className="w-full rounded-[3rem] sm:rounded-[11rem] xl:-ml-96 -mt-8 bg-primaryBlue-650 h-[19rem] max-sm:pb-10 sm:h-[26rem]">
             <div className="xl:grid grid-cols-[40%60%] h-full flex-center">
               <div></div>
@@ -87,26 +84,30 @@ export default function FirmsWhoTrust() {
                     ]}
                   />
                 </div>
-                <p className="max-w-md mt-1 text-white max-md:text-justify hypens-auto max-md:container">
-                  Софт офис е компания, създадена през 2008, занимаваща се със
-                  стоки и услуги, и по-конкретно с материали и консумативи.
-                </p>
-                <div className="z-10 inline-flex mt-4 zeroToXl:justify-center xl:items-center text-primaryBlue-100 grow-0">
-                  <div className="peer">
-                    <button className="z-10 font-bold cursor-pointer">
-                      <a
-                        href="https://softoffice.bg"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Виж сайта
-                      </a>
-                    </button>
+                <FadeFromBottom duration={0.5}>
+                  <p className="max-w-md mt-1 text-white max-md:text-justify hypens-auto max-md:container">
+                    Софт офис е компания, създадена през 2008, занимаваща се със
+                    стоки и услуги, и по-конкретно с материали и консумативи.
+                  </p>
+                </FadeFromBottom>
+                <FadeFromBottom delay={0.1} duration={0.5}>
+                  <div className="z-10 inline-flex mt-4 zeroToXl:justify-center xl:items-center text-primaryBlue-100 grow-0">
+                    <div className="peer">
+                      <button className="z-10 font-bold cursor-pointer">
+                        <a
+                          href="https://softoffice.bg"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Виж сайта
+                        </a>
+                      </button>
+                    </div>
+                    <div className="pl-1 my-auto transition-all opacity-0 peer-hover:opacity-100 peer-hover:translate-x-2 ">
+                      <BsArrowRight />
+                    </div>
                   </div>
-                  <div className="pl-1 my-auto transition-all opacity-0 peer-hover:opacity-100 peer-hover:translate-x-2 ">
-                    <BsArrowRight />
-                  </div>
-                </div>
+                </FadeFromBottom>
               </div>
             </div>
           </div>
@@ -126,42 +127,42 @@ export default function FirmsWhoTrust() {
                     ]}
                   />
                 </div>
-                <p className="max-w-sm mt-1 text-white max-md:text-justify hypens-auto max-md:container">
-                  Строителен супермаркет Ивда Гео e фирма с дългогодишен опит в
-                  сферата на търговията със строителни материали, инструменти,
-                  крепежни елементи и други.
-                </p>
-                <div className="z-10 inline-flex items-center mt-4 zeroToXl:justify-center text-primaryBlue-100 grow-0">
-                  <div className="peer">
-                    <button className="z-10 font-bold cursor-pointer">
-                      <a
-                        href="https://ivdageopaint.bg"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Виж сайта
-                      </a>
-                    </button>
+                <FadeFromBottom duration={0.5}>
+                  <p className="max-w-sm mt-1 text-white max-md:text-justify hypens-auto max-md:container">
+                    Строителен супермаркет Ивда Гео e фирма с дългогодишен опит
+                    в сферата на търговията със строителни материали,
+                    инструменти, крепежни елементи и други.
+                  </p>
+                </FadeFromBottom>
+                <FadeFromBottom delay={0.1} duration={0.5}>
+                  <div className="z-10 inline-flex items-center mt-4 zeroToXl:justify-center text-primaryBlue-100 grow-0">
+                    <div className="peer">
+                      <button className="z-10 font-bold cursor-pointer">
+                        <a
+                          href="https://ivdageopaint.bg"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Виж сайта
+                        </a>
+                      </button>
+                    </div>
+                    <div className="pl-1 my-auto transition-all opacity-0 peer-hover:opacity-100 peer-hover:translate-x-2 ">
+                      <BsArrowRight />
+                    </div>
                   </div>
-                  <div className="pl-1 my-auto transition-all opacity-0 peer-hover:opacity-100 peer-hover:translate-x-2 ">
-                    <BsArrowRight />
-                  </div>
-                </div>
+                </FadeFromBottom>
               </div>
             </div>
           </div>
-          <motion.div
-            animate={secondImgAnim}
-            ref={secondImage}
-            className="relative w-full h-96 xl:-ml-44 max-sm:-mt-32"
-          >
+          <div className="relative w-full h-96 xl:-ml-44 max-sm:-mt-32">
             <Image
               src="/firms/ivdageo.png"
               alt="Софт офис е компания, създадена през 2008,  занимаваща се със стоки и услуги,  и по-конкретно с материали и консумативи."
               layout="fill"
               objectFit="contain"
             />
-          </motion.div>
+          </div>
         </section>
       </section>
     </section>

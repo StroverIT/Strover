@@ -1,5 +1,6 @@
 import Image from "next/legacy/image";
 import React from "react";
+import FadeFromBottom from "../../layouts/animations/onView/FadeFromBottom";
 
 export default function Container({ imageUrl, text, isRev = false }) {
   return (
@@ -9,19 +10,23 @@ export default function Container({ imageUrl, text, isRev = false }) {
           isRev ? "lg:order-2  lg:pr-56" : "lg:pl-56"
         }`}
       >
-        <div>
-          <p>{text}</p>
-        </div>
+        <FadeFromBottom duration={0.5}>
+          <div>
+            <p>{text}</p>
+          </div>
+        </FadeFromBottom>
       </div>
-      <div className="flex-center">
-        <div className="relative w-48 h-48 lg:h-80 lg:w-80  ">
-          <Image
-            src={`/digitalAssets/icons/${imageUrl}.png`}
-            alt="this is image from flat icon"
-            layout="fill"
-          />
+      <FadeFromBottom duration={0.5}>
+        <div className="flex-center">
+          <div className="relative w-48 h-48 lg:h-80 lg:w-80 ">
+            <Image
+              src={`/digitalAssets/icons/${imageUrl}.png`}
+              alt="this is image from flat icon"
+              layout="fill"
+            />
+          </div>
         </div>
-      </div>
+      </FadeFromBottom>
     </div>
   );
 }

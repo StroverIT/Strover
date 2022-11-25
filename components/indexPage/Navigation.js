@@ -96,7 +96,7 @@ export default function Navigation() {
           <div className="relative w-20 h-20">
             <WhiteSpider />
           </div>
-          <div className="pl-1  h-full flex-center -ml-5">
+          <div className="h-full pl-1 -ml-5 flex-center">
             <LogoName />
           </div>
         </div>
@@ -209,10 +209,7 @@ export default function Navigation() {
                       Контакти
                     </Link>
                   </motion.li>
-                  <motion.li
-                    variants={hamburgerList}
-                    onClick={() => handleNav("#aboutUs")}
-                  >
+                  <motion.li variants={hamburgerList}>
                     <Link href="/aboutUs" scroll={false}>
                       За нас
                     </Link>

@@ -10,21 +10,8 @@ import { useInView } from "react-intersection-observer";
 
 import { toastSuccess, toastError } from "../libs/Notifications";
 import sendMesage from "../fetches/sendingMessage";
+import FadeFromBottom from "./layouts/animations/onView/FadeFromBottom";
 
-const variants = {
-  initial: {
-    borderRadius: "0%",
-    opacity: 0,
-  },
-  animate: {
-    opacity: 1,
-
-    borderRadius: ["100%", "0%"],
-    transition: {
-      duration: 1,
-    },
-  },
-};
 const inputsInit = {
   name: "",
   email: "",
@@ -42,8 +29,6 @@ export default function ContactUs({
   const [inputs, setInputs] = useState(inputsInit);
 
   const [isLoading, setLoading] = useState(false);
-  const [box, boxView] = useInView();
-  const boxAnim = useAnimation();
 
   const handler = (e) => {
     setInputs((prevState) => ({
@@ -74,16 +59,9 @@ export default function ContactUs({
 
     setLoading(false);
   };
-  useEffect(() => {
-    if (boxView) boxAnim.start("animate");
-    if (!boxView) boxAnim.start("initial");
-  }, [boxView]);
 
   return (
-    <motion.section
-      ref={box}
-      animate={boxAnim}
-      variants={variants}
+    <section
       className={`flex-center border-8 ${color} lg:mx-56 2xl:mx-96 border-dashed`}
     >
       <section
@@ -149,20 +127,24 @@ export default function ContactUs({
           </form>
         </section>
         <section className="flex flex-col mx-auto space-y-3 mt-7 focus:border-transparent">
-          <div className="flex items-center">
-            <div className="text-2xl ">
-              <HiOutlineMail />
+          <FadeFromBottom duration={0.5}>
+            <div className="flex items-center">
+              <div className="text-2xl ">
+                <HiOutlineMail />
+              </div>
+              <div className="pl-1">stroverbg@gmail.com</div>
             </div>
-            <div className="pl-1">stroverbg@gmail.com</div>
-          </div>
-          <div className="flex items-center">
-            <div className="text-xl ">
-              <FiPhoneCall />
+          </FadeFromBottom>
+          <FadeFromBottom duration={0.5} delay={0.1}>
+            <div className="flex items-center">
+              <div className="text-xl ">
+                <FiPhoneCall />
+              </div>
+              <div className="pl-1">{number}</div>
             </div>
-            <div className="pl-1">{number}</div>
-          </div>
+          </FadeFromBottom>
         </section>
       </section>
-    </motion.section>
+    </section>
   );
 }

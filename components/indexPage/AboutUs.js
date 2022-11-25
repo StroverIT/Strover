@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 import Line from "./Line";
+import FadeFromBottom from "../layouts/animations/onView/FadeFromBottom";
 const divVariant = {
   hidden: {
     opacity: 0,
@@ -37,16 +38,20 @@ export default function AboutUs() {
       </div>
 
       <section className="zeroToXl:flex-col zeroToXl:flex-center zeroToXl:gap-y-10">
-        <div className="xl:flex-center flex-col xl:mr-10 xl:absolute xl:-top-20 xl:left-[380px]">
-          <h5 className="mb-2 text-xl font-medium md:text-3xl text-primaryBlue-450">
-            КОИ СМЕ НИЕ?
-          </h5>
-          <p className="max-w-xl text-lg leading-8 text-white max-md:container max-md:text-justify hypens-auto ">
-            Ние сме Strover. Млади, амбициозни и креативни интернет паяци, които
-            са готови да се учат от всичко и всички. Плетем мрежата си около
-            онлайн търговията, уеб дизайна, онлайн маркетинга и SEO
-            оптимизацията, насочени към съществуващи и нови бизнеси.
-          </p>
+        <div className="xl:flex-center flex-col xl:mr-10 xl:absolute xl:-top-28 xl:left-[350px]">
+          <FadeFromBottom duration={0.5}>
+            <h5 className="mb-2 text-xl font-medium md:text-3xl text-primaryBlue-450">
+              КОИ СМЕ НИЕ?
+            </h5>
+          </FadeFromBottom>
+          <FadeFromBottom duration={0.5} delay={0.1}>
+            <p className="max-w-xl text-lg leading-8 text-white max-md:container max-md:text-justify hypens-auto ">
+              Ние сме Strover. Млади, амбициозни и креативни интернет паяци,
+              които са готови да се учат от всичко и всички. Плетем мрежата си
+              около онлайн търговията, уеб дизайна, онлайн маркетинга и SEO
+              оптимизацията, насочени към съществуващи и нови бизнеси.
+            </p>
+          </FadeFromBottom>
         </div>
 
         <motion.div
@@ -55,15 +60,19 @@ export default function AboutUs() {
           animate="visible"
           className="xl:flex-center flex-col xl:absolute xl:top-[400px] xl:left-[250px]"
         >
-          <h5 className="mb-2 text-xl font-medium md:text-3xl text-primaryBlue-450">
-            КАКВО ЩЕ ПОЛУЧИТЕ?
-          </h5>
-          <p className="max-w-xl text-lg leading-8 text-white max-md:container hypens-auto max-md:text-justify">
-            Комплексна услуга от хора, които са специалисти в съответните сфери:
-            дигиталния маркетинг, компютърните науки и онлайн продажбите. Ние ще
-            Ви предоставим цялостни дигитални решения за развитието на бранда Ви
-            и достигането му до ИДЕАЛНИТЕ КЛИЕНТИ.
-          </p>
+          <FadeFromBottom duration={0.5}>
+            <h5 className="mb-2 text-xl font-medium md:text-3xl text-primaryBlue-450">
+              КАКВО ЩЕ ПОЛУЧИТЕ?
+            </h5>
+          </FadeFromBottom>
+          <FadeFromBottom duration={0.5} delay={0.1}>
+            <p className="max-w-xl text-lg leading-8 text-white max-md:container hypens-auto max-md:text-justify">
+              Комплексна услуга от хора, които са специалисти в съответните
+              сфери: дигиталния маркетинг, компютърните науки и онлайн
+              продажбите. Ние ще Ви предоставим цялостни дигитални решения за
+              развитието на бранда Ви и достигането му до ИДЕАЛНИТЕ КЛИЕНТИ.
+            </p>
+          </FadeFromBottom>
         </motion.div>
         <motion.div
           variants={divVariant}
@@ -71,15 +80,19 @@ export default function AboutUs() {
           animate="visible"
           className="xl:flex-center flex-col xl:absolute xl:-bottom-14 xl:left-[470px]"
         >
-          <h5 className="mb-2 text-xl font-medium md:text-3xl text-primaryBlue-450">
-            ЗАЩО СМЕ РАЗЛИЧНИ?
-          </h5>
-          <p className="max-w-xl text-lg leading-8 text-white max-md:container max-md:text-justify hypens-auto">
-            Защото държим на индивидуалния подход към клиента, както и на
-            добрата комуникация по всеки един проект. Когато за него няма нужда
-            от сложни технически термини - просто не ги използваме. За нас
-            визията в интернет пространството е изключително важна.
-          </p>
+          <FadeFromBottom duration={0.5}>
+            <h5 className="mb-2 text-xl font-medium md:text-3xl text-primaryBlue-450">
+              ЗАЩО СМЕ РАЗЛИЧНИ?
+            </h5>
+          </FadeFromBottom>
+          <FadeFromBottom duration={0.5} delay={0.1}>
+            <p className="max-w-xl text-lg leading-8 text-white max-md:container max-md:text-justify hypens-auto">
+              Защото държим на индивидуалния подход към клиента, както и на
+              добрата комуникация по всеки един проект. Когато за него няма
+              нужда от сложни технически термини - просто не ги използваме. За
+              нас визията в интернет пространството е изключително важна.
+            </p>
+          </FadeFromBottom>
         </motion.div>
       </section>
     </section>

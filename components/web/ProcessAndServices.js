@@ -1,6 +1,7 @@
 import Image from "next/legacy/image";
 import React from "react";
 import TextAnimation from "../../libs/TextAnimation";
+import FadeFromBottom from "../layouts/animations/onView/FadeFromBottom";
 
 export default function ProcessAndServices() {
   return (
@@ -46,83 +47,122 @@ export default function ProcessAndServices() {
         </div>
         {/* Analyze */}
         <div className="flex-center flex-col 3xl:absolute lg:top-[320px] lg:left-[300px] ">
-          <div className="relative h-28 w-28">
-            <Image src="/icons/analyze.png" alt="analyze icon" layout="fill" />
-          </div>
-          <h5 className="mt-3 text-lg font-semibold lg:text-2xl">
-            Анализ и консултация
-          </h5>
-          <p className="max-w-sm mt-1 text-center max-lg:text-sm">
-            Най-напред извършваме консултация, където ще поговорим за вашите
-            идеи и как ние можем да ви помогнем.
-          </p>
+          <FadeFromBottom duration={0.5}>
+            <div className="relative h-28 w-28">
+              <Image
+                src="/icons/analyze.png"
+                alt="analyze icon"
+                layout="fill"
+              />
+            </div>
+          </FadeFromBottom>
+
+          <FadeFromBottom duration={0.5} delay={0.1}>
+            <h5 className="mt-3 text-lg font-semibold lg:text-2xl">
+              Анализ и консултация
+            </h5>
+          </FadeFromBottom>
+          <FadeFromBottom duration={0.5} delay={0.2}>
+            <p className="max-w-sm mt-1 text-center max-lg:text-sm">
+              Най-напред извършваме консултация, където ще поговорим за вашите
+              идеи и как ние можем да ви помогнем.
+            </p>
+          </FadeFromBottom>
         </div>
         {/* Development */}
         <div className="flex-center flex-col 3xl:absolute lg:top-[320px] lg:right-[390px] ">
-          <div className="relative h-28 w-28">
-            <Image
-              src="/icons/programing.png"
-              alt="Programing or coding "
-              layout="fill"
-            />
-          </div>
-          <h5 className="mt-3 text-lg font-semibold lg:text-2xl">
-            Изработка нa сайт
-          </h5>
-          <p className="max-w-sm mt-1 text-center max-lg:text-sm">
-            След като разберем почече за вашите цел и посока, започваме
-            разботката на перфектия за ваш уебсайт.
-          </p>
+          <FadeFromBottom duration={0.5}>
+            <div className="relative h-28 w-28">
+              <Image
+                src="/icons/programing.png"
+                alt="Programing or coding "
+                layout="fill"
+              />
+            </div>
+          </FadeFromBottom>
+          <FadeFromBottom duration={0.5} delay={0.1}>
+            <h5 className="mt-3 text-lg font-semibold lg:text-2xl">
+              Изработка нa сайт
+            </h5>
+          </FadeFromBottom>
+          <FadeFromBottom duration={0.5} delay={0.2}>
+            <p className="max-w-sm mt-1 text-center max-lg:text-sm">
+              След като разберем почече за вашите цел и посока, започваме
+              разботката на перфектия за ваш уебсайт.
+            </p>
+          </FadeFromBottom>
         </div>
         {/* Seo optimization */}
         <div className="flex-center flex-col 3xl:absolute lg:bottom-[-120px] lg:right-[170px] ">
-          <div className="relative h-28 w-28">
-            <Image src="/icons/seo.png" alt="Seo optimization" layout="fill" />
-          </div>
-          <h5 className="mt-3 text-xl font-semibold lg:text-2xl">
-            SEO оптимизация
-          </h5>
-          <p className="max-w-sm mt-1 text-center max-lg:text-sm">
-            Когато е завършен уейбсайта, се пристъпва към намирането на
-            потребители и потенциални клиенти. Това се извършва, чрез търсачките
-            или т.н. SEO (Search Engine Optimization)
-          </p>
+          <FadeFromBottom duration={0.5}>
+            <div className="relative h-28 w-28">
+              <Image
+                src="/icons/seo.png"
+                alt="Seo optimization"
+                layout="fill"
+              />
+            </div>
+          </FadeFromBottom>
+          <FadeFromBottom duration={0.5} delay={0.1}>
+            <h5 className="mt-3 text-xl font-semibold lg:text-2xl">
+              SEO оптимизация
+            </h5>
+          </FadeFromBottom>
+          <FadeFromBottom duration={0.5} delay={0.2}>
+            <p className="max-w-sm mt-1 text-center max-lg:text-sm">
+              Когато е завършен уейбсайта, се пристъпва към намирането на
+              потребители и потенциални клиенти. Това се извършва, чрез
+              търсачките или т.н. SEO (Search Engine Optimization)
+            </p>
+          </FadeFromBottom>
         </div>
         {/* Online writing products */}
         <div className="flex-center flex-col 3xl:absolute lg:bottom-[-160px] lg:left-[710px] ">
-          <div className="relative h-28 w-28">
-            <Image
-              src="/icons/content.png"
-              alt="Online writing products"
-              layout="fill"
-            />
-          </div>
-          <h5 className="mt-3 text-lg font-semibold text-center lg:text-2xl">
-            Онлайн добавяне на продукти
-          </h5>
-          <p className="mt-1 text-center lg:max-w-sm max-lg:text-sm">
-            С услугата “Онлайн добавяне на продукти”, ние ще добавим вашите
-            дигитални продукти, чрез Admin Panel, който е разработен от нас за
-            вас.
-          </p>
+          <FadeFromBottom duration={0.5}>
+            <div className="relative h-28 w-28">
+              <Image
+                src="/icons/content.png"
+                alt="Online writing products"
+                layout="fill"
+              />
+            </div>
+          </FadeFromBottom>
+          <FadeFromBottom duration={0.5} delay={0.1}>
+            <h5 className="mt-3 text-lg font-semibold text-center lg:text-2xl">
+              Онлайн добавяне на продукти
+            </h5>
+          </FadeFromBottom>
+          <FadeFromBottom duration={0.5} delay={0.2}>
+            <p className="mt-1 text-center lg:max-w-sm max-lg:text-sm">
+              С услугата “Онлайн добавяне на продукти”, ние ще добавим вашите
+              дигитални продукти, чрез Admin Panel, който е разработен от нас за
+              вас.
+            </p>
+          </FadeFromBottom>
         </div>
         {/* Maintance */}
         <div className="flex-center flex-col 3xl:absolute lg:bottom-[-160px] lg:left-[157px] ">
-          <div className="relative h-28 w-28">
-            <Image
-              src="/icons/configuration.png"
-              alt="Maintance"
-              layout="fill"
-            />
-          </div>
-          <h5 className="mt-3 text-xl font-semibold lg:text-2xl">
-            Поддръжка и развитие
-          </h5>
-          <p className="max-w-sm mt-1 text-center max-lg:text-sm">
-            Когато сайтът Ви има техническа поддръжка, той е винаги актуален,
-            винаги защитен от атаки и винаги в изправност и готов да достигне до
-            нови висоти.
-          </p>
+          <FadeFromBottom duration={0.5}>
+            <div className="relative h-28 w-28">
+              <Image
+                src="/icons/configuration.png"
+                alt="Maintance"
+                layout="fill"
+              />
+            </div>
+          </FadeFromBottom>
+          <FadeFromBottom duration={0.5} delay={0.1}>
+            <h5 className="mt-3 text-xl font-semibold lg:text-2xl">
+              Поддръжка и развитие
+            </h5>
+          </FadeFromBottom>
+          <FadeFromBottom duration={0.5} delay={0.2}>
+            <p className="max-w-sm mt-1 text-center max-lg:text-sm">
+              Когато сайтът Ви има техническа поддръжка, той е винаги актуален,
+              винаги защитен от атаки и винаги в изправност и готов да достигне
+              до нови висоти.
+            </p>
+          </FadeFromBottom>
         </div>
       </section>
       <section className="container mt-20 lg:mt-80">

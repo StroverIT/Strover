@@ -124,7 +124,7 @@ export default function AboutUs() {
             <HeaderSpider title="ЕКИПЪТ" size="text-4xl" />
           </div>
 
-          <section className="mt-16 flex-center gap-x-20">
+          <section className="grid mt-16 gap-y-10 lg:grid-cols-2 gap-x-20">
             <div className="flex-col flex-center">
               <div className="relative w-56 h-56 transition-all border-2 rounded-full cursor-pointer hover:scale-110 border-primaryBlue-100 ">
                 <Image
@@ -134,7 +134,7 @@ export default function AboutUs() {
                   className="object-contain rounded-full "
                 />
               </div>
-              <h3 className="text-xl text-center">Джулия Пеева</h3>
+              <h3 className="mt-2 text-xl text-center">Джулия Пеева</h3>
               <p>Дигитален Маркетинг</p>
             </div>
             <div className="flex-col flex-center">
@@ -146,7 +146,7 @@ export default function AboutUs() {
                   className="rounded-full bg-blend"
                 />
               </div>
-              <h3 className="text-xl text-center">Християн Александров</h3>
+              <h3 className="mt-2 text-xl text-center">Християн Александров</h3>
               <p>Копирайтър</p>
             </div>
           </section>

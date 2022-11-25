@@ -5,6 +5,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import TextAnimation from "../../libs/TextAnimation";
 import HeaderSpider from "../HeaderSpider";
+import FadeFromBottom from "../layouts/animations/onView/FadeFromBottom";
 
 const dataServices = [
   {
@@ -100,24 +101,11 @@ export default function Services() {
   );
 }
 function Service({ index, lines, title, text, link }) {
-  const [isAnimated, setAnimated] = useState(false);
-
   boxVariant.animate.transition.delay = index / 10;
   let arr = [];
   for (let i = 0; i < lines; i++) {
     arr.push(i);
   }
-  const [items, itemsView] = useInView({ threshold: 0.2 });
-
-  const itemsAnim = useAnimation();
-
-  useEffect(() => {
-    if (itemsView) {
-      itemsAnim.start("animate");
-      setAnimated(true);
-    }
-    if (!itemsView) !isAnimated && itemsAnim.start("initial");
-  }, [itemsView]);
 
   return (
     <section className="flex lg:px-80">
@@ -139,28 +127,20 @@ function Service({ index, lines, title, text, link }) {
           </div>
         </div>
       </section>
-      <motion.section
-        variants={boxesVariant}
-        ref={items}
-        animate={itemsAnim}
-        className="container lg:pt-16"
-      >
-        <motion.h5
-          variants={boxVariant}
-          className="text-lg font-semibold lg:text-2xl"
-        >
-          {title}
-        </motion.h5>
-        <motion.p variants={boxVariant} className="pt-1 max-lg:text-sm">
-          {text}
-        </motion.p>
+      <section className="container lg:pt-16">
+        <FadeFromBottom duration={0.5}>
+          <h5 className="text-lg font-semibold lg:text-2xl">{title}</h5>
+        </FadeFromBottom>
+        <FadeFromBottom duration={0.5} delay={0.1}>
+          <p className="pt-1 max-lg:text-sm">{text}</p>
+        </FadeFromBottom>
         {/* <motion.button
           variants={boxVariant}
           className="py-2 mt-4 transition-all bg-pink-100 rounded-full lg:mt-5 max-lg:text-sm px-9 hover:drop-shadow-lg hover:-translate-y-1"
         >
           Виж повече
         </motion.button> */}
-      </motion.section>
+      </section>
     </section>
   );
 }

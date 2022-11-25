@@ -43,7 +43,7 @@ export default function Web() {
         </section>
         <Questions />
         {/* Here must be the pricing or packages to choose */}
-        <section className=" lg:mt-56">
+        <section className=" lg:mt-10">
           <ContactUs
             color="border-blue-50"
             btnColor="bg-blue-50"
@@ -58,7 +58,7 @@ export default function Web() {
           <Brands
             digital={true}
             logistics={true}
-            py="py-20 lg:py-56"
+            py="py-20 lg:pt-20 pb-36"
             bg="bg-brands-index-color"
           />
         </section>
