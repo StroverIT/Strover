@@ -13,7 +13,7 @@ export default function Services() {
       <div className="text-white flex-center">
         <HeaderSpider title="Брандове" size="text-5xl" />
       </div>
-      <section className="container grid items-center justify-center mt-10 text-white zeroToXl:text-center grid-cols xl:grid-cols-3 xl:space-x-10 zeroToXl:gap-y-10">
+      <section className="container grid items-center justify-center mt-10 text-white zeroToXl:text-center grid-cols xl:grid-cols-3 zeroToXl:gap-y-10">
         {/* Web container */}
 
         <Container
@@ -36,7 +36,7 @@ export default function Services() {
         {/* \n */}
         <Container
           title="Academy"
-          p={`В нашата академия ще ви помогнем да научите програмине и/или digital marketing`}
+          p={`Развиваме/създаваме вашите програмни и дигитални умения`}
           link="/academy"
           btnColor="btn-academy-bg-color"
           moreClasses="md:flex md:justify-end md:items-end md:text-end md:flex-col text-center"
