@@ -2,25 +2,18 @@ import React from "react";
 
 import Container from "./ServiceComp/Container";
 import TextAnimation from "../../libs/TextAnimation";
+import HeaderSpider from "../HeaderSpider";
 
 export default function Services() {
   return (
     <section
-      className="xl:bg-[url('/indexForms/background.svg')] no-repeat w-full zeroToXl:bg-blue-300 zeroToXl:py-10 xl:h-[420px] bg-no-repeat relative"
+      className="relative w-full py-20 bg-blue-300 bg-no-repeat box no-repeat"
       id="services"
     >
-      <div className=" xl:ml-10 text-4xl md:text-5xl font-semibold text-center text-white md:flex-center leading-[4rem] ">
-        <TextAnimation
-          placeholderText={[
-            {
-              type: "heading1",
-              text: "Брандове",
-              paddingBottom: "10px",
-            },
-          ]}
-        />
+      <div className="text-white flex-center">
+        <HeaderSpider title="Брандове" size="text-5xl" />
       </div>
-      <section className="container grid items-center justify-center text-white md:t-20 zeroToXl:text-center grid-cols xl:grid-cols-3 xl:space-x-10 xl:mt-24 zeroToXl:gap-y-10">
+      <section className="container grid items-center justify-center mt-10 text-white zeroToXl:text-center grid-cols xl:grid-cols-3 xl:space-x-10 zeroToXl:gap-y-10">
         {/* Web container */}
 
         <Container

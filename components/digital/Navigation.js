@@ -77,8 +77,12 @@ export default function Navigation() {
                 Начало
               </Link>
             </li>
-            <li>Услуги</li>
-            <li>Портфолио</li>
+            <li>
+              <a href="#mission">Мисия</a>
+            </li>
+            <li>
+              <a href="#services">Услуги</a>
+            </li>
           </ul>
         </div>
         <div className="flex-col flex-center">
@@ -156,15 +160,16 @@ export default function Navigation() {
                 >
                   Начало
                 </motion.li>
-                <Link href="/aboutUs" scroll={false}>
-                  <motion.li variants={hamburgerList}>За нас</motion.li>
-                </Link>
                 <motion.li
                   variants={hamburgerList}
                   onClick={() => handleNav("#services")}
                 >
                   Услуги
                 </motion.li>
+                <Link href="/aboutUs" scroll={false}>
+                  <motion.li variants={hamburgerList}>За нас</motion.li>
+                </Link>
+
                 <Link href="/contactUs" scroll={false}>
                   <motion.li variants={hamburgerList}>Контакти</motion.li>
                 </Link>

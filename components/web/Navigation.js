@@ -167,22 +167,14 @@ export default function Navigation() {
                 </Link>
                 <motion.li
                   variants={hamburgerList}
-                  onClick={() => handleNav("#aboutUs")}
-                >
-                  За нас
-                </motion.li>
-                <motion.li
-                  variants={hamburgerList}
                   onClick={() => handleNav("#services")}
                 >
                   Услуги
                 </motion.li>
-                <motion.li
-                  variants={hamburgerList}
-                  onClick={() => handleNav("#questions")}
-                >
-                  Въпроси
-                </motion.li>
+                <Link href="/aboutUs" scroll={false}>
+                  <motion.li variants={hamburgerList}>За нас</motion.li>
+                </Link>
+
                 <Link href="/contactUs" scroll={false}>
                   <motion.li variants={hamburgerList}>Контакти</motion.li>
                 </Link>

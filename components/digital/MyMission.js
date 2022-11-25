@@ -5,7 +5,7 @@ import Container from "./MyMissionComps/Container";
 
 export default function MyMission() {
   return (
-    <section className="mt-24">
+    <section className="mt-24" id="mission">
       <div>
         <div className="flex-col flex-center">
           <HeaderSpider
