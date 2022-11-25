@@ -93,6 +93,15 @@ html::-webkit-scrollbar {
   -webkit-mask: var(--mask);
   mask: var(--mask);
 }
+
+.box-top {
+  --mask: radial-gradient(118.51px at 50% 159px, #000 99%, #0000 101%)
+      calc(50% - 106px) 0/212px 100%,
+    radial-gradient(118.51px at 50% -106px, #0000 99%, #000 101%) 50% 53px/212px
+      100% repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
 .index-bg {
   background: linear-gradient(
     172.62deg,
