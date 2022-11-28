@@ -13,8 +13,11 @@ export default function Digital() {
   return (
     <>
       <Head>
-        <title>StroverDigital</title>
-        <meta name="description" content="Създаване на социални мрежи" />
+        <title>Strover Digital - маркетинг в социалните мрежи</title>
+        <meta
+          name="description"
+          content="Създаване на социални мрежи, за по-голямо разпространение и популяризиране в онлайн пространството."
+        />
       </Head>
       <main className="text-white ">
         <section id="bg">

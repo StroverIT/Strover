@@ -18,10 +18,10 @@ export default function Web() {
   return (
     <>
       <Head>
-        <title>StroverWeb</title>
+        <title>Strover Web - разработка на уебсайтове</title>
         <meta
           name="description"
-          content="Поддръжка, създаване и оптимизиране на уебсайтове"
+          content="Поддръжка, създаване и оптимизиране на уебсайтове. Всичко което Ви е нужно за развитието на бизнеса Ви, онлайн."
         />
       </Head>
       <main className="relative text-white ">
