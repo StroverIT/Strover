@@ -72,7 +72,7 @@ export default function ListBrands({
             imageLink="/logos/academy-spider.svg"
             title="Academy"
             p="Предлагаме онлайн обучение в сферата на Дигиталният маркетинг, Уеб разработката и Уеб дизайна"
-            link="/digital"
+            link="/academy"
             borderColor="bg-red-150"
             textColor="text-red-150"
             mt="mt-10"
