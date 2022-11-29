@@ -196,7 +196,7 @@ export default function HeroSection() {
                     layout="fill"
                   />
                 </div>
-                <div className="absolute w-16 h-16 text-xl font-semibold">
+                <div className="absolute text-xl font-semibold w-14 h-14">
                   <Image
                     src="/icons/globe_1.png"
                     layout="fill"
