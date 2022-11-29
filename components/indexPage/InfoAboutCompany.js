@@ -70,7 +70,7 @@ export default function IdeasInWebsite({ isBox = true }) {
             <ul className="mt-2 ml-5 list-disc">
               <li>Нашата мисия и виждане</li>
               <li>Процеса и услугите ни</li>
-              <li>Как бизнеса Ви, ще разсте от гледна точка на продажби</li>
+              <li>Как бизнеса Ви, ще расте от гледна точка на продажби</li>
             </ul>
             <div className="mt-5 md:mt-10 ">
               <Link href="/digital" scroll={false}>
