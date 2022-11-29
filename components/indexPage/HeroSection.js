@@ -227,9 +227,9 @@ export default function HeroSection() {
                     layout="fill"
                   />
                 </div>
-                <div className="absolute w-16 h-16 text-xl font-semibold top-2">
+                <div className="absolute text-xl font-semibold w-14 h-14 top-2">
                   <Image
-                    src="/icons/social-media.png"
+                    src="/icons/bullhorn.png"
                     layout="fill"
                     alt="acadamey hat"
                   />
@@ -247,7 +247,7 @@ export default function HeroSection() {
             whileTap={{ scale: 0.8 }}
             initial="hidden"
             animate="visible"
-            className="  absolute right-[100px] bottom-[150px] hidden lg:block text-white  "
+            className="  absolute right-[200px] bottom-[160px] hidden lg:block text-white  "
           >
             <Link href="/academy" scroll={false}>
               <div className="relative flex flex-col items-center justify-center gap-y-10">
@@ -258,9 +258,9 @@ export default function HeroSection() {
                     layout="fill"
                   />
                 </div>
-                <div className="absolute w-16 h-16 text-xl font-semibold top-4">
+                <div className="absolute mt-2 text-xl font-semibold w-14 h-14">
                   <Image
-                    src="/icons/mortarboard.png"
+                    src="/icons/badge (1).png"
                     layout="fill"
                     alt="acadamey hat"
                   />
