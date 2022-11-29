@@ -198,7 +198,7 @@ export default function HeroSection() {
                 </div>
                 <div className="absolute w-16 h-16 text-xl font-semibold">
                   <Image
-                    src="/icons/coding.png"
+                    src="/icons/globe_1.png"
                     layout="fill"
                     alt="acadamey hat"
                   />
