@@ -47,7 +47,7 @@ export default function IdeasInWebsite({ isBox = true }) {
             <div className="mt-5 md:mt-10 ">
               <Link href="/web" scroll={false}>
                 <button
-                  className={`px-10 py-2 text-sm rounded-lg btn-web-bg-color`}
+                  className={`px-10 py-2 text-xs sm:text-sm rounded-lg btn-web-bg-color`}
                 >
                   Научи повече
                 </button>
@@ -75,7 +75,7 @@ export default function IdeasInWebsite({ isBox = true }) {
             <div className="mt-5 md:mt-10 ">
               <Link href="/digital" scroll={false}>
                 <button
-                  className={`px-10 py-2 text-sm rounded-lg btn-digital-bg-color`}
+                  className={`px-10 py-2 text-xs sm:text-sm rounded-lg btn-digital-bg-color`}
                 >
                   Научи повече
                 </button>
@@ -105,7 +105,7 @@ export default function IdeasInWebsite({ isBox = true }) {
             <div className="mt-5 md:mt-10 ">
               <Link href="/academy" scroll={false}>
                 <button
-                  className={`px-10 py-2 text-sm rounded-lg btn-academy-bg-color`}
+                  className={`px-10 py-2 text-xs sm:text-sm rounded-lg btn-academy-bg-color`}
                 >
                   Научи повече
                 </button>

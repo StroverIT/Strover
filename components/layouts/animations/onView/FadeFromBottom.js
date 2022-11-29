@@ -1,9 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 
-import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 import Image from "next/legacy/image";
 import Link from "next/link";
-import { useInView } from "react-intersection-observer";
 
 export default function FadeFromBottom({
   children,
@@ -19,7 +18,9 @@ export default function FadeFromBottom({
       transition: { ease: "easeOut", duration, delay },
     },
   };
-  const [brands, brandsView] = useInView({ threshold: 0.2 });
+  const brands = useRef(null);
+
+  const brandsView = useInView(brands);
 
   const brandsAnim = useAnimation();
 
