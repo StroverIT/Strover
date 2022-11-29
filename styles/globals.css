@@ -228,11 +228,7 @@ li {
 }
 
 .btn-digital-bg-color {
-  background: linear-gradient(
-    180deg,
-    #f26ab5 0%,
-    rgba(232, 11, 133, 0.62) 100%
-  );
+  background: linear-gradient(180deg, #f26ab5 0%, rgba(232, 11, 133, 100) 100%);
 }
 .btn-logistics-bg-color {
   background: linear-gradient(180deg, #f0884d 0%, #e65300 100%);

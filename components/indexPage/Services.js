@@ -7,7 +7,7 @@ import HeaderSpider from "../HeaderSpider";
 export default function Services() {
   return (
     <section
-      className="relative w-full py-20 bg-blue-300 bg-no-repeat box no-repeat"
+      className="relative w-full bg-blue-300 bg-no-repeat py-28 box no-repeat"
       id="services"
     >
       <div className="text-white flex-center">

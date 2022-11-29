@@ -29,7 +29,7 @@ export default function AboutUs() {
   // }, []);
   return (
     <section
-      className="container relative flex flex-col min-h-screen my-16 text-center md:my-80"
+      className="container relative flex flex-col min-h-screen my-16 text-center md:my-56 "
       id="aboutUs"
     >
       <div className="hidden xl:flex">

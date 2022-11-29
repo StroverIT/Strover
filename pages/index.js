@@ -7,6 +7,7 @@ import Brands from "../components/Brands/ListBrands";
 import AboutUs from "../components/indexPage/AboutUs";
 import FirmsWhoTrust from "../components/indexPage/FirmsWhoTrust";
 import HeroSection from "../components/indexPage/HeroSection";
+import InfoAboutCompany from "../components/indexPage/InfoAboutCompany";
 import MoreInfo from "../components/indexPage/MoreInfo/MoreInfo";
 import Navigation from "../components/indexPage/Navigation";
 import Services from "../components/indexPage/Services";
@@ -28,6 +29,7 @@ export default function Home() {
 
       <main className="relative mt-5">
         <HeroSection />
+        <InfoAboutCompany />
         {/* <MoreInfo /> */}
         <AboutUs />
         <Services />
