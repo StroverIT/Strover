@@ -15,7 +15,7 @@ const lineVariants = {
 export default function BlueLine() {
   const line = useRef(null);
 
-  const lineView = useInView();
+  const lineView = useInView(line);
   const lineAnim = useAnimation();
 
   useEffect(() => {
