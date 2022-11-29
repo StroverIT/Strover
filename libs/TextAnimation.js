@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import AnimatedText from "./AnimatedText";
 
-import { motion, useAnimation } from "framer-motion";
-
-import { useInView } from "react-intersection-observer";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 const variants = {
   visible: {
@@ -24,7 +22,9 @@ export default function TextAnimation({
 }) {
   const [start, setStart] = useState(isShowed);
 
-  const [items, itemsView] = useInView({ threshhold });
+  const items = useRef(null);
+
+  const itemsView = useInView(items, { amount: threshhold });
 
   useEffect(() => {
     let timeOut;

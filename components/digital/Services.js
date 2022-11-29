@@ -1,8 +1,5 @@
 import Image from "next/legacy/image";
-import React, { useEffect, useState } from "react";
-import { motion, useAnimation } from "framer-motion";
 
-import { useInView } from "react-intersection-observer";
 import TextAnimation from "../../libs/TextAnimation";
 import HeaderSpider from "../HeaderSpider";
 import FadeFromBottom from "../layouts/animations/onView/FadeFromBottom";

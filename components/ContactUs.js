@@ -6,7 +6,6 @@ import InputIcons from "./form/Icons";
 
 import Input from "./form/Input";
 import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 
 import { toastSuccess, toastError } from "../libs/Notifications";
 import sendMesage from "../fetches/sendingMessage";

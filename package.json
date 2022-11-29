@@ -19,7 +19,6 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.6.0",
-    "react-intersection-observer": "^9.4.0",
     "react-toastify": "^9.1.1",
     "tailwind-scrollbar": "^2.0.1",
     "uglify-js": "^3.17.4"

@@ -1,6 +1,5 @@
-import { motion, useAnimation } from "framer-motion";
-import React, { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
+import { motion, useAnimation, useInView } from "framer-motion";
+import React, { useEffect, useRef } from "react";
 
 const lineVariants = {
   initial: {
@@ -14,7 +13,9 @@ const lineVariants = {
   },
 };
 export default function BlueLine() {
-  const [line, lineView] = useInView();
+  const line = useRef(null);
+
+  const lineView = useInView();
   const lineAnim = useAnimation();
 
   useEffect(() => {
@@ -26,7 +27,7 @@ export default function BlueLine() {
   }, [lineView]);
 
   return (
-    <div className="py-2  flex-center">
+    <div className="py-2 flex-center">
       <div className="w-4 h-4 rounded-full bg-blue-250"></div>
 
       <motion.div

@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { FaSpider } from "react-icons/fa";
-import { useInView } from "react-intersection-observer";
-import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 const lineVariants = {
   initial: { width: 0, opacity: 0 },
@@ -20,7 +19,9 @@ export default function HeaderSpider({
 
   lineColor = "bg-primaryBlue-200",
 }) {
-  const [section, sectionView] = useInView({ threshold: 0.9 });
+  const section = useRef(null);
+
+  const sectionView = useInView(section, { amount: 1 });
   const sectionAnim = useAnimation();
 
   useEffect(() => {

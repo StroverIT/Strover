@@ -154,12 +154,9 @@ export default function Navigation() {
                 animate="animate"
                 className="flex flex-col items-center justify-center h-full text-3xl gap-y-10 "
               >
-                <motion.li
-                  variants={hamburgerList}
-                  onClick={() => handleNav("#index")}
-                >
-                  Начало
-                </motion.li>
+                <Link href="/" scroll={false}>
+                  <motion.li variants={hamburgerList}>Начало</motion.li>
+                </Link>
                 <motion.li
                   variants={hamburgerList}
                   onClick={() => handleNav("#services")}

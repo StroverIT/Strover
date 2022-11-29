@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { motion, useAnimation } from "framer-motion";
-
-import { useInView } from "react-intersection-observer";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 export default function Line({ setSecondCont, setThirdCont }) {
   const [lineHeight, setLineHeight] = useState(0);

@@ -1,18 +1,20 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 
 import Image from "next/legacy/image";
 import { BsArrowRight } from "react-icons/bs";
 
-import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 
-import { useInView } from "react-intersection-observer";
 import { useIsSmall } from "../../libs/FramerMediaQueryFn";
 import TextAnimation from "../../libs/TextAnimation";
 import FadeFromBottom from "../layouts/animations/onView/FadeFromBottom";
 
 export default function FirmsWhoTrust() {
-  const [firstImage, firstImageView] = useInView({ threshold: 0.8 });
-  const [secondImage, secondImageView] = useInView({ threshold: 0.8 });
+  const firstImage = useRef(null);
+  const secondImage = useRef(null);
+
+  const firstImageView = useInView(firstImage, { amount: 0.8 });
+  const secondImageView = useInView(secondImage, { amount: 0.8 });
 
   const isSmall = useIsSmall();
 

@@ -1,10 +1,9 @@
 import Image from "next/legacy/image";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 
 import TextAnimation from "../../libs/TextAnimation";
 
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { motion, useAnimation, useInView } from "framer-motion";
 import FadeIn from "../layouts/animations/onView/FadeIn";
 
 const sectionVariant = {
@@ -25,7 +24,8 @@ const divVariant = {
   },
 };
 export default function HowToProfit() {
-  const [section, sectionView] = useInView({ threshold: 0.2 });
+  const section = useRef(null);
+  const sectionView = useInView(section, { amount: 0.2 });
 
   const sectionAnim = useAnimation();
 
@@ -35,9 +35,9 @@ export default function HowToProfit() {
   }, [sectionView]);
 
   return (
-    <section className=" max-lg:container relative z-10 text-center pt-14 xl:-mt-96 -mt-28">
+    <section className="relative z-10 text-center  max-lg:container pt-14 xl:-mt-96 -mt-28">
       <div className="flex-col flex-center">
-        <div className="lg:text-4xl font-semibold uppercase text-blue-50 hidden lg:flex ">
+        <div className="hidden font-semibold uppercase lg:text-4xl text-blue-50 lg:flex ">
           <TextAnimation
             placeholderText={[
               {
@@ -51,7 +51,7 @@ export default function HowToProfit() {
           как сайтът ви печели за вас
         </div>
         <FadeIn duration={0.85} delay={0.4}>
-          <div className="max-w-2xl max-lg:mt-2 text-lg ">
+          <div className="max-w-2xl text-lg max-lg:mt-2 ">
             В днешни дни не е достатъчно да притежавате просто сайт, трябва Ви
             Уеб сайт, който развива бизнеса Ви онлайн
           </div>
@@ -61,7 +61,7 @@ export default function HowToProfit() {
       <motion.section
         animate={sectionAnim}
         variants={sectionVariant}
-        className="grid lg:grid-cols-3 mt-20 lg:gap-x-28  lg:px-28 max-sm:gap-y-10"
+        className="grid mt-20 lg:grid-cols-3 lg:gap-x-28 lg:px-28 max-sm:gap-y-10"
         ref={section}
       >
         <FadeIn duration={0.85}>
@@ -74,7 +74,7 @@ export default function HowToProfit() {
               />{" "}
             </div>
           </div>
-          <h5 className="mt-5 text-lg lg:text-xl font-semibold">
+          <h5 className="mt-5 text-lg font-semibold lg:text-xl">
             Денонощно сайта работи за вас
           </h5>
           <p className="mt-2">
