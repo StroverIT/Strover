@@ -17,7 +17,7 @@ export default function Pricing() {
 
           <p className="pt-1">
             Да продава артикули онлайн с конвенционален метод за продажба на
-            дребно.
+            дребно/едро.
           </p>
           <h1 className="pt-2 text-xl font-semibold">Характеристика</h1>
           <ul className="pt-1 ml-4 list-disc">
