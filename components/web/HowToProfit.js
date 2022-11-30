@@ -35,7 +35,7 @@ export default function HowToProfit() {
   }, [sectionView]);
 
   return (
-    <section className="relative z-10 text-center  max-lg:container pt-14 xl:-mt-96 -mt-28">
+    <section className="relative z-10 text-center max-lg:container pt-14 xl:-mt-96 -mt-28">
       <div className="flex-col flex-center">
         <div className="hidden font-semibold uppercase lg:text-4xl text-blue-50 lg:flex ">
           <TextAnimation
@@ -51,9 +51,10 @@ export default function HowToProfit() {
           как сайтът ви печели за вас
         </div>
         <FadeIn duration={0.85} delay={0.4}>
-          <div className="max-w-2xl text-lg max-lg:mt-2 ">
-            В днешни дни не е достатъчно да притежавате просто сайт, трябва Ви
-            Уеб сайт, който развива бизнеса Ви онлайн
+          <div className="max-w-3xl text-lg max-lg:mt-2 ">
+            {/* В днешни дни не е достатъчно да притежавате просто сайт, трябва Ви
+            Уеб сайт, който развива бизнеса Ви онлайн */}
+            {/* Как и защо вашият уебсайт ще печели за бизнесът Ви. */}
           </div>
         </FadeIn>
       </div>
