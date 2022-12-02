@@ -149,7 +149,7 @@ export default function Navigation() {
               initial="hidden"
               animate="visible"
               onClick={brandsHandler}
-              className="px-5 py-1 font-semibold tracking-[0.15rem] border-2 text-primaryBlue-150 border-primaryBlue-150"
+              className="px-5 py-1 font-semibold tracking-[0.15rem] border-2 text-primaryBlue-150 border-primaryBlue-150 cursor-pointer"
             >
               Брандове
             </motion.li>

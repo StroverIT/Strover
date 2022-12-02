@@ -102,7 +102,7 @@ export default function Navigation() {
               <li>Контакти</li>
             </Link>
             <li
-              className="px-5 py-1 font-semibold tracking-[0.15rem] border-2 text-pink border-pink"
+              className="px-5 py-1 font-semibold tracking-[0.15rem] border-2 text-pink border-pink cursor-pointer"
               onClick={brandsHandler}
             >
               БРАНДОВЕ
