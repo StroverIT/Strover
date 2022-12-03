@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import HeaderSpider from "../HeaderSpider";
 import InfoContainer from "./innerComp/InfoContainer";
@@ -12,7 +13,7 @@ export default function Pricing() {
         <HeaderSpider title="Нашите цени" size="text-4xl lg:text-5xl" />
       </section>
       <section className="mt-10 ">
-        <InfoContainer image="shopping.png" title="Онлайн магазин / ecommerce">
+        <InfoContainer image="shopping.png" title="Онлайн магазин / e-commerce">
           <h1 className="text-xl font-semibold">Предназначение</h1>
 
           <p className="pt-1">
@@ -31,9 +32,10 @@ export default function Pricing() {
               поръчки, профилни страници и др.)
             </li>
           </ul>
-          <p className="pt-4 font-semibold text-center">
+          <p className="pt-4 text-lg font-semibold text-center">
             Цена: 1 000 - 10 000 лв.
           </p>
+          <SeeMore link="ecommerce" />
         </InfoContainer>
         <InfoContainer
           image="investment.png"
@@ -60,9 +62,10 @@ export default function Pricing() {
             </li>
             <li>призив за действие за съвместна работа</li>
           </ul>
-          <p className="pt-4 font-semibold text-center">
+          <p className="pt-4 text-lg font-semibold text-center">
             Цена: 600 - 2 000 лв.
           </p>
+          <SeeMore link="business" />
         </InfoContainer>
         <InfoContainer
           image="portfolio_v2.png"
@@ -82,11 +85,12 @@ export default function Pricing() {
             <li>Обяснение на услугите</li>
             <li>Призив за действие за съвместна работа</li>
           </ul>
-          <p className="pt-4 font-semibold text-center">
+          <p className="pt-4 text-lg font-semibold text-center">
             Цена: 600 - 2 000 лв.
           </p>
+          <SeeMore link="portfolio" />
         </InfoContainer>
-        <InfoContainer
+        {/* <InfoContainer
           image="blog.png"
           p="Винаги свежи, за работата да е приятна с нас, достатъчно креативни, за да представим бизнеса 
             Ви по един специален начин, ние сме постоянно мотивирани, за да Ви предложим решения, от които имате нужда!"
@@ -105,16 +109,12 @@ export default function Pricing() {
             <li>категоризация или тагове за удобно сърфиране</li>
             <li>шлюзове за плащане и възможности за сметка, ако е приложимо</li>
           </ul>
-          <p className="pt-4 font-semibold text-center">
+          <p className="pt-4 text-lg font-semibold text-center">
             Цена: 1 500 - 12 000 лв.
           </p>
-        </InfoContainer>
-        <InfoContainer
-          image="chat.png"
-          p="Винаги свежи, за работата да е приятна с нас, достатъчно креативни, за да представим бизнеса 
-            Ви по един специален начин, ние сме постоянно мотивирани, за да Ви предложим решения, от които имате нужда!"
-          title="Форум "
-        >
+          <SeeMore link="blog" />
+        </InfoContainer> */}
+        <InfoContainer image="chat.png" isNext={true} title="Форум ">
           <h1 className="text-xl font-semibold">Предназначение</h1>
           <p className="pt-1">
             Да позволи на потребителите да обсъждат помежду си и да споделят
@@ -134,9 +134,10 @@ export default function Pricing() {
               биографии на профили и др.)
             </li>
           </ul>
-          <p className="pt-4 font-semibold text-center">
+          <p className="pt-4 text-lg font-semibold text-center">
             Цена: 3 000 - 15 000 лв.
           </p>
+          <SeeMore link="forum" />
         </InfoContainer>
 
         <section className="container mt-10">
@@ -146,11 +147,25 @@ export default function Pricing() {
             продукта, е по договаряне
           </section>
           <section>
-            SEO оптимизация - спрямо големината на сайта и тъпит на сайта
+            SEO оптимизация - спрямо големината на сайта и типът на сайта
           </section>
-          <section>Поддръжка и развитие - от 100 - 1000 лв/месец</section>
+          <section>
+            Поддръжка и развитие на уебсайта - от 100 - 1000 лв/месец
+          </section>
         </section>
       </section>
     </section>
+  );
+}
+
+function SeeMore({ link }) {
+  return (
+    <div className="mt-5 flex-center">
+      <Link href={`/web/${link}`} scroll={false}>
+        <button className="px-10 py-2 text-sm transition-all border rounded-md bg-blue hover:scale-105 hover:bg-transparent ">
+          Виж повече
+        </button>
+      </Link>
+    </div>
   );
 }
