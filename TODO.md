@@ -59,7 +59,11 @@ SLOGANS ={
 
 [] Хриси номера
 [] Махни лага от телефона
-[] Ценоразпис на всичките ми услуги
+[x] Ценоразпис на всичките ми услуги
+[x] Пакетна Цена - web
+[x ] Instead of Price, change it with "Виж повече", Нашите предложения, Виж н
+[ ] Message that we use cookies
+[] Check why to show cookeies to accept
 
 {/\_ <motion.div
 variants={icon2}
