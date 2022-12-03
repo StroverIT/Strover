@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import { toastSuccess, toastError } from "../../libs/Notifications";
 import sendMesage from "../../fetches/sendingMessage";
+import { useRouter } from "next/router";
 
 const inputsInit = {
   name: "",
@@ -22,7 +23,10 @@ export default function FixedForm({
   number,
   scrollBarThumb,
   scrollBarTrack,
+  typePage,
+  redirect = false,
 }) {
+  const router = useRouter();
   const [inputs, setInputs] = useState(inputsInit);
   const [isLoading, setLoading] = useState(false);
 
@@ -43,12 +47,15 @@ export default function FixedForm({
       return toastError("Моля попълнете всички полета!");
     }
 
-    const data = await sendMesage(inputs, "contact us page");
+    const data = await sendMesage(inputs, typePage);
     if (data.message) {
       setInputs(inputsInit);
       toastSuccess(data.message);
       setTimeout(() => {
         setOpen(false);
+        if (redirect) {
+          router.push(redirect);
+        }
       }, 1000);
     }
     if (data.error) {
@@ -56,6 +63,7 @@ export default function FixedForm({
     }
 
     setLoading(false);
+    // redirect if is a must :D
   };
 
   return (
