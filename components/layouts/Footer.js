@@ -65,7 +65,7 @@ export default function Footer() {
         copyRight: "bg-pink-250",
       });
       setBorder("border-t pt-5 border-pink");
-    } else if (router.pathname == "/web") {
+    } else if (router.pathname == "/web" || router.pathname.includes("/web")) {
       setColors({
         bgColor: "bg-blue-100",
         button: "bg-blue-50",
