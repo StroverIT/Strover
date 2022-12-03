@@ -26,7 +26,6 @@ export default function Layout({ children }) {
       html.classList.add("index");
     } else if (router.pathname == "/digital") {
       body.classList.add("digital-bg");
-      html.classList.add("digital");
     } else if (router.pathname == "/web") {
       body.classList.add("web-bg");
       html.classList.add("web");
@@ -39,6 +38,10 @@ export default function Layout({ children }) {
     } else if (router.pathname == "/academy") {
       body.classList.add("bg-academy");
     }
+
+    if (router.pathname.includes("/web")) {
+      html.classList.add("web");
+    }
   }, [router]);
   useEffect(() => {
     const html = document.querySelector("html");
@@ -50,9 +53,9 @@ export default function Layout({ children }) {
       onExitComplete={() => {
         if (typeof window !== "undefined") {
           const html = document.querySelector("html");
+          html.style.scrollBehavior = "smooth";
 
           window.scrollTo({ top: 0 });
-          html.style.scrollBehavior = "smooth";
         }
       }}
     >
