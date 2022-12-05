@@ -36,7 +36,23 @@ function MyApp({ Component, pageProps }) {
       `}
       </Script>
       <Head>
+        <title>Strover</title>
         <link rel="icon" href="/logos/web-spider.svg" />
+        <meta
+          name="description"
+          content="Изработка и поддръжка на уебсайтове, създаване на социални мрежи, развитие на бизнеси в онлайн пространството"
+        />
+        <meta property="og:title" content="Strover Company" />
+        <meta
+          property="og:description"
+          content="Изработка и поддръжка на уебсайтове, създаване на социални мрежи, развитие на бизнеси в онлайн пространството"
+        />
+        <meta
+          property="og:image"
+          content="https://www.linkpicture.com/q/STROVER-POST.jpg"
+        />
+        <meta property="og:url" content="https://strover.bg/" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <Layout>
         <Component {...pageProps} />
