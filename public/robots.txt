@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: http://strover.bg
+Host: https://strover.bg
 
 # Sitemaps
-Sitemap: http://strover.bg/sitemap.xml
+Sitemap: https://strover.bg/sitemap.xml
