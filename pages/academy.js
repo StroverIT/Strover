@@ -20,7 +20,7 @@ export default function Academy() {
         <title>StroverAcademy</title>
         <meta
           name="description"
-          content="Академия за дигитални мрежи, изработка на уебсайтове и уеб дизайн"
+          content="Академия за дигитални мрежи, изработка на сайтове и уеб дизайн"
         />
       </Head>
       <Navigation />

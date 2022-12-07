@@ -22,7 +22,7 @@ const Forum = () => {
   return (
     <>
       <Head>
-        <title>Изработка на персонален уебсайт - портфолио</title>
+        <title>Изработка на персонален сайт - портфолио</title>
       </Head>
       <Navigation />
       <main className="pt-48 pb-20 bg-gray-200 ">
@@ -30,7 +30,7 @@ const Forum = () => {
           <section className="container">
             <div className="flex-col flex-center">
               <HeaderSpider
-                title="Изработка на персонален уебсайт - портфолио "
+                title="Изработка на персонален сайт - портфолио "
                 size="text-4xl"
               />
             </div>
@@ -52,7 +52,7 @@ const Forum = () => {
             <div className="flex-col flex-center">
               <HeaderSpider title="Пакетни услуги" size="text-4xl" />
             </div>
-            <section className="grid mt-10  xl:grid-cols-2 2xl:grid-cols-3 gap-x-7 gap-y-7">
+            <section className="grid mt-10 xl:grid-cols-2 2xl:grid-cols-3 gap-x-7 gap-y-7">
               <Container>
                 <Title>
                   <span className="text-green">BASIC</span> Пакет

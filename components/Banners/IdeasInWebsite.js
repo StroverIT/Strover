@@ -24,7 +24,7 @@ export default function IdeasInWebsite({ isBox = true }) {
       >
         <div className="text-center ">
           <h3 className="text-2xl font-bold lg:text-4xl text-shadow">
-            Превърнете идеите си в уебсайт!
+            Превърнете идеите си в сайт!
           </h3>
           <motion.div className="mt-10">
             <motion.button

@@ -52,7 +52,7 @@ export default function AboutUs() {
         <title>Strover за нас</title>
         <meta
           name="description"
-          content="Изработка и поддръжка на уебсайтове, създаване на социални мрежи, развитие на бизнеси в онлайн пространството"
+          content="Изработка и поддръжка на сайтове, създаване на социални мрежи, развитие на бизнеси в онлайн пространството"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>

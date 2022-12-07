@@ -8,7 +8,7 @@ export default function MoreInfo() {
         <div className="flex">
           <div>ICON</div>
           <div className="pl-1">
-            <h3>Уебсайтове</h3>
+            <h3>Сайтове</h3>
             <p></p>
           </div>
         </div>

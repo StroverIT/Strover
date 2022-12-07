@@ -37,11 +37,7 @@ export default function Pricing() {
           </p>
           <SeeMore link="ecommerce" />
         </InfoContainer>
-        <InfoContainer
-          image="investment.png"
-          title="Бизнес уебсайт"
-          isNext={true}
-        >
+        <InfoContainer image="investment.png" title="Бизнес сайт" isNext={true}>
           <h1 className="text-xl font-semibold">Предназначение</h1>
           <p className="pt-1">
             Да информирате потенциални клиенти и потребители за вашия бизнес и
@@ -150,7 +146,7 @@ export default function Pricing() {
             SEO оптимизация - спрямо големината на сайта и типът на сайта
           </section>
           <section>
-            Поддръжка и развитие на уебсайта - от 100 - 1000 лв/месец
+            Поддръжка и развитие на сайта - от 100 - 1000 лв/месец
           </section>
         </section>
       </section>

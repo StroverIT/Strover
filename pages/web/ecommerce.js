@@ -35,7 +35,7 @@ const Ecommerce = () => {
             <section className="flex-col pt-6 flex-center">
               <section className="max-w-2xl">
                 <p className="">
-                  Доста често хората си мислят, че просто трябва да има уебсайт
+                  Доста често хората си мислят, че просто трябва да има сайт
                   където да са показани продуктите и клиентите да имат
                   възможността да си ги поръчат, но това не е напълно вярно. Зад
                   успешен онлайн магазин (e-commerce), стоят много фактори,
@@ -58,7 +58,7 @@ const Ecommerce = () => {
             <div className="flex-col flex-center">
               <HeaderSpider title="Пакетни услуги" size="text-4xl" />
             </div>
-            <section className="grid mt-10  xl:grid-cols-2 2xl:grid-cols-3 gap-x-7 gap-y-7">
+            <section className="grid mt-10 xl:grid-cols-2 2xl:grid-cols-3 gap-x-7 gap-y-7">
               <Container>
                 <Title>
                   <span className="text-green">BASIC</span> Пакет

@@ -27,10 +27,7 @@ const Business = () => {
         <div className="mb-10">
           <section className="container">
             <div className="flex-col flex-center">
-              <HeaderSpider
-                title="Изработка на Бизнес уебсайт"
-                size="text-4xl"
-              />
+              <HeaderSpider title="Изработка на Бизнес сайт" size="text-4xl" />
             </div>
             <section className="flex-col pt-6 flex-center">
               <section className="max-w-2xl">
@@ -47,7 +44,7 @@ const Business = () => {
             <div className="flex-col flex-center">
               <HeaderSpider title="Пакетни услуги" size="text-4xl" />
             </div>
-            <section className="grid mt-10  xl:grid-cols-2 2xl:grid-cols-3 gap-x-7 gap-y-7">
+            <section className="grid mt-10 xl:grid-cols-2 2xl:grid-cols-3 gap-x-7 gap-y-7">
               <Container>
                 <Title>
                   <span className="text-green">BASIC</span> Пакет
