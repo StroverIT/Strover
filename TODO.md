@@ -64,6 +64,7 @@ SLOGANS ={
 [x ] Instead of Price, change it with "Виж повече", Нашите предложения, Виж н
 [ ] Message that we use cookies
 [] Check why to show cookeies to accept
+[] Добави, "На 01.01.2023 ще има 50% промоция на всички услуги в WEB, желаете ли да получите известие? \*Промоцията ще продължи само седмица"
 
 {/\_ <motion.div
 variants={icon2}
