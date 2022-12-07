@@ -92,12 +92,12 @@ export default function Navigation() {
             </li>
           </ul>
         </div>
-        <div className="flex-col flex-center">
+        <div className=" flex-center">
           <div className="relative ">
             <WhiteSpider width="w-14" />
-          </div>
-          <div className="w-full h-full pl-44">
-            <LogoName viewBox={500} />
+            <div className="absolute -left-12 top-14 w-96 h-96 ">
+              <LogoName viewBox={500} />
+            </div>
           </div>
         </div>
         <div>
@@ -109,7 +109,7 @@ export default function Navigation() {
               <li className="">Контакти</li>
             </Link>
             <li
-              className="px-5 py-1 font-semibold tracking-[0.15rem] border-2 text-red-150 border-red-150"
+              className="px-5 py-1 font-semibold tracking-[0.15rem] border-2 text-red-150 border-red-150 cursor-pointer"
               onClick={brandsHandler}
             >
               БРАНДОВЕ

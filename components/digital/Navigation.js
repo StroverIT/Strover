@@ -85,12 +85,12 @@ export default function Navigation() {
             </li>
           </ul>
         </div>
-        <div className="flex-col flex-center">
+        <div className=" flex-center">
           <div className="relative ">
             <WhiteSpider width="w-14" />
-          </div>
-          <div className="w-full h-full pl-44">
-            <LogoName viewBox={500} />
+            <div className="absolute -left-12 top-14 w-96 h-96 ">
+              <LogoName viewBox={500} />
+            </div>
           </div>
         </div>
         <div>
