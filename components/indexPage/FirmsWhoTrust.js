@@ -56,7 +56,7 @@ export default function FirmsWhoTrust() {
           placeholderText={[
             {
               type: "heading1",
-              text: "Част от фирмите, които ни се довериха",
+              text: "Част от проектите ни",
               paddingBottom: "10px",
             },
           ]}
