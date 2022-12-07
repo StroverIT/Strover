@@ -127,7 +127,7 @@ export default function ProcessAndServices() {
           <FadeFromBottom duration={0.5} delay={0.2}>
             <p className="mt-1 text-center lg:max-w-sm max-lg:text-sm">
               С услугата “Онлайн добавяне на продукти”, ние ще добавим вашите
-              дигитални продукти, чрез Admin Panel, който е разработен от нас за
+              дигитални продукти, чрез Admin Panel, който е изработен от нас за
               вас.
             </p>
           </FadeFromBottom>

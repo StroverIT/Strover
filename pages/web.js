@@ -18,7 +18,7 @@ export default function Web() {
   return (
     <>
       <Head>
-        <title>Strover Web - разработка на сайтове</title>
+        <title>Strover Web - изработка на сайтове</title>
         <meta
           name="description"
           content="Поддръжка, създаване и оптимизиране на сайтове. Всичко което Ви е нужно за развитието на бизнеса Ви, онлайн."
