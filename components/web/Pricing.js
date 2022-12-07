@@ -33,7 +33,7 @@ export default function Pricing() {
             </li>
           </ul>
           <p className="pt-4 text-lg font-semibold text-center">
-            Цена: 1 000 - 10 000 лв.
+            Цена от 1 000 лв.
           </p>
           <SeeMore link="ecommerce" />
         </InfoContainer>
@@ -63,7 +63,7 @@ export default function Pricing() {
             <li>призив за действие за съвместна работа</li>
           </ul>
           <p className="pt-4 text-lg font-semibold text-center">
-            Цена: 600 - 2 000 лв.
+            Цена от 600 лв.
           </p>
           <SeeMore link="business" />
         </InfoContainer>
@@ -86,7 +86,7 @@ export default function Pricing() {
             <li>Призив за действие за съвместна работа</li>
           </ul>
           <p className="pt-4 text-lg font-semibold text-center">
-            Цена: 600 - 2 000 лв.
+            Цена от 600 лв.
           </p>
           <SeeMore link="portfolio" />
         </InfoContainer>
@@ -135,7 +135,7 @@ export default function Pricing() {
             </li>
           </ul>
           <p className="pt-4 text-lg font-semibold text-center">
-            Цена: 3 000 - 15 000 лв.
+            Цена от 3 000 лв.
           </p>
           <SeeMore link="forum" />
         </InfoContainer>
