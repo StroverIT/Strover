@@ -132,7 +132,7 @@ export default function Navigation() {
             <LogoName />
           </div>
         </div>
-        <div className="relative z-10">
+        <div className="relative z-10" aria-label="Hamburger menu">
           <Hamburger toggled={isOpen} toggle={setOpen} />
         </div>
         <AnimatePresence mode="wait">

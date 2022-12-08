@@ -155,7 +155,7 @@ export default function Navigation() {
           </motion.ul>
         </div>
         <div className="md:hidden flex-center">
-          <div className="relative z-10">
+          <div className="relative z-10" aria-label="Hamburger menu">
             <Hamburger toggled={isOpen} toggle={setOpen} />
           </div>
           <AnimatePresence mode="wait">
