@@ -71,7 +71,7 @@ const Cookie = ({ setIsCookie, isCookie }) => {
                 <Link href="/privacy-policy" className="pr-1 underline">
                   политика за поверителност
                 </Link>
-                <Link href="/cookies-policy" className="underline">
+                <Link href="/cookie-policy" className="underline">
                   и политика за бисквитки
                 </Link>
               </p>

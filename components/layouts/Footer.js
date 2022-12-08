@@ -198,6 +198,13 @@ export default function Footer() {
                     </span>
                   </Link>
                 </li>
+                <li className="cursor-default">
+                  <Link href="/cookie-policy" scroll={false}>
+                    <span className="pb-1 border-b cursor-pointer border-border">
+                      Политика за бисквитките
+                    </span>
+                  </Link>
+                </li>
               </ul>
             </section>
             <section className="">
