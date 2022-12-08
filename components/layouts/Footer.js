@@ -208,7 +208,7 @@ export default function Footer() {
                 <div className="ml-1 border-l border-border">
                   <ul className="pl-4 leading-8">
                     <li className="">
-                      <a href="tel:0876237725 ">
+                      <a href="tel:0876237725">
                         <section className="flex items-center">
                           <FiPhoneCall />
                           <span className="pl-1">+359 87 623 7725</span>

@@ -109,7 +109,7 @@ export default function Navigation() {
             </li>
 
             <li
-              className="px-5 py-1 border text-primaryBlue-150 border-primaryBlue-150"
+              className="px-5 py-1 border cursor-pointer text-primaryBlue-150 border-primaryBlue-150"
               onClick={brandsHandler}
             >
               БРАНДОВЕ

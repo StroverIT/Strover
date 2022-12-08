@@ -127,20 +127,24 @@ export default function ContactUs({
         </section>
         <section className="flex flex-col mx-auto space-y-3 mt-7 focus:border-transparent">
           <FadeFromBottom duration={0.5}>
-            <div className="flex items-center">
-              <div className="text-2xl ">
-                <HiOutlineMail />
+            <a href="mailto:stroverbg@gmail.com">
+              <div className="flex items-center">
+                <div className="text-2xl ">
+                  <HiOutlineMail />
+                </div>
+                <div className="pl-1">stroverbg@gmail.com</div>
               </div>
-              <div className="pl-1">stroverbg@gmail.com</div>
-            </div>
+            </a>
           </FadeFromBottom>
           <FadeFromBottom duration={0.5} delay={0.1}>
-            <div className="flex items-center">
-              <div className="text-xl ">
-                <FiPhoneCall />
+            <a href="tel:+359876237725">
+              <div className="flex items-center">
+                <div className="text-xl ">
+                  <FiPhoneCall />
+                </div>
+                <div className="pl-1">{number}</div>
               </div>
-              <div className="pl-1">{number}</div>
-            </div>
+            </a>
           </FadeFromBottom>
         </section>
       </section>

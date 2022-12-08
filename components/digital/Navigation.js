@@ -88,7 +88,7 @@ export default function Navigation() {
         <div className=" flex-center">
           <div className="relative ">
             <WhiteSpider width="w-14" />
-            <div className="absolute -left-12 top-14 w-96 h-96 ">
+            <div className="absolute h-10 -left-12 top-14 w-96 ">
               <LogoName viewBox={500} />
             </div>
           </div>
