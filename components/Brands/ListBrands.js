@@ -18,7 +18,7 @@ export default function ListBrands({
     <section className={`${py} ${bg} box  lg:my-10`}>
       <section className="mb-24 text-white">
         <FadeIn duration={0.8}>
-          <h4 className="text-5xl font-semibold text-center">Брандове</h4>
+          <h3 className="text-5xl font-semibold text-center">Брандове</h3>
         </FadeIn>
         <div className="mt-2 text-center">
           <TextAnimation
