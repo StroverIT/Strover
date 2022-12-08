@@ -162,7 +162,7 @@ export default function HeroSection() {
       <div className="absolute top-[100px] -right-[50px] ">
         <div className="relative ">
           <div className="w-[800px] h-[700px] relative opacity-10 lg:opacity-20">
-            <Image src="/testing.WEBP" alt="inner-polygon" layout="fill" />
+            <Image src="/testing.svg" alt="inner-polygon" layout="fill" />
           </div>
           <div className="absolute lg:top-10 lg:right-0 right-0  bottom-10 -rotate-[40deg] lg:-rotate-[125deg] w-96 h-56 opacity-10 lg:opacity-40">
             <Image
