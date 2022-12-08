@@ -107,6 +107,7 @@ export default function Footer() {
             <h5 className="mt-8 font-semibold uppercase">Социални мрежи</h5>
             <div className="flex mt-2 gap-x-5">
               <a
+                aria-label="Strover Facebook"
                 href="https://www.facebook.com/profile.php?id=100085497228053"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -119,6 +120,7 @@ export default function Footer() {
                 </div>
               </a>
               <a
+                aria-label="Strover Instagram"
                 href="https://www.instagram.com/stroverbg/"
                 target="_blank"
                 rel="noopener noreferrer"
