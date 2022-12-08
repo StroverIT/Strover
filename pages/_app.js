@@ -14,6 +14,8 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>Strover</title>
+        <Partytown debug={true} forward={["dataLayer.push"]} />
+
         <link rel="icon" href="/logos/web-spider.svg" />
         <meta
           name="description"
@@ -30,7 +32,6 @@ function MyApp({ Component, pageProps }) {
         />
         <meta property="og:url" content="https://strover.bg/" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <Partytown debug={true} forward={["dataLayer.push"]} />
         <script
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
           type="text/partytown"
