@@ -9,7 +9,9 @@ export default function Links({ data, hambSetOpen, hambOpen }) {
   const [open, setOpen] = useState(false);
   const handleNav = (hash) => {
     setOpen(false);
-    hambSetOpen(false);
+    if (hambOpen) {
+      hambSetOpen(false);
+    }
     let timer;
     if (hash) {
       const item = document.querySelector(`#${hash}`);
@@ -88,7 +90,7 @@ export default function Links({ data, hambSetOpen, hambOpen }) {
                 <ul className="flex flex-col py-28 gap-y-4">
                   {data.map((data, index) => {
                     return (
-                      <li key={data.key}>
+                      <li key={data.key} className="cursor-pointer">
                         <a onClick={() => handleNav(data.link)}>
                           {index + 1}. {data.text}
                         </a>

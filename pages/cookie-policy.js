@@ -2,7 +2,7 @@ import Head from "next/head";
 import React from "react";
 import Navigation from "../components/otherPagesNav/Navigation";
 
-import { links } from "../components/otherPagesNav/privacyAndPolicyData";
+import { links } from "../components/otherPagesNav/cookiePolicy";
 
 export default function PrivacyPolicy() {
   return (
@@ -41,7 +41,7 @@ export default function PrivacyPolicy() {
             поверителност. Затова ви препоръчваме периодично да преглеждате тази
             страница.
           </p>
-          <h3 className="mt-6 ml-4 font-semibold">
+          <h3 className="mt-6 ml-4 font-semibold" id="pointOne">
             ИНФОРМАЦИЯ, КОЯТО СЪБИРАМЕ:
           </h3>
           <p className="mt-4 ml-10">
@@ -53,7 +53,7 @@ export default function PrivacyPolicy() {
             <li>Телефон</li>
             <li>Пол</li>
           </ul>
-          <h3 className="mt-6 ml-4 font-semibold">
+          <h3 className="mt-6 ml-4 font-semibold" id="pointTwo">
             КАК СЪБИРАМЕ ВАШАТА ИНФОРМАЦИЯ:
           </h3>
           <p className="mt-4 ml-10">
@@ -68,7 +68,7 @@ export default function PrivacyPolicy() {
             <li>От публични източници</li>
           </ul>
 
-          <h3 className="mt-6 ml-4 font-semibold">
+          <h3 className="mt-6 ml-4 font-semibold" id="pointThree">
             КАК ИЗПОЛЗВАМЕ ВАШАТА ИНФОРМАЦИЯ:
           </h3>
           <p className="mt-4 ml-10">
@@ -93,7 +93,7 @@ export default function PrivacyPolicy() {
             която(ите) даваме съгласието, освен ако от нас не се изисква да
             направим друго закон.
           </p>
-          <h3 className="mt-6 ml-4 font-semibold">
+          <h3 className="mt-6 ml-4 font-semibold" id="pointFour">
             КАК СПОДЕЛЯМЕ ВАШАТА ИНФОРМАЦИЯ:
           </h3>
           <p className="mt-4 ml-10">
@@ -122,7 +122,7 @@ export default function PrivacyPolicy() {
             придобият с друга компания, вашата информация ще бъде един от
             активите, които се прехвърлят на новия собственик.
           </p>
-          <h3 className="mt-6 ml-4 font-semibold">
+          <h3 className="mt-6 ml-4 font-semibold" id="pointFive">
             ЗАПАЗВАНЕ НА ВАШАТА ИНФОРМАЦИЯ:
           </h3>
           <p className="mt-4 ml-10">
@@ -138,7 +138,9 @@ export default function PrivacyPolicy() {
             които не ви идентифицира (пряко или косвено), могат да се съхраняват
             за неопределено време.
           </p>
-          <h3 className="mt-6 ml-4 font-semibold">ВАШИТЕ ПРАВА:</h3>
+          <h3 className="mt-6 ml-4 font-semibold" id="pointFive">
+            ВАШИТЕ ПРАВА:
+          </h3>
           <p className="mt-4 ml-10">
             В зависимост от приложимия закон може да имате право на достъп и
             коригиране или изтриване на вашите лични данни или да получите копие
@@ -164,7 +166,9 @@ export default function PrivacyPolicy() {
             на същата за изискваните цели, може да нямате достъп до или да
             използвате услугите, за които е била търсена вашата информация.
           </p>
-          <h3 className="mt-6 ml-4 font-semibold">СИГУРНОСТ:</h3>
+          <h3 className="mt-6 ml-4 font-semibold" id="pointSix">
+            СИГУРНОСТ:
+          </h3>
           <p className="mt-4 ml-10">
             Сигурността на вашата информация е важна за нас и ние ще използваме
             разумни мерки за сигурност, за да предотвратим загуба, злоупотреба
@@ -174,7 +178,7 @@ export default function PrivacyPolicy() {
             гарантираме сигурността на каквато и да е информация, която ни
             предавате, и вие го правите на свой собствен риск.
           </p>
-          <h3 className="mt-6 ml-4 font-semibold">
+          <h3 className="mt-6 ml-4 font-semibold" id="pointSeven">
             ВРЪЗКИ НА ТРЕТИ СТРАНИ И ИЗПОЛЗВАНЕ НА ВАШАТА ИНФОРМАЦИЯ:
           </h3>
           <p className="mt-4 ml-10">
@@ -188,8 +192,8 @@ export default function PrivacyPolicy() {
             съдържанието, политиките за поверителност или практиките на сайтове
             или услуги на трети страни.
           </p>
-          <h3 className="mt-6 ml-4 font-semibold">
-            ЖАЛБА / ДЛЪЖНОСТНО ЛИЦЕ ПО ЗАЩИТА НА ДАННИТЕ::
+          <h3 className="mt-6 ml-4 font-semibold" id="pointEight">
+            ЖАЛБА / ДЛЪЖНОСТНО ЛИЦЕ ПО ЗАЩИТА НА ДАННИТЕ:
           </h3>
           <p className="mt-4 ml-10">
             Ако имате някакви въпроси или притеснения относно обработката на
