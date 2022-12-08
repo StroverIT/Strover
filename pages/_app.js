@@ -4,8 +4,25 @@ import Head from "next/head";
 import { ToastContainer } from "react-toastify";
 
 import Script from "next/script";
+import { useEffect, useState } from "react";
+import Cookie from "../components/Banners/Cookie";
 
 function MyApp({ Component, pageProps }) {
+  const [isCookie, setIsCookie] = useState(false);
+
+  useEffect(() => {
+    const isFound = localStorage.getItem("iknowyou");
+
+    if (!isFound) {
+      setTimeout(() => {
+        setIsCookie(true);
+      }, 5000);
+    }
+  }, []);
+  const cookieHandler = () => {
+    localStorage.setItem("iknowyou", "true");
+    setIsCookie(false);
+  };
   return (
     <>
       {" "}
@@ -46,6 +63,7 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </Layout>
       <ToastContainer />
+      <Cookie setIsCookie={cookieHandler} isCookie={isCookie} />
     </>
   );
 }
