@@ -1,5 +1,3 @@
-/* eslint-disable @next/next/inline-script-id */
-
 import "../styles/globals.css";
 import Layout from "../components/layouts/Layout";
 import Head from "next/head";
@@ -15,7 +13,7 @@ function MyApp({ Component, pageProps }) {
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
       />
-      <Script strategy="afterInteractive">
+      <Script strategy="afterInteractive" id="my-script">
         {`
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
