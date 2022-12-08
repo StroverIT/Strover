@@ -134,9 +134,9 @@ export default function Navigation() {
           </div>
         </div>
 
-        <div className="relative z-10" aria-label="Hamburger menu">
+        <button className="relative z-10" aria-label="Hamburger menu">
           <Hamburger toggled={isOpen} toggle={setOpen} />
-        </div>
+        </button>
         <AnimatePresence mode="wait">
           {isOpen && (
             <motion.div

@@ -128,9 +128,9 @@ export default function Navigation() {
           <div className="relative w-20 h-20">
             <WhiteSpider />
           </div>
-          <div className="h-full pl-1 -ml-5 flex-center">
+          <button className="h-full pl-1 -ml-5 flex-center">
             <LogoName />
-          </div>
+          </button>
         </div>
 
         <div className="relative z-10" aria-label="Hamburger menu">
