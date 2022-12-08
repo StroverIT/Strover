@@ -4,14 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run partytown && next build",
-    "partytown": "partytown copylib public/~partytown",
+    "build": "next build",
     "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@builder.io/partytown": "^0.7.3",
     "build": "^0.1.4",
     "framer-motion": "^7.6.6",
     "googleapis": "^109.0.1",
