@@ -154,22 +154,31 @@ export default function Navigation() {
                 animate="animate"
                 className="flex flex-col items-center justify-center h-full text-3xl gap-y-10 "
               >
-                <Link href="/" scroll={false}>
-                  <motion.li variants={hamburgerList}>Начало</motion.li>
-                </Link>
+                <motion.li variants={hamburgerList}>
+                  <Link href="/" scroll={false}>
+                    Начало
+                  </Link>
+                </motion.li>
+
                 <motion.li
                   variants={hamburgerList}
                   onClick={() => handleNav("#services")}
                 >
                   Услуги
                 </motion.li>
-                <Link href="/aboutUs" scroll={false}>
-                  <motion.li variants={hamburgerList}>За нас</motion.li>
-                </Link>
 
-                <Link href="/contactUs" scroll={false}>
-                  <motion.li variants={hamburgerList}>Контакти</motion.li>
-                </Link>
+                <motion.li variants={hamburgerList}>
+                  <Link href="/aboutUs" scroll={false}>
+                    За нас
+                  </Link>
+                </motion.li>
+
+                <motion.li variants={hamburgerList}>
+                  <Link href="/contactUs" scroll={false}>
+                    Контакти
+                  </Link>
+                </motion.li>
+
                 <motion.li
                   variants={hamburgerList}
                   onClick={brandsHandler}

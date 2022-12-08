@@ -205,19 +205,23 @@ export default function Footer() {
                 </h5>
                 <div className="ml-1 border-l border-border">
                   <ul className="pl-4 leading-8">
-                    <a href="tel:0876237725">
-                      <li className="flex items-center">
-                        <FiPhoneCall />
-                        <span className="pl-1">+359 87 623 7725</span>
-                      </li>
-                    </a>
+                    <li className="">
+                      <a href="tel:0876237725 ">
+                        <section className="flex items-center">
+                          <FiPhoneCall />
+                          <span className="pl-1">+359 87 623 7725</span>
+                        </section>
+                      </a>
+                    </li>
 
-                    <a href="mailto:stroverbg@gmail.com">
-                      <li className="flex items-center">
-                        <HiOutlineMail />
-                        <span className="pl-1">stroverbg@gmail.com</span>
-                      </li>
-                    </a>
+                    <li className="">
+                      <a href="mailto:stroverbg@gmail.com">
+                        <section className="flex items-center">
+                          <HiOutlineMail />
+                          <span className="pl-1">stroverbg@gmail.com</span>
+                        </section>
+                      </a>
+                    </li>
                     <li className="flex items-center">
                       <RiGlobalLine /> <span className="pl-1">strover.bg</span>
                     </li>

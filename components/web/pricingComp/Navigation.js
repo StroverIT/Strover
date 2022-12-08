@@ -103,12 +103,18 @@ export default function Navigation() {
         </div>
         <div>
           <ul className="flex items-center space-x-5">
-            <Link href="/aboutUs" scroll={false}>
-              <li>За нас</li>
-            </Link>
-            <Link href="/contactUs" scroll={false}>
-              <li>Контакти</li>
-            </Link>
+            <li>
+              <Link href="/aboutUs" scroll={false}>
+                За нас
+              </Link>
+            </li>
+
+            <li>
+              <Link href="/contactUs" scroll={false}>
+                Контакти
+              </Link>
+            </li>
+
             <li
               className="px-5 py-1 font-semibold tracking-[0.15rem] border-2 text-primaryBlue-150 border-primaryBlue-150"
               onClick={brandsHandler}
@@ -163,17 +169,22 @@ export default function Navigation() {
                 animate="animate"
                 className="flex flex-col items-center justify-center h-full text-3xl gap-y-10 "
               >
-                <Link href="/">
-                  <motion.li variants={hamburgerList}>Начало</motion.li>
-                </Link>
+                <motion.li variants={hamburgerList}>
+                  <Link href="/">Начало</Link>
+                </motion.li>
 
-                <Link href="/aboutUs" scroll={false}>
-                  <motion.li variants={hamburgerList}>За нас</motion.li>
-                </Link>
+                <motion.li variants={hamburgerList}>
+                  <Link href="/aboutUs" scroll={false}>
+                    За нас
+                  </Link>
+                </motion.li>
 
-                <Link href="/contactUs" scroll={false}>
-                  <motion.li variants={hamburgerList}>Контакти</motion.li>
-                </Link>
+                <motion.li variants={hamburgerList}>
+                  <Link href="/contactUs" scroll={false}>
+                    Контакти
+                  </Link>
+                </motion.li>
+
                 <motion.li
                   variants={hamburgerList}
                   onClick={brandsHandler}

@@ -108,42 +108,41 @@ export default function Navigation() {
             animate={listsAnim}
             className="flex items-center justify-center h-full gap-x-10 "
           >
-            <a href="#index">
-              <motion.li
-                variants={listVariant}
-                initial="hidden"
-                animate="visible"
-              >
-                Начало
-              </motion.li>
-            </a>
-            <a href="#services">
-              <motion.li
-                variants={listVariant}
-                initial="hidden"
-                animate="visible"
-              >
-                Услуги
-              </motion.li>
-            </a>
-            <Link href="/contactUs" scroll={false}>
-              <motion.li
-                variants={listVariant}
-                initial="hidden"
-                animate="visible"
-              >
+            <motion.li
+              variants={listVariant}
+              initial="hidden"
+              animate="visible"
+            >
+              <a href="#index">Начало</a>
+            </motion.li>
+
+            <motion.li
+              variants={listVariant}
+              initial="hidden"
+              animate="visible"
+            >
+              <a href="#services">Услуги</a>
+            </motion.li>
+
+            <motion.li
+              variants={listVariant}
+              initial="hidden"
+              animate="visible"
+            >
+              <Link href="/contactUs" scroll={false}>
                 Контакти
-              </motion.li>
-            </Link>
-            <Link href="/aboutUs" scroll={false}>
-              <motion.li
-                variants={listVariant}
-                initial="hidden"
-                animate="visible"
-              >
+              </Link>
+            </motion.li>
+
+            <motion.li
+              variants={listVariant}
+              initial="hidden"
+              animate="visible"
+            >
+              <Link href="/aboutUs" scroll={false}>
                 За нас
-              </motion.li>
-            </Link>
+              </Link>
+            </motion.li>
             <motion.li
               variants={listVariant}
               initial="hidden"

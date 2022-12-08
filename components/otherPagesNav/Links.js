@@ -47,7 +47,7 @@ export default function Links({ data, hambSetOpen, hambOpen }) {
   }, [router.pathname]);
 
   return (
-    <section>
+    <li>
       <nav className="cursor-pointer" onClick={() => setOpen(true)}>
         Съдържание
       </nav>
@@ -101,6 +101,6 @@ export default function Links({ data, hambSetOpen, hambOpen }) {
           </motion.div>
         )}
       </AnimatePresence>
-    </section>
+    </li>
   );
 }

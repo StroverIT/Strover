@@ -47,7 +47,6 @@ export default function IdeasInWebsite({ isBox = true }) {
               color="border-blue-50"
               btnColor="bg-blue-50"
               bgColor="bg-blue-200"
-              number="+359 87 623 7725"
               scrollBarThumb="scrollbar-thumb-primaryBlue-150"
               scrollBarTrack="scrollbar-track-primaryBlue-500"
             />

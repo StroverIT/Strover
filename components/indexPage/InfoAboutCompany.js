@@ -23,9 +23,9 @@ export default function IdeasInWebsite({ isBox = true }) {
         }}
       >
         <div className="container flex-center">
-          <h3 className="text-xl font-bold lg:text-4xl text-shadow">
+          <h1 className="text-xl font-bold lg:text-4xl text-shadow">
             В Strover ще разберете за...
-          </h3>
+          </h1>
         </div>
         <section className="grid pt-10 lg:grid-cols-3 lg:px-20 gap-x-5 max-lg:container gap-y-10">
           <div className="mx-auto">
@@ -37,7 +37,7 @@ export default function IdeasInWebsite({ isBox = true }) {
                   alt="acadamey hat"
                 />
               </div>
-              <h3 className="ml-4 text-xl font-semibold">Сайтовете</h3>
+              <h2 className="ml-4 text-xl font-semibold">Сайтовете</h2>
             </div>
             <ul className="mt-2 ml-5 list-disc">
               <li>Защо е нужен сайт</li>
@@ -63,9 +63,9 @@ export default function IdeasInWebsite({ isBox = true }) {
                   alt="acadamey hat"
                 />
               </div>
-              <h3 className="ml-4 text-xl font-semibold">
+              <h2 className="ml-4 text-xl font-semibold">
                 Дигиталният маркетинг
-              </h3>
+              </h2>
             </div>
             <ul className="mt-2 ml-5 list-disc">
               <li>Нашата мисия и виждане</li>
@@ -91,11 +91,11 @@ export default function IdeasInWebsite({ isBox = true }) {
                   alt="acadamey hat"
                 />
               </div>
-              <h3 className="ml-4 text-xl font-semibold">Академията ни</h3>
+              <h2 className="ml-4 text-xl font-semibold">Академията ни</h2>
             </div>
-            <h5 className="mt-2">
+            <h2 className="mt-2">
               Ние ще ви помогнем да стартирате кариера като
-            </h5>
+            </h2>
             <ul className="mt-2 ml-5 list-disc columns-2">
               <li>Програмист</li>
               <li>Дизайнер</li>

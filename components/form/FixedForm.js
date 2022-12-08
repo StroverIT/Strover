@@ -20,7 +20,6 @@ export default function FixedForm({
   color,
   btnColor,
   bgColor,
-  number,
   scrollBarThumb,
   scrollBarTrack,
   typePage,
