@@ -49,7 +49,8 @@ export default function Footer() {
       router.pathname == "/aboutUs" ||
       router.pathname == "/privacy-policy" ||
       router.pathname == "/terms-and-conditions" ||
-      router.pathname == "/offers"
+      router.pathname == "/offers" ||
+      router.pathname == "/cookie-policy"
     ) {
       setColors({
         bgColor: "bg-primaryBlue-650",

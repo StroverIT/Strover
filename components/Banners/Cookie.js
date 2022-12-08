@@ -24,7 +24,8 @@ const Cookie = ({ setIsCookie, isCookie }) => {
     }
     if (
       router.pathname == "/privacy-policy" ||
-      router.pathname == "/terms-and-conditions"
+      router.pathname == "/terms-and-conditions" ||
+      router.pathname == "/cookie-policy"
     ) {
       setStyles("bg-primaryBlue");
     } else if (router.pathname == "/academy") {
