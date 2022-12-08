@@ -35,6 +35,7 @@ export default function IdeasInWebsite({ isBox = true }) {
                   src="/icons/globe_1.png"
                   layout="fill"
                   alt="acadamey hat"
+                  objectFit="contain"
                 />
               </div>
               <h2 className="ml-4 text-xl font-semibold">Сайтовете</h2>
@@ -61,6 +62,7 @@ export default function IdeasInWebsite({ isBox = true }) {
                   src="/icons/bullhorn.png"
                   layout="fill"
                   alt="acadamey hat"
+                  objectFit="contain"
                 />
               </div>
               <h2 className="ml-4 text-xl font-semibold">
@@ -89,6 +91,7 @@ export default function IdeasInWebsite({ isBox = true }) {
                   src="/icons/badge (1).png"
                   layout="fill"
                   alt="acadamey hat"
+                  objectFit="contain"
                 />
               </div>
               <h2 className="ml-4 text-xl font-semibold">Академията ни</h2>
