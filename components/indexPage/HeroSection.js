@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -115,7 +115,7 @@ export default function HeroSection() {
       className="container h-screen grid-cols-2 text-center flex-center md:text-left lg:grid "
       id="index"
     >
-      <div className="flex flex-col justify-center text-white ">
+      <div className="flex flex-col justify-center text-white relative z-20">
         <motion.div
           variants={header1}
           initial="hidden"
@@ -162,7 +162,7 @@ export default function HeroSection() {
       <div className="absolute top-[100px] -right-[50px] ">
         <div className="relative ">
           <div className="w-[800px] h-[700px] relative opacity-10 lg:opacity-20">
-            <Image src="/testing.svg" alt="inner-polygon" layout="fill" />
+            <Image src="/testing.WEBP" alt="inner-polygon" layout="fill" />
           </div>
           <div className="absolute lg:top-10 lg:right-0 right-0  bottom-10 -rotate-[40deg] lg:-rotate-[125deg] w-96 h-56 opacity-10 lg:opacity-40">
             <Image
