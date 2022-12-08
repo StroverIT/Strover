@@ -65,32 +65,3 @@ SLOGANS ={
 [ ] Message that we use cookies
 [] Check why to show cookeies to accept
 [] Добави, "На 01.01.2023 ще има 50% промоция на всички услуги в WEB, желаете ли да получите известие? \*Промоцията ще продължи само седмица"
-
-{/\_ <motion.div
-variants={icon2}
-whileHover={{ scale: 1.2 }}
-whileTap={{ scale: 0.8 }}
-initial="hidden"
-animate="visible"
-className=" absolute left-[500px] top-[200px] text-white " >
-
-<div className="relative flex flex-col items-center justify-center gap-y-10">
-<div className="w-20 h-20 ">
-<Image
-                src="/indexForms/forms/Polygon 4.svg"
-                alt="white spider logo"
-                layout="fill"
-              />
-</div>
-<div className="absolute w-16 h-16 text-xl font-semibold">
-<Image
-                src="/icons/delivery-truck.png"
-                layout="fill"
-                alt="acadamey hat"
-              />
-</div>
-<div className="absolute mt-2 ml-1 text-xl font-semibold top-20">
-Transport
-</div>
-</div>
-</motion.div> _/}
