@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from "react";
-
-import Navigation from "../indexPage/Navigation";
+import React, { useEffect } from "react";
 
 import Footer from "./Footer";
 import { useRouter } from "next/router";

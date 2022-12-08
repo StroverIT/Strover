@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Image from "next/legacy/image";
 import WhiteSpider from "../svg-anim-comp/WhiteSpider";
 import { AnimatePresence, motion, useAnimation } from "framer-motion";
 import { Sling as Hamburger } from "hamburger-react";

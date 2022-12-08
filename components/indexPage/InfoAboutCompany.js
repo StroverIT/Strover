@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { AnimatePresence, motion, useScroll } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import Image from "next/legacy/image";
-import WhiteSpider from "../svg-anim-comp/WhiteSpider";
 import Link from "next/link";
 
 export default function IdeasInWebsite({ isBox = true }) {

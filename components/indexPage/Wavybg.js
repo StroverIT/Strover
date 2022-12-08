@@ -1,7 +1,6 @@
 import React from "react";
 
 import { motion } from "framer-motion";
-const svgVar = {};
 const pathVariant = {
   hidden: {
     pathLength: 0,

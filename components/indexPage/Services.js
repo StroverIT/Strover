@@ -1,7 +1,6 @@
 import React from "react";
 
 import Container from "./ServiceComp/Container";
-import TextAnimation from "../../libs/TextAnimation";
 import HeaderSpider from "../HeaderSpider";
 
 export default function Services() {
