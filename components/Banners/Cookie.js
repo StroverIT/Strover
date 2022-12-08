@@ -88,7 +88,7 @@ const Cookie = ({ setIsCookie, isCookie }) => {
                 <span>
                   <BsCheckLg />
                 </span>
-                <span className="pl-1 font-semibold">Прочетох</span>
+                <span className="pl-1 font-semibold">Разбрах</span>
               </button>
             </section>
           </section>
