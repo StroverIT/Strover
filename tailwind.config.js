@@ -45,6 +45,8 @@ const customColors = {
   },
   green: {
     DEFAULT: "hsl(110, 67%, 30%)",
+    100: "#028A0F",
+    150: "#004B49",
   },
   pink: {
     DEFAULT: "#FF33A4",

@@ -8,7 +8,7 @@ import { AnimatePresence, motion } from "framer-motion";
 const Cookie = ({ setIsCookie, isCookie }) => {
   const router = useRouter();
   const [styles, setStyles] = useState("");
-
+  const [btnStyle, setBtnStyle] = useState("bg-green-150");
   useEffect(() => {
     if (
       router.pathname == "/" ||
@@ -17,13 +17,18 @@ const Cookie = ({ setIsCookie, isCookie }) => {
     ) {
       setStyles("bg-primaryBlue");
     } else if (router.pathname == "/digital") {
+      setStyles("bg-pink-200");
+      setBtnStyle("bg-green-100");
     } else if (router.pathname == "/web") {
+      setStyles("bg-primaryBlue");
     }
     if (
       router.pathname == "/privacy-policy" ||
       router.pathname == "/terms-and-conditions"
     ) {
+      setStyles("bg-primaryBlue");
     } else if (router.pathname == "/academy") {
+      setStyles("bg-primaryBlue");
     }
   }, [router]);
   return (
@@ -52,9 +57,9 @@ const Cookie = ({ setIsCookie, isCookie }) => {
           }}
           className={` ${styles} fixed bottom-0 w-full`}
         >
-          <section className="flex items-center justify-between px-5 py-10 lg:container max-lg:flex-col md:px-14">
+          <section className="flex items-center justify-between px-5 py-10 lg:container max-lg:flex-col md:px-14 gap-y-10">
             <section>
-              <h1 className="text-xl font-semibold text-white">
+              <h1 className="text-2xl font-semibold text-white">
                 Вашата поверителност
               </h1>
               <p className="text-white">
@@ -71,17 +76,19 @@ const Cookie = ({ setIsCookie, isCookie }) => {
                 </Link>
               </p>
             </section>
-            <section className="font-sans text-lightGreen max-lg:pt-5">
+            <section
+              className={`font-sans ${btnStyle} text-white rounded-full px-10 py-4 `}
+            >
               <button
                 aria-label="Приемане на бисквитките"
                 type="button"
                 onClick={() => setIsCookie(false)}
-                className="text-xl flex-center"
+                className="flex-center"
               >
                 <span>
                   <BsCheckLg />
                 </span>
-                <span className="pl-1">Добре</span>
+                <span className="pl-1 font-semibold">Прочетох</span>
               </button>
             </section>
           </section>
