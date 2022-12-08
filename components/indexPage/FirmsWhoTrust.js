@@ -8,6 +8,7 @@ import { motion, useAnimation, useInView } from "framer-motion";
 import { useIsSmall } from "../../libs/FramerMediaQueryFn";
 import TextAnimation from "../../libs/TextAnimation";
 import FadeFromBottom from "../layouts/animations/onView/FadeFromBottom";
+import HeaderSpider from "../HeaderSpider";
 
 export default function FirmsWhoTrust() {
   const firstImage = useRef(null);
@@ -51,15 +52,10 @@ export default function FirmsWhoTrust() {
   }, [secondImageView]);
   return (
     <section className="mt-32">
-      <div className="text-2xl font-semibold text-center text-white md:text-4xl max-sm:px-16">
-        <TextAnimation
-          placeholderText={[
-            {
-              type: "heading1",
-              text: "Част от проектите ни",
-              paddingBottom: "10px",
-            },
-          ]}
+      <div className="font-semibold flex-center text-white md:text-4xl ">
+        <HeaderSpider
+          title="Част от проектите ни"
+          size="text-2xl  md:text-4xl"
         />
       </div>
       <section className="mt-20 md:mt-32 xl:container">
