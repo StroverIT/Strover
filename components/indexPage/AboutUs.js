@@ -40,9 +40,9 @@ export default function AboutUs() {
       <section className="zeroToXl:flex-col zeroToXl:flex-center zeroToXl:gap-y-10">
         <div className="xl:flex-center flex-col xl:mr-10 xl:absolute xl:-top-28 xl:left-[350px]">
           <FadeFromBottom duration={0.5}>
-            <h5 className="mb-2 text-xl font-medium md:text-3xl text-primaryBlue-450">
+            <h3 className="mb-2 text-xl font-medium md:text-3xl text-primaryBlue-450">
               КОИ СМЕ НИЕ?
-            </h5>
+            </h3>
           </FadeFromBottom>
           <FadeFromBottom duration={0.5} delay={0.1}>
             <p className="max-w-xl text-lg leading-8 text-white max-md:container max-md:text-justify hypens-auto ">
@@ -61,9 +61,9 @@ export default function AboutUs() {
           className="xl:flex-center flex-col xl:absolute xl:top-[400px] xl:left-[250px]"
         >
           <FadeFromBottom duration={0.5}>
-            <h5 className="mb-2 text-xl font-medium md:text-3xl text-primaryBlue-450">
+            <h3 className="mb-2 text-xl font-medium md:text-3xl text-primaryBlue-450">
               КАКВО ЩЕ ПОЛУЧИТЕ?
-            </h5>
+            </h3>
           </FadeFromBottom>
           <FadeFromBottom duration={0.5} delay={0.1}>
             <p className="max-w-xl text-lg leading-8 text-white max-md:container hypens-auto max-md:text-justify">
@@ -81,9 +81,9 @@ export default function AboutUs() {
           className="xl:flex-center flex-col xl:absolute xl:-bottom-14 xl:left-[470px]"
         >
           <FadeFromBottom duration={0.5}>
-            <h5 className="mb-2 text-xl font-medium md:text-3xl text-primaryBlue-450">
+            <h3 className="mb-2 text-xl font-medium md:text-3xl text-primaryBlue-450">
               ЗАЩО СМЕ РАЗЛИЧНИ?
-            </h5>
+            </h3>
           </FadeFromBottom>
           <FadeFromBottom duration={0.5} delay={0.1}>
             <p className="max-w-xl text-lg leading-8 text-white max-md:container max-md:text-justify hypens-auto">
