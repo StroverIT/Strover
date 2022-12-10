@@ -19,6 +19,7 @@ export default function Home() {
     <div className="index-bg ">
       <Head>
         <title>Strover</title>
+        <link rel="icon" href="/logos/web-spider.svg" />
         <meta
           name="description"
           content="Изработка и поддръжка на сайтове, създаване на социални мрежи, развитие на бизнеси в онлайн пространството"
