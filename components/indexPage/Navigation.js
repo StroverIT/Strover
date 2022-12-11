@@ -49,7 +49,7 @@ export default function Navigation() {
   const listsAnim = useAnimation();
   const [isOpen, setOpen] = useState(false);
   const [brandsOpen, setOpenBrands] = useState(false);
-
+  const [offset, setOffset] = useState(0);
   const handleNav = (hash) => {
     setOpen(false);
     let timer;
@@ -87,149 +87,158 @@ export default function Navigation() {
 
     html.style.overflowY = "auto";
   }, [router.pathname]);
+  useEffect(() => {
+    const onScroll = () => setOffset(window.pageYOffset);
+    // clean up code
+    window.removeEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     // THIS MUST BE ONLY FOR HOME ROUTE !!!!!
-    <div className="fixed top-0 z-50 w-screen text-white shadow-xl nav-bg-color">
-      <div className="container flex justify-between py-5">
-        <div className="flex items-center justify-center">
-          <div className="relative w-20 h-20">
-            <WhiteSpider />
+    <div className={`fixed top-0 z-50  w-full `}>
+      <section
+        className={`     text-white shadow-xl nav-bg-color transition-all flex-center ${
+          offset >= 300 && "lg:rounded-full lg:mt-5 lg:px-10 lg:container"
+        }`}
+      >
+        <div className="container flex justify-between py-5 ">
+          <div className="flex items-center justify-center">
+            <div className="relative w-20 h-20">
+              <WhiteSpider />
+            </div>
+            <div className="h-full pl-1 -ml-5 flex-center">
+              <LogoName />
+            </div>
           </div>
-          <div className="h-full pl-1 -ml-5 flex-center">
-            <LogoName />
-          </div>
-        </div>
-        {/* Links */}
-        <div className="hidden md:flex">
-          <motion.ul
-            variants={listsVariants}
-            initial="initial"
-            animate={listsAnim}
-            className="flex items-center justify-center h-full gap-x-10 "
-          >
-            <motion.li
-              variants={listVariant}
-              initial="hidden"
-              animate="visible"
+          {/* Links */}
+          <div className="hidden md:flex">
+            <motion.ul
+              variants={listsVariants}
+              initial="initial"
+              animate={listsAnim}
+              className="flex items-center justify-center h-full gap-x-10 "
             >
-              <a href="#index">Начало</a>
-            </motion.li>
-
-            <motion.li
-              variants={listVariant}
-              initial="hidden"
-              animate="visible"
-            >
-              <a href="#services">Услуги</a>
-            </motion.li>
-
-            <motion.li
-              variants={listVariant}
-              initial="hidden"
-              animate="visible"
-            >
-              <Link href="/contactUs" scroll={false}>
-                Контакти
-              </Link>
-            </motion.li>
-
-            <motion.li
-              variants={listVariant}
-              initial="hidden"
-              animate="visible"
-            >
-              <Link href="/aboutUs" scroll={false}>
-                За нас
-              </Link>
-            </motion.li>
-            <motion.li
-              variants={listVariant}
-              initial="hidden"
-              animate="visible"
-              onClick={brandsHandler}
-              className="px-5 py-1 font-semibold tracking-[0.15rem] border-2 text-primaryBlue-150 border-primaryBlue-150 cursor-pointer"
-            >
-              Брандове
-            </motion.li>
-          </motion.ul>
-        </div>
-        <div className="md:hidden flex-center">
-          <button className="relative z-10" aria-label="Hamburger menu">
-            <Hamburger toggled={isOpen} toggle={setOpen} />
-          </button>
-          <AnimatePresence mode="wait">
-            {isOpen && (
-              <motion.div
-                initial="initialState"
-                animate="animateState"
-                exit="exitState"
-                transition={{
-                  duration: 0.75,
-                }}
-                variants={{
-                  initialState: {
-                    opacity: 0,
-                    clipPath: "polygon(0 0,100% 0,100% 100%, 0% 100%)",
-                  },
-                  animateState: {
-                    opacity: 1,
-
-                    clipPath: "polygon(0 0,100% 0,100% 100%, 0% 100%)",
-                  },
-                  exitState: {
-                    opacity: 0,
-                    clipPath: "polygon(50% 0,50% 0,50% 100%, 50% 100%)",
-                  },
-                }}
-                className="fixed top-0 left-0 w-screen h-screen bg-primaryBlue-750"
+              <motion.li
+                variants={listVariant}
+                initial="hidden"
+                animate="visible"
               >
-                <motion.ul
-                  variants={hamburgerVariants}
-                  initial="initial"
-                  animate="animate"
-                  className="flex flex-col items-center justify-center h-full text-3xl gap-y-10 "
+                <a href="#index">Начало</a>
+              </motion.li>
+              <motion.li
+                variants={listVariant}
+                initial="hidden"
+                animate="visible"
+              >
+                <a href="#services">Услуги</a>
+              </motion.li>
+              <motion.li
+                variants={listVariant}
+                initial="hidden"
+                animate="visible"
+              >
+                <Link href="/contactUs" scroll={false}>
+                  Контакти
+                </Link>
+              </motion.li>
+              <motion.li
+                variants={listVariant}
+                initial="hidden"
+                animate="visible"
+              >
+                <Link href="/aboutUs" scroll={false}>
+                  За нас
+                </Link>
+              </motion.li>
+              <motion.li
+                variants={listVariant}
+                initial="hidden"
+                animate="visible"
+                onClick={brandsHandler}
+                className="px-5 py-1 font-semibold tracking-[0.15rem] border-2 text-primaryBlue-150 border-primaryBlue-150 cursor-pointer"
+              >
+                Брандове
+              </motion.li>
+            </motion.ul>
+          </div>
+          <div className="md:hidden flex-center">
+            <button className="relative z-10" aria-label="Hamburger menu">
+              <Hamburger toggled={isOpen} toggle={setOpen} />
+            </button>
+            <AnimatePresence mode="wait">
+              {isOpen && (
+                <motion.div
+                  initial="initialState"
+                  animate="animateState"
+                  exit="exitState"
+                  transition={{
+                    duration: 0.75,
+                  }}
+                  variants={{
+                    initialState: {
+                      opacity: 0,
+                      clipPath: "polygon(0 0,100% 0,100% 100%, 0% 100%)",
+                    },
+                    animateState: {
+                      opacity: 1,
+                      clipPath: "polygon(0 0,100% 0,100% 100%, 0% 100%)",
+                    },
+                    exitState: {
+                      opacity: 0,
+                      clipPath: "polygon(50% 0,50% 0,50% 100%, 50% 100%)",
+                    },
+                  }}
+                  className="fixed top-0 left-0 w-screen h-screen bg-primaryBlue-750"
                 >
-                  <motion.li
-                    variants={hamburgerList}
-                    onClick={() => handleNav("#index")}
+                  <motion.ul
+                    variants={hamburgerVariants}
+                    initial="initial"
+                    animate="animate"
+                    className="flex flex-col items-center justify-center h-full text-3xl gap-y-10 "
                   >
-                    Начало
-                  </motion.li>
-
-                  <motion.li
-                    variants={hamburgerList}
-                    onClick={() => handleNav("#services")}
-                  >
-                    Услуги
-                  </motion.li>
-                  <motion.li variants={hamburgerList}>
-                    <Link href="/contactUs" scroll={false}>
-                      Контакти
-                    </Link>
-                  </motion.li>
-                  <motion.li variants={hamburgerList}>
-                    <Link href="/aboutUs" scroll={false}>
-                      За нас
-                    </Link>
-                  </motion.li>
-                  <motion.li
-                    variants={hamburgerList}
-                    onClick={brandsHandler}
-                    className="px-5 py-1 font-semibold tracking-[0.15rem] border-2 text-primaryBlue-150 border-primaryBlue-150"
-                  >
-                    Брандове
-                  </motion.li>
-                </motion.ul>
-              </motion.div>
-            )}
-          </AnimatePresence>
+                    <motion.li
+                      variants={hamburgerList}
+                      onClick={() => handleNav("#index")}
+                    >
+                      Начало
+                    </motion.li>
+                    <motion.li
+                      variants={hamburgerList}
+                      onClick={() => handleNav("#services")}
+                    >
+                      Услуги
+                    </motion.li>
+                    <motion.li variants={hamburgerList}>
+                      <Link href="/contactUs" scroll={false}>
+                        Контакти
+                      </Link>
+                    </motion.li>
+                    <motion.li variants={hamburgerList}>
+                      <Link href="/aboutUs" scroll={false}>
+                        За нас
+                      </Link>
+                    </motion.li>
+                    <motion.li
+                      variants={hamburgerList}
+                      onClick={brandsHandler}
+                      className="px-5 py-1 font-semibold tracking-[0.15rem] border-2 text-primaryBlue-150 border-primaryBlue-150"
+                    >
+                      Брандове
+                    </motion.li>
+                  </motion.ul>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+          <MenuBrands
+            brandsOpen={brandsOpen}
+            setOpenBrands={setOpenBrands}
+            bgColor="bg-primaryBlue-750"
+          />
         </div>
-        <MenuBrands
-          brandsOpen={brandsOpen}
-          setOpenBrands={setOpenBrands}
-          bgColor="bg-primaryBlue-750"
-        />
-      </div>
+      </section>
     </div>
   );
 }
