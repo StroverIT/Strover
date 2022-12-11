@@ -10,38 +10,19 @@ import TextAnimation from "../../libs/TextAnimation";
 import { AiOutlinePlus } from "react-icons/ai";
 import { questionData } from "./questionComp/questionData";
 import BlueLine from "./questionComp/BlueLine";
+import HeaderSpider from "../HeaderSpider";
 
 export default function Questions() {
   return (
     <section>
-      <div className="-mb-[310px] lg:-mb-[350px]">
-        <div className="relative z-10 w-full h-96">
-          <Image src="/web/questions/upperLayer.svg" layout="fill" alt="Adad" />
-        </div>
-        <div className="relative w-full h-96 -mt-[370px] lg:-mt-[320px] z-10">
-          <Image
-            src="/web/questions/upperDownLayer.svg"
-            layout="fill"
-            alt="Adad"
-          />
-        </div>
-      </div>
-
-      <section className="relative w-full bg-blue-200 mt-28 pt-28 pb-72">
+      <section className="relative w-full -mt-[5.6rem] bg-blue-200  pb-28 box">
         <section className="container pt-28">
-          <div className="flex-col pb-10 flex-center">
+          <div className="flex-col pb-2 flex-center">
             <div
               className="hidden text-4xl font-semibold text-blue-50 lg:flex"
               id="questions"
             >
-              <TextAnimation
-                placeholderText={[
-                  {
-                    type: "heading1",
-                    text: "ЧЕСТО ЗАДАВАНИ ВЪПРОСИ",
-                  },
-                ]}
-              />
+              <HeaderSpider title="ЧЕСТО ЗАДАВАНИ ВЪПРОСИ" />
             </div>
 
             <div
@@ -58,7 +39,7 @@ export default function Questions() {
         </section>
 
         {/* Questions */}
-        <section className="relative z-20 flex flex-col mx-auto mt-10 lg:px-52 max-w-7xl max-lg:container">
+        <section className="relative z-20 flex flex-col mx-auto lg:px-52 max-w-7xl max-lg:container">
           <BlueLine />
           {questionData.map((question, index) => {
             return (
@@ -74,18 +55,6 @@ export default function Questions() {
           <BlueLine />
         </section>
       </section>
-      <div className="-mt-[13rem] lg:-mt-[14rem]">
-        <div className="relative z-10 w-full h-96">
-          <Image src="/web/questions/upperLayer.svg" layout="fill" alt="Adad" />
-        </div>
-        <div className="relative w-full h-96 -mt-[365px] lg:-mt-[320px] z-10">
-          <Image
-            src="/web/questions/upperDownLayer.svg"
-            layout="fill"
-            alt="Adad"
-          />
-        </div>
-      </div>
     </section>
   );
 }

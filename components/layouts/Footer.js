@@ -22,7 +22,6 @@ export default function Footer() {
     markers: "",
     copyRight: "",
   });
-  const [border, setBorder] = useState("");
 
   const handler = (e) => {
     setInputs(e.target.value);
@@ -65,7 +64,6 @@ export default function Footer() {
         markers: "marker:text-pink-150",
         copyRight: "bg-pink-250",
       });
-      setBorder("border-t pt-5 border-pink");
     } else if (router.pathname == "/web" || router.pathname.includes("/web")) {
       setColors({
         bgColor: "bg-blue-100",
@@ -83,7 +81,7 @@ export default function Footer() {
     }
   }, [router]);
   return (
-    <footer className={`${colors.bgColor} ${border}  pt-2 z-10 w-full`}>
+    <footer className={`${colors.bgColor}   pt-16 z-10 w-full`}>
       <section className={` pb-10`}>
         <section className="flex flex-col-reverse xl:grid xl:grid-cols-[30%70%]  container text-white gap-x-28">
           <section>

@@ -51,8 +51,8 @@ export default function FirmsWhoTrust() {
     }
   }, [secondImageView]);
   return (
-    <section className="mt-32">
-      <div className="font-semibold flex-center text-white md:text-4xl ">
+    <section className="mt-32 mb-20">
+      <div className="font-semibold text-white flex-center md:text-4xl ">
         <HeaderSpider
           title="Част от проектите ни"
           size="text-2xl  md:text-4xl"

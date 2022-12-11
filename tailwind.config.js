@@ -33,6 +33,8 @@ const customColors = {
   },
   blue: {
     DEFAULT: "#2596BE",
+    "def-transparent": "hsl(196, 67%, 45%, 80%)",
+
     50: "#00BCFF",
     100: "#2596BE",
     150: "#196580",
@@ -55,6 +57,7 @@ const customColors = {
     150: "#FB31FF",
     200: "#830149",
     250: "#C7006E",
+    300: "#B03060",
   },
   transparent: "transparent",
   orange: {

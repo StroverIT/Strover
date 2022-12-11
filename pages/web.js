@@ -9,10 +9,12 @@ import WaveSvg from "../components/web/HeroSectionComp/WaveSvg";
 import WaveSvgDown from "../components/web/HeroSectionComp/WaveSvgDown";
 import HowToProfit from "../components/web/HowToProfit";
 import MoreServices from "../components/web/MoreServices";
-import Navigation from "../components/web/Navigation";
+import Navigation from "../components/layouts/brands/Navigation";
 import Pricing from "../components/web/Pricing";
 import ProcessAndServices from "../components/web/ProcessAndServices";
 import Questions from "../components/web/Questions";
+
+import { web as links } from "../data/links";
 
 export default function Web() {
   return (
@@ -26,7 +28,7 @@ export default function Web() {
       </Head>
       <main className="relative text-white ">
         <section className="bg-[url('/web/bgheroV3.svg')] bg-no-repeat w-full h-full  absolute -z-10  top-[-550px] lg:top-[-150px] left-0"></section>
-        <Navigation />
+        <Navigation bgColor="bg-blue" pageLinks={links} />
         <section className="">
           <HeroSection />
         </section>
@@ -45,7 +47,7 @@ export default function Web() {
         </section>
         <Questions />
         {/* Here must be the pricing or packages to choose */}
-        <section className=" lg:mt-10">
+        <section className=" lg:my-20">
           <ContactUs
             color="border-blue-50"
             btnColor="bg-blue-50"
@@ -61,7 +63,7 @@ export default function Web() {
             digital={true}
             logistics={true}
             py="py-20 lg:pt-20 pb-36"
-            bg="bg-brands-index-color"
+            bg="bg-blue-250"
           />
         </section>
       </main>

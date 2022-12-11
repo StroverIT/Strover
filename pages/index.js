@@ -49,8 +49,8 @@ export default function Home() {
           logistics={true}
           digital={true}
           web={true}
-          bg="bg-brands-index-color"
-          py="sm:py-56 max-sm:pb-24 max-lg:py-20"
+          bg="bg-primaryBlue"
+          py="sm:pt-24 pb-36 max-lg:py-20"
           totalLen={3}
         />
       </main>

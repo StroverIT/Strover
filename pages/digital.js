@@ -6,8 +6,10 @@ import ContactUs from "../components/ContactUs";
 import HeroSection from "../components/digital/HeroSection";
 import MoreServices from "../components/digital/MoreServices";
 import MyMission from "../components/digital/MyMission";
-import Navigation from "../components/digital/Navigation";
+import Navigation from "../components/layouts/brands/Navigation";
 import Services from "../components/digital/Services";
+
+import { digital as links } from "../data/links";
 
 export default function Digital() {
   return (
@@ -24,7 +26,7 @@ export default function Digital() {
           <div className="top"></div>
           <div className="bottom"></div>
         </section>
-        <Navigation />
+        <Navigation bgColor="bg-pink-200" pageLinks={links} />
         <section className="relative digital-font">
           <HeroSection />
           <MyMission />
@@ -47,9 +49,8 @@ export default function Digital() {
           <Brands
             web={true}
             logistics={true}
-            bg="bg-pink-200"
+            bg="bg-pink-300"
             py="py-24 md:mt-56"
-            rounded="rounded-t-[70rem]"
           />
         </section>
       </main>

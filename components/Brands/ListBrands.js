@@ -3,6 +3,7 @@ import Brand from "./Brand";
 import TextAnimation from "../../libs/TextAnimation";
 
 import FadeIn from "../layouts/animations/onView/FadeIn";
+import HeaderSpider from "../HeaderSpider";
 
 export default function ListBrands({
   digital,
@@ -15,10 +16,12 @@ export default function ListBrands({
 }) {
   const duration = 1.5;
   return (
-    <section className={`${py} ${bg} box  lg:my-10`}>
-      <section className="mb-24 text-white">
+    <section className={`${py} ${bg} box  relative z-20 -mb-16`}>
+      <section className="mb-10 text-white">
         <FadeIn duration={0.8}>
-          <h3 className="text-5xl font-semibold text-center">Брандове</h3>
+          <div className="flex-center">
+            <HeaderSpider title="Брандове" size="text-5xl" />
+          </div>
         </FadeIn>
         <div className="mt-2 text-center">
           <TextAnimation
@@ -47,20 +50,21 @@ export default function ListBrands({
             borderColor="bg-primaryBlue-200"
             textColor="text-primaryBlue-200"
             duration={duration}
+            mt="mt-4"
           />
         )}
         {/* Digital */}
         {digital && (
           <Brand
             altImage="Tech spider logo for strovers' brands"
-            imageLink="/logos/digital-spider.svg"
+            imageLink="/logos/digital_spider.svg"
             title="Digital"
             p="Помагаме да достигнете до повече потенциални клиенти, увеличаване на прихода и разширяване на аудиторията Ви"
             link="/digital"
-            borderColor="bg-pink"
-            textColor="text-pink"
+            borderColor="bg-pink-50"
+            textColor="text-pink-50"
             maxW="max-w-sm"
-            mt="mt-10"
+            mt="mt-8"
             delay={0.2}
             duration={duration}
           />
@@ -69,13 +73,13 @@ export default function ListBrands({
         {logistics && (
           <Brand
             altImage="Tech spider logo for strovers' brands"
-            imageLink="/logos/academy-spider.svg"
+            imageLink="/logos/academy_spider.svg"
             title="Academy"
             p="Предлагаме онлайн обучение в сферата на Дигиталният маркетинг, Уеб изработката и Уеб дизайна"
             link="/academy"
-            borderColor="bg-red-150"
-            textColor="text-red-150"
-            mt="mt-10"
+            borderColor="bg-red-100"
+            textColor="text-red-100"
+            mt="mt-8"
             delay={0.4}
             duration={duration}
           />

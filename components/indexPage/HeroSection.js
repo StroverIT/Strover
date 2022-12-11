@@ -115,7 +115,7 @@ export default function HeroSection() {
       className="container h-screen grid-cols-2 text-center flex-center md:text-left lg:grid "
       id="index"
     >
-      <div className="flex flex-col justify-center text-white relative z-20">
+      <div className="relative z-20 flex flex-col justify-center text-white">
         <motion.div
           variants={header1}
           initial="hidden"
@@ -136,10 +136,11 @@ export default function HeroSection() {
           variants={paraVariant}
           initial="hidden"
           animate="visible"
-          className="max-w-sm mt-5 text-lg"
+          className="max-w-sm mt-5 text-xl"
         >
-          Ние ще развием бизнеса Ви в онлайн пространството в желаната за вас
-          ниша.
+          {/* Ние ще развием бизнеса Ви в онлайн пространството в желаната за вас
+          ниша. */}
+          Ние помагаме на вашия бизнес да достигне до следващото ниво.
         </motion.p>
         <motion.div
           variants={button}
