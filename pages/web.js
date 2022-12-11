@@ -28,7 +28,11 @@ export default function Web() {
       </Head>
       <main className="relative text-white ">
         <section className="bg-[url('/web/bgheroV3.svg')] bg-no-repeat w-full h-full  absolute -z-10  top-[-550px] lg:top-[-150px] left-0"></section>
-        <Navigation bgColor="bg-blue" pageLinks={links} />
+        <Navigation
+          navColor="nav-bg-color"
+          bgColor="bg-blue"
+          pageLinks={links}
+        />
         <section className="">
           <HeroSection />
         </section>

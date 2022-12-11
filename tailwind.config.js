@@ -52,6 +52,8 @@ const customColors = {
   },
   pink: {
     DEFAULT: "#FF33A4",
+    "def-transparent": "hsl(327, 98%, 26%, 90%)",
+
     50: "#EB90A7",
     100: "#FA008A",
     150: "#FB31FF",

@@ -26,7 +26,11 @@ export default function Digital() {
           <div className="top"></div>
           <div className="bottom"></div>
         </section>
-        <Navigation bgColor="bg-pink-200" pageLinks={links} />
+        <Navigation
+          bgColor="bg-pink-200"
+          pageLinks={links}
+          navColor="bg-pink-def-transparent"
+        />
         <section className="relative digital-font">
           <HeroSection />
           <MyMission />

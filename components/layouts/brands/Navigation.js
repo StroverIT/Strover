@@ -25,7 +25,7 @@ const hamburgerList = {
     x: 0,
   },
 };
-export default function Navigation({ bgColor, pageLinks }) {
+export default function Navigation({ bgColor, pageLinks, navColor }) {
   const router = useRouter();
 
   const [isOpen, setOpen] = useState(false);
@@ -83,7 +83,7 @@ export default function Navigation({ bgColor, pageLinks }) {
       <section
         className={`${
           offset >= 300 && "lg:container lg:rounded-full lg:mt-5"
-        } ${bgColor} py-5 shadow-xl  transition-all`}
+        } ${navColor} py-5 shadow-xl  transition-all`}
       >
         <section className="items-center justify-between hidden px-28 lg:flex ">
           <div className="py-8">
