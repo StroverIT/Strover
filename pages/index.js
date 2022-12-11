@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <div className="index-bg ">
       <Head>
-        <title>Strover</title>
+        <title>Strover - Изработка на сайтове</title>
         <link rel="icon" href="/logos/web-spider.svg" />
         <meta
           name="description"
