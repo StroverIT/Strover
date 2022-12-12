@@ -448,3 +448,7 @@ a {
   background-color: rgb(31, 202, 39);
   background-blend-mode: multiply;
 }
+
+.color {
+  color: hsl(212, 72%, 32%);
+}
