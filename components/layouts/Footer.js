@@ -22,7 +22,7 @@ export default function Footer() {
     markers: "",
     copyRight: "",
   });
-
+  const [paddingNeed, setPaddingNeed] = useState(true);
   const handler = (e) => {
     setInputs(e.target.value);
   };
@@ -79,9 +79,19 @@ export default function Footer() {
         copyRight: "bg-red-350",
       });
     }
+    console.log(router.pathname);
+    if (
+      router.pathname != "/digital" &&
+      router.pathname != "/web" &&
+      router.pathname != "/"
+    ) {
+      setPaddingNeed(false);
+    }
   }, [router]);
   return (
-    <footer className={`${colors.bgColor}   pt-16 z-10 w-full`}>
+    <footer
+      className={`${colors.bgColor}   ${paddingNeed && "pt-16"} z-10 w-full`}
+    >
       <section className={` pb-10`}>
         <section className="flex flex-col-reverse xl:grid xl:grid-cols-[30%70%]  container text-white gap-x-28">
           <section>
