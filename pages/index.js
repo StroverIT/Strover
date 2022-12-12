@@ -49,7 +49,7 @@ export default function Home() {
           logistics={true}
           digital={true}
           web={true}
-          bg="bg-primaryBlue"
+          bg="bg-primaryBlue-900"
           py="sm:pt-24 pb-36 max-lg:py-20"
           totalLen={3}
         />
