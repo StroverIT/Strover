@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import React from "react";
 import HeaderSpider from "../../HeaderSpider";
 
@@ -36,7 +36,7 @@ export default function InfoContainer({
               <Image
                 src={`/webIcons/pricing/${image}`}
                 alt="growth for you and your company"
-                layout="fill"
+                fill
               />
             </div>
           </div>

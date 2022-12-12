@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import React, { useState } from "react";
 import TextAnimation from "../../libs/TextAnimation";
 import HeaderSpider from "../HeaderSpider";
@@ -20,7 +20,7 @@ export default function MoreServices() {
               <Image
                 src="/icons/brochure.png"
                 alt="Създаване на онлайн брошури"
-                layout="fill"
+                fill
               />
             </div>
           </FadeFromBottom>
@@ -54,11 +54,7 @@ export default function MoreServices() {
         <div className="flex-col flex-center ">
           <FadeFromBottom duration={0.5}>
             <div className="relative h-28 w-28">
-              <Image
-                src="/icons/graphic-design.png"
-                alt="Maintance"
-                layout="fill"
-              />
+              <Image src="/icons/graphic-design.png" alt="Maintance" fill />
             </div>
           </FadeFromBottom>
 
@@ -96,7 +92,7 @@ export default function MoreServices() {
         <div className="flex-col flex-center ">
           <FadeFromBottom duration={0.5}>
             <div className="relative h-28 w-28">
-              <Image src="/icons/brand.png" alt="Maintance" layout="fill" />
+              <Image src="/icons/brand.png" alt="Maintance" fill />
             </div>
           </FadeFromBottom>
 
@@ -117,7 +113,7 @@ export default function MoreServices() {
         <div className="flex-col flex-center ">
           <FadeFromBottom duration={0.5}>
             <div className="relative h-28 w-28">
-              <Image src="/icons/adwords.png" alt="Maintance" layout="fill" />
+              <Image src="/icons/adwords.png" alt="Maintance" fill />
             </div>
           </FadeFromBottom>
 
@@ -137,7 +133,7 @@ export default function MoreServices() {
         <div className="flex-col flex-center ">
           <FadeFromBottom duration={0.5}>
             <div className="relative h-28 w-28">
-              <Image src="/icons/photo.png" alt="Maintance" layout="fill" />
+              <Image src="/icons/photo.png" alt="Maintance" fill />
             </div>
           </FadeFromBottom>
 

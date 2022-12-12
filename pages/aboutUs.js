@@ -8,7 +8,7 @@ import { FiPhoneCall } from "react-icons/fi";
 import InputIcons from "../components/form/Icons";
 import Input from "../components/form/Input";
 import { BsFacebook, BsInstagram } from "react-icons/bs";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { FaSpider } from "react-icons/fa";
 import HeaderSpider from "../components/HeaderSpider";
 import InfoContainer from "../components/otherPagesNav/AboutUs/InfoContainer";
@@ -88,7 +88,7 @@ export default function AboutUs() {
                 <Image
                   src="/principles.svg"
                   alt="growth for you and your company"
-                  layout="fill"
+                  fill
                 />
               </div>
             </div>
@@ -131,7 +131,7 @@ export default function AboutUs() {
                 <Image
                   src="/djulia.jpg"
                   alt="growth for you and your company"
-                  layout="fill"
+                  fill
                   className="object-contain rounded-full "
                 />
               </div>
@@ -143,7 +143,7 @@ export default function AboutUs() {
                 <Image
                   src="/hrisi2_durt_crop.jpg"
                   alt="growth for you and your company"
-                  layout="fill"
+                  fill
                   className="rounded-full bg-blend"
                 />
               </div>

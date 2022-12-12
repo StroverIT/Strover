@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { BsArrowRight } from "react-icons/bs";
 
 import { motion, useAnimation, useInView } from "framer-motion";
@@ -64,8 +64,8 @@ export default function FirmsWhoTrust() {
             <Image
               src="/firms/softoffice.png"
               alt="Софт офис е компания, създадена през 2008,  занимаваща се със стоки и услуги,  и по-конкретно с материали и консумативи."
-              layout="fill"
-              objectFit="contain"
+              fill
+              className="object-contain"
             />
           </div>
           <div className="w-full rounded-[3rem] sm:rounded-[11rem] xl:-ml-96 -mt-8 bg-primaryBlue-650 h-[19rem] max-sm:pb-10 sm:h-[26rem]">
@@ -157,8 +157,8 @@ export default function FirmsWhoTrust() {
             <Image
               src="/firms/ivdageo.png"
               alt="Софт офис е компания, създадена през 2008,  занимаваща се със стоки и услуги,  и по-конкретно с материали и консумативи."
-              layout="fill"
-              objectFit="contain"
+              fill
+              className="object-contain"
             />
           </div>
         </section>

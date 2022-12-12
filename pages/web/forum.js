@@ -1,7 +1,6 @@
 import { AnimatePresence } from "framer-motion";
 import Head from "next/head";
-import Image from "next/legacy/image";
-import Link from "next/link";
+
 import { useEffect, useState } from "react";
 import ContactUsTodayComp from "../../components/Banners/ContactUsTodayComp";
 import FixedForm from "../../components/form/FixedForm";

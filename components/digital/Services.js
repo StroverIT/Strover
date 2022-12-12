@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 import TextAnimation from "../../libs/TextAnimation";
 import HeaderSpider from "../HeaderSpider";
@@ -111,7 +111,7 @@ function Service({ index, lines, title, text, link }) {
           <Image
             src="/digitalForms/forNumber.svg"
             alt="this is background for digital numbers"
-            layout="fill"
+            fill
           />
           <div className="absolute text-5xl death-center text-blue days-one-font">
             {index + 1}

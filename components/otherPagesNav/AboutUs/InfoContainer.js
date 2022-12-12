@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import React from "react";
 import HeaderSpider from "../../HeaderSpider";
 
@@ -20,7 +20,7 @@ export default function InfoContainer({ title, p, image, border, isNext }) {
               <Image
                 src={`/icons/${image}`}
                 alt="growth for you and your company"
-                layout="fill"
+                fill
               />
             </div>
           </div>

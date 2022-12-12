@@ -1,5 +1,5 @@
 import { AnimatePresence } from "framer-motion";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 
@@ -22,11 +22,7 @@ const ContactUsTodayComp = ({ typePage = "contact us page" }) => {
           <Link href="/contactUs" scroll={false}>
             <div className="flex-col h-full py-10 cursor-pointer flex-center bg-primaryBlue-400 rounded-xl">
               <div className="relative w-20 h-20">
-                <Image
-                  src="/icons/phone-call.png"
-                  alt="phone calling"
-                  layout="fill"
-                />
+                <Image src="/icons/phone-call.png" alt="phone calling" fill />
               </div>
               <h3 className="container mt-5 text-lg text-center">
                 ОБАДИ НИ СЕ ЗА КОНСУЛТАЦИЯ
@@ -44,7 +40,7 @@ const ContactUsTodayComp = ({ typePage = "contact us page" }) => {
             onClick={() => openForm(true)}
           >
             <div className="relative w-20 h-20">
-              <Image src="/icons/mail.png" alt="phone calling" layout="fill" />
+              <Image src="/icons/mail.png" alt="phone calling" fill />
             </div>
             <h3 className="container mt-5 text-lg text-center">
               Направи запитване по e-mail{" "}
@@ -63,7 +59,7 @@ const ContactUsTodayComp = ({ typePage = "contact us page" }) => {
                 <Image
                   src="/icons/business-proposal.png"
                   alt="phone calling"
-                  layout="fill"
+                  fill
                 />
               </div>
               <h3 className="container mt-5 text-lg text-center">
@@ -79,7 +75,7 @@ const ContactUsTodayComp = ({ typePage = "contact us page" }) => {
           {/* Fourth */}
           <div className="flex-col py-10 flex-center bg-orange rounded-xl">
             <div className="relative w-20 h-20">
-              <Image src="/icons/job.png" alt="phone calling" layout="fill" />
+              <Image src="/icons/job.png" alt="phone calling" fill />
             </div>
             <h3 className="container mt-5 text-lg text-center">
               Кандидатствай за работа{" "}

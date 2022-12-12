@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import React from "react";
 import FadeFromBottom from "../../layouts/animations/onView/FadeFromBottom";
 
@@ -22,7 +22,7 @@ export default function Container({ imageUrl, text, isRev = false }) {
             <Image
               src={`/digitalAssets/icons/${imageUrl}.png`}
               alt="this is image from flat icon"
-              layout="fill"
+              fill
             />
           </div>
         </div>

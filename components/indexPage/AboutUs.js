@@ -1,5 +1,4 @@
-import Image from "next/legacy/image";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import { motion } from "framer-motion";
 

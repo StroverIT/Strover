@@ -1,8 +1,6 @@
 import React, { useEffect, useRef } from "react";
 
 import { motion, useAnimation, useInView } from "framer-motion";
-import Image from "next/legacy/image";
-import Link from "next/link";
 
 export default function FadeIn({
   children,

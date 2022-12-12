@@ -1,4 +1,3 @@
-import Image from "next/legacy/image";
 import React from "react";
 import HeaderSpider from "../HeaderSpider";
 import Container from "./MyMissionComps/Container";

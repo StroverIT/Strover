@@ -4,10 +4,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { HiOutlineAcademicCap, HiX } from "react-icons/hi";
 import { RiGlobalFill } from "react-icons/ri";
 import { IoMdAnalytics } from "react-icons/io";
-import { FaCarSide } from "react-icons/fa";
 
 import Link from "next/link";
-import Image from "next/legacy/image";
 
 const hamburgerVariants = {
   animate: { transition: { staggerChildren: 0.1, delay: 1 } },

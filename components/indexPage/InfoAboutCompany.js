@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, useScroll } from "framer-motion";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function IdeasInWebsite({ isBox = true }) {
@@ -32,9 +32,9 @@ export default function IdeasInWebsite({ isBox = true }) {
               <div className="relative w-10 h-10 text-xl font-semibold lg:w-12 lg:h-12">
                 <Image
                   src="/icons/globe_1.png"
-                  layout="fill"
                   alt="acadamey hat"
-                  objectFit="contain"
+                  fill
+                  className="object-contain"
                 />
               </div>
               <h2 className="ml-4 text-xl font-semibold">Сайтовете</h2>
@@ -59,9 +59,9 @@ export default function IdeasInWebsite({ isBox = true }) {
               <div className="relative w-12 h-12 text-xl font-semibold">
                 <Image
                   src="/icons/bullhorn.png"
-                  layout="fill"
                   alt="acadamey hat"
-                  objectFit="contain"
+                  fill
+                  className="object-contain"
                 />
               </div>
               <h2 className="ml-4 text-xl font-semibold">
@@ -88,9 +88,9 @@ export default function IdeasInWebsite({ isBox = true }) {
               <div className="relative w-10 h-10 text-xl font-semibold">
                 <Image
                   src="/icons/badge (1).png"
-                  layout="fill"
                   alt="acadamey hat"
-                  objectFit="contain"
+                  fill
+                  className="object-contain"
                 />
               </div>
               <h2 className="ml-4 text-xl font-semibold">Академията ни</h2>

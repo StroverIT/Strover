@@ -1,6 +1,6 @@
 // Next things
 import Head from "next/head";
-import Image from "next/legacy/image";
+
 import Brands from "../components/Brands/ListBrands";
 
 // Components

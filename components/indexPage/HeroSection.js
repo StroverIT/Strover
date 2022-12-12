@@ -163,20 +163,16 @@ export default function HeroSection() {
       <div className="absolute top-[100px] -right-[50px] ">
         <div className="relative ">
           <div className="w-[800px] h-[700px] relative opacity-10 lg:opacity-20">
-            <Image src="/testing.svg" alt="inner-polygon" layout="fill" />
+            <Image src="/testing.svg" alt="inner-polygon" fill />
           </div>
           <div className="absolute lg:top-10 lg:right-0 right-0  bottom-10 -rotate-[40deg] lg:-rotate-[125deg] w-96 h-56 opacity-10 lg:opacity-40">
-            <Image
-              src="/logos/white-spider.svg"
-              alt="white spider logo"
-              layout="fill"
-            />
+            <Image src="/logos/white-spider.svg" alt="white spider logo" fill />
           </div>
           {/* <div className="death-center w-16 h-16 ml-[15px] -mt-[10px]">
             <Image
               src="/logos/white-spider.svg"
               alt="white spider logo"
-              layout="fill"
+              fill
             />
           </div> */}
           {/* Web */}
@@ -194,15 +190,11 @@ export default function HeroSection() {
                   <Image
                     src="/indexForms/forms/Polygon 3.svg"
                     alt="white spider logo"
-                    layout="fill"
+                    fill
                   />
                 </div>
                 <div className="absolute text-xl font-semibold w-14 h-14">
-                  <Image
-                    src="/icons/globe_1.png"
-                    layout="fill"
-                    alt="acadamey hat"
-                  />
+                  <Image src="/icons/globe_1.png" fill alt="acadamey hat" />
                 </div>
                 <div className="absolute mt-2 text-xl font-semibold top-20 ">
                   Web
@@ -225,15 +217,11 @@ export default function HeroSection() {
                   <Image
                     src="/indexForms/forms/Polygon 1.svg"
                     alt="white spider logo"
-                    layout="fill"
+                    fill
                   />
                 </div>
                 <div className="absolute text-xl font-semibold w-14 h-14 top-2">
-                  <Image
-                    src="/icons/bullhorn.png"
-                    layout="fill"
-                    alt="acadamey hat"
-                  />
+                  <Image src="/icons/bullhorn.png" fill alt="acadamey hat" />
                 </div>
                 <div className="absolute mt-2 ml-1 text-xl font-semibold top-20">
                   Digital
@@ -256,15 +244,11 @@ export default function HeroSection() {
                   <Image
                     src="/indexForms/forms/Polygon 2.svg"
                     alt="white spider logo"
-                    layout="fill"
+                    fill
                   />
                 </div>
                 <div className="absolute mt-2 text-xl font-semibold w-14 h-14">
-                  <Image
-                    src="/icons/badge (1).png"
-                    layout="fill"
-                    alt="acadamey hat"
-                  />
+                  <Image src="/icons/badge (1).png" fill alt="acadamey hat" />
                 </div>
                 <div className="absolute mt-2 ml-1 text-xl font-semibold top-20">
                   Academy

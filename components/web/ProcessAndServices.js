@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import React from "react";
 import TextAnimation from "../../libs/TextAnimation";
 import HeaderSpider from "../HeaderSpider";
@@ -33,7 +33,7 @@ export default function ProcessAndServices() {
             <Image
               src="/web/lines.svg"
               alt="web digital lines for counting"
-              layout="fill"
+              fill
             />
           </div>
         </div>
@@ -41,11 +41,7 @@ export default function ProcessAndServices() {
         <div className="flex-center flex-col 3xl:absolute lg:top-[320px] lg:left-[300px] ">
           <FadeFromBottom duration={0.5}>
             <div className="relative h-28 w-28">
-              <Image
-                src="/icons/analyze.png"
-                alt="analyze icon"
-                layout="fill"
-              />
+              <Image src="/icons/analyze.png" alt="analyze icon" fill />
             </div>
           </FadeFromBottom>
 
@@ -68,7 +64,7 @@ export default function ProcessAndServices() {
               <Image
                 src="/icons/programing.png"
                 alt="Programing or coding "
-                layout="fill"
+                fill
               />
             </div>
           </FadeFromBottom>
@@ -88,11 +84,7 @@ export default function ProcessAndServices() {
         <div className="flex-center flex-col 3xl:absolute lg:bottom-[-120px] lg:right-[170px] ">
           <FadeFromBottom duration={0.5}>
             <div className="relative h-28 w-28">
-              <Image
-                src="/icons/seo.png"
-                alt="Seo optimization"
-                layout="fill"
-              />
+              <Image src="/icons/seo.png" alt="Seo optimization" fill />
             </div>
           </FadeFromBottom>
           <FadeFromBottom duration={0.5} delay={0.1}>
@@ -115,7 +107,7 @@ export default function ProcessAndServices() {
               <Image
                 src="/icons/content.png"
                 alt="Online writing products"
-                layout="fill"
+                fill
               />
             </div>
           </FadeFromBottom>
@@ -136,11 +128,7 @@ export default function ProcessAndServices() {
         <div className="flex-center flex-col 3xl:absolute lg:bottom-[-160px] lg:left-[157px] ">
           <FadeFromBottom duration={0.5}>
             <div className="relative h-28 w-28">
-              <Image
-                src="/icons/configuration.png"
-                alt="Maintance"
-                layout="fill"
-              />
+              <Image src="/icons/configuration.png" alt="Maintance" fill />
             </div>
           </FadeFromBottom>
           <FadeFromBottom duration={0.5} delay={0.1}>

@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 
 import TextAnimation from "../../libs/TextAnimation";
@@ -68,11 +68,7 @@ export default function HowToProfit() {
         <FadeIn duration={0.85}>
           <div className="flex-center">
             <div className="relative h-28 w-28">
-              <Image
-                src="/icons/24-hours.png"
-                layout="fill"
-                alt="24 hours icon"
-              />{" "}
+              <Image src="/icons/24-hours.png" fill alt="24 hours icon" />{" "}
             </div>
           </div>
           <h5 className="mt-5 text-lg font-semibold lg:text-xl">
@@ -89,11 +85,7 @@ export default function HowToProfit() {
           <div>
             <div className="flex-center">
               <div className="relative h-28 w-28">
-                <Image
-                  src="/icons/trust.png"
-                  layout="fill"
-                  alt="24 hours icon"
-                />{" "}
+                <Image src="/icons/trust.png" fill alt="24 hours icon" />{" "}
               </div>
             </div>
             <h5 className="mt-5 text-lg font-semibold">
@@ -111,11 +103,7 @@ export default function HowToProfit() {
           <div>
             <div className="flex-center">
               <div className="relative h-28 w-28">
-                <Image
-                  src="/icons/expansion.png"
-                  layout="fill"
-                  alt="24 hours icon"
-                />{" "}
+                <Image src="/icons/expansion.png" fill alt="24 hours icon" />{" "}
               </div>
             </div>
             <h5 className="mt-5 text-lg font-semibold">

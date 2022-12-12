@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 
 // Nextjs
-import Image from "next/legacy/image";
 
 // Framer motion
 import { motion, AnimatePresence } from "framer-motion";
-import TextAnimation from "../../libs/TextAnimation";
+
 // Icons
 import { AiOutlinePlus } from "react-icons/ai";
 import { questionData } from "./questionComp/questionData";

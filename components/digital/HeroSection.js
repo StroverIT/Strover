@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import React from "react";
 
 import { motion } from "framer-motion";
@@ -58,8 +58,8 @@ export default function HeroSection() {
           <Image
             src="/digitalForms/heroSec2.svg"
             alt="digital marketing with all services"
-            layout="fill"
-            objectFit="contain"
+            fill
+            className="object-contain"
           />
         </motion.section>
       </section>
