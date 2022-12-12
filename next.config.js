@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 
-const securityHeaders = [{ key: "Access-Control-Allow-Origin", value: "*" }];
+const securityHeaders = [
+  { key: "Access-Control-Allow-Origin", value: "*" },
+  { key: "X-Frame-Options", value: "SAMEORIGIN" },
+];
 
 const nextConfig = {
   reactStrictMode: true,
