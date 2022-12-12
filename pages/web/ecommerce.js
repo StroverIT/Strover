@@ -67,7 +67,7 @@ const Ecommerce = () => {
                   50 продукта
                 </Paragraph>
                 <Price className="pt-2 ">
-                  1500 <span className="text-gray-100">лв.</span>
+                  1200 <span className="text-gray-100">лв.</span>
                 </Price>
                 <Button
                   bgColor="bg-green"
@@ -99,7 +99,7 @@ const Ecommerce = () => {
                   продукта
                 </Paragraph>
                 <Price className="pt-2 ">
-                  4000 <span className="text-gray-100">лв.</span>
+                  2200 <span className="text-gray-100">лв.</span>
                 </Price>
                 <Button
                   bgColor="bg-red-200"
@@ -137,7 +137,7 @@ const Ecommerce = () => {
                   и трафик
                 </Paragraph>
                 <Price className="pt-2 ">
-                  6250 <span className="text-gray-100">лв.</span>
+                  3400 <span className="text-gray-100">лв.</span>
                 </Price>
                 <Button
                   bgColor="bg-primaryBlue"
