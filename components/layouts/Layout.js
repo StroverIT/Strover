@@ -3,8 +3,6 @@ import React, { useEffect } from "react";
 import Footer from "./Footer";
 import { useRouter } from "next/router";
 import { motion, AnimatePresence } from "framer-motion";
-import MessengerChat from "./MessengerChat";
-import Script from "next/script";
 
 export default function Layout({ children }) {
   const router = useRouter();
@@ -50,34 +48,6 @@ export default function Layout({ children }) {
   }, []);
   return (
     <>
-      <Script strategy="afterInteractive" id="messenger">
-        {`   
-      
-
-
-  var chatbox = document.getElementById('fb-customer-chat');
-  chatbox.setAttribute("page_id", 104601222403056);
-  chatbox.setAttribute("attribution", "biz_inbox");
-
-
-<!-- Your SDK code -->
-
-  window.fbAsyncInit = function() {
-    FB.init({
-      xfbml            : true,
-      version          : 'v15.0'
-    });
-  };
-
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-`}
-      </Script>
       <AnimatePresence
         mode="wait"
         onExitComplete={() => {
@@ -114,9 +84,6 @@ export default function Layout({ children }) {
         >
           {children}
           <Footer />
-          <div id="fb-root"></div>
-
-          <div id="fb-customer-chat" class="fb-customerchat"></div>
         </motion.div>
       </AnimatePresence>
     </>
