@@ -67,7 +67,7 @@ export default function Web() {
             digital={true}
             logistics={true}
             py="py-20 lg:pt-20 pb-36"
-            bg="bg-blue-250"
+            bg="bg-blue-300"
           />
         </section>
       </main>
