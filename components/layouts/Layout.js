@@ -3,6 +3,8 @@ import React, { useEffect } from "react";
 import Footer from "./Footer";
 import { useRouter } from "next/router";
 import { motion, AnimatePresence } from "framer-motion";
+import MessengerChat from "./MessengerChat";
+import Script from "next/script";
 
 export default function Layout({ children }) {
   const router = useRouter();
@@ -47,44 +49,76 @@ export default function Layout({ children }) {
     html.style.scrollBehavior = "smooth";
   }, []);
   return (
-    <AnimatePresence
-      mode="wait"
-      onExitComplete={() => {
-        if (typeof window !== "undefined") {
-          const html = document.querySelector("html");
-          html.style.scrollBehavior = "smooth";
+    <>
+      <Script strategy="afterInteractive" id="messenger">
+        {`   
+      
 
-          window.scrollTo({ top: 0 });
-        }
-      }}
-    >
-      <motion.div
-        key={router.route}
-        initial="initialState"
-        animate="animateState"
-        exit="exitState"
-        transition={{
-          duration: 0.75,
+
+  var chatbox = document.getElementById('fb-customer-chat');
+  chatbox.setAttribute("page_id", 104601222403056);
+  chatbox.setAttribute("attribution", "biz_inbox");
+
+
+<!-- Your SDK code -->
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      xfbml            : true,
+      version          : 'v15.0'
+    });
+  };
+
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+`}
+      </Script>
+      <AnimatePresence
+        mode="wait"
+        onExitComplete={() => {
+          if (typeof window !== "undefined") {
+            const html = document.querySelector("html");
+            html.style.scrollBehavior = "smooth";
+            window.scrollTo({ top: 0 });
+          }
         }}
-        variants={{
-          initialState: {
-            opacity: 0,
-            clipPath: "polygon(0 0,100% 0,100% 100%, 0% 100%)",
-          },
-          animateState: {
-            opacity: 1,
-            clipPath: "polygon(0 0,100% 0,100% 100%, 0% 100%)",
-          },
-          exitState: {
-            opacity: 0,
-            clipPath: "polygon(50% 0,50% 0,50% 100%, 50% 100%)",
-          },
-        }}
-        className="base-page-size flex flex-col justify-between min-h-screen h-full ${bgColor}"
       >
-        {children}
-        <Footer />
-      </motion.div>
-    </AnimatePresence>
+        <motion.div
+          key={router.route}
+          initial="initialState"
+          animate="animateState"
+          exit="exitState"
+          transition={{
+            duration: 0.75,
+          }}
+          variants={{
+            initialState: {
+              opacity: 0,
+              clipPath: "polygon(0 0,100% 0,100% 100%, 0% 100%)",
+            },
+            animateState: {
+              opacity: 1,
+              clipPath: "polygon(0 0,100% 0,100% 100%, 0% 100%)",
+            },
+            exitState: {
+              opacity: 0,
+              clipPath: "polygon(50% 0,50% 0,50% 100%, 50% 100%)",
+            },
+          }}
+          className="base-page-size flex flex-col justify-between min-h-screen h-full ${bgColor}"
+        >
+          {children}
+          <Footer />
+          <div id="fb-root"></div>
+
+          <div id="fb-customer-chat" class="fb-customerchat"></div>
+        </motion.div>
+      </AnimatePresence>
+    </>
   );
 }
