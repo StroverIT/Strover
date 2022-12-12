@@ -30,6 +30,7 @@ const customColors = {
     750: "#163B9A",
     800: "#0C245F",
     850: "#174D8C",
+    900: "hsl(212, 72%, 20%)",
   },
   blue: {
     DEFAULT: "#2596BE",
