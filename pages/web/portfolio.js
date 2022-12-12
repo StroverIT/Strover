@@ -23,7 +23,9 @@ const Forum = () => {
       <Head>
         <title>Изработка на персонален сайт - портфолио</title>
       </Head>
-      <Navigation />
+      <span className="text-white">
+        <Navigation />
+      </span>
       <main className="pt-48 pb-20 bg-gray-200 ">
         <div className="mb-10">
           <section className="container">
@@ -83,10 +85,7 @@ const Forum = () => {
                 <Title>
                   <span className="text-red-200">PRO</span> Пакет
                 </Title>
-                <Paragraph>
-                  Развивайте своя бизнес. Подходящ за магазини с от 50 до 500
-                  продукта
-                </Paragraph>
+                <Paragraph>Подходящ за средно съдържание.</Paragraph>
                 <Price className="pt-2 ">
                   1400 <span className="text-gray-100">лв.</span>
                 </Price>
@@ -96,33 +95,48 @@ const Forum = () => {
                 />
 
                 <Ul>
-                  <li>10 страници</li>
-
+                  <li>
+                    <span className="text-green-200">10 </span> страници
+                  </li>
                   <li>Уникален дизайн</li>
                   <li>Мобилна Версия</li>
-                  <li>3 и-мейл акаунта</li>
+                  <li>
+                    <span className="text-green-200">3 </span> и-мейл акаунта
+                  </li>
                   <li>Facebook чат</li>
                   <li>Контактна форма</li>
-
-                  <li>Онлайн плащания</li>
-
-                  <li>Админ Панел</li>
-
-                  <li>SEO оптимизация</li>
-
-                  <li>Безплатен хост за 6 месеца</li>
-                  <li>Следене на трафика от потребители</li>
-                  <li>Индексиране във всички търасчки</li>
                 </Ul>
+                <ul className="ml-5">
+                  <li>
+                    <span className="text-green-200 pr-2">+ </span> Онлайн
+                    плащания
+                  </li>
+                  <li>
+                    <span className="text-green-200 pr-2">+ </span> Админ Панел
+                  </li>
+                  <li>
+                    <span className="text-green-200 pr-2">+ </span> SEO
+                    оптимизация
+                  </li>
+                  <li>
+                    <span className="text-green-200 pr-2">+ </span> Безплатен
+                    хост за 6 месеца
+                  </li>
+                  <li>
+                    <span className="text-green-200 pr-2">+ </span> Следене на
+                    трафика от потребители
+                  </li>
+                  <li>
+                    <span className="text-green-200 pr-2">+ </span> Индексиране
+                    във всички търсачки
+                  </li>
+                </ul>
               </Container>
               <Container>
                 <Title>
                   <span className="text-primaryBlue">SPIDER</span> Пакет
                 </Title>
-                <Paragraph>
-                  Получавате всичко! Подходящ за магазини с голям брой продукти
-                  и трафик
-                </Paragraph>
+                <Paragraph>Подходящ за голямо съдържание.</Paragraph>
                 <Price className="pt-2 ">
                   1800 <span className="text-gray-100">лв.</span>
                 </Price>
@@ -132,10 +146,14 @@ const Forum = () => {
                 />
 
                 <Ul>
-                  <li>15 страници</li>
+                  <li>
+                    <span className="text-green-200">15 </span> страници
+                  </li>
                   <li>Уникален дизайн</li>
                   <li>Мобилна Версия</li>
-                  <li>5 и-мейл акаунта</li>
+                  <li>
+                    <span className="text-green-200">5 </span> и-мейл акаунта
+                  </li>
                   <li>Facebook чат</li>
                   <li>Контактна форма</li>
 
@@ -144,17 +162,39 @@ const Forum = () => {
                   <li>Админ Панел</li>
                   <li>SEO оптимизация</li>
 
-                  <li>Безплатен Хостинг за 1 година</li>
-                  <li>Безплатен SSL Сертификат за 1 година</li>
+                  <li>
+                    Безплатен хост за
+                    <span className="text-green-200"> 1 година</span>
+                  </li>
                   <li>Следене на трафика от потребители</li>
-                  <li>Индексиране във всички търасчки</li>
-
-                  <li>Възможност за многоезичност</li>
-                  <li>Безплатен GDPR</li>
-                  <li>Безплатни юридически текстове</li>
-                  <li>Следене на трафика от потребители</li>
-                  <li>Индексиране във всички търасчки</li>
+                  <li>Индексиране във всички търсачки</li>
                 </Ul>
+                <ul className="ml-5">
+                  <li>
+                    <span className="text-green-200 pr-2">+ </span>Възможност за
+                    многоезичност
+                  </li>
+                  <li>
+                    <span className="text-green-200 pr-2">+ </span>Безплатен
+                    GDPR
+                  </li>
+                  <li>
+                    <span className="text-green-200 pr-2">+ </span>Безплатни
+                    юридически текстове
+                  </li>
+                  <li>
+                    <span className="text-green-200 pr-2">+ </span>Следене на
+                    трафика от потребители
+                  </li>
+                  <li>
+                    <span className="text-green-200 pr-2">+ </span>Индексиране
+                    във всички търсачки
+                  </li>
+                  <li>
+                    <span className="text-green-200 pr-2">+ </span> Безплатен
+                    SSL Сертификат за 1 година
+                  </li>
+                </ul>
               </Container>
             </section>
           </section>

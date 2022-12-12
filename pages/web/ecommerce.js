@@ -21,7 +21,9 @@ const Ecommerce = () => {
   return (
     <>
       <Head></Head>
-      <Navigation />
+      <span className="text-white">
+        <Navigation />
+      </span>
       <main className="pt-48 pb-20 bg-gray-200 ">
         <div className="mb-10">
           <section className="container">
@@ -190,7 +192,10 @@ const Ecommerce = () => {
 
                   <li>Онлайн плащания</li>
                   <li>Възможност за многоезичност</li>
-                  <li>Безплатен хост за 1 година</li>
+                  <li>
+                    Безплатен хост за{" "}
+                    <span className="text-green-200">1 година</span>
+                  </li>
                   <li>Следене на трафика от потребители</li>
                   <li>Индексиране във всички търсачки</li>
                   <li>Безплатен GDPR</li>
