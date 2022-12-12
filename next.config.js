@@ -2,6 +2,7 @@
 
 const securityHeaders = [
   { key: "Access-Control-Allow-Origin", value: "*" },
+  { key: "X-Frame-Options", value: "ALLOW-FROM https://facebook.com" },
   { key: "X-Frame-Options", value: "SAMEORIGIN" },
 ];
 

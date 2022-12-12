@@ -87,11 +87,11 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:url" content="https://strover.bg/" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
+      <div id="fb-root"></div>
+      <div id="fb-customer-chat" class="fb-customerchat"></div>
       <Layout>
         <Component {...pageProps} />
       </Layout>
-      <div id="fb-root"></div>
-      <div id="fb-customer-chat" class="fb-customerchat"></div>
       <ToastContainer />
       <Cookie setIsCookie={cookieHandler} isCookie={isCookie} />
     </>
