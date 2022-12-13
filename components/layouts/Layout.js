@@ -1,12 +1,23 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import Footer from "./Footer";
 import { useRouter } from "next/router";
 import { motion, AnimatePresence } from "framer-motion";
+import ChristmasLights from "../Banners/ChristmasLights";
+import newsLetterSend from "../../fetches/newsletterSend";
+import { HiX } from "react-icons/hi";
+import ChirstmasPromotion from "../Banners/ChirstmasPromotion";
 
 export default function Layout({ children }) {
   const router = useRouter();
+  const [christmasCookie, setChristmasCookie] = useState(false);
 
+  const christmasHandler = (type) => {
+    if (type == false) {
+      setChristmasCookie(false);
+      localStorage.setItem("christmasPromotion", "true");
+    }
+  };
   useEffect(() => {
     const body = document.querySelector("body");
     const html = document.querySelector("html");
@@ -45,9 +56,18 @@ export default function Layout({ children }) {
   useEffect(() => {
     const html = document.querySelector("html");
     html.style.scrollBehavior = "smooth";
+
+    const isFound = localStorage.getItem("christmasPromotion");
+
+    if (!isFound) {
+      setTimeout(() => {
+        setChristmasCookie(true);
+      }, 8000);
+    }
   }, []);
   return (
     <>
+      <ChirstmasPromotion isOpen={christmasCookie} setOpen={christmasHandler} />
       <AnimatePresence
         mode="wait"
         onExitComplete={() => {

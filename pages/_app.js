@@ -6,6 +6,7 @@ import { ToastContainer } from "react-toastify";
 import Script from "next/script";
 import { useEffect, useState } from "react";
 import Cookie from "../components/Banners/Cookie";
+import ChristmasLights from "../components/Banners/ChristmasLights";
 
 function MyApp({ Component, pageProps }) {
   const [isCookie, setIsCookie] = useState(false);
@@ -25,7 +26,6 @@ function MyApp({ Component, pageProps }) {
   };
   return (
     <>
-      {" "}
       <Script
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
@@ -68,6 +68,7 @@ function MyApp({ Component, pageProps }) {
   }(document, 'script', 'facebook-jssdk'));
 `}
       </Script>
+
       <Head>
         <title>Strover</title>
         <link rel="icon" href="/logos/web-spider.svg" />
@@ -89,6 +90,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <div id="fb-root"></div>
       <div id="fb-customer-chat" className="fb-customerchat"></div>
+
       <Layout>
         <Component {...pageProps} />
       </Layout>

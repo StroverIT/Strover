@@ -83,6 +83,7 @@ const customColors = {
   },
   white: {
     DEFAULT: "#ffffff",
+    50: "hsl(0, 0%, 92%)",
   },
 };
 
