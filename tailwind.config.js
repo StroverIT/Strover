@@ -98,6 +98,8 @@ module.exports = {
       zeroToXl: { max: "1280px" },
       xs: { min: "350px" },
       sm: { min: "640px" },
+      smToXl: { min: "640px", max: "1280px" },
+
       "max-sm": {
         max: "640px",
       },

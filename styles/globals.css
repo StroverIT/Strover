@@ -420,7 +420,7 @@ a {
     scroll-padding-top: 12.5rem;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 640px) {
   /* here we will add the stles we want
   for the screen with min -width of 746 px*/
   .hypens-auto {
