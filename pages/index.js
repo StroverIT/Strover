@@ -34,6 +34,8 @@ export default function Home() {
           content="https://www.linkpicture.com/q/STROVER-POST.jpg"
         />
         <meta property="og:url" content="https://strover.bg/" />
+        <meta name="robots" content="index, follow" />
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <Navigation />
