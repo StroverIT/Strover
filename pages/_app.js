@@ -95,7 +95,10 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <div id="fb-root"></div>
       <div id="fb-customer-chat" className="fb-customerchat"></div>
-
+      <meta
+        itemProp="image"
+        content="https://www.linkpicture.com/q/STROVER-POST.jpg"
+      />
       <Layout>
         <Component {...pageProps} />
       </Layout>
