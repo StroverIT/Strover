@@ -65,7 +65,7 @@ const Ecommerce = () => {
                 </Title>
                 <Paragraph>
                   Лесен и бърз старт в Интернет. Подходящ за малки магазини с до
-                  50 продукта
+                  150 продукта
                 </Paragraph>
                 <Price className="pt-2 ">
                   1200 <span className="text-gray-100">лв.</span>
@@ -124,35 +124,35 @@ const Ecommerce = () => {
                 </Ul>
                 <ul className="ml-5">
                   <li>
-                    <span className="text-green-200 pr-2">+ </span>Онлайн
+                    <span className="pr-2 text-green-200">+ </span>Онлайн
                     плащания
                   </li>
                   <li>
-                    <span className="text-green-200 pr-2">+ </span>Възможност за
+                    <span className="pr-2 text-green-200">+ </span>Възможност за
                     многоезичност
                   </li>
                   <li>
-                    <span className="text-green-200 pr-2">+ </span>Безплатен
+                    <span className="pr-2 text-green-200">+ </span>Безплатен
                     хост за 6 месеца
                   </li>
                   <li>
-                    <span className="text-green-200 pr-2">+ </span>Следене на
+                    <span className="pr-2 text-green-200">+ </span>Следене на
                     трафика от потребители
                   </li>
                   <li>
-                    <span className="text-green-200 pr-2">+ </span>Индексиране
+                    <span className="pr-2 text-green-200">+ </span>Индексиране
                     във всички търсачки
                   </li>
                   <li>
-                    <span className="text-green-200 pr-2">+ </span>Безплатен
+                    <span className="pr-2 text-green-200">+ </span>Безплатен
                     GDPR
                   </li>
                   <li>
-                    <span className="text-green-200 pr-2">+ </span>Безплатен
+                    <span className="pr-2 text-green-200">+ </span>Безплатен
                     Facebook conversion API
                   </li>
                   <li>
-                    <span className="text-green-200 pr-2">+ </span>Безплатни
+                    <span className="pr-2 text-green-200">+ </span>Безплатни
                     юридически текстове
                   </li>
                 </ul>
@@ -204,19 +204,19 @@ const Ecommerce = () => {
                 </Ul>
                 <ul className="ml-5 ">
                   <li>
-                    <span className="text-green-200 pr-2">+ </span>Интеграция с
+                    <span className="pr-2 text-green-200">+ </span>Интеграция с
                     ЕКОНТ и/или СПИДИ
                   </li>
                   <li>
-                    <span className="text-green-200 pr-2">+ </span>Следене и
+                    <span className="pr-2 text-green-200">+ </span>Следене и
                     отчинате на продажбите
                   </li>
                   <li>
-                    <span className="text-green-200 pr-2">+ </span>
+                    <span className="pr-2 text-green-200">+ </span>
                     Възможност за събиране на email адреси с цел email marketing
                   </li>
                   <li>
-                    <span className="text-green-200 pr-2">+ </span>Безплатен SSL
+                    <span className="pr-2 text-green-200">+ </span>Безплатен SSL
                     Сертификат
                   </li>
                 </ul>
