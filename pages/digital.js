@@ -42,7 +42,7 @@ export default function Digital() {
               color="border-pink"
               btnColor="bg-pink"
               bgColor="bg-pink-50"
-              number="+359 89 631 5555 
+              number="+359 87 623 7725
               "
               scrollBarThumb="scrollbar-thumb-pink-100 "
               scrollBarTrack="scrollbar-track-pink-200"

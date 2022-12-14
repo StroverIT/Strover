@@ -68,7 +68,7 @@ export default function ContactUsPage() {
               <div className="text-xl ">
                 <FiPhoneCall />
               </div>
-              <a href="tel:0876237725" className="pl-1">
+              <a href="tel:+359876237725" className="pl-1">
                 Web - +359 87 623 7725
               </a>
             </div>
@@ -76,15 +76,15 @@ export default function ContactUsPage() {
               <div className="text-xl ">
                 <FiPhoneCall />
               </div>
-              <a href="tel:089 631 5555" className="pl-1">
-                Digital - +359 89 631 5555
+              <a href="tel:+359876237725" className="pl-1">
+                Digital - +359 87 623 7725
               </a>
             </div>
             <div className="flex items-center">
               <div className="text-xl ">
                 <FiPhoneCall />
               </div>
-              <a href="tel:0876237725" className="pl-1">
+              <a href="tel:+359876237725" className="pl-1">
                 Academy - +359 87 623 7725
               </a>
             </div>
