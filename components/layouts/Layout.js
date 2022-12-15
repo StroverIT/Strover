@@ -103,7 +103,8 @@ export default function Layout({ children }) {
           className="base-page-size flex flex-col justify-between min-h-screen h-full ${bgColor}"
         >
           {children}
-          {router.pathname != "/web/promotions" && <Footer />}
+          {router.pathname != "/web/promotions" &&
+            router.pathname != "/web/thanks-christmas" && <Footer />}
         </motion.div>
       </AnimatePresence>
     </>
