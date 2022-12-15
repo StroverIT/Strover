@@ -59,7 +59,7 @@ export default function Layout({ children }) {
 
     const isFound = localStorage.getItem("christmasPromotion");
 
-    if (!isFound) {
+    if (!isFound && router.pathname != "/web/promotions") {
       setTimeout(() => {
         setChristmasCookie(true);
       }, 8000);
@@ -103,7 +103,7 @@ export default function Layout({ children }) {
           className="base-page-size flex flex-col justify-between min-h-screen h-full ${bgColor}"
         >
           {children}
-          <Footer />
+          {router.pathname != "/web/promotions" && <Footer />}
         </motion.div>
       </AnimatePresence>
     </>

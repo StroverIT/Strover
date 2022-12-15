@@ -10,6 +10,7 @@ const Cookie = ({ setIsCookie, isCookie }) => {
   const [styles, setStyles] = useState("");
   const [btnStyle, setBtnStyle] = useState("bg-green-150");
   useEffect(() => {
+    setStyles("bg-primaryBlue");
     if (
       router.pathname == "/" ||
       router.pathname == "/aboutUs" ||

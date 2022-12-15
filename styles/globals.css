@@ -15,6 +15,7 @@
   --pag-max-width: 140px;
   --pag-height: 8px;
   --pag-height-active: calc(var(--pag-height) - 4px);
+  --border: 0.5vmin solid #3b373c;
 }
 html,
 body {
@@ -450,5 +451,9 @@ a {
 }
 
 .color {
-  color: hsl(0, 0%, 100%);
+  color: hsl(3, 100%, 64%);
+}
+
+.one-edge-shadow {
+  box-shadow: 0 8px 6px -6px black;
 }

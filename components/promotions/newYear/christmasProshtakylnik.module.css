@@ -1,0 +1,56 @@
+.list {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.list a {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+}
+.list li {
+  font-size: 3vmin;
+  width: 2em;
+  height: 2em;
+  display: grid;
+  place-items: center;
+  border: 0.125em solid;
+  border-radius: 50%;
+  position: relative;
+  filter: drop-shadow(0 0 0.05em black);
+}
+.list li::before,
+.list li::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.list li::before {
+  width: 0.75em;
+  height: 0.6em;
+  bottom: 100%;
+  background-image: linear-gradient(to top, white 50%, transparent 0),
+    radial-gradient(
+      circle at center,
+      transparent 30%,
+      white 0 50%,
+      transparent 0
+    );
+}
+.list li::after {
+  width: 0.125em;
+  height: 100vh;
+  background: rgb(216, 212, 212);
+  bottom: calc(100% + 0.5em);
+}
+.list a:nth-of-type(even) {
+  margin-top: 10rem;
+}
+.list a {
+  transition: transform 0.125s ease;
+}
+.list a:hover {
+  transform: scale(1.05);
+}

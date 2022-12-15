@@ -42,6 +42,7 @@ const customColors = {
     200: "#3E75DF",
     250: "#1223BA",
     300: "#203c8c",
+    350: "#a5d0cf",
   },
   border: {
     DEFAULT: "#FFF3F3",
@@ -72,6 +73,8 @@ const customColors = {
   red: {
     DEFAULT: "hsl(359, 100%, 42%)",
     100: "#FF5349",
+    110: "hsl(3, 100%, 65%)",
+
     150: "#FF281B",
     200: "#EC0D00",
     250: "#BE0A00",
@@ -84,6 +87,7 @@ const customColors = {
   white: {
     DEFAULT: "#ffffff",
     50: "hsl(0, 0%, 92%)",
+    "transparent-15": "hsl(0, 0%, 100%, 0.15)",
   },
 };
 
