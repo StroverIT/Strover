@@ -80,7 +80,7 @@ export default function Promotions() {
             </section>
 
             <section className="flex-center h-full flex-col  relative z-30  ">
-              <section className=" border   shadow-2xl bg-white-transparent-15 md:p-10 rounded-3xl p-2 container text-white">
+              <section className=" border flex-center flex-col  shadow-2xl bg-white-transparent-15 md:p-10 rounded-3xl p-2 container text-white">
                 <section className="mt-6 font-semibold text-center ">
                   <h2 className="text-xl md:text-5xl">НОВОГОДИШНА ПРОМОЦИЯ!</h2>
                 </section>
