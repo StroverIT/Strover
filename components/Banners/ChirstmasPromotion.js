@@ -54,10 +54,6 @@ const ChirstmasPromotion = ({ isOpen, setOpen }) => {
           }}
           className="fixed top-0 left-0 h-screen w-screen z-[60] text-center"
         >
-          <div
-            className="absolute top-0 left-0 z-10 w-screen h-screen blury-noProps"
-            onClick={() => setOpen(false)}
-          ></div>
           <motion.section
             transition={{
               type: "spring",
@@ -78,7 +74,33 @@ const ChirstmasPromotion = ({ isOpen, setOpen }) => {
             }}
             className="relative z-40 w-screen h-screen flex-center"
           >
-            <div className="relative flex-col w-full bg-white-50 md:w-3/6 max-lg:h-[90vh] md:h-[40%] md:rounded-3xl">
+            <motion.div
+              key="modal"
+              initial="initialState"
+              animate="animateState"
+              exit="exitState"
+              transition={{
+                duration: 0.75,
+              }}
+              variants={{
+                initialState: {
+                  opacity: 0,
+                  clipPath: "polygon(0 0,100% 0,100% 100%, 0% 100%)",
+                },
+                animateState: {
+                  opacity: 1,
+
+                  clipPath: "polygon(0 0,100% 0,100% 100%, 0% 100%)",
+                },
+                exitState: {
+                  opacity: 0,
+                  clipPath: "polygon(50% 0,50% 0,50% 100%, 50% 100%)",
+                },
+              }}
+              className="absolute top-0 left-0 z-10 w-screen h-screen blury-noProps"
+              onClick={() => setOpen(false)}
+            ></motion.div>
+            <div className="relative z-20 flex-col w-full bg-white-50 md:w-3/6 max-lg:h-[90vh] md:h-[40%] md:rounded-3xl">
               <ChristmasLights />
               <button
                 type="button"
