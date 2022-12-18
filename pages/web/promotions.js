@@ -29,6 +29,8 @@ export default function Promotions() {
     const data = await newsLetterSend({ email: input });
     if (data.message) {
       setInputs("");
+      localStorage.setItem("christmasPromotion", "true");
+
       router.push("/web/thanks-christmas");
     }
     if (data.error) {
