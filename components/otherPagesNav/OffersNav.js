@@ -97,7 +97,7 @@ export default function Navigation() {
         <div>
           <ul className="flex items-center space-x-5">
             <li>
-              <Link href="/aboutUs" scroll={false}>
+              <Link href="/company/aboutUs" scroll={false}>
                 За нас
               </Link>
             </li>
@@ -162,7 +162,7 @@ export default function Navigation() {
                 </motion.li>
 
                 <motion.li variants={hamburgerList}>
-                  <Link href="/aboutUs" scroll={false}>
+                  <Link href="/company/aboutUs" scroll={false}>
                     За нас
                   </Link>
                 </motion.li>

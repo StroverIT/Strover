@@ -28,7 +28,7 @@ export default function Layout({ children }) {
 
     if (
       router.pathname == "/" ||
-      router.pathname == "/aboutUs" ||
+      router.pathname == "/company/aboutUs" ||
       router.pathname == "/contactUs"
     ) {
       body.classList.add("index-bg");

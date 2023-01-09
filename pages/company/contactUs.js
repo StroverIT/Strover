@@ -1,15 +1,15 @@
 import Head from "next/head";
 import React, { useState } from "react";
 
-import Navigation from "../components/otherPagesNav/OffersNav";
-import ContactUs from "../components/ContactUs";
+import Navigation from "../../components/otherPagesNav/OffersNav";
+import ContactUs from "../../components/ContactUs";
 import { HiOutlineMail } from "react-icons/hi";
 import { FiPhoneCall } from "react-icons/fi";
-import InputIcons from "../components/form/Icons";
-import Input from "../components/form/Input";
+import InputIcons from "../../components/form/Icons";
+import Input from "../../components/form/Input";
 import { BsFacebook, BsInstagram } from "react-icons/bs";
-import sendMesage from "../fetches/sendingMessage";
-import { toastError, toastSuccess } from "../libs/Notifications";
+import sendMesage from "../../fetches/sendingMessage";
+import { toastError, toastSuccess } from "../../libs/Notifications";
 
 const inputsInit = {
   name: "",

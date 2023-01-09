@@ -1,22 +1,22 @@
 import Head from "next/head";
 import React, { useEffect, useState, useRef } from "react";
 
-import Navigation from "../components/otherPagesNav/OffersNav";
-import ContactUs from "../components/ContactUs";
+import Navigation from "../../components/otherPagesNav/OffersNav";
+import ContactUs from "../../components/ContactUs";
 import { HiOutlineMail } from "react-icons/hi";
 import { FiPhoneCall } from "react-icons/fi";
-import InputIcons from "../components/form/Icons";
-import Input from "../components/form/Input";
+import InputIcons from "../../components/form/Icons";
+import Input from "../../components/form/Input";
 import { BsFacebook, BsInstagram } from "react-icons/bs";
 import Image from "next/image";
 import { FaSpider } from "react-icons/fa";
-import HeaderSpider from "../components/HeaderSpider";
-import InfoContainer from "../components/otherPagesNav/AboutUs/InfoContainer";
+import HeaderSpider from "../../components/HeaderSpider";
+import InfoContainer from "../../components/otherPagesNav/AboutUs/InfoContainer";
 import Link from "next/link";
-import FixedForm from "../components/form/FixedForm";
+import FixedForm from "../../components/form/FixedForm";
 import { AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
-import ContactUsTodayComp from "../components/Banners/ContactUsTodayComp";
+import ContactUsTodayComp from "../../components/Banners/ContactUsTodayComp";
 
 export default function AboutUs() {
   const { asPath } = useRouter();

@@ -13,7 +13,7 @@ const Cookie = ({ setIsCookie, isCookie }) => {
     setStyles("bg-primaryBlue");
     if (
       router.pathname == "/" ||
-      router.pathname == "/aboutUs" ||
+      router.pathname == "/company/aboutUs" ||
       router.pathname == "/contactUs"
     ) {
       setStyles("bg-primaryBlue");

@@ -45,10 +45,10 @@ export default function Footer() {
     if (
       router.pathname == "/" ||
       router.pathname == "/contactUs" ||
-      router.pathname == "/aboutUs" ||
+      router.pathname == "/company/aboutUs" ||
       router.pathname == "/legal/privacy-policy" ||
       router.pathname == "/legal/terms-and-conditions" ||
-      router.pathname == "/offers" ||
+      router.pathname == "/deals/offers" ||
       router.pathname == "/legal/cookie-policy"
     ) {
       setColors({
@@ -183,14 +183,14 @@ export default function Footer() {
               <h5 className="mt-5 text-lg font-semibold">За STROVER</h5>
               <ul className={`list-disc ${colors.markers} pb-1 leading-8 ml-4`}>
                 <li className="cursor-default">
-                  <Link href="/aboutUs#team" scroll={false}>
+                  <Link href="/company/aboutUs#team" scroll={false}>
                     <span className="pb-1 border-b cursor-pointer border-border">
                       Екипа ни
                     </span>
                   </Link>
                 </li>
                 <li className="cursor-default">
-                  <Link href="/offers" scroll={false}>
+                  <Link href="/deals/offers" scroll={false}>
                     <span className="pb-1 border-b cursor-pointer border-border">
                       Оферти
                     </span>

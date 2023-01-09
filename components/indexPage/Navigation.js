@@ -148,7 +148,7 @@ export default function Navigation() {
                 initial="hidden"
                 animate="visible"
               >
-                <Link href="/aboutUs" scroll={false}>
+                <Link href="/company/aboutUs" scroll={false}>
                   За нас
                 </Link>
               </motion.li>
@@ -216,7 +216,7 @@ export default function Navigation() {
                       </Link>
                     </motion.li>
                     <motion.li variants={hamburgerList}>
-                      <Link href="/aboutUs" scroll={false}>
+                      <Link href="/company/aboutUs" scroll={false}>
                         За нас
                       </Link>
                     </motion.li>

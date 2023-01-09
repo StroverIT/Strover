@@ -53,7 +53,7 @@ const ContactUsTodayComp = ({ typePage = "contact us page" }) => {
             </p>
           </div>
           {/* third */}
-          <Link href="/offers" scroll={false}>
+          <Link href="/deals/offers" scroll={false}>
             <div className="flex-col py-10 flex-center bg-pink-250 rounded-xl">
               <div className="relative w-20 h-20">
                 <Image
