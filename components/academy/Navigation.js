@@ -5,7 +5,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import MenuBrands from "../Brands/MenuBrands";
 import WhiteSpider from "../svg-anim-comp/WhiteSpider";
 import { useRouter } from "next/router";
-import { IoLogoHackernews } from "react-icons/io";
 import LogoName from "../svg-anim-comp/LogoName";
 
 const hamburgerVariants = {
@@ -133,7 +132,7 @@ export default function Navigation() {
           </div>
         </div>
         <button className="relative z-10" aria-label="Hamburger menu">
-          <Hamburger toggled={isOpen} toggle={setOpen} />
+          <Hamburger toggled={isOpen} toggle={setOpen} label="Hamburger menu" />
         </button>
         <AnimatePresence mode="wait">
           {isOpen && (
