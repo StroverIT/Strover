@@ -67,7 +67,7 @@ export default function Layout({ children }) {
   }, []);
   return (
     <>
-      <ChirstmasPromotion isOpen={christmasCookie} setOpen={christmasHandler} />
+      {/* <ChirstmasPromotion isOpen={christmasCookie} setOpen={christmasHandler} /> */}
       <AnimatePresence
         mode="wait"
         onExitComplete={() => {
