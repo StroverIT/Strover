@@ -12,12 +12,12 @@ export default function Layout({ children }) {
   const router = useRouter();
   const [christmasCookie, setChristmasCookie] = useState(false);
 
-  const christmasHandler = (type) => {
-    if (type == false) {
-      setChristmasCookie(false);
-      localStorage.setItem("christmasPromotion", "true");
-    }
-  };
+  // const christmasHandler = (type) => {
+  //   if (type == false) {
+  //     setChristmasCookie(false);
+  //     localStorage.setItem("christmasPromotion", "true");
+  //   }
+  // };
   useEffect(() => {
     const body = document.querySelector("body");
     const html = document.querySelector("html");
