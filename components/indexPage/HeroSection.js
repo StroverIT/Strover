@@ -136,11 +136,12 @@ export default function HeroSection() {
           variants={paraVariant}
           initial="hidden"
           animate="visible"
-          className="max-w-sm mt-5 text-xl"
+          className="max-w-md mt-5 text-xl "
         >
           {/* Ние ще развием бизнеса Ви в онлайн пространството в желаната за вас
           ниша. */}
-          Ние помагаме на вашия бизнес да достигне до следващо ниво.
+          Всичко на едно място за достъпност и достигане до следващо ниво -
+          онлайн
         </motion.p>
         <motion.div
           variants={button}
