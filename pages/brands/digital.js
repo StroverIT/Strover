@@ -1,15 +1,15 @@
 import Head from "next/head";
 
 import React from "react";
-import Brands from "../components/Brands/ListBrands";
-import ContactUs from "../components/ContactUs";
-import HeroSection from "../components/digital/HeroSection";
-import MoreServices from "../components/digital/MoreServices";
-import MyMission from "../components/digital/MyMission";
-import Navigation from "../components/layouts/brands/Navigation";
-import Services from "../components/digital/Services";
+import Brands from "../../components/Brands/ListBrands";
+import ContactUs from "../../components/ContactUs";
+import HeroSection from "../../components/digital/HeroSection";
+import MoreServices from "../../components/digital/MoreServices";
+import MyMission from "../../components/digital/MyMission";
+import Navigation from "../../components/layouts/brands/Navigation";
+import Services from "../../components/digital/Services";
 
-import { digital as links } from "../data/links";
+import { digital as links } from "../../data/links";
 
 export default function Digital() {
   return (

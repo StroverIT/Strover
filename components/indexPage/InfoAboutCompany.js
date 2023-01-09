@@ -45,7 +45,7 @@ export default function IdeasInWebsite({ isBox = true }) {
               <li>Как създаваме упешно печеливш сайт</li>
             </ul>
             <div className="mt-5 md:mt-10 ">
-              <Link href="/web" scroll={false}>
+              <Link href="/brands/web" scroll={false}>
                 <button
                   className={`px-10 py-2 text-xs sm:text-sm rounded-lg btn-web-bg-color`}
                 >
@@ -74,7 +74,7 @@ export default function IdeasInWebsite({ isBox = true }) {
               <li>Как бизнеса Ви, ще расте от гледна точка на продажби</li>
             </ul>
             <div className="mt-5 md:mt-10 ">
-              <Link href="/digital" scroll={false}>
+              <Link href="/brands/digital" scroll={false}>
                 <button
                   className={`px-10 py-2 text-xs sm:text-sm rounded-lg btn-digital-bg-color`}
                 >
@@ -105,7 +105,7 @@ export default function IdeasInWebsite({ isBox = true }) {
               <li>Маркетолог</li>
             </ul>
             <div className="mt-5 md:mt-10 ">
-              <Link href="/academy" scroll={false}>
+              <Link href="/brands/academy" scroll={false}>
                 <button
                   className={`px-10 py-2 text-xs sm:text-sm rounded-lg btn-academy-bg-color`}
                 >

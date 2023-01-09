@@ -33,10 +33,10 @@ export default function Layout({ children }) {
     ) {
       body.classList.add("index-bg");
       html.classList.add("index");
-    } else if (router.pathname == "/digital") {
+    } else if (router.pathname == "/brands/digital") {
       body.classList.add("digital-bg");
       html.classList.add("digital");
-    } else if (router.pathname == "/web") {
+    } else if (router.pathname == "/brands/web") {
       body.classList.add("web-bg");
       html.classList.add("web");
     }
@@ -45,7 +45,7 @@ export default function Layout({ children }) {
       router.pathname == "/terms-and-conditions"
     ) {
       html.classList.add("index");
-    } else if (router.pathname == "/academy") {
+    } else if (router.pathname == "/brands/academy") {
       body.classList.add("bg-academy");
     }
 

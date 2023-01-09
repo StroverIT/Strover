@@ -184,7 +184,7 @@ export default function HeroSection() {
             animate="visible"
             className="  absolute right-[500px] hidden lg:block top-[50px] text-white  "
           >
-            <Link href="/web" scroll={false}>
+            <Link href="/brands/web" scroll={false}>
               <div className="relative flex flex-col items-center justify-center gap-y-10">
                 <div className="w-20 h-20 ">
                   <Image
@@ -211,7 +211,7 @@ export default function HeroSection() {
             animate="visible"
             className="  absolute right-[370px] top-[280px] text-white hidden lg:block "
           >
-            <Link href="/digital" scroll={false}>
+            <Link href="/brands/digital" scroll={false}>
               <div className="relative flex flex-col items-center justify-center gap-y-10">
                 <div className="w-20 h-20 ">
                   <Image
@@ -238,7 +238,7 @@ export default function HeroSection() {
             animate="visible"
             className="  absolute right-[200px] bottom-[160px] hidden lg:block text-white  "
           >
-            <Link href="/academy" scroll={false}>
+            <Link href="/brands/academy" scroll={false}>
               <div className="relative flex flex-col items-center justify-center gap-y-10">
                 <div className="w-20 h-20 ">
                   <Image

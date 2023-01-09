@@ -17,7 +17,7 @@ const Cookie = ({ setIsCookie, isCookie }) => {
       router.pathname == "/contactUs"
     ) {
       setStyles("bg-primaryBlue");
-    } else if (router.pathname == "/digital") {
+    } else if (router.pathname == "/brands/digital") {
       setStyles("bg-pink-200");
       setBtnStyle("bg-green-100");
     } else if (router.pathname == "/web") {
@@ -29,7 +29,7 @@ const Cookie = ({ setIsCookie, isCookie }) => {
       router.pathname == "/cookie-policy"
     ) {
       setStyles("bg-primaryBlue");
-    } else if (router.pathname == "/academy") {
+    } else if (router.pathname == "/brands/academy") {
       setStyles("bg-primaryBlue");
     }
   }, [router]);
