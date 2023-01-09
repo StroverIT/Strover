@@ -122,7 +122,7 @@ export default function Navigation({ bgColor, pageLinks, navColor }) {
                 </Link>
               </li>
               <li>
-                <Link href="/contactUs" scroll={false}>
+                <Link href="/company/contactUs" scroll={false}>
                   Контакти
                 </Link>
               </li>
@@ -200,7 +200,7 @@ export default function Navigation({ bgColor, pageLinks, navColor }) {
                     </Link>
                   </motion.li>
                   <motion.li variants={hamburgerList}>
-                    <Link href="/contactUs" scroll={false}>
+                    <Link href="/company/contactUs" scroll={false}>
                       Контакти
                     </Link>
                   </motion.li>

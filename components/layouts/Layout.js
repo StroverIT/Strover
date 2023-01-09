@@ -29,7 +29,7 @@ export default function Layout({ children }) {
     if (
       router.pathname == "/" ||
       router.pathname == "/company/aboutUs" ||
-      router.pathname == "/contactUs"
+      router.pathname == "/company/contactUs"
     ) {
       body.classList.add("index-bg");
       html.classList.add("index");

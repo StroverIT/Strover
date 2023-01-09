@@ -108,7 +108,7 @@ export default function Navigation() {
             </li>
 
             <li className="">
-              <Link href="/contactUs" scroll={false}>
+              <Link href="/company/contactUs" scroll={false}>
                 Контакти
               </Link>
             </li>
@@ -178,7 +178,7 @@ export default function Navigation() {
                 </motion.li>
 
                 <motion.li variants={hamburgerList}>
-                  <Link href="/contactUs" scroll={false}>
+                  <Link href="/company/contactUs" scroll={false}>
                     Контакти
                   </Link>
                 </motion.li>

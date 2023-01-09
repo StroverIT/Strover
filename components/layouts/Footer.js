@@ -44,7 +44,7 @@ export default function Footer() {
   useEffect(() => {
     if (
       router.pathname == "/" ||
-      router.pathname == "/contactUs" ||
+      router.pathname == "/company/contactUs" ||
       router.pathname == "/company/aboutUs" ||
       router.pathname == "/legal/privacy-policy" ||
       router.pathname == "/legal/terms-and-conditions" ||

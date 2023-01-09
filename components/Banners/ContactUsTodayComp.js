@@ -19,7 +19,7 @@ const ContactUsTodayComp = ({ typePage = "contact us page" }) => {
         </section>
         <section className="grid mt-10 text-white md:px-10 md:grid-cols-2 xl:grid-cols-4 gap-y-10 gap-x-10">
           {/* first */}
-          <Link href="/contactUs" scroll={false}>
+          <Link href="/company/contactUs" scroll={false}>
             <div className="flex-col h-full py-10 cursor-pointer flex-center bg-primaryBlue-400 rounded-xl">
               <div className="relative w-20 h-20">
                 <Image src="/icons/phone-call.png" alt="phone calling" fill />

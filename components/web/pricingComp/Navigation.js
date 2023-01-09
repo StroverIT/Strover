@@ -87,7 +87,7 @@ export default function Navigation({ bgColor, pageLinks, navColor }) {
         }  
        bg-blue py-5 shadow-xl  transition-all`}
       >
-        <section className="items-center justify-between hidden px-28 lg:flex relative">
+        <section className="relative items-center justify-between hidden px-28 lg:flex">
           <div className="py-8">
             <ul className="flex space-x-5">
               <li>
@@ -121,7 +121,7 @@ export default function Navigation({ bgColor, pageLinks, navColor }) {
                 </Link>
               </li>
               <li>
-                <Link href="/contactUs" scroll={false}>
+                <Link href="/company/contactUs" scroll={false}>
                   Контакти
                 </Link>
               </li>
@@ -199,7 +199,7 @@ export default function Navigation({ bgColor, pageLinks, navColor }) {
                     </Link>
                   </motion.li>
                   <motion.li variants={hamburgerList}>
-                    <Link href="/contactUs" scroll={false}>
+                    <Link href="/company/contactUs" scroll={false}>
                       Контакти
                     </Link>
                   </motion.li>
