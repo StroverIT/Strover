@@ -6,7 +6,10 @@ import { links } from "../components/otherPagesNav/termsAndConditionsData";
 export default function TermsAndConditions() {
   return (
     <>
-      <Head></Head>
+      <Head>
+      <meta name="robots" content="noindex, nofollow" />
+
+      </Head>
       <Navigation links={links} />
       <section className="container text-black mt-36">
         <div>
