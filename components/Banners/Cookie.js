@@ -57,7 +57,7 @@ const Cookie = ({ setIsCookie, isCookie }) => {
               y: "100vh",
             },
           }}
-          className={` ${styles} fixed bottom-0 w-full`}
+          className={` ${styles} fixed bottom-0 w-full z-[999999]`}
         >
           <section className="flex items-center justify-between px-5 py-10 lg:container max-lg:flex-col md:px-14 gap-y-10">
             <section>
