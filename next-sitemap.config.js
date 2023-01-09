@@ -5,9 +5,10 @@ module.exports = {
   exclude: [
     "/legal/terms-and-conditions",
     "/legal/privacy-policy",
+    "/legal/cookie-policy",
+
     "/web/thanks",
     "/web/thanks-christmas",
-    "/legal/cookie-policy",
     "/web/promotions",
   ],
   // ...other options
