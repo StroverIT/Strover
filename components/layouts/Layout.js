@@ -41,8 +41,8 @@ export default function Layout({ children }) {
       html.classList.add("web");
     }
     if (
-      router.pathname == "/privacy-policy" ||
-      router.pathname == "/terms-and-conditions"
+      router.pathname == "/legal/privacy-policy" ||
+      router.pathname == "/legal/terms-and-conditions"
     ) {
       html.classList.add("index");
     } else if (router.pathname == "/brands/academy") {

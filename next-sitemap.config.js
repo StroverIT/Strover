@@ -3,11 +3,11 @@ module.exports = {
   siteUrl: "https://strover.bg",
   generateRobotsTxt: true, // (optional)
   exclude: [
-    "/terms-and-conditions",
-    "/privacy-policy",
+    "/legal/terms-and-conditions",
+    "/legal/privacy-policy",
     "/web/thanks",
     "/web/thanks-christmas",
-    "/cookie-policy",
+    "/legal/cookie-policy",
     "/web/promotions",
   ],
   // ...other options

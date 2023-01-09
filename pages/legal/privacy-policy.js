@@ -1,8 +1,8 @@
 import Head from "next/head";
 import React from "react";
-import Navigation from "../components/otherPagesNav/Navigation";
+import Navigation from "../../components/otherPagesNav/Navigation";
 
-import { links } from "../components/otherPagesNav/privacyAndPolicyData";
+import { links } from "../../components/otherPagesNav/privacyAndPolicyData";
 
 export default function PrivacyPolicy() {
   return (

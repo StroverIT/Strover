@@ -1,14 +1,13 @@
 import Head from "next/head";
 import React from "react";
-import Navigation from "../components/otherPagesNav/Navigation";
-import { links } from "../components/otherPagesNav/termsAndConditionsData";
+import Navigation from "../../components/otherPagesNav/Navigation";
+import { links } from "../../components/otherPagesNav/termsAndConditionsData";
 
 export default function TermsAndConditions() {
   return (
     <>
       <Head>
-      <meta name="robots" content="noindex, nofollow" />
-
+        <meta name="robots" content="noindex, nofollow" />
       </Head>
       <Navigation links={links} />
       <section className="container text-black mt-36">

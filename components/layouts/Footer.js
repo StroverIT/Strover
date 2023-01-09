@@ -46,10 +46,10 @@ export default function Footer() {
       router.pathname == "/" ||
       router.pathname == "/contactUs" ||
       router.pathname == "/aboutUs" ||
-      router.pathname == "/privacy-policy" ||
-      router.pathname == "/terms-and-conditions" ||
+      router.pathname == "/legal/privacy-policy" ||
+      router.pathname == "/legal/terms-and-conditions" ||
       router.pathname == "/offers" ||
-      router.pathname == "/cookie-policy"
+      router.pathname == "/legal/cookie-policy"
     ) {
       setColors({
         bgColor: "bg-primaryBlue-650",
@@ -204,14 +204,14 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li className="cursor-default">
-                  <Link href="/privacy-policy" scroll={false}>
+                  <Link href="/legal/privacy-policy" scroll={false}>
                     <span className="pb-1 border-b cursor-pointer border-border">
                       Защита на лични данни
                     </span>
                   </Link>
                 </li>
                 <li className="cursor-default">
-                  <Link href="/cookie-policy" scroll={false}>
+                  <Link href="/legal/cookie-policy" scroll={false}>
                     <span className="pb-1 border-b cursor-pointer border-border">
                       Политика за бисквитките
                     </span>
