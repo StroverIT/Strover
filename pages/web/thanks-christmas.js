@@ -17,11 +17,11 @@ export default function Promotions() {
         <meta name="robots" content="noindex, nofollow" />
         <meta charset="UTF-8" />
       </Head>
-      <main className="relative  h-screen ">
-        <section className="bg-primaryBlue h-screen border-b-8  border-primaryBlue-500"></section>
+      <main className="relative h-screen ">
+        <section className="h-screen border-b-8 bg-primaryBlue border-primaryBlue-500"></section>
         <SnowingBg />
 
-        <section className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-screen w-screen z-10 shadow-inne">
+        <section className="absolute z-10 w-screen h-screen -translate-x-1/2 -translate-y-1/2  top-1/2 left-1/2 shadow-inne">
           {/* bg-blue-300  */}
           {/* bg-primaryBlue-650 */}
           {/* bg-primaryBlue-750 */}
@@ -45,15 +45,15 @@ export default function Promotions() {
                 />
               </div>
             </section>
-            <section className="absolute  bottom-0 z-20 -right-16 opacity-80 md:opacity-100">
+            <section className="absolute bottom-0 z-20 -right-16 opacity-80 md:opacity-100">
               <ChristmasGifts />
             </section>
-            <section className="absolute -top-60 left-14 hidden md:block">
+            <section className="absolute hidden -top-60 left-14 md:block">
               <ChristmasProshtakylnik />
             </section>
 
-            <section className="flex-center h-full flex-col  relative z-30  ">
-              <section className=" border  flex-center flex-col shadow-2xl bg-white-transparent-15 md:p-10 rounded-3xl p-2 container text-white py-10">
+            <section className="relative z-30 flex-col h-full flex-center ">
+              <section className="container flex-col p-2 py-10 text-white border shadow-2xl  flex-center bg-white-transparent-15 md:p-10 rounded-3xl">
                 <div className="flex-center">
                   <section className="w-14 h-14 md:w-20 md:h-20">
                     <Check />
@@ -62,22 +62,22 @@ export default function Promotions() {
                 <section className="mt-6 font-semibold text-center ">
                   <h2 className="text-xl md:text-5xl">УСПЕШНО СЕ ЗАПИСАХТЕ!</h2>
                 </section>
-                <p className="mt-2 text-sm  max-w-4xl text-center md:text-2xl">
+                <p className="max-w-4xl mt-2 text-sm text-center md:text-2xl">
                   Благодарим Ви, че ни гласувахте доверие! Ако желаете може да
                   разгледате сайта -{" "}
                   <Link href="/" className="underline">
                     Начална страница
                   </Link>
                 </p>
-                <h3 className="text-center md:text-2xl my-4">Или</h3>
-                <section className="flex-center flex-col text-center md:text-2xl">
+                <h3 className="my-4 text-center md:text-2xl">Или</h3>
+                <section className="flex-col text-center flex-center md:text-2xl">
                   <p>Да посетите един от брандовете ни</p>
-                  <ul className="text-start flex gap-y-5 gap-x-5 mt-2">
+                  <ul className="flex mt-2 text-start gap-y-5 gap-x-5">
                     <li className="underline">
-                      <Link href="/web">WEB</Link>
+                      <Link href="/brands/web">WEB</Link>
                     </li>
                     <li className="underline">
-                      <Link href="/digital">DIGITAL</Link>
+                      <Link href="/brands/digital">DIGITAL</Link>
                     </li>
                   </ul>
                 </section>
@@ -90,8 +90,8 @@ export default function Promotions() {
   );
 }
 
-// <section className="flex-center h-full flex-col  relative z-30  ">
-//             <section className=" border   shadow-2xl bg-white-transparent-15 p-10 rounded-3xl text-white">
+// <section className="relative z-30 flex-col h-full flex-center ">
+//             <section className="p-10 text-white border shadow-2xl  bg-white-transparent-15 rounded-3xl">
 //               <div className="flex-center">
 //                 <section className="w-20 h-20">
 //                   <Check />
@@ -102,7 +102,7 @@ export default function Promotions() {
 //
 //                 </h2>
 //               </section>
-//               <p className="mt-2 text-lg  max-w-4xl text-center md:text-2xl">
+//               <p className="max-w-4xl mt-2 text-lg text-center md:text-2xl">
 //                 {/* На 01.01.2023 ще Ви бъде изпратен линк към страницата, където ще бъдат показани всички услуги на промоция */}
 //
 //               </p>

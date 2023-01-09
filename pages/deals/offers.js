@@ -1,9 +1,9 @@
 import Head from "next/head";
 import React, { useState } from "react";
 
-import Navigation from "../components/otherPagesNav/OffersNav";
-import newsLetterSend from "../fetches/newsletterSend";
-import { toastError, toastSuccess } from "../libs/Notifications";
+import Navigation from "../../components/otherPagesNav/OffersNav";
+import newsLetterSend from "../../fetches/newsletterSend";
+import { toastError, toastSuccess } from "../../libs/Notifications";
 
 export default function Offers() {
   const [emailVal, setEmailVal] = useState("");

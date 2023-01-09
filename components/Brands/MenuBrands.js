@@ -63,14 +63,14 @@ export default function MenuBrands({ brandsOpen, setOpenBrands, bgColor }) {
               animate="animate"
               className="flex-col text-3xl flex-center gap-y-10"
             >
-              <Link href="/web">
+              <Link href="/brands/web">
                 <motion.li variants={hamburgerList} className="flex-center">
                   <RiGlobalFill />
                   <span className="pl-1">Web</span>
                 </motion.li>
               </Link>
 
-              <Link href="/digital">
+              <Link href="/brands/digital">
                 <motion.li variants={hamburgerList} className="flex-center">
                   <IoMdAnalytics />
 
@@ -83,7 +83,7 @@ export default function MenuBrands({ brandsOpen, setOpenBrands, bgColor }) {
                   <span className="pl-1">Transport</span>
                 </motion.li>
               </Link> */}
-              <Link href="/academy">
+              <Link href="/brands/academy">
                 <motion.li variants={hamburgerList} className="flex-center">
                   <HiOutlineAcademicCap />
                   <span className="pl-1">Academy</span>

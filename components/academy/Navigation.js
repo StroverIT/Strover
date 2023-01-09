@@ -5,7 +5,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import MenuBrands from "../Brands/MenuBrands";
 import WhiteSpider from "../svg-anim-comp/WhiteSpider";
 import { useRouter } from "next/router";
-import { IoLogoHackernews } from "react-icons/io";
 import LogoName from "../svg-anim-comp/LogoName";
 
 const hamburgerVariants = {
@@ -103,13 +102,13 @@ export default function Navigation() {
         <div>
           <ul className="flex items-center space-x-5">
             <li>
-              <Link href="/aboutUs" scroll={false}>
+              <Link href="/company/aboutUs" scroll={false}>
                 За нас
               </Link>
             </li>
 
             <li className="">
-              <Link href="/contactUs" scroll={false}>
+              <Link href="/company/contactUs" scroll={false}>
                 Контакти
               </Link>
             </li>
@@ -133,7 +132,7 @@ export default function Navigation() {
           </div>
         </div>
         <button className="relative z-10" aria-label="Hamburger menu">
-          <Hamburger toggled={isOpen} toggle={setOpen} />
+          <Hamburger toggled={isOpen} toggle={setOpen} label="Hamburger menu" />
         </button>
         <AnimatePresence mode="wait">
           {isOpen && (
@@ -177,21 +176,9 @@ export default function Navigation() {
                 >
                   За нас
                 </motion.li>
-                <motion.li
-                  variants={hamburgerList}
-                  onClick={() => handleNav("#services")}
-                >
-                  Услуги
-                </motion.li>
-                <motion.li
-                  variants={hamburgerList}
-                  onClick={() => handleNav("#questions")}
-                >
-                  Въпроси
-                </motion.li>
 
                 <motion.li variants={hamburgerList}>
-                  <Link href="/contactUs" scroll={false}>
+                  <Link href="/company/contactUs" scroll={false}>
                     Контакти
                   </Link>
                 </motion.li>

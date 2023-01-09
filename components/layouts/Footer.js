@@ -44,12 +44,12 @@ export default function Footer() {
   useEffect(() => {
     if (
       router.pathname == "/" ||
-      router.pathname == "/contactUs" ||
-      router.pathname == "/aboutUs" ||
-      router.pathname == "/privacy-policy" ||
-      router.pathname == "/terms-and-conditions" ||
-      router.pathname == "/offers" ||
-      router.pathname == "/cookie-policy"
+      router.pathname == "/company/contactUs" ||
+      router.pathname == "/company/aboutUs" ||
+      router.pathname == "/legal/privacy-policy" ||
+      router.pathname == "/legal/terms-and-conditions" ||
+      router.pathname == "/deals/offers" ||
+      router.pathname == "/legal/cookie-policy"
     ) {
       setColors({
         bgColor: "bg-primaryBlue-650",
@@ -57,21 +57,24 @@ export default function Footer() {
         markers: "marker:text-primaryBlue-550",
         copyRight: "bg-primaryBlue-850",
       });
-    } else if (router.pathname == "/digital") {
+    } else if (router.pathname == "/brands/digital") {
       setColors({
         bgColor: "bg-pink-200",
         button: "bg-pink-100",
         markers: "marker:text-pink-150",
         copyRight: "bg-pink-250",
       });
-    } else if (router.pathname == "/web" || router.pathname.includes("/web")) {
+    } else if (
+      router.pathname == "/brands/web" ||
+      router.pathname.includes("/web")
+    ) {
       setColors({
         bgColor: "bg-blue-100",
         button: "bg-blue-50",
         markers: "marker:text-blue-50",
         copyRight: "bg-blue-150",
       });
-    } else if (router.pathname == "/academy") {
+    } else if (router.pathname == "/brands/academy") {
       setColors({
         bgColor: "bg-red-300",
         button: "bg-red-150",
@@ -81,8 +84,8 @@ export default function Footer() {
     }
     console.log(router.pathname);
     if (
-      router.pathname != "/digital" &&
-      router.pathname != "/web" &&
+      router.pathname != "/brands/digital" &&
+      router.pathname != "/brands/web" &&
       router.pathname != "/"
     ) {
       setPaddingNeed(false);
@@ -149,14 +152,14 @@ export default function Footer() {
               <h5 className="mt-5 text-lg font-semibold">Брандове</h5>
               <ul className={`list-disc  ${colors.markers} leading-8 ml-4`}>
                 <li className="cursor-default">
-                  <Link href="/web" scroll={false}>
+                  <Link href="/brands/web" scroll={false}>
                     <span className="pb-1 border-b cursor-pointer border-border">
                       Web
                     </span>
                   </Link>
                 </li>
                 <li className="cursor-default">
-                  <Link href="/digital" scroll={false}>
+                  <Link href="/brands/digital" scroll={false}>
                     <span className="pb-1 border-b cursor-pointer border-border">
                       Digital
                     </span>
@@ -168,7 +171,7 @@ export default function Footer() {
                   </span>
                 </li> */}
                 <li className="cursor-default">
-                  <Link href="/academy" scroll={false}>
+                  <Link href="/brands/academy" scroll={false}>
                     <span className="pb-1 border-b cursor-pointer border-border">
                       Academy
                     </span>
@@ -180,14 +183,14 @@ export default function Footer() {
               <h5 className="mt-5 text-lg font-semibold">За STROVER</h5>
               <ul className={`list-disc ${colors.markers} pb-1 leading-8 ml-4`}>
                 <li className="cursor-default">
-                  <Link href="/aboutUs#team" scroll={false}>
+                  <Link href="/company/aboutUs#team" scroll={false}>
                     <span className="pb-1 border-b cursor-pointer border-border">
                       Екипа ни
                     </span>
                   </Link>
                 </li>
                 <li className="cursor-default">
-                  <Link href="/offers" scroll={false}>
+                  <Link href="/deals/offers" scroll={false}>
                     <span className="pb-1 border-b cursor-pointer border-border">
                       Оферти
                     </span>
@@ -201,14 +204,14 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li className="cursor-default">
-                  <Link href="/privacy-policy" scroll={false}>
+                  <Link href="/legal/privacy-policy" scroll={false}>
                     <span className="pb-1 border-b cursor-pointer border-border">
                       Защита на лични данни
                     </span>
                   </Link>
                 </li>
                 <li className="cursor-default">
-                  <Link href="/cookie-policy" scroll={false}>
+                  <Link href="/legal/cookie-policy" scroll={false}>
                     <span className="pb-1 border-b cursor-pointer border-border">
                       Политика за бисквитките
                     </span>

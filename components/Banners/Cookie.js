@@ -13,23 +13,23 @@ const Cookie = ({ setIsCookie, isCookie }) => {
     setStyles("bg-primaryBlue");
     if (
       router.pathname == "/" ||
-      router.pathname == "/aboutUs" ||
-      router.pathname == "/contactUs"
+      router.pathname == "/company/aboutUs" ||
+      router.pathname == "/company/contactUs"
     ) {
       setStyles("bg-primaryBlue");
-    } else if (router.pathname == "/digital") {
+    } else if (router.pathname == "/brands/digital") {
       setStyles("bg-pink-200");
       setBtnStyle("bg-green-100");
     } else if (router.pathname == "/web") {
       setStyles("bg-primaryBlue");
     }
     if (
-      router.pathname == "/privacy-policy" ||
-      router.pathname == "/terms-and-conditions" ||
-      router.pathname == "/cookie-policy"
+      router.pathname == "/legal/privacy-policy" ||
+      router.pathname == "/legal/terms-and-conditions" ||
+      router.pathname == "/legal/cookie-policy"
     ) {
       setStyles("bg-primaryBlue");
-    } else if (router.pathname == "/academy") {
+    } else if (router.pathname == "/brands/academy") {
       setStyles("bg-primaryBlue");
     }
   }, [router]);
@@ -70,10 +70,10 @@ const Cookie = ({ setIsCookie, isCookie }) => {
               </p>
               <p className="text-white">
                 За да научите повече, прочетете нашата{" "}
-                <Link href="/privacy-policy" className="pr-1 underline">
+                <Link href="/legal/privacy-policy" className="pr-1 underline">
                   политика за поверителност
                 </Link>
-                <Link href="/cookie-policy" className="underline">
+                <Link href="/legal/cookie-policy" className="underline">
                   и политика за бисквитки
                 </Link>
               </p>

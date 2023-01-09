@@ -1,13 +1,15 @@
 import Head from "next/head";
 import React from "react";
-import Navigation from "../components/otherPagesNav/Navigation";
+import Navigation from "../../components/otherPagesNav/Navigation";
 
-import { links } from "../components/otherPagesNav/privacyAndPolicyData";
+import { links } from "../../components/otherPagesNav/privacyAndPolicyData";
 
 export default function PrivacyPolicy() {
   return (
     <>
-      <Head></Head>
+      <Head>
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
       <Navigation links={links} />
       <section className="container text-black mt-36">
         <div>

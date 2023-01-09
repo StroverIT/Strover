@@ -1,8 +1,8 @@
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
-import Navigation from "../components/academy/Navigation";
+import Navigation from "../../components/academy/Navigation";
 
-import style from "../styles/Academy.module.css";
+import style from "../../styles/Academy.module.css";
 import { motion } from "framer-motion";
 
 export default function Academy() {

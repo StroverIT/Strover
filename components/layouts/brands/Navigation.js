@@ -117,12 +117,12 @@ export default function Navigation({ bgColor, pageLinks, navColor }) {
           <div>
             <ul className="flex items-center space-x-5">
               <li>
-                <Link href="/aboutUs" scroll={false}>
+                <Link href="/company/aboutUs" scroll={false}>
                   За нас
                 </Link>
               </li>
               <li>
-                <Link href="/contactUs" scroll={false}>
+                <Link href="/company/contactUs" scroll={false}>
                   Контакти
                 </Link>
               </li>
@@ -195,12 +195,12 @@ export default function Navigation({ bgColor, pageLinks, navColor }) {
                       );
                     })}
                   <motion.li variants={hamburgerList}>
-                    <Link href="/aboutUs" scroll={false}>
+                    <Link href="/company/aboutUs" scroll={false}>
                       За нас
                     </Link>
                   </motion.li>
                   <motion.li variants={hamburgerList}>
-                    <Link href="/contactUs" scroll={false}>
+                    <Link href="/company/contactUs" scroll={false}>
                       Контакти
                     </Link>
                   </motion.li>

@@ -28,24 +28,24 @@ export default function Layout({ children }) {
 
     if (
       router.pathname == "/" ||
-      router.pathname == "/aboutUs" ||
-      router.pathname == "/contactUs"
+      router.pathname == "/company/aboutUs" ||
+      router.pathname == "/company/contactUs"
     ) {
       body.classList.add("index-bg");
       html.classList.add("index");
-    } else if (router.pathname == "/digital") {
+    } else if (router.pathname == "/brands/digital") {
       body.classList.add("digital-bg");
       html.classList.add("digital");
-    } else if (router.pathname == "/web") {
+    } else if (router.pathname == "/brands/web") {
       body.classList.add("web-bg");
       html.classList.add("web");
     }
     if (
-      router.pathname == "/privacy-policy" ||
-      router.pathname == "/terms-and-conditions"
+      router.pathname == "/legal/privacy-policy" ||
+      router.pathname == "/legal/terms-and-conditions"
     ) {
       html.classList.add("index");
-    } else if (router.pathname == "/academy") {
+    } else if (router.pathname == "/brands/academy") {
       body.classList.add("bg-academy");
     }
 

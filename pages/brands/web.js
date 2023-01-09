@@ -1,20 +1,20 @@
 import Head from "next/head";
 import React from "react";
-import IdeasInWebsite from "../components/Banners/IdeasInWebsite";
-import Brands from "../components/Brands/ListBrands";
-import ContactUs from "../components/ContactUs";
-import HeroSection from "../components/web/HeroSection";
-import Background from "../components/web/HeroSectionComp/Background";
-import WaveSvg from "../components/web/HeroSectionComp/WaveSvg";
-import WaveSvgDown from "../components/web/HeroSectionComp/WaveSvgDown";
-import HowToProfit from "../components/web/HowToProfit";
-import MoreServices from "../components/web/MoreServices";
-import Navigation from "../components/layouts/brands/Navigation";
-import Pricing from "../components/web/Pricing";
-import ProcessAndServices from "../components/web/ProcessAndServices";
-import Questions from "../components/web/Questions";
+import IdeasInWebsite from "../../components/Banners/IdeasInWebsite";
+import Brands from "../../components/Brands/ListBrands";
+import ContactUs from "../../components/ContactUs";
+import HeroSection from "../../components/web/HeroSection";
+import Background from "../../components/web/HeroSectionComp/Background";
+import WaveSvg from "../../components/web/HeroSectionComp/WaveSvg";
+import WaveSvgDown from "../../components/web/HeroSectionComp/WaveSvgDown";
+import HowToProfit from "../../components/web/HowToProfit";
+import MoreServices from "../../components/web/MoreServices";
+import Navigation from "../../components/layouts/brands/Navigation";
+import Pricing from "../../components/web/Pricing";
+import ProcessAndServices from "../../components/web/ProcessAndServices";
+import Questions from "../../components/web/Questions";
 
-import { web as links } from "../data/links";
+import { web as links } from "../../data/links";
 
 export default function Web() {
   return (
