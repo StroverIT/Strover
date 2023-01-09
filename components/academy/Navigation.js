@@ -176,18 +176,6 @@ export default function Navigation() {
                 >
                   За нас
                 </motion.li>
-                <motion.li
-                  variants={hamburgerList}
-                  onClick={() => handleNav("#services")}
-                >
-                  Услуги
-                </motion.li>
-                <motion.li
-                  variants={hamburgerList}
-                  onClick={() => handleNav("#questions")}
-                >
-                  Въпроси
-                </motion.li>
 
                 <motion.li variants={hamburgerList}>
                   <Link href="/contactUs" scroll={false}>
