@@ -10,6 +10,8 @@ module.exports = {
     "/web/thanks",
     "/web/thanks-christmas",
     "/web/promotions",
+
+    "/brands/digital",
   ],
   // ...other options
 };
