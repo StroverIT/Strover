@@ -165,7 +165,11 @@ export default function Navigation() {
           </div>
           <div className="md:hidden flex-center">
             <button className="relative z-10" aria-label="Hamburger menu">
-              <Hamburger toggled={isOpen} toggle={setOpen} />
+              <Hamburger
+                toggled={isOpen}
+                toggle={setOpen}
+                label="Hamburger menu"
+              />
             </button>
             <AnimatePresence mode="wait">
               {isOpen && (
