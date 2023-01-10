@@ -5,11 +5,11 @@ export default function HeroSection() {
     <section className="max-sm:mt-10 flex items-center    max-lg:flex-center text-center lg:left-1/2 lg:-translate-x-1/2 z-30  h-[70vh]  lg:absolute lg:-translate-y-[4rem] md:top-28 ">
       <section className="relative z-30 ">
         <h1 className="text-5xl font-bold md:text-7xl text-blue-50">
-          Strover Web
+          Изработка на сайт
         </h1>
         <p className="max-w-xl mt-3 text-md max-md:container ">
-          В Strover Web ще научите всичко за изработването и поддръжането на
-          един успешен сайт
+          В Strover Web ще научите всичко необходимо за изработването и
+          поддръжането на един успешен уеб сайт
         </p>
         {/* <p className="container max-w-xl mt-3 text-justify text-md hypens-auto">
           В Strover Web ще научите за нашите услуги в областта на разработването
