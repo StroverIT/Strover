@@ -11,18 +11,7 @@ const sectionVariant = {
     transition: { staggerChildren: 0.3 },
   },
 };
-const divVariant = {
-  initial: {
-    opacity: 0,
-  },
-  animate: {
-    opacity: 1,
-    transition: {
-      duration: 2.5,
-      type: "spring",
-    },
-  },
-};
+
 export default function HowToProfit() {
   const section = useRef(null);
   const sectionView = useInView(section, { amount: 0.2 });
@@ -41,14 +30,14 @@ export default function HowToProfit() {
           <TextAnimation
             placeholderText={[
               {
-                type: "heading1",
-                text: "как сайтът ви ще печели за вас",
+                type: "heading2",
+                text: "как вашият уеб сайт печели за вас",
               },
             ]}
           />
         </div>
         <div className="text-3xl font-semibold uppercase text-blue-50 lg:hidden">
-          как сайтът ви печели за вас
+          как вашият уеб сайт печели за вас
         </div>
         <FadeIn duration={0.85} delay={0.4}>
           <div className="max-w-3xl text-lg max-lg:mt-2 ">
