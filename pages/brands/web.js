@@ -20,7 +20,7 @@ export default function Web() {
   return (
     <>
       <Head>
-        <title>Strover Web - изработка на сайт</title>
+        <title>Strover Web - Изработка на сайт</title>
         <meta
           name="description"
           content="Strover Company - поддръжка и изработка на сайт, онлайн магазин (e-commerce) на изгодни цени с точни срокове. SEO оптимизация, за достигане до повече клиенти. 
