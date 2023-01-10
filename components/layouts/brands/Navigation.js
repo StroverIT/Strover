@@ -144,9 +144,13 @@ export default function Navigation({ bgColor, pageLinks, navColor }) {
               <LogoName />
             </button>
           </div>
-          <div className="relative z-10" aria-label="Hamburger menu">
-            <Hamburger toggled={isOpen} toggle={setOpen} />
-          </div>
+          <button className="relative z-10" aria-label="Hamburger menu">
+            <Hamburger
+              toggled={isOpen}
+              toggle={setOpen}
+              label="Hamburger menu"
+            />
+          </button>
           <AnimatePresence mode="wait">
             {isOpen && (
               <motion.div
