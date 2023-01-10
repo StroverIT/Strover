@@ -45,7 +45,7 @@ export default function ListBrands({
             altImage="Tech spider logo for strovers' brands"
             imageLink="/logos/web-spider.svg"
             title="Web"
-            p="Изработка на онлайн магазин-и, блогове, персонализирана платформи, уеб базиран софтуер и информативни динамични уеб сайтове"
+            p="Изработка на онлайн магазини, блогове, персонализирана платформи, уеб базиран софтуер и информативни динамични уеб сайтове"
             link="/brands/web"
             borderColor="bg-primaryBlue-200"
             textColor="text-primaryBlue-200"
