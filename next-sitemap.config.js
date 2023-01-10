@@ -12,6 +12,7 @@ module.exports = {
     "/web/promotions",
 
     "/brands/digital",
+    "/brands/academy",
   ],
   // ...other options
 };
