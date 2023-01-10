@@ -17,14 +17,13 @@ export default function ProcessAndServices() {
             placeholderText={[
               {
                 type: "paragraph",
-                text: "По-долу може да разгледате за нашият процес за изграждането на успешен уеб сайт.",
+                text: "Нашият процес чрез който изграждаме успешен уеб сайт.",
               },
             ]}
           />
         </div>
         <p className="mt-2 text-sm lg:hidden">
-          По-долу може да разгледате за нашият процес за изграждането на успешен
-          уеб сайт.
+          Нашият процес чрез който изграждаме успешен уеб сайт.
         </p>
       </section>
       <section className="relative max-3xl:flex max-3xl:flex-wrap max-3xl:items-center max-3xl:justify-center mt-14 max-3xl:gap-y-20 sm:gap-y-10 sm:gap-x-40">
