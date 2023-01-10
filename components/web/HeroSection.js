@@ -7,10 +7,12 @@ export default function HeroSection() {
         <h1 className="text-5xl font-bold md:text-7xl text-blue-50">
           Изработка на сайт
         </h1>
-        <p className="max-w-xl mt-3 text-md max-md:container ">
-          В Strover Web ще научите всичко необходимо за изработването и
-          поддръжането на един успешен уеб сайт
-        </p>
+        <div className="flex-center">
+          <p className="max-w-xl mt-3 text-md max-md:container text-center">
+            В Strover Web ще научите всичко необходимо за изработването и
+            поддръжането на един успешен уеб сайт
+          </p>
+        </div>
         {/* <p className="container max-w-xl mt-3 text-justify text-md hypens-auto">
           В Strover Web ще научите за нашите услуги в областта на разработването
           на уеб сайтове, поддържане и ребрандиране на вече същестуващи такива,
