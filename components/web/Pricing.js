@@ -14,13 +14,13 @@ export default function Pricing() {
       </section>
       <section className="mt-10 ">
         <InfoContainer image="shopping.png" title="Онлайн магазин / e-commerce">
-          <h1 className="text-xl font-semibold">Предназначение</h1>
+          <h2 className="text-xl font-semibold">Предназначение</h2>
 
           <p className="pt-1">
             Да продава артикули онлайн с конвенционален метод за продажба на
             дребно/едро.
           </p>
-          <h1 className="pt-2 text-xl font-semibold">Характеристика</h1>
+          <h2 className="pt-2 text-xl font-semibold">Характеристика</h2>
           <ul className="pt-1 ml-4 list-disc">
             <li>Производствена галерия с висококачествени изображения</li>
             <li>продуктови страници</li>
@@ -38,12 +38,12 @@ export default function Pricing() {
           <SeeMore link="ecommerce" />
         </InfoContainer>
         <InfoContainer image="investment.png" title="Бизнес сайт" isNext={true}>
-          <h1 className="text-xl font-semibold">Предназначение</h1>
+          <h2 className="text-xl font-semibold">Предназначение</h2>
           <p className="pt-1">
             Да информирате потенциални клиенти и потребители за вашия бизнес и
             да ги примамите да работят с вас
           </p>
-          <h1 className="pt-2 text-xl font-semibold">Характеристика</h1>
+          <h2 className="pt-2 text-xl font-semibold">Характеристика</h2>
           <ul className="pt-1 ml-4 list-disc">
             <li>обяснение на услугите</li>
             <li>
@@ -69,12 +69,12 @@ export default function Pricing() {
             Ви по един специален начин, ние сме постоянно мотивирани, за да Ви предложим решения, от които имате нужда!"
           title="Персонален"
         >
-          <h1 className="text-xl font-semibold">Предназначение</h1>
+          <h2 className="text-xl font-semibold">Предназначение</h2>
           <p className="pt-1">
             Да показва мостри от работа за определени професионалисти и да
             привлича повече клиенти
           </p>
-          <h1 className="pt-2 text-xl font-semibold">Характеристики</h1>
+          <h2 className="pt-2 text-xl font-semibold">Характеристики</h2>
           <ul className="pt-1 ml-4 list-disc">
             <li>Галерия от висококачествени изображения и работни образци</li>
             <li>Информация за специалиста или агенцията</li>
@@ -93,12 +93,12 @@ export default function Pricing() {
           title="Блог / уебсайт за новини "
           isNext={true}
         >
-          <h1 className="text-xl font-semibold">Предназначение</h1>
+          <h2 className="text-xl font-semibold">Предназначение</h2>
           <p className="pt-1">
             За да образоваме или информираме посетителя за текущи събития или
             специализирани знания.
           </p>
-          <h1 className="pt-2 text-xl font-semibold">Характеристики</h1>
+          <h2 className="pt-2 text-xl font-semibold">Характеристики</h2>
           <ul className="pt-1 ml-4 list-disc">
             <li>каталози със статии</li>
             <li>специални страници за всяка статия</li>
@@ -111,13 +111,13 @@ export default function Pricing() {
           <SeeMore link="blog" />
         </InfoContainer> */}
         <InfoContainer image="chat.png" isNext={true} title="Форум ">
-          <h1 className="text-xl font-semibold">Предназначение</h1>
+          <h2 className="text-xl font-semibold">Предназначение</h2>
           <p className="pt-1">
             Да позволи на потребителите да обсъждат помежду си и да споделят
             информация и връзки помежду си, обикновено посветени на конкретни
             теми.
           </p>
-          <h1 className="pt-2 text-xl font-semibold">Характеристика</h1>
+          <h2 className="pt-2 text-xl font-semibold">Характеристика</h2>
           <ul className="pt-1 ml-4 list-disc">
             <li>организирани дискусионни табла по теми</li>
             <li>

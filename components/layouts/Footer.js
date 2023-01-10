@@ -98,9 +98,9 @@ export default function Footer() {
       <section className={` pb-10`}>
         <section className="flex flex-col-reverse xl:grid xl:grid-cols-[30%70%]  container text-white gap-x-28">
           <section>
-            <h5 className="mt-5 mb-3 font-semibold uppercase ">
+            <h3 className="mt-5 mb-3 font-semibold uppercase ">
               Абонирай се за нашите оферти
-            </h5>
+            </h3>
             <input
               type="text"
               className="w-full px-2 py-5 text-sm text-black border-none rounded-sm h-7 placeholder:text-black"
@@ -116,7 +116,7 @@ export default function Footer() {
                 {isLoading ? <div className="loader"></div> : "Абонирай ме!"}
               </button>
             </div>
-            <h5 className="mt-8 font-semibold uppercase">Социални мрежи</h5>
+            <h1 className="mt-8 font-semibold uppercase">Социални мрежи</h1>
             <div className="flex mt-2 gap-x-5">
               <a
                 aria-label="Strover Facebook"
@@ -149,7 +149,7 @@ export default function Footer() {
 
           <section className="grid-cols-[20%40%40%] justify-center xl:grid ">
             <section>
-              <h5 className="mt-5 text-lg font-semibold">Брандове</h5>
+              <h1 className="mt-5 text-lg font-semibold">Брандове</h1>
               <ul className={`list-disc  ${colors.markers} leading-8 ml-4`}>
                 <li className="cursor-default">
                   <Link href="/brands/web" scroll={false}>
@@ -180,7 +180,7 @@ export default function Footer() {
               </ul>
             </section>
             <section>
-              <h5 className="mt-5 text-lg font-semibold">За STROVER</h5>
+              <h1 className="mt-5 text-lg font-semibold">За STROVER</h1>
               <ul className={`list-disc ${colors.markers} pb-1 leading-8 ml-4`}>
                 <li className="cursor-default">
                   <Link href="/company/aboutUs#team" scroll={false}>
@@ -221,9 +221,9 @@ export default function Footer() {
             </section>
             <section className="">
               <div>
-                <h5 className="mt-5 text-lg font-semibold text-left">
+                <h1 className="mt-5 text-lg font-semibold text-left">
                   Контакти
-                </h5>
+                </h1>
                 <div className="ml-1 border-l border-border">
                   <ul className="pl-4 leading-8">
                     <li className="">

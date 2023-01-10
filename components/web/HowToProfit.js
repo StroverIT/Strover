@@ -30,15 +30,15 @@ export default function HowToProfit() {
           <TextAnimation
             placeholderText={[
               {
-                type: "heading2",
+                type: "heading1",
                 text: "как вашият уеб сайт печели за вас",
               },
             ]}
           />
         </div>
-        <h2 className="text-3xl font-semibold uppercase text-blue-50 lg:hidden">
+        <h1 className="text-3xl font-semibold uppercase text-blue-50 lg:hidden">
           как вашият уеб сайт печели за вас
-        </h2>
+        </h1>
         <FadeIn duration={0.85} delay={0.4}>
           <div className="max-w-3xl text-lg max-lg:mt-2 ">
             {/* В днешни дни не е достатъчно да притежавате просто сайт, трябва Ви
@@ -60,9 +60,9 @@ export default function HowToProfit() {
               <Image src="/icons/24-hours.png" fill alt="24 hours icon" />{" "}
             </div>
           </div>
-          <h3 className="mt-5 text-lg font-semibold lg:text-xl">
+          <h2 className="mt-5 text-lg font-semibold lg:text-xl">
             Денонощно вашият уеб сайт работи
-          </h3>
+          </h2>
           <p className="mt-2">
             За разлика от нас хората, сайта няма нужда от почивка. Той ще
             представя бизнеса Ви денонощно, за да може до Вас винаги да достигат
@@ -77,9 +77,9 @@ export default function HowToProfit() {
                 <Image src="/icons/trust.png" fill alt="24 hours icon" />{" "}
               </div>
             </div>
-            <h3 className="mt-5 text-lg font-semibold">
+            <h2 className="mt-5 text-lg font-semibold">
               Изграждане на доверието в клиентите Ви
-            </h3>
+            </h2>
             <p className="mt-2">
               Всеки ваш потенциален клиент, ще желае да види така наречената
               “дигитална следа”, това ще рече социални мрежи и Уеб сайт. Защо
@@ -95,9 +95,9 @@ export default function HowToProfit() {
                 <Image src="/icons/expansion.png" fill alt="24 hours icon" />{" "}
               </div>
             </div>
-            <h3 className="mt-5 text-lg font-semibold">
+            <h2 className="mt-5 text-lg font-semibold">
               Разширяване обхвата на бизнеса Ви
-            </h3>
+            </h2>
             <p className="mt-2">
               Забравете вече за териториалните ограничения, вие разполагате с
               целият интернет. Сайтът Ви има възможността да се срещне с

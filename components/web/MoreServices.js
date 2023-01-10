@@ -25,9 +25,9 @@ export default function MoreServices() {
             </div>
           </FadeFromBottom>
           <FadeFromBottom duration={0.5} delay={0.1}>
-            <h5 className="mt-3 text-lg font-semibold lg:text-2xl">
+            <h2 className="mt-3 text-lg font-semibold lg:text-2xl">
               Създаване на онлайн брошури
-            </h5>
+            </h2>
           </FadeFromBottom>
           <FadeFromBottom duration={0.5} delay={0.2}>
             <p
@@ -59,9 +59,9 @@ export default function MoreServices() {
           </FadeFromBottom>
 
           <FadeFromBottom duration={0.5} delay={0.1}>
-            <h5 className="mt-3 text-lg font-semibold lg:text-2xl">
+            <h2 className="mt-3 text-lg font-semibold lg:text-2xl">
               Редизайн{" "}
-            </h5>
+            </h2>
           </FadeFromBottom>
 
           <FadeFromBottom duration={0.5} delay={0.2}>
@@ -97,9 +97,9 @@ export default function MoreServices() {
           </FadeFromBottom>
 
           <FadeFromBottom duration={0.5} delay={0.1}>
-            <h5 className="mt-3 text-xl font-semibold lg:text-2xl">
+            <h2 className="mt-3 text-xl font-semibold lg:text-2xl">
               Ребрандиране
-            </h5>
+            </h2>
           </FadeFromBottom>
 
           <FadeFromBottom duration={0.5} delay={0.2}>
@@ -118,9 +118,9 @@ export default function MoreServices() {
           </FadeFromBottom>
 
           <FadeFromBottom duration={0.5} delay={0.1}>
-            <h5 className="mt-3 text-xl font-semibold lg:text-2xl">
+            <h2 className="mt-3 text-xl font-semibold lg:text-2xl">
               Google Ads
-            </h5>
+            </h2>
           </FadeFromBottom>
 
           <FadeFromBottom duration={0.5} delay={0.2}>
@@ -138,9 +138,9 @@ export default function MoreServices() {
           </FadeFromBottom>
 
           <FadeFromBottom duration={0.5} delay={0.1}>
-            <h5 className="mt-3 font-semibold text-md lg:text-2xl">
+            <h2 className="mt-3 font-semibold text-md lg:text-2xl">
               Създаване на снимки за сайт
-            </h5>
+            </h2>
           </FadeFromBottom>
 
           <FadeFromBottom duration={0.5} delay={0.2}>

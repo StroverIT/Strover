@@ -67,13 +67,13 @@ export default function ContactUs({
         className={`grid lg:grid-cols-2 py-14 lg:py-32  w-full px-5 xl:px-28 ${bgColor}`}
       >
         <section className="">
-          <h4>
+          <h1>
             <span
               className={`border-b-4 ${color} pb-1 text-2xl font-semibold rounded-sm `}
             >
               Свържи се с нас!
             </span>
-          </h4>
+          </h1>
           <p className="pt-3 lg:max-w-[15rem]">
             Очакваме с нетърпение нашите общи проекти!
           </p>

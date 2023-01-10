@@ -80,9 +80,9 @@ function Question({ title, text, isBorder = true, index }) {
     <section className={`p-4 ${isBorder ? "border-b-2 border-blue-250" : ""} `}>
       <div onClick={() => setOpen(!isOpen)} className="cursor-pointer">
         <div className="flex items-center justify-between">
-          <h4 className="font-semibold uppercase text-md lg:text-lg">
+          <h2 className="font-semibold uppercase text-md lg:text-lg">
             {title}
-          </h4>
+          </h2>
           <motion.div
             animate={isOpen ? "open" : "closed"}
             variants={iconVariants}

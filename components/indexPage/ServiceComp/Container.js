@@ -7,7 +7,7 @@ export default function Container({ title, children, link, btnColor, delay }) {
   return (
     <FadeIn delay={delay} duration={0.8}>
       <div className="">
-        <h3 className="text-4xl">{title}</h3>
+        <h2 className="text-4xl">{title}</h2>
         {children}
         <div className="mt-5 md:mt-5 ">
           <Link href={link} scroll={false}>

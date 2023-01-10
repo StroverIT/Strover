@@ -20,7 +20,7 @@ export default function MoreServices() {
       <section className="flex lg:px-80">
         <section className=""></section>
         <section className="pt-5 lg:pt-16">
-          <h5 className="text-lg font-semibold lg:text-3xl">SEO оптимизация</h5>
+          <h2 className="text-lg font-semibold lg:text-3xl">SEO оптимизация</h2>
           <p className="max-w-md pt-2 max-lg:text-sm">
             Когато е завършен уейбсайта, се пристъпва към намирането на
             потребители и потенциални клиенти. Това се извършва, чрез търсачките

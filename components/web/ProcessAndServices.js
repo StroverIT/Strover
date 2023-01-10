@@ -45,9 +45,9 @@ export default function ProcessAndServices() {
           </FadeFromBottom>
 
           <FadeFromBottom duration={0.5} delay={0.1}>
-            <h5 className="mt-3 text-lg font-semibold lg:text-2xl">
+            <h2 className="mt-3 text-lg font-semibold lg:text-2xl">
               Анализ и консултация
-            </h5>
+            </h2>
           </FadeFromBottom>
           <FadeFromBottom duration={0.5} delay={0.2}>
             <p className="max-w-sm mt-1 text-center max-lg:text-sm">
@@ -68,9 +68,9 @@ export default function ProcessAndServices() {
             </div>
           </FadeFromBottom>
           <FadeFromBottom duration={0.5} delay={0.1}>
-            <h5 className="mt-3 text-lg font-semibold lg:text-2xl">
+            <h2 className="mt-3 text-lg font-semibold lg:text-2xl">
               Изработка нa сайт
-            </h5>
+            </h2>
           </FadeFromBottom>
           <FadeFromBottom duration={0.5} delay={0.2}>
             <p className="max-w-sm mt-1 text-center max-lg:text-sm">
@@ -87,9 +87,9 @@ export default function ProcessAndServices() {
             </div>
           </FadeFromBottom>
           <FadeFromBottom duration={0.5} delay={0.1}>
-            <h5 className="mt-3 text-xl font-semibold lg:text-2xl">
+            <h2 className="mt-3 text-xl font-semibold lg:text-2xl">
               SEO оптимизация
-            </h5>
+            </h2>
           </FadeFromBottom>
           <FadeFromBottom duration={0.5} delay={0.2}>
             <p className="max-w-sm mt-1 text-center max-lg:text-sm">
@@ -111,9 +111,9 @@ export default function ProcessAndServices() {
             </div>
           </FadeFromBottom>
           <FadeFromBottom duration={0.5} delay={0.1}>
-            <h5 className="mt-3 text-lg font-semibold text-center lg:text-2xl">
+            <h2 className="mt-3 text-lg font-semibold text-center lg:text-2xl">
               Онлайн добавяне на продукти
-            </h5>
+            </h2>
           </FadeFromBottom>
           <FadeFromBottom duration={0.5} delay={0.2}>
             <p className="mt-1 text-center lg:max-w-sm max-lg:text-sm">
@@ -131,9 +131,9 @@ export default function ProcessAndServices() {
             </div>
           </FadeFromBottom>
           <FadeFromBottom duration={0.5} delay={0.1}>
-            <h5 className="mt-3 text-xl font-semibold lg:text-2xl">
+            <h2 className="mt-3 text-xl font-semibold lg:text-2xl">
               Поддръжка и развитие
-            </h5>
+            </h2>
           </FadeFromBottom>
           <FadeFromBottom duration={0.5} delay={0.2}>
             <p className="max-w-sm mt-1 text-center max-lg:text-sm">

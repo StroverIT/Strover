@@ -31,7 +31,7 @@ export default function HeaderSpider({
 
   return (
     <motion.div className="" ref={section} animate={sectionAnim}>
-      <h3 className={`${size} text-center font-medium`}>{title}</h3>
+      <h1 className={`${size} text-center font-medium`}>{title}</h1>
 
       <div className="mt-2 flex-center">
         <motion.div

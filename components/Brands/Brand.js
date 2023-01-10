@@ -21,7 +21,7 @@ export default function Brand({
       <div className="relative flex flex-col w-32 h-32">
         <Image alt={altImage} src={imageLink} fill />
       </div>
-      <h4 className={`text-4xl font-bold ${textColor} `}>{title}</h4>
+      <h2 className={`text-4xl font-bold ${textColor} `}>{title}</h2>
       <p className={`${maxW} mt-2 text-white`}>{p}</p>
       <div className={`${mt} `}>
         <Link href={link} scroll={false}>

@@ -126,7 +126,7 @@ function Service({ index, lines, title, text, link }) {
       </section>
       <section className="container lg:pt-16">
         <FadeFromBottom duration={0.5}>
-          <h5 className="text-lg font-semibold lg:text-2xl">{title}</h5>
+          <h2 className="text-lg font-semibold lg:text-2xl">{title}</h2>
         </FadeFromBottom>
         <FadeFromBottom duration={0.5} delay={0.1}>
           <p className="pt-1 max-lg:text-sm">{text}</p>
