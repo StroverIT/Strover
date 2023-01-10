@@ -140,7 +140,10 @@ export default function Navigation({ bgColor, pageLinks, navColor }) {
             <div className="relative w-20 h-20">
               <WhiteSpider />
             </div>
-            <button className="h-full pl-1 -ml-5 flex-center">
+            <button
+              className="h-full pl-1 -ml-5 flex-center"
+              aria-label="Home button"
+            >
               <LogoName />
             </button>
           </div>
