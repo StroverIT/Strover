@@ -60,9 +60,9 @@ export default function HowToProfit() {
               <Image src="/icons/24-hours.png" fill alt="24 hours icon" />{" "}
             </div>
           </div>
-          <h5 className="mt-5 text-lg font-semibold lg:text-xl">
+          <h3 className="mt-5 text-lg font-semibold lg:text-xl">
             Денонощно сайта работи за вас
-          </h5>
+          </h3>
           <p className="mt-2">
             За разлика от Вас, сайтът Ви няма нужда от почивка. Сайтът ще
             представя бизнеса Ви денонощно, за да може до Вас винаги да достигат
@@ -77,9 +77,9 @@ export default function HowToProfit() {
                 <Image src="/icons/trust.png" fill alt="24 hours icon" />{" "}
               </div>
             </div>
-            <h5 className="mt-5 text-lg font-semibold">
+            <h3 className="mt-5 text-lg font-semibold">
               Изграждане на доверието в клиентите Ви
-            </h5>
+            </h3>
             <p className="mt-2">
               Всеки ваш потенциален клиент, ще желае да види вашата “дигитална
               следа”, това ще рече социални мрежи и Уеб сайт. Защо ли? Вече
@@ -95,9 +95,9 @@ export default function HowToProfit() {
                 <Image src="/icons/expansion.png" fill alt="24 hours icon" />{" "}
               </div>
             </div>
-            <h5 className="mt-5 text-lg font-semibold">
+            <h3 className="mt-5 text-lg font-semibold">
               Разширяване обхвата на бизнеса Ви
-            </h5>
+            </h3>
             <p className="mt-2">
               Забравете вече за териториалните ограничения, вие разполагате с
               целият интернет. Сайтът Ви има възможноста да се срещне с
