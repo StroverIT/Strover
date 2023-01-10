@@ -1,14 +1,20 @@
 import React from "react";
+import CodeTextAnim from "../../libs/CodeTextAnim";
 
 export default function HeroSection() {
   return (
-    <section className="max-sm:mt-10 flex items-center    max-lg:flex-center text-center lg:left-1/2 lg:-translate-x-1/2 z-30  h-[70vh]  lg:absolute lg:-translate-y-[4rem] md:top-28 ">
+    <section className="max-sm:mt-10 flex items-center    max-lg:flex-center text-center lg:left-1/2 lg:-translate-x-1/2 z-30  h-[70vh]  lg:absolute lg:-translate-y-[4rem] md:top-28">
       <section className="relative z-30 ">
-        <h1 className="text-5xl font-bold md:text-7xl text-blue-50">
+        {/* <h1 className="text-5xl font-bold md:text-7xl text-blue-50">
           Изработка на сайт
-        </h1>
+        </h1> */}
+        {/* <div className="container w-screen"> */}
+
+        <CodeTextAnim />
+
+        {/* </div> */}
         <div className="flex-center">
-          <p className="max-w-xl mt-3 text-md max-md:container text-center">
+          <p className="max-w-xl mt-3 text-center text-md md:font-medium max-md:container">
             В Strover Web ще научите всичко необходимо за изработването и
             поддръжането на един успешен уеб сайт
           </p>

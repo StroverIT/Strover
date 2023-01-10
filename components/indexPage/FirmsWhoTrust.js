@@ -1,11 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 
 import Image from "next/image";
 import { BsArrowRight } from "react-icons/bs";
 
-import { motion, useAnimation, useInView } from "framer-motion";
-
-import { useIsSmall } from "../../libs/FramerMediaQueryFn";
 import TextAnimation from "../../libs/TextAnimation";
 import FadeFromBottom from "../layouts/animations/onView/FadeFromBottom";
 import HeaderSpider from "../HeaderSpider";
