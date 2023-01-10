@@ -26,6 +26,7 @@ export default function Web() {
           content="Strover Company - поддръжка и изработка на сайт, онлайн магазин (e-commerce) на изгодни цени с точни срокове. SEO оптимизация, за достигане до повече клиенти. 
           За всичко нужно да е на едно място за създаването на успешен сайт."
         />
+        <link rel="canonical" href="https://strover.bg/brands/web" />
       </Head>
       <main className="relative text-white ">
         <section className="bg-[url('/web/bgheroV3.svg')] bg-no-repeat w-full h-full  absolute -z-10  top-[-550px] lg:top-[-150px] left-0"></section>
