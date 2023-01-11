@@ -15,8 +15,8 @@ export default function HeroSection() {
         {/* </div> */}
         <div className="flex-center">
           <p className="max-w-xl mt-3 text-center text-md md:font-medium max-md:container">
-            В Strover Web ще научите всичко необходимо за изработването и
-            поддръжането на един успешен уеб сайт
+            В Strover Web ще научите всичко необходимо за изработване на уеб
+            сайт
           </p>
         </div>
         {/* <p className="container max-w-xl mt-3 text-justify text-md hypens-auto">
