@@ -9,6 +9,7 @@ export default function PrivacyPolicy() {
     <>
       <Head>
         <meta name="robots" content="noindex, nofollow" />
+        <title>Политика на лични данни</title>
       </Head>
       <Navigation links={links} />
       <section className="container text-black mt-36">

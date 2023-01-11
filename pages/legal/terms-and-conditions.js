@@ -8,6 +8,7 @@ export default function TermsAndConditions() {
     <>
       <Head>
         <meta name="robots" content="noindex, nofollow" />
+        <title>Условия за ползване</title>
       </Head>
       <Navigation links={links} />
       <section className="container text-black mt-36">
