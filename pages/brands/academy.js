@@ -4,6 +4,7 @@ import Navigation from "../../components/academy/Navigation";
 
 import style from "../../styles/Academy.module.css";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Academy() {
   const schnatszVariants = {
@@ -18,7 +19,7 @@ export default function Academy() {
   return (
     <>
       <Head>
-        <title>StroverAcademy</title>
+        <title>Strover - Academy - Академия за програмисти</title>
         <meta
           name="description"
           content="Академия за дигитални мрежи, изработка на сайтове и уеб дизайн"
@@ -27,8 +28,17 @@ export default function Academy() {
       </Head>
       <Navigation />
       <main className="h-[100vh] relative ">
-        <div className="absolute z-10 py-2 text-5xl font-bold text-white -translate-x-1/2 -translate-y-1/2 rounded-full left-1/2 top-1/2 flex-center">
-          <div className="px-6">Очаквайте скоро!</div>
+        <div className="absolute z-10 py-2   text-white -translate-x-1/2 -translate-y-1/2 rounded-full left-1/2 top-1/2 flex-center flex-col">
+          <h1 className="px-6 text-5xl font-bold">Очаквайте скоро!</h1>
+          <h2 className="text-2xl mt-2">Вижте и другите ни брандове</h2>
+          <div className="underline text-xl text-center grid grid-cols-2">
+            <div>
+              <Link href="/brands/web">Web</Link>
+            </div>
+            <div>
+              <Link href="/brands/digital">Digital</Link>
+            </div>
+          </div>
         </div>
         <div className={`relative ${style.wrapper}`}>
           <div className={`${style.illu}`}>

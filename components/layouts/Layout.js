@@ -40,10 +40,7 @@ export default function Layout({ children }) {
       body.classList.add("web-bg");
       html.classList.add("web");
     }
-    if (
-      router.pathname == "/legal/privacy-policy" ||
-      router.pathname == "/legal/terms-and-conditions"
-    ) {
+    if (router.pathname.includes("/legal")) {
       html.classList.add("index");
     } else if (router.pathname == "/brands/academy") {
       body.classList.add("bg-academy");

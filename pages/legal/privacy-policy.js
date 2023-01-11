@@ -1,5 +1,7 @@
 import Head from "next/head";
+import Link from "next/link";
 import React from "react";
+import { BsBoxArrowInLeft } from "react-icons/bs";
 import Navigation from "../../components/otherPagesNav/Navigation";
 
 import { links } from "../../components/otherPagesNav/privacyAndPolicyData";
@@ -14,6 +16,12 @@ export default function PrivacyPolicy() {
       <Navigation links={links} />
       <section className="container text-black mt-36">
         <div>
+          <div className="text-sm mb-10 flex items-center">
+            <div className="mr-1 text-lg">
+              <BsBoxArrowInLeft />
+            </div>
+            <Link href="/">Към началната страница</Link>
+          </div>
           <h2 className="text-2xl font-semibold">Политика за поверителност</h2>
           <p className="font-medium">
             Последна актуализация на 12 ноември 2022 г
