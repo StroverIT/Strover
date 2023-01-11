@@ -95,8 +95,8 @@ export default function Footer() {
     <footer
       className={`${colors.bgColor}   ${paddingNeed && "pt-16"} z-10 w-full`}
     >
-      <section className={` pb-10`}>
-        <section className="flex flex-col-reverse xl:grid xl:grid-cols-[30%70%]  container text-white gap-x-28">
+      <div className={` pb-10`}>
+        <div className="flex flex-col-reverse xl:grid xl:grid-cols-[30%70%]  container text-white gap-x-28">
           <section>
             <h3 className="mt-5 mb-3 font-semibold uppercase ">
               Абонирай се за нашите оферти
@@ -116,7 +116,7 @@ export default function Footer() {
                 {isLoading ? <div className="loader"></div> : "Абонирай ме!"}
               </button>
             </div>
-            <h1 className="mt-8 font-semibold uppercase">Социални мрежи</h1>
+            <h3 className="mt-8 font-semibold uppercase">Социални мрежи</h3>
             <div className="flex mt-2 gap-x-5">
               <a
                 aria-label="Strover Facebook"
@@ -147,9 +147,9 @@ export default function Footer() {
             </div>
           </section>
 
-          <section className="grid-cols-[20%40%40%] justify-center xl:grid ">
+          <div className="grid-cols-[20%40%40%] justify-center xl:grid ">
             <section>
-              <h1 className="mt-5 text-lg font-semibold">Брандове</h1>
+              <h3 className="mt-5 text-lg font-semibold">Брандове</h3>
               <ul className={`list-disc  ${colors.markers} leading-8 ml-4`}>
                 <li className="cursor-default">
                   <Link href="/brands/web" scroll={false}>
@@ -180,7 +180,7 @@ export default function Footer() {
               </ul>
             </section>
             <section>
-              <h1 className="mt-5 text-lg font-semibold">За STROVER</h1>
+              <h3 className="mt-5 text-lg font-semibold">За STROVER</h3>
               <ul className={`list-disc ${colors.markers} pb-1 leading-8 ml-4`}>
                 <li className="cursor-default">
                   <Link href="/company/aboutUs#team" scroll={false}>
@@ -221,9 +221,9 @@ export default function Footer() {
             </section>
             <section className="">
               <div>
-                <h1 className="mt-5 text-lg font-semibold text-left">
+                <h3 className="mt-5 text-lg font-semibold text-left">
                   Контакти
-                </h1>
+                </h3>
                 <div className="ml-1 border-l border-border">
                   <ul className="pl-4 leading-8">
                     <li className="">
@@ -250,9 +250,9 @@ export default function Footer() {
                 </div>
               </div>
             </section>
-          </section>
-        </section>
-      </section>
+          </div>
+        </div>
+      </div>
       <section
         className={`${colors.copyRight} flex-center py-5 text-white flex-wrap max-sm:flex-col`}
       >

@@ -20,7 +20,13 @@ const Ecommerce = () => {
   }, [typeForm]);
   return (
     <>
-      <Head></Head>
+      <Head>
+        <title>Strover - Онлайн магазин - E-commerce</title>
+        <meta
+          name="description"
+          content="Strover Company Онлайн магазин (E-commerce). Ние ще създадем успешен онлайн магазин, който ще продава сам по себе си. "
+        />
+      </Head>
       <span className="text-white">
         <Navigation />
       </span>

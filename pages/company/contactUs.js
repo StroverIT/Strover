@@ -49,7 +49,16 @@ export default function ContactUsPage() {
   };
   return (
     <>
-      <Head></Head>
+      <Head>
+        <title>
+          Strover - Конкати - Очакваме с нетърпение нашите общи проекти!
+        </title>
+        <meta
+          name="description"
+          content="Strover Company контактии. Винаги сме готови за нови проекти и съвместна работа. Предлагаме безплатна консултация. Изработка на сайт - контакти"
+        />
+      </Head>
+
       <Navigation />
 
       <main className="bg-gray-200 py-36">
@@ -93,6 +102,7 @@ export default function ContactUsPage() {
               <h3 className="text-lg">Намерете ни в Социалните мрежи:</h3>
               <div className="flex mt-2 gap-x-5">
                 <a
+                  aria-label="Strover Facebook"
                   href="https://www.facebook.com/profile.php?id=100085497228053"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -105,6 +115,7 @@ export default function ContactUsPage() {
                   </div>
                 </a>
                 <a
+                  aria-label="Strover Instagram"
                   href="https://www.instagram.com/stroverbg/"
                   target="_blank"
                   rel="noopener noreferrer"

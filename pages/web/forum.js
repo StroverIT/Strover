@@ -22,6 +22,10 @@ const Forum = () => {
     <>
       <Head>
         <title>Изработка на Форум</title>
+        <meta
+          name="description"
+          content="Strover Company форум. Ще създадем платформа, чрез която потребителите ще имат възможност да обсъждат теми, качват съдържание независимо. Най-хубавото е че Вие имате пълен контрол."
+        />
       </Head>
       <Navigation />
       <main className="pt-48 pb-20 bg-gray-200 ">

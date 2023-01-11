@@ -22,6 +22,10 @@ const Business = () => {
     <>
       <Head>
         <title>Изработка на бизнес сайт</title>
+        <meta
+          name="description"
+          content="Strover Company бизнес сайт. Ще създадем сайт който ще покаже бизнеса Ви във възможно най-добрата му светлина. С уникален дизайн и анимации, вашите клиенти с удоволстиве ще искат да поръчат от вашите услуги."
+        />
       </Head>
       <span className="text-white">
         <Navigation />

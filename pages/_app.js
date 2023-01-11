@@ -70,12 +70,12 @@ function MyApp({ Component, pageProps }) {
       </Script>
 
       <Head>
-        <title>Strover</title>
+        {/* <title>Strover</title> */}
         <link rel="icon" href="/logos/web-spider.svg" />
-        <meta
+        {/* <meta
           name="description"
           content="Strover Company изработва, поддържа и развива сайтове. Предлага услуги в сферата на дигиталният маркетинг, като включва SEO, създаване, поддържане и развиване на социални мрежи, брандиране и ребрандиране. За всичко което Ви трябва да е на едно място, на достъпна цена с прекрасно обслужване."
-        />
+        /> */}
         <meta
           property="og:title"
           content="Strover Company | Изработка, поддръжка и развитие на всякакъв вид сайтове | SEO | Google Ads | Дигитален маркетинг"

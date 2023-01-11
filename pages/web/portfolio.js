@@ -22,6 +22,10 @@ const Forum = () => {
     <>
       <Head>
         <title>Изработка на персонален сайт - портфолио</title>
+        <meta
+          name="description"
+          content="Strover Company персонален сайт - портфолио. Ще създадем сайт който ще покаже възможно най-добрата Ви светлина. С уникален дизайн и анимации."
+        />
       </Head>
       <span className="text-white">
         <Navigation />

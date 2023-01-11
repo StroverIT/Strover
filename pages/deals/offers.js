@@ -25,7 +25,13 @@ export default function Offers() {
   };
   return (
     <>
-      <Head></Head>
+      <Head>
+        <title>Strover - Оферти - Вижте най-актуалните ни предложения!</title>
+        <meta
+          name="description"
+          content="Strover Company оферти. Предлагаме възжмоно най-доброто на възможно най-евтината цена. Запишете се да не изпускате нашите оферти."
+        />
+      </Head>
 
       {/* Main */}
       <Navigation />

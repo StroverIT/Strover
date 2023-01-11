@@ -122,9 +122,9 @@ export default function Navigation() {
           <WhiteSpider />
           <div className="pl-1 text-xl font-bold">Strover</div>
         </div>
-        <div className="relative z-10">
-          <Hamburger toggled={isOpen} toggle={setOpen} />
-        </div>
+        <button className="relative z-10" aria-label="Hamburger menu">
+          <Hamburger toggled={isOpen} toggle={setOpen} label="Hamburger Menu" />
+        </button>
         <AnimatePresence mode="wait">
           {isOpen && (
             <motion.div
