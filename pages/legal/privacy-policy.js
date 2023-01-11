@@ -26,7 +26,7 @@ export default function PrivacyPolicy() {
             </div>
             <Link href="/">Към началната страница</Link>
           </div>
-          <h2 className="text-2xl font-semibold">Политика за поверителност</h2>
+          <h1 className="text-2xl font-semibold">Политика за поверителност</h1>
           <p className="font-medium">
             Последна актуализация на 12 ноември 2022 г
           </p>
@@ -60,9 +60,9 @@ export default function PrivacyPolicy() {
           </section>
           <section className="">
             <div>
-              <h3 className="text-lg font-semibold">
+              <h2 className="text-lg font-semibold">
                 ОБОБЩЕНИЕ НА КЛЮЧОВИТЕ МОМЕНТИ
-              </h3>
+              </h2>
               <p className="my-4 italic font-semibold">
                 Това резюме предоставя ключови точки от нашето съобщение за
                 поверителност, но можете да научите повече подробности за всяка
@@ -152,7 +152,7 @@ export default function PrivacyPolicy() {
           </section>
           {/* Съдържание */}
           <section className="mt-10">
-            <h3 className="text-2xl font-semibold ">СЪДЪРЖАНИЕ</h3>
+            <h2 className="text-2xl font-semibold ">СЪДЪРЖАНИЕ</h2>
             <ol className="flex flex-col text-sm gap-y-4 text-[blue] mt-4">
               <li>
                 <a href="#pointOne" className="">
@@ -239,9 +239,9 @@ export default function PrivacyPolicy() {
             <h3 className="text-xl font-semibold">
               1. КАКВА ИНФОРМАЦИЯ СЪБИРАМЕ?
             </h3>
-            <h5 className="mt-5 font-semibold">
+            <h4 className="mt-5 font-semibold">
               Лична информация, която ни разкривате
-            </h5>
+            </h4>
             <div className="mt-4">
               <span className="pr-1 font-semibold">Накратко:</span> Ние събираме
               лична информация, която ни предоставяте.
@@ -713,9 +713,9 @@ export default function PrivacyPolicy() {
               администрирането и използването на вашия акаунт, за да отговорим
               на заявки за услуги или за други немаркетингови цели.
             </p>
-            <h5 className="mt-4 font-semibold text-md">
+            <h4 className="mt-4 font-semibold text-md">
               Информация за профила
-            </h5>
+            </h4>
             <p className="mt-4">
               Ако по всяко време искате да прегледате или промените информацията
               в акаунта си или да прекратите акаунта си, можете:
