@@ -24,7 +24,7 @@ export default function Academy() {
           name="description"
           content="Академия за дигитални мрежи, изработка на сайтове и уеб дизайн"
         />
-        <meta name="robots" content="noindex, nofollow" />
+        <meta name="robots" content="index, follow" />
       </Head>
       <Navigation />
       <main className="h-[100vh] relative ">

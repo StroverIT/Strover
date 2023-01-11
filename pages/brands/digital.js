@@ -20,7 +20,7 @@ export default function Digital() {
           name="description"
           content="Създаване на социални мрежи, за по-голямо разпространение и популяризиране в онлайн пространството."
         />
-        <meta name="robots" content="noindex, nofollow" />
+        <meta name="robots" content="index, follow" />
       </Head>
       <main className="text-white ">
         <section id="bg">

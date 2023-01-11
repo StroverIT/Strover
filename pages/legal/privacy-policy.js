@@ -10,8 +10,12 @@ export default function PrivacyPolicy() {
   return (
     <>
       <Head>
-        <meta name="robots" content="noindex, nofollow" />
+        <meta name="robots" content="index, follow" />
         <title>Политика на лични данни</title>
+        <meta
+          name="description"
+          content="Политика за лични данни - политика за поверителност на потребиителя."
+        />
       </Head>
       <Navigation links={links} />
       <section className="container text-black mt-36">

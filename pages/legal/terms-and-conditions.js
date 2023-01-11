@@ -9,8 +9,12 @@ export default function TermsAndConditions() {
   return (
     <>
       <Head>
-        <meta name="robots" content="noindex, nofollow" />
+        <meta name="robots" content="index, follow" />
         <title>Условия за ползване</title>
+        <meta
+          name="description"
+          content="Условия за ползване на сайта. Какви са нашите условия за да се възползвате максимално от нашата платформа"
+        />
       </Head>
       <Navigation links={links} />
       <section className="container text-black mt-36">
