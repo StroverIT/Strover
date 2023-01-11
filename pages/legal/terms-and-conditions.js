@@ -10,10 +10,10 @@ export default function TermsAndConditions() {
     <>
       <Head>
         <meta name="robots" content="index, follow" />
-        <title>Условия за ползване</title>
+        <title>Strover Company - Условия за ползване</title>
         <meta
           name="description"
-          content="Условия за ползване на сайта. Какви са нашите условия за да се възползвате максимално от нашата платформа"
+          content="Условия за ползване на сайта. Какви са нашите условия за да се възползвате максимално от нашата платформа, при въззражения може да ни пишете на и-мейл stroverbg@gmail.com"
         />
       </Head>
       <Navigation links={links} />
@@ -25,7 +25,7 @@ export default function TermsAndConditions() {
             </div>
             <Link href="/">Към началната страница</Link>
           </div>
-          <h2 className="text-2xl font-semibold">УСЛОВИЯ ЗА ПОЛЗВАНЕ</h2>
+          <h1 className="text-2xl font-semibold">УСЛОВИЯ ЗА ПОЛЗВАНЕ</h1>
           <p className="font-medium">
             Последна актуализация на 12 ноември 2022 г
           </p>
@@ -36,7 +36,7 @@ export default function TermsAndConditions() {
         <section className="mt-10 mb-20">
           {/* Съдържание */}
           <section className="mt-10">
-            <h3 className="text-2xl font-semibold ">СЪДЪРЖАНИЕ</h3>
+            <h2 className="text-2xl font-semibold ">СЪДЪРЖАНИЕ</h2>
             <ol className="flex flex-col text-sm gap-y-4 text-[blue] mt-4">
               {links.map((data, index) => {
                 return (
@@ -636,7 +636,7 @@ export default function TermsAndConditions() {
           {/* Четиринадесета точка */}
           <section className="mt-4" id="pointFourteen">
             <h3 className="text-xl font-semibold">14. РЕШАВАНЕ НА СПОРОВЕ</h3>
-            <h5 className="text-lg font-semibold">Неформални преговори</h5>
+            <h4 className="text-lg font-semibold">Неформални преговори</h4>
             <p className="mt-4">
               За да ускорим разрешаването и да контролираме разходите за всеки
               спор, противоречие или иск, свързан с тези Условия за ползване
@@ -648,7 +648,7 @@ export default function TermsAndConditions() {
               неофициални преговори започват след писмено уведомление от едната
               страна до другата страна.
             </p>
-            {/* <h5 className="text-lg font-semibold">Обвързващ арбитраж</h5>
+            {/* <h4 className="text-lg font-semibold">Обвързващ арбитраж</h4>
             <p className="mt-4">
               Всеки спор, произтичащ от или във връзка с този договор,
               включително всеки въпрос относно неговото съществуване, валидност
@@ -670,7 +670,7 @@ export default function TermsAndConditions() {
               арбитража е __________. Езикът на производството е __________.
               Приложимото право на договора е материалното право на __________.
             </p> */}
-            <h5 className="text-lg font-semibold">Ограничения</h5>
+            <h4 className="text-lg font-semibold">Ограничения</h4>
             <p className="mt-4">
               Страните се съгласяват, че всеки арбитраж ще бъде ограничен до
               Спора между страните поотделно. До пълната степен, позволена от
@@ -681,9 +681,9 @@ export default function TermsAndConditions() {
               завеждане на Спор в предполагаемо представително качество от името
               на широката общественост или други лица.
             </p>
-            <h5 className="text-lg font-semibold">
+            <h4 className="text-lg font-semibold">
               Изключения от неформалните преговори и арбитража
-            </h5>
+            </h4>
             <p className="mt-4">
               Страните се съгласяват, че следните спорове не са предмет на
               горепосочените разпоредби относно неофициални преговори и

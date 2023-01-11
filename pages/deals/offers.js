@@ -38,16 +38,16 @@ export default function Offers() {
 
       <section className="container my-36">
         <section>
-          <h3 className="text-3xl">ПРЕДЛОЖЕНИЯ И ОФЕРТИ</h3>
-          <h5 className="text-2xl text-gray-150">
+          <h1 className="text-3xl">ПРЕДЛОЖЕНИЯ И ОФЕРТИ</h1>
+          <h2 className="text-2xl text-gray-150">
             Възползвайте се от нашите сезонни кампании и активности за бизнеса
             Ви
-          </h5>
+          </h2>
         </section>
         <section className="p-10 mt-10 bg-gray">
-          <h3 className="mb-3 text-xl">
+          <h1 className="mb-3 text-xl">
             Абонирай се за последните ни новини и промоции
-          </h3>
+          </h1>
           <div className="lg:grid lg:grid-cols-[40%20%]">
             <input
               type="email"
@@ -67,7 +67,7 @@ export default function Offers() {
         </section>
         <section className="mt-5">
           <div className="container">
-            <h5 className="text-lg text-center">Няма създадени оферти!</h5>
+            <h2 className="text-lg text-center">Няма създадени оферти!</h2>
           </div>
         </section>
       </section>

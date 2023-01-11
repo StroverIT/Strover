@@ -11,10 +11,10 @@ export default function PrivacyPolicy() {
     <>
       <Head>
         <meta name="robots" content="index, follow" />
-        <title>Политика на лични данни</title>
+        <title>Strover - Политика на лични данни</title>
         <meta
           name="description"
-          content="Политика за лични данни - политика за поверителност на потребиителя."
+          content="Политика за лични данни - политика за поверителност на потребиителя. Как нашата компания обработва взима, съхранява и обработва личните данни."
         />
       </Head>
       <Navigation links={links} />

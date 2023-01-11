@@ -64,7 +64,7 @@ export default function ContactUsPage() {
       <main className="bg-gray-200 py-36">
         <div className="container grid-cols-2 lg:grid gap-x-10">
           <section className="flex flex-col space-y-3 focus:border-transparent py-14 ">
-            <h3 className="text-lg">Контактна Информация</h3>
+            <h1 className="text-lg">Контактна Информация</h1>
             <div className="flex items-center">
               <div className="text-2xl ">
                 <HiOutlineMail />
@@ -99,7 +99,7 @@ export default function ContactUsPage() {
             </div>
 
             <div className="pt-2">
-              <h3 className="text-lg">Намерете ни в Социалните мрежи:</h3>
+              <h2 className="text-lg">Намерете ни в Социалните мрежи:</h2>
               <div className="flex mt-2 gap-x-5">
                 <a
                   aria-label="Strover Facebook"
@@ -135,13 +135,13 @@ export default function ContactUsPage() {
               className={` py-14 lg:py-32 bg-blue-200 w-full px-5 lg:px-28 `}
             >
               <section className="">
-                <h4>
+                <h3>
                   <span
                     className={`border-b-4 border-blue-50 pb-1 text-2xl font-semibold rounded-sm `}
                   >
                     Свържи се с нас!
                   </span>
-                </h4>
+                </h3>
                 <p className="pt-3 lg:max-w-[15rem]">
                   Очакваме с нетърпение нашите общи проекти!
                 </p>

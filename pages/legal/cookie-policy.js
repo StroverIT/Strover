@@ -10,12 +10,12 @@ export default function PrivacyPolicy() {
   return (
     <>
       <Head>
-        <title>Политика за бисквитките</title>
+        <title>Strover - Политика за бисквитките</title>
 
         <meta name="robots" content="index, follow" />
         <meta
           name="description"
-          content="Политика на бисквитките ни. Запознайте се как ние използваме и обработваме Вашите данни."
+          content="Политика на бисквитките ни. Запознайте се как ние използваме и обработваме предоставени данните. За контакти - stroverbg@gmail.com"
         />
       </Head>
       <Navigation links={links} />
@@ -28,7 +28,7 @@ export default function PrivacyPolicy() {
             <Link href="/">Към началната страница</Link>
           </div>
 
-          <h2 className="text-2xl font-semibold">Политика за поверителност</h2>
+          <h1 className="text-2xl font-semibold">Политика за поверителност</h1>
 
           <p className="font-medium">
             Последна актуализация на 8 декември 2022 г
@@ -59,9 +59,9 @@ export default function PrivacyPolicy() {
             поверителност. Затова ви препоръчваме периодично да преглеждате тази
             страница.
           </p>
-          <h3 className="mt-6 ml-4 font-semibold" id="pointOne">
+          <h2 className="mt-6 ml-4 font-semibold" id="pointOne">
             ИНФОРМАЦИЯ, КОЯТО СЪБИРАМЕ:
-          </h3>
+          </h2>
           <p className="mt-4 ml-10">
             Ще събираме и обработваме следната лична информация за Вас:
           </p>
