@@ -1,5 +1,6 @@
 import { AnimatePresence } from "framer-motion";
 import Head from "next/head";
+import Image from "next/image";
 
 import { useEffect, useState } from "react";
 import ContactUsTodayComp from "../../components/Banners/ContactUsTodayComp";
@@ -24,7 +25,7 @@ const Ecommerce = () => {
         <title>Strover - Онлайн магазин - E-commerce</title>
         <meta
           name="description"
-          content="Strover Company Онлайн магазин (E-commerce). Ние ще създадем успешен онлайн магазин, който ще продава сам по себе си. "
+          content="Strover Company е водеща фирма в областта на изработката на онлайн магазини. Ние сме специализирани в разработването и поддържането на интернет магазини с висока функционалност и добър дизайн. "
         />
       </Head>
       <span className="text-white">
@@ -33,30 +34,86 @@ const Ecommerce = () => {
       <main className="pt-48 pb-20 bg-gray-200 ">
         <div className="mb-10">
           <section className="container">
-            <div className="flex-col flex-center">
-              <HeaderSpider
-                title="Изработка на онлайн магазин - e-commerce"
-                size="text-4xl"
-              />
-            </div>
-            <section className="flex-col pt-6 flex-center">
-              <section className="max-w-2xl">
-                <p className="">
-                  Често хората си мислят, че просто трябва да имат сайт където
-                  да са показани продуктите и клиентите да имат възможността да
-                  си ги поръчат, но това не е напълно вярно. Зад успешен онлайн
-                  магазин (e-commerce), стоят много фактори, като:
-                </p>
-                <ul className="ml-5 list-disc">
-                  <li>Маркетингова страгетия</li>
-                  <li>Професионални снимки</li>
-                  <li>Добре обяснено описание</li>
-                  <li>Добре направени &quot;Call to auction&quot; бутони</li>
-                </ul>
-                <p className="pt-2">
-                  При нас не само ще Ви изработим уникален дизайн, а сайт който
-                  може да продава сам по себе си.
-                </p>
+            <section className="flex-center">
+              <section className="grid max-w-3xl gap-x-5 gap-y-5">
+                <section>
+                  <div className="flex-col flex-center">
+                    <HeaderSpider
+                      title="Изработка на онлайн магазин "
+                      size="text-4xl"
+                    />
+                  </div>
+                  <div className="relative float-left mt-5 -ml-10 h-72 w-96 image-circle ">
+                    <Image
+                      src="/web/services/ecommerce/firstPhoto.webp"
+                      alt="Изработка на онлайн магазин от Strover Company - създаване и поддържане на качествени интернет магазини с висока функционалност и добър дизайн"
+                      className="object-contain image-cicle filterGray"
+                      fill
+                    />
+                  </div>
+                  <p>
+                    <div className="pb-2">
+                      Strover Company е надеждна фирма за изработка на онлайн
+                      магазини, която предлага качествени услуги и индивидуално
+                      отношение към всеки клиент. Ние сме специализирани в
+                      създаването и поддържането на интернет магазини, които
+                      отговарят на всички ваши нужди и изисквания.
+                    </div>
+                    <div className="pb-2">
+                      Ние използваме само последната технология и иновативни
+                      дизайн принципи, за да създадем онлайн магазини с висока
+                      функционалност и добър дизайн.
+                    </div>
+                    <div className="pb-2">
+                      Нашият екип от експерти е в състояние да създаде интернет
+                      магазин, който е перфектно подходящ за вашия бизнес и
+                      потребители.
+                    </div>
+                    <div>
+                      Ние имаме голям опит в сферата на изработката на онлайн
+                      магазини и сме се занимавали с различни видове продукти и
+                      услуги. Може да се доверите на нас, че ще предоставим
+                      качествен интернет магазин, който ще помогне за
+                      увеличаване на вашия бизнес. Ние ще ви подкрепим през
+                      цялото процеса на разработка и поддържане на вашия онлайн
+                      магазин, за да може да се фокусирате на развитието на
+                      вашия бизнес. Свържете се с нас днес и започнете да
+                      създавате своя онлайн магазин с Изработка на онлайн
+                      магазин от Strover Company.
+                    </div>
+                  </p>
+                </section>
+
+                <section className="">
+                  <div className="flex-center">
+                    <HeaderSpider
+                      title="Повече информация за изработката "
+                      size="text-3xl"
+                      typeHead="h2"
+                    />
+                  </div>
+                  <div className="mt-2">
+                    <p className="">
+                      Често хората си мислят, че просто трябва да имат сайт
+                      където да са показани продуктите и клиентите да имат
+                      възможността да си ги поръчат, но това не е напълно вярно.
+                      Зад успешен онлайн магазин (e-commerce), стоят много
+                      фактори, като:
+                    </p>
+                    <ul className="ml-5 list-disc">
+                      <li>Маркетингова страгетия</li>
+                      <li>Професионални снимки</li>
+                      <li>Добре обяснено описание</li>
+                      <li>
+                        Добре направени &quot;Call to auction&quot; бутони
+                      </li>
+                    </ul>
+                    <p className="pt-2">
+                      При нас не само ще Ви изработим уникален дизайн, а сайт
+                      който може да продава сам по себе си.
+                    </p>
+                  </div>
+                </section>
               </section>
             </section>
           </section>
