@@ -17,6 +17,14 @@
   --pag-height-active: calc(var(--pag-height) - 4px);
   --border: 0.5vmin solid #3b373c;
 }
+.image-circle {
+  clip-path: circle(30% at 30% 50%);
+  shape-outside: circle(30% at 30% 50%);
+}
+.filterGray {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(30%);
+}
 html,
 body {
   padding: 0;
