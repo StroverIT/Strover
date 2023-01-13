@@ -18,6 +18,7 @@ export default function HeaderSpider({
   size,
 
   lineColor = "bg-primaryBlue-200",
+  typeHead = "h1",
 }) {
   const section = useRef(null);
 
@@ -31,7 +32,11 @@ export default function HeaderSpider({
 
   return (
     <motion.div className="" ref={section} animate={sectionAnim}>
-      <h1 className={`${size} text-center font-medium`}>{title}</h1>
+      {typeHead == "h1" ? (
+        <h1 className={`${size} text-center font-medium`}>{title}</h1>
+      ) : (
+        <h2 className={`${size} text-center font-medium`}>{title}</h2>
+      )}
 
       <div className="mt-2 flex-center">
         <motion.div
