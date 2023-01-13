@@ -20,16 +20,13 @@ export default function FirmsWhoTrust() {
         <FirmsContainer
           imageUrl="/firms/softoffice.png"
           title="SoftOffice"
-          description={`   Софт офис е компания, създадена през 2008, занимаваща се със
-                стоки и услуги, и по-конкретно с материали и консумативи.`}
+          description={` Компанията Софт офис е създадена през 2008 година и се занимава с продажба на стоки и услуги, като материали и консумативи`}
           siteLink="https://softoffice.bg"
         />{" "}
         <FirmsContainer
           imageUrl="/firms/ivdageo.png"
           title="Ivda Geo"
-          description={`   Строителен супермаркет Ивда Гео e фирма с дългогодишен опит
-          в сферата на търговията със строителни материали,
-          инструменти, крепежни елементи и други.`}
+          description={`Фирмата Ивда Гео, строителен супермаркет, има дългогодишен опит в областта на търговията със строителни материали, инструменти, крепежни елементи и други продукти.`}
           siteLink="https://ivdagepaint.bg"
           isReverse={true}
         />
