@@ -44,12 +44,12 @@ const FirmsContainer = ({
 }) => {
   return (
     <section
-      className={`relative flex mt-10 rounded-full max-sm:flex-col ${
+      className={`relative flex mt-10 rounded-full max-sm:flex-col max-md:container ${
         !isReverse && "max-sm:flex-col-reverse"
       } smToXl:bg-primaryBlue-650 `}
     >
       {!isReverse && (
-        <div className="relative w-full max-sm:-mt-20 h-96">
+        <div className="relative w-full max-sm:-mt-20 h-96 ">
           <Image
             src={imageUrl}
             alt={description}
@@ -107,7 +107,7 @@ const FirmsContainer = ({
         </div>
       </div>
       {isReverse && (
-        <div className="relative w-full h-96 xl:-ml-44 max-sm:-mt-20">
+        <div className="relative w-full h-96 xl:-ml-44 max-sm:-mt-20 ">
           <Image
             src={imageUrl}
             alt={description}
