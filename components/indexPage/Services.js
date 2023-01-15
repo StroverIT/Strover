@@ -2,6 +2,7 @@ import React from "react";
 
 import Container from "./ServiceComp/Container";
 import HeaderSpider from "../HeaderSpider";
+import Image from "next/image";
 
 export default function Services() {
   return (
@@ -12,34 +13,99 @@ export default function Services() {
       <div className="text-white flex-center">
         <HeaderSpider title="Брандове" size="text-5xl" />
       </div>
-      <section className="container grid items-center justify-center mt-10 text-white zeroToXl:text-center grid-cols xl:grid-cols-3 zeroToXl:gap-y-10">
+      <section className="flex  flex-col gap-y-10 md:gap-y-64 mt-10  md:pb-56 text-white zeroToXl:text-center   zeroToXl:gap-y-10">
         {/* Web container */}
 
-        <Container title="Web" link="/brands/web" btnColor="btn-web-bg-color">
-          <p className="max-w-sm mt-2 whitespace-pre-line">
+        <Container
+          title="Web"
+          link="/brands/web"
+          titleColor="text-primaryBlue-200"
+          btnColor="btn-web-bg-color"
+          imageUrl="test-removebg.png"
+        >
+          <section className="md:max-w-lg mt-2  text-left container flex-center flex-col max-md:px-10">
             {/* Нямате сайт? Не се тревожете! Ние ще създадем един за вас! */}
             {/* Анализираме, създаваме, поддържаме и развиваме всякакъв вид
             уебсайтове. */}
-            Анализираме, създаваме, поддържаме и развиваме Вашият бизнес онлайн
-            , в избраната за вас ниша.
-          </p>
+            <section className="mt-2">
+              <h2 className="font-semibold text-lg ">Изработка на сайт</h2>
+              <p className="">
+                Изработка на сайт е основната дейност на Strover Company. Ние
+                сме специализирани в разработването и поддържането на сайтове,
+                които са професионално изработени и оптимизирани за да се
+                достигне до по-голям брой клиенти.
+              </p>
+            </section>
+            <section className="mt-2">
+              <h2 className="font-semibold text-lg ">
+                Технологийте за изработка на сайт
+              </h2>
+              <p className="">
+                Ние използваме най-новите технологии и инструменти за да
+                предложим уникално и качествено опит за посетителите на Вашия
+                сайт.
+              </p>
+            </section>
+
+            <section className="mt-2">
+              <h2 className="font-semibold text-lg ">Препоръчителни услуги</h2>
+              <p className="">
+                Ние също така предлагаме SEO оптимизация, за да подобрим
+                видимостта на Вашия сайт в търсачките и да достигнем до повече
+                клиенти. Доверете на Strover Company да изработи сайт, който да
+                отговаря на Вашите нужди и да помогне за растежа на Вашия
+                бизнес.
+              </p>
+            </section>
+          </section>
         </Container>
         {/* Digital container */}
         <Container
           title="Digital"
           link="/brands/digital"
+          titleColor="text-pink"
           btnColor="btn-digital-bg-color"
+          imageUrl="test-social.png"
           delay={0.2}
         >
-          <p className="xl:max-w-[18rem] mt-2 whitespace-pre-line">
-            Ние създаваме ефективни маркетингови стратегии, за да популяризиране
-            Вашият бизнес в социалните мрежи.
-          </p>
+          <section className="md:max-w-lg mt-4  text-left container flex-center flex-col max-md:px-10">
+            <p>
+              Дигиталният маркетинг е важен аспект за успешното развитие на
+              вашия бизнес.
+            </p>
+            <p className="mt-2">
+              Strover Company предлага комплексни услуги в областта на
+              дигиталния маркетинг, като SEO, социални медии, брандиране и
+              ребрандиране.
+            </p>
+            <p className="mt-2">
+              Използвайки най-новите технологии и инструменти, помагаме на вашия
+              бизнес да се развива и да се достига до по-голям брой клиенти.
+            </p>{" "}
+            <p className="mt-2">
+              Работим с вас за да разберем вашите нужди и цели и да създадем
+              стратегия, която да отговаря на тях.
+            </p>
+            <p>
+              Предлагаме индивидуално подходящи решения и да подобрим вашето
+              онлайн присъствие.
+            </p>
+            <p className="mt-2">
+              Доверете се на Strover Company за вашия дигитален маркетинг и
+              наблюдайте как вашия бизнес се развива и достига до повече
+              клиенти.
+            </p>
+            <p className="mt-2">
+              С нашия знание и опит в дигиталния маркетинг, ще помогнем на вашия
+              бизнес да се покаже на интернет и да достигне до своята целева
+              аудитория с правилната маркетинг стратегия.
+            </p>
+          </section>
         </Container>
 
         {/* Logistics container */}
         {/* \n */}
-        <Container
+        {/* <Container
           title="Academy"
           link="/brands/academy"
           btnColor="btn-academy-bg-color"
@@ -50,7 +116,7 @@ export default function Services() {
             Развиваме/създаваме вашите програмни умения и предлагаме кариерен
             старт от избраната от вас специалност.
           </p>
-        </Container>
+        </Container> */}
       </section>
     </section>
   );
