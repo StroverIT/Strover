@@ -66,7 +66,7 @@ const Forum = () => {
                   Лесен и бърз старт в Интернет. Подходящ за малко съдържание.
                 </Paragraph>
                 <Price className="pt-2 ">
-                  800 <span className="text-gray-100">лв.</span>
+                  300 <span className="text-gray-100">лв.</span>
                 </Price>
                 <Button
                   bgColor="bg-green"
@@ -91,7 +91,7 @@ const Forum = () => {
                 </Title>
                 <Paragraph>Подходящ за средно съдържание.</Paragraph>
                 <Price className="pt-2 ">
-                  1400 <span className="text-gray-100">лв.</span>
+                  600 <span className="text-gray-100">лв.</span>
                 </Price>
                 <Button
                   bgColor="bg-red-200"
@@ -112,26 +112,26 @@ const Forum = () => {
                 </Ul>
                 <ul className="ml-5">
                   <li>
-                    <span className="text-green-200 pr-2">+ </span> Онлайн
+                    <span className="pr-2 text-green-200">+ </span> Онлайн
                     плащания
                   </li>
                   <li>
-                    <span className="text-green-200 pr-2">+ </span> Админ Панел
+                    <span className="pr-2 text-green-200">+ </span> Админ Панел
                   </li>
                   <li>
-                    <span className="text-green-200 pr-2">+ </span> SEO
+                    <span className="pr-2 text-green-200">+ </span> SEO
                     оптимизация
                   </li>
                   <li>
-                    <span className="text-green-200 pr-2">+ </span> Безплатен
+                    <span className="pr-2 text-green-200">+ </span> Безплатен
                     хост за 6 месеца
                   </li>
                   <li>
-                    <span className="text-green-200 pr-2">+ </span> Следене на
+                    <span className="pr-2 text-green-200">+ </span> Следене на
                     трафика от потребители
                   </li>
                   <li>
-                    <span className="text-green-200 pr-2">+ </span> Индексиране
+                    <span className="pr-2 text-green-200">+ </span> Индексиране
                     във всички търсачки
                   </li>
                 </ul>
@@ -142,7 +142,7 @@ const Forum = () => {
                 </Title>
                 <Paragraph>Подходящ за голямо съдържание.</Paragraph>
                 <Price className="pt-2 ">
-                  1800 <span className="text-gray-100">лв.</span>
+                  1200 <span className="text-gray-100">лв.</span>
                 </Price>
                 <Button
                   bgColor="bg-primaryBlue"
@@ -175,27 +175,27 @@ const Forum = () => {
                 </Ul>
                 <ul className="ml-5">
                   <li>
-                    <span className="text-green-200 pr-2">+ </span>Възможност за
+                    <span className="pr-2 text-green-200">+ </span>Възможност за
                     многоезичност
                   </li>
                   <li>
-                    <span className="text-green-200 pr-2">+ </span>Безплатен
+                    <span className="pr-2 text-green-200">+ </span>Безплатен
                     GDPR
                   </li>
                   <li>
-                    <span className="text-green-200 pr-2">+ </span>Безплатни
+                    <span className="pr-2 text-green-200">+ </span>Безплатни
                     юридически текстове
                   </li>
                   <li>
-                    <span className="text-green-200 pr-2">+ </span>Следене на
+                    <span className="pr-2 text-green-200">+ </span>Следене на
                     трафика от потребители
                   </li>
                   <li>
-                    <span className="text-green-200 pr-2">+ </span>Индексиране
+                    <span className="pr-2 text-green-200">+ </span>Индексиране
                     във всички търсачки
                   </li>
                   <li>
-                    <span className="text-green-200 pr-2">+ </span> Безплатен
+                    <span className="pr-2 text-green-200">+ </span> Безплатен
                     SSL Сертификат за 1 година
                   </li>
                 </ul>
@@ -247,10 +247,10 @@ function Button({ bgColor, onClick }) {
   return (
     <div className="pt-2 flex-center">
       <button
-        className={`px-20 py-4 text-white rounded-full ${bgColor} `}
+        className={`px-20 py-3 text-white rounded-full text-xl font-semibold ${bgColor} `}
         onClick={onClick}
       >
-        Изберете
+        ПОРЪЧАЙ
       </button>
     </div>
   );
