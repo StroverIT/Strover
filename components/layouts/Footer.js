@@ -21,6 +21,7 @@ export default function Footer() {
     button: "",
     markers: "",
     copyRight: "",
+    borderCopy: "",
   });
   const [paddingNeed, setPaddingNeed] = useState(true);
   const handler = (e) => {
@@ -69,10 +70,11 @@ export default function Footer() {
       router.pathname.includes("/web")
     ) {
       setColors({
-        bgColor: "bg-blue-100",
+        bgColor: "bg-primaryBlue-500",
         button: "bg-blue-50",
         markers: "marker:text-blue-50",
-        copyRight: "bg-blue-150",
+        copyRight: "bg-primaryBlue-500",
+        borderCopy: "border-t border-primaryBlue-200",
       });
     } else if (router.pathname == "/brands/academy") {
       setColors({
@@ -254,9 +256,9 @@ export default function Footer() {
         </div>
       </div>
       <section
-        className={`${colors.copyRight} flex-center py-5 text-white flex-wrap max-sm:flex-col`}
+        className={`${colors.copyRight} ${colors.borderCopy} flex-center py-5 text-white flex-wrap max-sm:flex-col`}
       >
-        <div className="flex-center">
+        <div className="flex-center ">
           <AiOutlineCopyright />
           2022 Stover
         </div>

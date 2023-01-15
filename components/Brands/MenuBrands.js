@@ -66,52 +66,70 @@ export default function MenuBrands({ brandsOpen, setOpenBrands, bgColor }) {
               className={`${style.Menu_list} font-semibold`}
               data-offset="10"
             >
-              <motion.li
-                variants={hamburgerList}
-                className={`${style.Menu_list_item}`}
-                data-offset="20"
-                onclick
-              >
+              <motion.li variants={hamburgerList}>
                 <Link href="/brands/web">
-                  WEB
-                  <span className={style.Mask}>
-                    <span>WEB</span>
-                  </span>
-                  <span className={style.Mask}>
-                    <span>WEB</span>
-                  </span>
+                  <div className="flex-center">
+                    <div className="">
+                      <RiGlobalFill />
+                    </div>
+                    <div
+                      className={`${style.Menu_list_item} `}
+                      data-offset="20"
+                      onclick
+                    >
+                      WEB
+                      <span className={style.Mask}>
+                        <span>WEB</span>
+                      </span>
+                      <span className={style.Mask}>
+                        <span>WEB</span>
+                      </span>
+                    </div>
+                  </div>
                 </Link>
               </motion.li>
-              <motion.li
-                variants={hamburgerList}
-                className={style.Menu_list_item}
-                data-offset="16"
-                onclick
-              >
+              <motion.li variants={hamburgerList}>
                 <Link href="/brands/digital">
-                  Digital
-                  <span className={style.Mask}>
-                    <span>Digital</span>
-                  </span>
-                  <span className={style.Mask}>
-                    <span>Digital</span>
-                  </span>
+                  <div className="flex-center">
+                    <div className="">
+                      <IoMdAnalytics />
+                    </div>
+                    <div
+                      className={`${style.Menu_list_item} `}
+                      data-offset="20"
+                      onclick
+                    >
+                      digital
+                      <span className={style.Mask}>
+                        <span>digital</span>
+                      </span>
+                      <span className={style.Mask}>
+                        <span>digital</span>
+                      </span>
+                    </div>
+                  </div>
                 </Link>
               </motion.li>
-              <motion.li
-                variants={hamburgerList}
-                className={style.Menu_list_item}
-                data-offset="12"
-                onclick
-              >
+              <motion.li variants={hamburgerList}>
                 <Link href="/brands/academy">
-                  ACademy
-                  <span className={style.Mask}>
-                    <span>ACademy</span>
-                  </span>
-                  <span className={style.Mask}>
-                    <span>ACademy</span>
-                  </span>
+                  <div className="flex-center">
+                    <div className="">
+                      <HiOutlineAcademicCap />
+                    </div>
+                    <div
+                      className={`${style.Menu_list_item} `}
+                      data-offset="20"
+                      onclick
+                    >
+                      academy
+                      <span className={style.Mask}>
+                        <span>academy</span>
+                      </span>
+                      <span className={style.Mask}>
+                        <span>academy</span>
+                      </span>
+                    </div>
+                  </div>
                 </Link>
               </motion.li>
             </motion.ul>
