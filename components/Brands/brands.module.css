@@ -1,0 +1,81 @@
+/* body {
+  
+}
+html, body {
+  width: 100vw;
+  height: 100vh;
+}
+*/
+.Menu {
+  transform-style: preserve-3d;
+  transform: perspective(60rem);
+  align-items: center;
+  justify-content: center;
+  font-family: "Gilroy ExtraBold", system-ui, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-kerning: normal;
+  -webkit-text-size-adjust: 100%;
+}
+.Menu_list {
+  font-size: 3.5rem;
+  line-height: 1.75;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Menu_list_item {
+  position: relative;
+  color: transparent;
+  cursor: pointer;
+}
+.Menu_list_item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 49%;
+  left: -10%;
+  right: -10%;
+  height: 4px;
+  border-radius: 4px;
+  margin-top: -2px;
+  background: #ff2c75;
+  transform: scale(0);
+  transition: transform 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+  z-index: 1;
+}
+.Mask {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  color: theme("colors.white.DEFAULT");
+  top: 0;
+  height: 49%;
+  transition: all 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+}
+.Mask span {
+  display: block;
+}
+.Mask + .Mask {
+  top: 48.9%;
+  height: 51.1%;
+}
+.Mask + .Mask span {
+  transform: translateY(-49%);
+}
+.Menu_list_item:hover .Mask,
+.Menu_list_item:active .Mask {
+  color: #fff;
+  transform: skewX(12deg) translateX(5px);
+}
+.Menu_list_item:hover .Mask + .Mask,
+.Menu_list_item:active .Mask + .Mask {
+  transform: skewX(12deg) translateX(-5px);
+}
+.Menu_list_item:hover::before,
+.Menu_list_item:active::before {
+  transform: scale(1);
+}

@@ -24,6 +24,8 @@ const hamburgerList = {
     x: 0,
   },
 };
+import style from "./brands.module.css";
+
 export default function MenuBrands({ brandsOpen, setOpenBrands, bgColor }) {
   const closeHandler = () => {
     setOpenBrands(false);
@@ -56,42 +58,65 @@ export default function MenuBrands({ brandsOpen, setOpenBrands, bgColor }) {
           }}
           className={`fixed top-0 left-0 z-50 w-screen h-screen ${bgColor}`}
         >
-          <div className="container relative flex-col h-full text-3xl flex-center gap-y-10">
+          <div className={`${style.Menu} flex-center h-screen`}>
             <motion.ul
               variants={hamburgerVariants}
               initial="initial"
               animate="animate"
-              className="flex-col text-3xl flex-center gap-y-10"
+              className={`${style.Menu_list} font-semibold`}
+              data-offset="10"
             >
-              <Link href="/brands/web">
-                <motion.li variants={hamburgerList} className="flex-center">
-                  <RiGlobalFill />
-                  <span className="pl-1">Web</span>
-                </motion.li>
-              </Link>
-
-              <Link href="/brands/digital">
-                <motion.li variants={hamburgerList} className="flex-center">
-                  <IoMdAnalytics />
-
-                  <span className="pl-1">Digital</span>
-                </motion.li>
-              </Link>
-              {/* <Link href="/trasnport">
-                <motion.li variants={hamburgerList} className="flex-center">
-                  <FaCarSide />
-                  <span className="pl-1">Transport</span>
-                </motion.li>
-              </Link> */}
-              <Link href="/brands/academy">
-                <motion.li variants={hamburgerList} className="flex-center">
-                  <HiOutlineAcademicCap />
-                  <span className="pl-1">Academy</span>
-                </motion.li>
-              </Link>
+              <motion.li
+                variants={hamburgerList}
+                className={`${style.Menu_list_item}`}
+                data-offset="20"
+                onclick
+              >
+                <Link href="/brands/web">
+                  WEB
+                  <span className={style.Mask}>
+                    <span>WEB</span>
+                  </span>
+                  <span className={style.Mask}>
+                    <span>WEB</span>
+                  </span>
+                </Link>
+              </motion.li>
+              <motion.li
+                variants={hamburgerList}
+                className={style.Menu_list_item}
+                data-offset="16"
+                onclick
+              >
+                <Link href="/brands/digital">
+                  Digital
+                  <span className={style.Mask}>
+                    <span>Digital</span>
+                  </span>
+                  <span className={style.Mask}>
+                    <span>Digital</span>
+                  </span>
+                </Link>
+              </motion.li>
+              <motion.li
+                variants={hamburgerList}
+                className={style.Menu_list_item}
+                data-offset="12"
+                onclick
+              >
+                <Link href="/brands/academy">
+                  ACademy
+                  <span className={style.Mask}>
+                    <span>ACademy</span>
+                  </span>
+                  <span className={style.Mask}>
+                    <span>ACademy</span>
+                  </span>
+                </Link>
+              </motion.li>
             </motion.ul>
             <div
-              className="absolute right-0 text-4xl cursor-pointer top-10"
+              className="absolute text-5xl text-red-200 cursor-pointer right-10 top-10"
               onClick={closeHandler}
             >
               <HiX />
