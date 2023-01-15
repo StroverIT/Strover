@@ -27,7 +27,7 @@ export default function FirmsWhoTrust() {
           imageUrl="/firms/ivdageo.png"
           title="Ivda Geo"
           description={`Фирмата Ивда Гео, строителен супермаркет, има дългогодишен опит в областта на търговията със строителни материали, инструменти, крепежни елементи и други продукти.`}
-          siteLink="https://ivdagepaint.bg"
+          siteLink="https://ivdageopaint.bg"
           isReverse={true}
         />
       </section>
