@@ -241,10 +241,10 @@ function Button({ bgColor, onClick }) {
   return (
     <div className="pt-2 flex-center">
       <button
-        className={`px-20 py-4 text-white rounded-full ${bgColor} `}
+        className={`px-20 py-3 text-white rounded-full text-xl font-semibold ${bgColor} `}
         onClick={onClick}
       >
-        Изберете
+        ПОРЪЧАЙ
       </button>
     </div>
   );
