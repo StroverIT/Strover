@@ -18,7 +18,9 @@ export default function Home() {
   return (
     <div className="index-bg ">
       <Head>
-        <title>Strover - Изработка на сайтове</title>
+        <title>
+          Strover Company - Създаване на сайтове и Дигитален маркетинг
+        </title>
         <link rel="icon" href="/logos/web-spider.svg" />
         <meta
           name="description"

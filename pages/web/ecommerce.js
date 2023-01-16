@@ -22,7 +22,7 @@ const Ecommerce = () => {
   return (
     <>
       <Head>
-        <title>Strover - Онлайн магазин - E-commerce</title>
+        <title>Изработка на онлайн магазин - E-commerce</title>
         <meta
           name="description"
           content="Strover Company е водеща фирма в областта на изработката на онлайн магазини. Ние сме специализирани в разработването и поддържането на интернет магазини с висока функционалност и добър дизайн. "

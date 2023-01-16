@@ -15,7 +15,7 @@ export default function Digital() {
   return (
     <>
       <Head>
-        <title>Strover Digital - маркетинг в социалните мрежи</title>
+        <title>Дигитален маркетинг в социалните мрежи и SEO</title>
         <meta
           name="description"
           content="Създаване на социални мрежи, за по-голямо разпространение и популяризиране в онлайн пространството."

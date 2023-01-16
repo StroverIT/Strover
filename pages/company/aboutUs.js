@@ -49,7 +49,7 @@ export default function AboutUs() {
   return (
     <>
       <Head>
-        <title>Strover за нас</title>
+        <title>Разберете повече за нашата компания</title>
         <meta
           name="description"
           content="Изработка и поддръжка на сайтове, създаване на социални мрежи, развитие на бизнеси в онлайн пространството"

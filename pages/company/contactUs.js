@@ -50,9 +50,7 @@ export default function ContactUsPage() {
   return (
     <>
       <Head>
-        <title>
-          Strover - Конкати - Очакваме с нетърпение нашите общи проекти!
-        </title>
+        <title>Конкати - Очакваме с нетърпение нашите общи проекти!</title>
         <meta
           name="description"
           content="Strover Company контактии. Винаги сме готови за нови проекти и съвместна работа. Предлагаме безплатна консултация. Изработка на сайт - контакти"
