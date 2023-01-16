@@ -25,7 +25,7 @@ export default function TermsAndConditions() {
             </div>
             <Link href="/">Към началната страница</Link>
           </div>
-          <h1 className="text-2xl font-semibold">УСЛОВИЯ ЗА ПОЛЗВАНЕ</h1>
+          <h1 className="text-2xl font-semibold">НАШИТЕ УСЛОВИЯ ЗА ПОЛЗВАНЕ</h1>
           <p className="font-medium">
             Последна актуализация на 12 ноември 2022 г
           </p>

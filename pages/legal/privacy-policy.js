@@ -26,7 +26,9 @@ export default function PrivacyPolicy() {
             </div>
             <Link href="/">Към началната страница</Link>
           </div>
-          <h1 className="text-2xl font-semibold">Политика за поверителност</h1>
+          <h1 className="text-2xl font-semibold">
+            Нашата политика за поверителност
+          </h1>
           <p className="font-medium">
             Последна актуализация на 12 ноември 2022 г
           </p>
