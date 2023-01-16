@@ -22,7 +22,7 @@ export default function HeaderSpider({
 }) {
   const section = useRef(null);
 
-  const sectionView = useInView(section, { amount: 1 });
+  const sectionView = useInView(section, { amount: 0.5 });
   const sectionAnim = useAnimation();
 
   useEffect(() => {
