@@ -29,7 +29,7 @@ export default function Web() {
         <link rel="canonical" href="https://strover.bg/brands/web" />
       </Head>
       <main className="relative text-white ">
-        <section className="bg-[url('/web/bgheroV3.svg')] bg-no-repeat w-full h-full  absolute -z-10  top-[-550px] lg:top-[-150px] left-0"></section>
+        <section className="bg-[url('/web/bgHeroV3.svg')] bg-no-repeat w-full h-full  absolute -z-10  top-[-550px] lg:top-[-150px] left-0"></section>
         <Navigation
           navColor="nav-bg-color"
           bgColor="bg-blue"
