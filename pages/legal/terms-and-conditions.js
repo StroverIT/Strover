@@ -10,7 +10,7 @@ export default function TermsAndConditions() {
     <>
       <Head>
         <meta name="robots" content="index, follow" />
-        <title>Strover Company - Условия за ползване</title>
+        <title>Условия за ползване - Strover</title>
         <meta
           name="description"
           content="Условия за ползване на сайта. Какви са нашите условия за да се възползвате максимално от нашата платформа, при въззражения може да ни пишете на и-мейл stroverbg@gmail.com"
@@ -19,13 +19,13 @@ export default function TermsAndConditions() {
       <Navigation links={links} />
       <section className="container text-black mt-36">
         <div>
-          <div className="text-sm mb-10 flex items-center">
+          <div className="flex items-center mb-10 text-sm">
             <div className="mr-1 text-lg">
               <BsBoxArrowInLeft />
             </div>
             <Link href="/">Към началната страница</Link>
           </div>
-          <h1 className="text-2xl font-semibold">НАШИТЕ УСЛОВИЯ ЗА ПОЛЗВАНЕ</h1>
+          <h1 className="text-2xl font-semibold">УСЛОВИЯ ЗА ПОЛЗВАНЕ</h1>
           <p className="font-medium">
             Последна актуализация на 12 ноември 2022 г
           </p>
