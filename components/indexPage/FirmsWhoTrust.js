@@ -33,7 +33,7 @@ export default function FirmsWhoTrust() {
         <FirmsContainer
           imageUrl="/firms/movexTest1.png"
           title="Movex"
-          description={`Movex Bulgaria е фирма за хамалски и транспортни услуги с почти 10 години опит в двете сфери. `}
+          description={`Movex Bulgaria е фирма за хамалски и транспортни услуги с почти 10 години опит. `}
           siteLink="https://movex.bg"
           gridXl="xl:grid-cols-[40%50%]"
         />
