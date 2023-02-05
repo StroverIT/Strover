@@ -30,6 +30,13 @@ export default function FirmsWhoTrust() {
           siteLink="https://ivdageopaint.bg"
           isReverse={true}
         />
+        <FirmsContainer
+          imageUrl="/firms/movexTest1.png"
+          title="Movex"
+          description={`Фирмата Ивда Гео, строителен супермаркет, има дългогодишен опит в областта на търговията със строителни материали, инструменти, крепежни елементи и други продукти.`}
+          siteLink="https://movex.bg"
+          gridXl="xl:grid-cols-[40%50%]"
+        />
       </section>
     </section>
   );
@@ -41,6 +48,7 @@ const FirmsContainer = ({
   description,
   siteLink,
   isReverse,
+  gridXl = "xl:grid-cols-[40%60%]",
 }) => {
   return (
     <section
@@ -54,7 +62,7 @@ const FirmsContainer = ({
             src={imageUrl}
             alt={description}
             fill
-            className="object-contain"
+            className="object-contain "
           />
         </div>
       )}
@@ -65,7 +73,7 @@ const FirmsContainer = ({
       >
         <div
           className={`sm:grid sm:grid-cols-[0%90%] ${
-            isReverse ? "xl:grid-cols-[12%90%]" : "xl:grid-cols-[40%60%]"
+            isReverse ? "xl:grid-cols-[12%90%]" : gridXl
           } h-full flex-center`}
         >
           <div></div>

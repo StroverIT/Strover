@@ -129,18 +129,6 @@ export default function AboutUs() {
             <div className="flex-col flex-center">
               <div className="relative w-56 h-56 transition-all border-2 rounded-full cursor-pointer hover:scale-110 border-primaryBlue-100 ">
                 <Image
-                  src="/djulia.jpg"
-                  alt="growth for you and your company"
-                  fill
-                  className="object-contain rounded-full "
-                />
-              </div>
-              <h3 className="mt-2 text-xl text-center">Джулия Пеева</h3>
-              <p>Дигитален Маркетинг</p>
-            </div>
-            <div className="flex-col flex-center">
-              <div className="relative w-56 h-56 transition-all border-2 rounded-full cursor-pointer hover:scale-110 border-primaryBlue-100 ">
-                <Image
                   src="/hrisi2_durt_crop.jpg"
                   alt="growth for you and your company"
                   fill
