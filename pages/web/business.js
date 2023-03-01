@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import ContactUsTodayComp from "../../components/Banners/ContactUsTodayComp";
 import FixedForm from "../../components/form/FixedForm";
 import HeaderSpider from "../../components/HeaderSpider";
+import Layout from "../../components/layouts/Layout";
 import Navigation from "../../components/web/pricingComp/Navigation";
 
 const Business = () => {
@@ -226,6 +227,9 @@ const Business = () => {
 };
 
 export default Business;
+Business.getLayout = (page) => (
+  <Layout useTranslation={useTranslation}>{page}</Layout>
+);
 
 function Container({ children }) {
   return (

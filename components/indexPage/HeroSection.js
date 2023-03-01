@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 
 import { motion } from "framer-motion";
-
+import { useTranslation } from "next-i18next";
 const header1 = {
   hidden: {
     opacity: 0,
@@ -110,6 +110,7 @@ const icon4 = {
   },
 };
 export default function HeroSection() {
+  const { t } = useTranslation("common");
   return (
     <section
       className="container h-screen grid-cols-2 text-center flex-center md:text-left lg:grid "
@@ -140,7 +141,7 @@ export default function HeroSection() {
         >
           {/* Ние ще развием бизнеса Ви в онлайн пространството в желаната за вас
           ниша. */}
-          Всичко което Ви трябва за достигане до следващо нищо - онлайн
+          {t("Всичко което Ви трябва за достигане до следващо ниво - онлайн")}
         </motion.p>
         <motion.div
           variants={button}

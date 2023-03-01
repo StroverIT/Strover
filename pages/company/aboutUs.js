@@ -17,6 +17,8 @@ import FixedForm from "../../components/form/FixedForm";
 import { AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
 import ContactUsTodayComp from "../../components/Banners/ContactUsTodayComp";
+import Layout from "../../components/layouts/Layout";
+import { useTranslation } from "next-i18next";
 
 export default function AboutUs() {
   const { asPath } = useRouter();
@@ -145,3 +147,7 @@ export default function AboutUs() {
     </>
   );
 }
+
+AboutUs.getLayout = (page) => (
+  <Layout useTranslation={useTranslation}>{page}</Layout>
+);

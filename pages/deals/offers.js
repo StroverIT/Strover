@@ -1,5 +1,7 @@
+import { useTranslation } from "next-i18next";
 import Head from "next/head";
 import React, { useState } from "react";
+import Layout from "../../components/layouts/Layout";
 
 import Navigation from "../../components/otherPagesNav/OffersNav";
 import newsLetterSend from "../../fetches/newsletterSend";
@@ -74,3 +76,7 @@ export default function Offers() {
     </>
   );
 }
+
+Offers.getLayout = (page) => (
+  <Layout useTranslation={useTranslation}>{page}</Layout>
+);

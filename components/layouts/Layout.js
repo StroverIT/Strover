@@ -7,11 +7,27 @@ import ChristmasLights from "../Banners/ChristmasLights";
 import newsLetterSend from "../../fetches/newsletterSend";
 import { HiX } from "react-icons/hi";
 import ChirstmasPromotion from "../Banners/ChirstmasPromotion";
+import { ToastContainer } from "react-toastify";
+import Cookie from "../Banners/Cookie";
 
-export default function Layout({ children }) {
+export default function Layout({ children, useTranslation }) {
   const router = useRouter();
   const [christmasCookie, setChristmasCookie] = useState(false);
+  const [isCookie, setIsCookie] = useState(false);
 
+  useEffect(() => {
+    const isFound = localStorage.getItem("iknowyou");
+
+    if (!isFound) {
+      setTimeout(() => {
+        setIsCookie(true);
+      }, 5000);
+    }
+  }, []);
+  const cookieHandler = () => {
+    localStorage.setItem("iknowyou", "true");
+    setIsCookie(false);
+  };
   // const christmasHandler = (type) => {
   //   if (type == false) {
   //     setChristmasCookie(false);
@@ -101,9 +117,13 @@ export default function Layout({ children }) {
         >
           {children}
           {router.pathname != "/web/promotions" &&
-            router.pathname != "/web/thanks-christmas" && <Footer />}
+            router.pathname != "/web/thanks-christmas" && (
+              <Footer useTranslation={useTranslation} />
+            )}
         </motion.div>
       </AnimatePresence>
+      <ToastContainer />
+      <Cookie setIsCookie={cookieHandler} isCookie={isCookie} />
     </>
   );
 }

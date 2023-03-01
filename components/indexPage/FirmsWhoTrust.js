@@ -6,6 +6,7 @@ import { BsArrowRight } from "react-icons/bs";
 import TextAnimation from "../../libs/TextAnimation";
 import FadeFromBottom from "../layouts/animations/onView/FadeFromBottom";
 import HeaderSpider from "../HeaderSpider";
+import { useTranslation } from "next-i18next";
 
 export default function FirmsWhoTrust() {
   return (
@@ -33,7 +34,7 @@ export default function FirmsWhoTrust() {
         <FirmsContainer
           imageUrl="/firms/movexTest1.png"
           title="Movex"
-          description={`Movex Bulgaria е фирма за хамалски и транспортни услуги с почти 10 години опит. `}
+          description={`Movex Bulgaria е фирма за хамалски и транспортни услуги с почти 10 години опит.`}
           siteLink="https://movex.bg"
           gridXl="xl:grid-cols-[40%50%]"
         />
@@ -50,6 +51,8 @@ const FirmsContainer = ({
   isReverse,
   gridXl = "xl:grid-cols-[40%60%]",
 }) => {
+  const { t } = useTranslation("home");
+
   return (
     <section
       className={`relative flex mt-10 rounded-full max-sm:flex-col max-md:container ${
@@ -90,7 +93,7 @@ const FirmsContainer = ({
             </div>
             <FadeFromBottom duration={0.5}>
               <p className="max-w-sm mt-1 text-white max-sm:text-justify hypens-auto max-sm:container">
-                {description}
+                {t(description)}
               </p>
             </FadeFromBottom>
             <FadeFromBottom delay={0.1} duration={0.5}>

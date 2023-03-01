@@ -5,6 +5,8 @@ import Navigation from "../../components/otherPagesNav/Navigation";
 import { links } from "../../components/otherPagesNav/cookiePolicy";
 import Link from "next/link";
 import { BsBoxArrowInLeft } from "react-icons/bs";
+import Layout from "../../components/layouts/Layout";
+import { useTranslation } from "next-i18next";
 
 export default function PrivacyPolicy() {
   return (
@@ -21,7 +23,7 @@ export default function PrivacyPolicy() {
       <Navigation links={links} />
       <section className="container text-black mt-36">
         <div>
-          <div className="text-sm mb-10 flex items-center">
+          <div className="flex items-center mb-10 text-sm">
             <div className="mr-1 text-lg">
               <BsBoxArrowInLeft />
             </div>
@@ -225,3 +227,6 @@ export default function PrivacyPolicy() {
     </>
   );
 }
+PrivacyPolicy.getLayout = (page) => (
+  <Layout useTranslation={useTranslation}>{page}</Layout>
+);

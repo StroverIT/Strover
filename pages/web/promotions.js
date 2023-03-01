@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 import ChristmasLights from "../../components/Banners/ChristmasLights";
+import Layout from "../../components/layouts/Layout";
 import ChristmasButton from "../../components/promotions/newYear/ChristmasButton";
 import ChristmasGifts from "../../components/promotions/newYear/ChristmasGifts";
 import ChristmasProshtakylnik from "../../components/promotions/newYear/ChristmasProshtakylnik";
@@ -46,11 +47,11 @@ export default function Promotions() {
         <meta name="robots" content="noindex, nofollow" />
         <meta charset="UTF-8" />
       </Head>
-      <main className="relative  h-screen ">
-        <section className="bg-primaryBlue h-screen border-b-8  border-primaryBlue-500"></section>
+      <main className="relative h-screen ">
+        <section className="h-screen border-b-8 bg-primaryBlue border-primaryBlue-500"></section>
         <SnowingBg />
 
-        <section className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-screen w-screen z-10 shadow-inne">
+        <section className="absolute z-10 w-screen h-screen -translate-x-1/2 -translate-y-1/2  top-1/2 left-1/2 shadow-inne">
           {/* bg-blue-300  */}
           {/* bg-primaryBlue-650 */}
           {/* bg-primaryBlue-750 */}
@@ -74,36 +75,36 @@ export default function Promotions() {
                 />
               </div>
             </section>
-            <section className="absolute  bottom-0 z-20 -right-16 opacity-80 md:opacity-100">
+            <section className="absolute bottom-0 z-20 -right-16 opacity-80 md:opacity-100">
               <ChristmasGifts />
             </section>
-            <section className="absolute -top-60 left-14 hidden md:block">
+            <section className="absolute hidden -top-60 left-14 md:block">
               <ChristmasProshtakylnik />
             </section>
 
-            <section className="flex-center h-full flex-col  relative z-30  ">
-              <section className=" border flex-center flex-col  shadow-2xl bg-white-transparent-15 md:p-10 rounded-3xl p-2 container text-white">
+            <section className="relative z-30 flex-col h-full flex-center ">
+              <section className="container flex-col p-2 text-white border shadow-2xl  flex-center bg-white-transparent-15 md:p-10 rounded-3xl">
                 <section className="mt-6 font-semibold text-center ">
                   <h2 className="text-xl md:text-5xl">НОВОГОДИШНА ПРОМОЦИЯ!</h2>
                 </section>
-                <p className="mt-2 text-sm  max-w-4xl text-center md:text-2xl">
+                <p className="max-w-4xl mt-2 text-sm text-center md:text-2xl">
                   На 01.01.2023 ще има 50% промоция на услугите в
                   <span className=""> WEB</span> бранда. Офертата е лимитирана и
                   ще продължи една седмица.
                 </p>
-                <section className="mt-4  md:mt-10 flex-col flex-center text-xl max-md:text-sm ">
+                <section className="flex-col mt-4 text-xl md:mt-10 flex-center max-md:text-sm ">
                   <section className=" flex-center">
-                    <div className="relative h-7 w-7 hidden md:block">
+                    <div className="relative hidden h-7 w-7 md:block">
                       <Image src="/icons/giftbox.png" fill alt="giftBox" />
                     </div>
-                    <p className="  md:text-2xl text-center px-3">
+                    <p className="px-3 text-center  md:text-2xl">
                       Запишете се за офертата, преди ПАЯКА да я открадне!
                       {/* Ако желаете да бъдете известени може да се запишете за нашият
                       бюлетин */}
                       {/* Ако желаете да получите известие и най-новите ни оферти, може
                       да се запишете за нашият бюлетин. */}
                     </p>
-                    <div className="relative h-7 w-7 hidden md:block">
+                    <div className="relative hidden h-7 w-7 md:block">
                       <Image src="/icons/giftbox.png" fill alt="giftBox" />
                     </div>
                   </section>
@@ -111,7 +112,7 @@ export default function Promotions() {
                     <div className="mt-1 -mr-2">
                       <input
                         type="text"
-                        className="w-full py-5 pl-5 text-sm md:text-2xl text-black border-none rounded-bl-xl h-7 md:h-16 placeholder:text-black"
+                        className="w-full py-5 pl-5 text-sm text-black border-none md:text-2xl rounded-bl-xl h-7 md:h-16 placeholder:text-black"
                         placeholder="Email"
                         value={input}
                         onChange={handler}
@@ -131,3 +132,6 @@ export default function Promotions() {
     </>
   );
 }
+Promotions.getLayout = (page) => (
+  <Layout useTranslation={useTranslation}>{page}</Layout>
+);
