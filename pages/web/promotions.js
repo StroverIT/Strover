@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import ChristmasLights from "../../components/Banners/ChristmasLights";
 import Layout from "../../components/layouts/Layout";
 import ChristmasButton from "../../components/promotions/newYear/ChristmasButton";
@@ -51,7 +52,7 @@ export default function Promotions() {
         <section className="h-screen border-b-8 bg-primaryBlue border-primaryBlue-500"></section>
         <SnowingBg />
 
-        <section className="absolute z-10 w-screen h-screen -translate-x-1/2 -translate-y-1/2  top-1/2 left-1/2 shadow-inne">
+        <section className="absolute z-10 w-screen h-screen -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 shadow-inne">
           {/* bg-blue-300  */}
           {/* bg-primaryBlue-650 */}
           {/* bg-primaryBlue-750 */}
@@ -83,7 +84,7 @@ export default function Promotions() {
             </section>
 
             <section className="relative z-30 flex-col h-full flex-center ">
-              <section className="container flex-col p-2 text-white border shadow-2xl  flex-center bg-white-transparent-15 md:p-10 rounded-3xl">
+              <section className="container flex-col p-2 text-white border shadow-2xl flex-center bg-white-transparent-15 md:p-10 rounded-3xl">
                 <section className="mt-6 font-semibold text-center ">
                   <h2 className="text-xl md:text-5xl">НОВОГОДИШНА ПРОМОЦИЯ!</h2>
                 </section>
@@ -97,7 +98,7 @@ export default function Promotions() {
                     <div className="relative hidden h-7 w-7 md:block">
                       <Image src="/icons/giftbox.png" fill alt="giftBox" />
                     </div>
-                    <p className="px-3 text-center  md:text-2xl">
+                    <p className="px-3 text-center md:text-2xl">
                       Запишете се за офертата, преди ПАЯКА да я открадне!
                       {/* Ако желаете да бъдете известени може да се запишете за нашият
                       бюлетин */}

@@ -1,7 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 import ChristmasLights from "../../components/Banners/ChristmasLights";
+import Layout from "../../components/layouts/Layout";
 import ChristmasGifts from "../../components/promotions/newYear/ChristmasGifts";
 import ChristmasProshtakylnik from "../../components/promotions/newYear/ChristmasProshtakylnik";
 import ChristmasTree from "../../components/promotions/newYear/ChristmasTree";
@@ -21,7 +23,7 @@ export default function Promotions() {
         <section className="h-screen border-b-8 bg-primaryBlue border-primaryBlue-500"></section>
         <SnowingBg />
 
-        <section className="absolute z-10 w-screen h-screen -translate-x-1/2 -translate-y-1/2  top-1/2 left-1/2 shadow-inne">
+        <section className="absolute z-10 w-screen h-screen -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 shadow-inne">
           {/* bg-blue-300  */}
           {/* bg-primaryBlue-650 */}
           {/* bg-primaryBlue-750 */}
@@ -53,7 +55,7 @@ export default function Promotions() {
             </section>
 
             <section className="relative z-30 flex-col h-full flex-center ">
-              <section className="container flex-col p-2 py-10 text-white border shadow-2xl  flex-center bg-white-transparent-15 md:p-10 rounded-3xl">
+              <section className="container flex-col p-2 py-10 text-white border shadow-2xl flex-center bg-white-transparent-15 md:p-10 rounded-3xl">
                 <div className="flex-center">
                   <section className="w-14 h-14 md:w-20 md:h-20">
                     <Check />
@@ -89,9 +91,11 @@ export default function Promotions() {
     </>
   );
 }
-
+Promotions.getLayout = (page) => (
+  <Layout useTranslation={useTranslation}>{page}</Layout>
+);
 // <section className="relative z-30 flex-col h-full flex-center ">
-//             <section className="p-10 text-white border shadow-2xl  bg-white-transparent-15 rounded-3xl">
+//             <section className="p-10 text-white border shadow-2xl bg-white-transparent-15 rounded-3xl">
 //               <div className="flex-center">
 //                 <section className="w-20 h-20">
 //                   <Check />

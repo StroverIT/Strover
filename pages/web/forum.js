@@ -2,6 +2,7 @@ import { AnimatePresence } from "framer-motion";
 import Head from "next/head";
 
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import ContactUsTodayComp from "../../components/Banners/ContactUsTodayComp";
 import FixedForm from "../../components/form/FixedForm";
 import HeaderSpider from "../../components/HeaderSpider";
