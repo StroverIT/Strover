@@ -15,6 +15,7 @@ import ProcessAndServices from "../../components/web/ProcessAndServices";
 import Questions from "../../components/web/Questions";
 
 import { web as links } from "../../data/links";
+import Layout from "../../components/layouts/Layout";
 
 export default function Web() {
   return (
@@ -78,3 +79,4 @@ export default function Web() {
     </>
   );
 }
+Web.getLayout = (page) => <Layout>{page}</Layout>;

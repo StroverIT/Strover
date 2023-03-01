@@ -1,3 +1,6 @@
+import Layout from "../components/layouts/Layout";
+// import NestedLayout from '../components/nested-layout'
+
 // Next things
 import Head from "next/head";
 
@@ -12,7 +15,9 @@ import MoreInfo from "../components/indexPage/MoreInfo/MoreInfo";
 import Navigation from "../components/indexPage/Navigation";
 import Services from "../components/indexPage/Services";
 
-// Icons
+// Translations
+import serverSideTranslations from "../utils/serverSideTranslations";
+import { useTranslation } from "next-i18next";
 
 export default function Home() {
   return (
@@ -66,3 +71,29 @@ export default function Home() {
     </div>
   );
 }
+
+Home.getLayout = (page) => (
+  <Layout useTranslation={useTranslation}>{page}</Layout>
+);
+
+export const getServerSideProps = async ({ locale }) => {
+  // Wrapping in Promis.all is not necessary, I use it simply so that if there are any other asynchronous operations, then not to use them through await and not to block each other's work
+  const [translations] = await Promise.all([
+    serverSideTranslations(locale, ["home", "common", "footer"]),
+  ]);
+
+  return {
+    props: {
+      ...translations,
+    },
+  };
+};
+
+// export async function getStaticProps({ locale }) {
+//   return {
+//     props: {
+//       ...(await serverSideTranslations(locale, ["common", "home", "footer"])),
+//       // Will be passed to the page component as props
+//     },
+//   };
+// }
