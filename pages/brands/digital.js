@@ -10,6 +10,7 @@ import Navigation from "../../components/layouts/brands/Navigation";
 import Services from "../../components/digital/Services";
 
 import { digital as links } from "../../data/links";
+import Layout from "../../components/layouts/Layout";
 
 export default function Digital() {
   return (
@@ -62,3 +63,7 @@ export default function Digital() {
     </>
   );
 }
+
+Digital.getLayout = (page) => (
+  <Layout useTranslation={useTranslation}>{page}</Layout>
+);

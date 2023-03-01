@@ -1,6 +1,7 @@
 import Head from "next/head";
 import React from "react";
 import { BsFacebook, BsInstagram } from "react-icons/bs";
+import Layout from "../../components/layouts/Layout";
 import Check from "../../components/svg-anim-comp/Check";
 import Navigation from "../../components/web/pricingComp/Navigation";
 
@@ -71,3 +72,6 @@ const Thanks = () => {
 };
 
 export default Thanks;
+Thanks.getLayout = (page) => (
+  <Layout useTranslation={useTranslation}>{page}</Layout>
+);

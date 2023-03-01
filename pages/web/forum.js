@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import ContactUsTodayComp from "../../components/Banners/ContactUsTodayComp";
 import FixedForm from "../../components/form/FixedForm";
 import HeaderSpider from "../../components/HeaderSpider";
+import Layout from "../../components/layouts/Layout";
 import Navigation from "../../components/web/pricingComp/Navigation";
 
 const Forum = () => {
@@ -40,7 +41,7 @@ const Forum = () => {
                   Нашите интернет паяци, ще създават платформа, чрез която
                   потребителите ще имат възможността да:
                 </p>
-                <ul className="list-disc ml-5">
+                <ul className="ml-5 list-disc">
                   <li>Обсъждат теми </li>
                   <li>Качват съдържание независимо</li>
                   <li>
@@ -95,7 +96,9 @@ const Forum = () => {
 };
 
 export default Forum;
-
+Forum.getLayout = (page) => (
+  <Layout useTranslation={useTranslation}>{page}</Layout>
+);
 function Container({ children }) {
   return (
     <div className="flex flex-col h-full p-10 pt-5 bg-white shadow-xl rounded-xl">
