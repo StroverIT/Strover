@@ -7,23 +7,10 @@ import Script from "next/script";
 import { useEffect, useState } from "react";
 import Cookie from "../components/Banners/Cookie";
 import ChristmasLights from "../components/Banners/ChristmasLights";
-
+import { appWithTranslation } from "next-i18next";
+import nextI18NextConfig from "../next-i18next.config";
 function MyApp({ Component, pageProps }) {
-  const [isCookie, setIsCookie] = useState(false);
-
-  useEffect(() => {
-    const isFound = localStorage.getItem("iknowyou");
-
-    if (!isFound) {
-      setTimeout(() => {
-        setIsCookie(true);
-      }, 5000);
-    }
-  }, []);
-  const cookieHandler = () => {
-    localStorage.setItem("iknowyou", "true");
-    setIsCookie(false);
-  };
+  const getLayout = Component.getLayout || ((page) => page);
   return (
     <>
       <Script
@@ -68,7 +55,6 @@ function MyApp({ Component, pageProps }) {
   }(document, 'script', 'facebook-jssdk'));
 `}
       </Script>
-
       <Head>
         {/* <title>Strover</title> */}
         <link rel="icon" href="/logos/web-spider.svg" />
@@ -102,13 +88,10 @@ function MyApp({ Component, pageProps }) {
         itemProp="image"
         content="https://www.linkpicture.com/q/STROVER-POST.jpg"
       />
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-      <ToastContainer />
-      <Cookie setIsCookie={cookieHandler} isCookie={isCookie} />
+
+      {getLayout(<Component {...pageProps} />)}
     </>
   );
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp, nextI18NextConfig);
