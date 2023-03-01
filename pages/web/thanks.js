@@ -1,5 +1,6 @@
 import Head from "next/head";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { BsFacebook, BsInstagram } from "react-icons/bs";
 import Layout from "../../components/layouts/Layout";
 import Check from "../../components/svg-anim-comp/Check";

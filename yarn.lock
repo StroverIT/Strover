@@ -868,6 +868,10 @@
   dependencies:
     glob "7.1.7"
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f29a15d15b49ac720defe25d8c1b6cf13000dfb0
 "@next/swc-android-arm-eabi@13.0.3":
   version "13.0.3"
   resolved "https://registry.yarnpkg.com/@next/swc-android-arm-eabi/-/swc-android-arm-eabi-13.0.3.tgz#87ce3b7d81ec198f5360f4393e5e03f112758696"
@@ -908,14 +912,24 @@
   resolved "https://registry.yarnpkg.com/@next/swc-linux-arm64-musl/-/swc-linux-arm64-musl-13.0.3.tgz#5fd31e1149f151393b98239b5a6a96316459d19a"
   integrity sha512-MoYe9SM40UaunTjC+01c9OILLH3uSoeri58kDMu3KF/EFEvn1LZ6ODeDj+SLGlAc95wn46hrRJS2BPmDDE+jFQ==
 
+<<<<<<< HEAD
+=======
+"@next/swc-linux-x64-gnu@13.0.3":
+  version "13.0.3"
+  resolved "https://registry.yarnpkg.com/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-13.0.3.tgz#a9b414123f26912fc830e5a65dd02e1ca56e2ead"
+=======
+<<<<<<< HEAD
+>>>>>>> f29a15d15b49ac720defe25d8c1b6cf13000dfb0
 "@next/swc-linux-x64-gnu@13.0.3":
   version "13.0.3"
   resolved "https://registry.npmjs.org/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-13.0.3.tgz"
+>>>>>>> 77c1bef6c8b600d7f9bd1195b6e158e0f8db0c7e
   integrity sha512-z22T5WGnRanjLMXdF0NaNjSpBlEzzY43t5Ysp3nW1oI6gOkub6WdQNZeHIY7A2JwkgSWZmtjLtf+Fzzz38LHeQ==
 
 "@next/swc-linux-x64-musl@13.0.3":
   version "13.0.3"
-  resolved "https://registry.npmjs.org/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-13.0.3.tgz"
+<<<<<<< HEAD
+  resolved "https://registry.yarnpkg.com/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-13.0.3.tgz#113f896de5e818ab40e6ec046538203cdd07dab0"
   integrity sha512-ZOMT7zjBFmkusAtr47k8xs/oTLsNlTH6xvYb+iux7yly2hZGwhfBLzPGBsbeMZukZ96IphJTagT+C033s6LNVA==
 
 "@next/swc-win32-arm64-msvc@13.0.3":
@@ -928,6 +942,25 @@
   resolved "https://registry.yarnpkg.com/@next/swc-win32-ia32-msvc/-/swc-win32-ia32-msvc-13.0.3.tgz#1a9c0d36c7dab1620257e85ada702c5acd9875d6"
   integrity sha512-Sa8yGkNeRUsic8Qjf7MLIAfP0p0+einK/wIqJ8UO1y76j+8rRQu42AMs5H4Ax1fm9GEYq6I8njHtY59TVpTtGQ==
 
+=======
+  resolved "https://registry.npmjs.org/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-13.0.3.tgz"
+  integrity sha512-ZOMT7zjBFmkusAtr47k8xs/oTLsNlTH6xvYb+iux7yly2hZGwhfBLzPGBsbeMZukZ96IphJTagT+C033s6LNVA==
+<<<<<<< HEAD
+
+"@next/swc-win32-arm64-msvc@13.0.3":
+  version "13.0.3"
+  resolved "https://registry.yarnpkg.com/@next/swc-win32-arm64-msvc/-/swc-win32-arm64-msvc-13.0.3.tgz#2ae5abe61f982a10f7742e97ac57f166751734aa"
+  integrity sha512-Q4BM16Djl+Oah9UdGrvjFYgoftYB2jNd+rtRGPX5Mmxo09Ry/KiLbOZnoUyoIxKc1xPyfqMXuaVsAFQLYs0KEQ==
+
+"@next/swc-win32-ia32-msvc@13.0.3":
+  version "13.0.3"
+  resolved "https://registry.yarnpkg.com/@next/swc-win32-ia32-msvc/-/swc-win32-ia32-msvc-13.0.3.tgz#1a9c0d36c7dab1620257e85ada702c5acd9875d6"
+  integrity sha512-Sa8yGkNeRUsic8Qjf7MLIAfP0p0+einK/wIqJ8UO1y76j+8rRQu42AMs5H4Ax1fm9GEYq6I8njHtY59TVpTtGQ==
+
+=======
+=======
+>>>>>>> 77c1bef6c8b600d7f9bd1195b6e158e0f8db0c7e
+>>>>>>> f29a15d15b49ac720defe25d8c1b6cf13000dfb0
 "@next/swc-win32-x64-msvc@13.0.3":
   version "13.0.3"
   resolved "https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-13.0.3.tgz"
@@ -2190,6 +2223,16 @@ i18next-intervalplural-postprocessor@^3.0.0:
   resolved "https://registry.npmjs.org/i18next-intervalplural-postprocessor/-/i18next-intervalplural-postprocessor-3.0.0.tgz"
   integrity sha512-ZJWg2Gcb0kQqVI7kygLj9wVwQHK3mzRAg94uLsdoHqss0M9n0HSPr1pThd2AttkBsJFWR26G18hnKCqcTB8shQ==
 
+<<<<<<< HEAD
+=======
+i18next@^22.4.10:
+  version "22.4.10"
+  resolved "https://registry.npmjs.org/i18next/-/i18next-22.4.10.tgz"
+  integrity sha512-3EqgGK6fAJRjnGgfkNSStl4mYLCjUoJID338yVyLMj5APT67HUtWoqSayZewiiC5elzMUB1VEUwcmSCoeQcNEA==
+  dependencies:
+    "@babel/runtime" "^7.20.6"
+
+>>>>>>> f29a15d15b49ac720defe25d8c1b6cf13000dfb0
 ieee754@^1.1.13:
   version "1.2.1"
   resolved "https://registry.npmjs.org/ieee754/-/ieee754-1.2.1.tgz"
@@ -2656,7 +2699,19 @@ next-sitemap@^3.1.32:
     "@corex/deepmerge" "^4.0.29"
     minimist "^1.2.6"
 
+<<<<<<< HEAD
 next@^13.0.3:
+=======
+<<<<<<< HEAD
+next@^13.0.3:
+=======
+<<<<<<< HEAD
+next@*, next@^13.0.3:
+=======
+next@*, next@^13.0.3, "next@>= 12.0.0":
+>>>>>>> 0e41bf0325b044d443e3cae877089ff2e5d8b71e
+>>>>>>> 77c1bef6c8b600d7f9bd1195b6e158e0f8db0c7e
+>>>>>>> f29a15d15b49ac720defe25d8c1b6cf13000dfb0
   version "13.0.3"
   resolved "https://registry.npmjs.org/next/-/next-13.0.3.tgz"
   integrity sha512-rFQeepcenRxKzeKlh1CsmEnxsJwhIERtbUjmYnKZyDInZsU06lvaGw5DT44rlNp1Rv2MT/e9vffZ8vK+ytwXHA==
@@ -2987,6 +3042,17 @@ react-dom@18.2.0:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
 
+<<<<<<< HEAD
+=======
+react-i18next@^12.2.0:
+  version "12.2.0"
+  resolved "https://registry.npmjs.org/react-i18next/-/react-i18next-12.2.0.tgz"
+  integrity sha512-5XeVgSygaGfyFmDd2WcXvINRw2WEC1XviW1LXY/xLOEMzsCFRwKqfnHN+hUjla8ZipbVJR27GCMSuTr0BhBBBQ==
+  dependencies:
+    "@babel/runtime" "^7.20.6"
+    html-parse-stringify "^3.0.1"
+
+>>>>>>> f29a15d15b49ac720defe25d8c1b6cf13000dfb0
 react-icons@^4.6.0:
   version "4.6.0"
   resolved "https://registry.npmjs.org/react-icons/-/react-icons-4.6.0.tgz"
@@ -3004,7 +3070,19 @@ react-toastify@^9.1.1:
   dependencies:
     clsx "^1.1.1"
 
+<<<<<<< HEAD
 react@18.2.0:
+=======
+<<<<<<< HEAD
+react@18.2.0:
+=======
+<<<<<<< HEAD
+react@*, "react@^16.8 || ^17 || ^18", "react@^16.8.0 || ^17.0.0 || ^18.0.0", react@^18.0.0, react@^18.2.0, "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", react@>=16, react@18.2.0:
+=======
+react@*, "react@^16.8 || ^17 || ^18", "react@^16.8.0 || ^17.0.0 || ^18.0.0", react@^18.0.0, react@^18.2.0, "react@>= 16.8.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@>= 17.0.2", react@>=16, react@18.2.0:
+>>>>>>> 0e41bf0325b044d443e3cae877089ff2e5d8b71e
+>>>>>>> 77c1bef6c8b600d7f9bd1195b6e158e0f8db0c7e
+>>>>>>> f29a15d15b49ac720defe25d8c1b6cf13000dfb0
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==
