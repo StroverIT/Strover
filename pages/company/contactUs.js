@@ -11,6 +11,7 @@ import { BsFacebook, BsInstagram } from "react-icons/bs";
 import sendMesage from "../../fetches/sendingMessage";
 import { toastError, toastSuccess } from "../../libs/Notifications";
 import Layout from "../../components/layouts/Layout";
+import { useTranslation } from "next-i18next";
 
 const inputsInit = {
   name: "",

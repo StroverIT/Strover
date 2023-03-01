@@ -1,3 +1,4 @@
+import { useTranslation } from "next-i18next";
 import Head from "next/head";
 import React, { useState } from "react";
 import Layout from "../../components/layouts/Layout";

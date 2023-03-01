@@ -18,6 +18,7 @@ import { AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
 import ContactUsTodayComp from "../../components/Banners/ContactUsTodayComp";
 import Layout from "../../components/layouts/Layout";
+import { useTranslation } from "next-i18next";
 
 export default function AboutUs() {
   const { asPath } = useRouter();

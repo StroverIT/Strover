@@ -6,6 +6,7 @@ import { links } from "../../components/otherPagesNav/cookiePolicy";
 import Link from "next/link";
 import { BsBoxArrowInLeft } from "react-icons/bs";
 import Layout from "../../components/layouts/Layout";
+import { useTranslation } from "next-i18next";
 
 export default function PrivacyPolicy() {
   return (

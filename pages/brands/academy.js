@@ -6,6 +6,7 @@ import style from "../../styles/Academy.module.css";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Layout from "../../components/layouts/Layout";
+import { useTranslation } from "next-i18next";
 
 export default function Academy() {
   const schnatszVariants = {

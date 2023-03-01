@@ -11,6 +11,7 @@ import Services from "../../components/digital/Services";
 
 import { digital as links } from "../../data/links";
 import Layout from "../../components/layouts/Layout";
+import { useTranslation } from "next-i18next";
 
 export default function Digital() {
   return (

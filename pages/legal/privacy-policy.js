@@ -1,3 +1,4 @@
+import { useTranslation } from "next-i18next";
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
