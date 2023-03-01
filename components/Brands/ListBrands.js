@@ -4,6 +4,7 @@ import TextAnimation from "../../libs/TextAnimation";
 
 import FadeIn from "../layouts/animations/onView/FadeIn";
 import HeaderSpider from "../HeaderSpider";
+import { useTranslation } from "next-i18next";
 
 export default function ListBrands({
   digital,
@@ -15,6 +16,7 @@ export default function ListBrands({
   rounded,
 }) {
   const duration = 1.5;
+
   return (
     <section className={`${py} ${bg} box  relative z-20 -mb-16`}>
       <section className="mb-10 text-white">
@@ -59,7 +61,9 @@ export default function ListBrands({
             altImage="Tech spider logo for strovers' brands"
             imageLink="/logos/digital_spider.svg"
             title="Digital"
-            p="Помагаме да достигнете до повече потенциални клиенти, увеличаване на прихода и разширяване на аудиторията Ви"
+            p={
+              "Помагаме да достигнете до повече потенциални клиенти, увеличаване на прихода и разширяване на аудиторията Ви"
+            }
             link="/brands/digital"
             borderColor="bg-pink-50"
             textColor="text-pink-50"

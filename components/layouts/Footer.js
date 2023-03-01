@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 // Icons
 import { BsFacebook, BsInstagram } from "react-icons/bs";
@@ -11,7 +11,9 @@ import Link from "next/link";
 import newsletterSend from "../../fetches/newsletterSend";
 import { toastError, toastSuccess } from "../../libs/Notifications";
 
-export default function Footer() {
+export default function Footer({ useTranslation }) {
+  const { t } = useTranslation("footer");
+
   const router = useRouter();
 
   const [input, setInputs] = useState("");
@@ -187,7 +189,7 @@ export default function Footer() {
                 <li className="cursor-default">
                   <Link href="/company/aboutUs#team" scroll={false}>
                     <span className="pb-1 border-b cursor-pointer border-border">
-                      Екипа ни
+                      {t("Екипа ни")}
                     </span>
                   </Link>
                 </li>
