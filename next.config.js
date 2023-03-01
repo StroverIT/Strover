@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 
+const { i18n } = require("./next-i18next.config");
+
 const securityHeaders = [
   { key: "Access-Control-Allow-Origin", value: "*" },
   { key: "X-Frame-Options", value: "ALLOW-FROM https://facebook.com" },
@@ -9,10 +11,7 @@ const securityHeaders = [
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  i18n: {
-    locales: ["bg"],
-    defaultLocale: "bg",
-  },
+  i18n,
   async headers() {
     return [
       {
