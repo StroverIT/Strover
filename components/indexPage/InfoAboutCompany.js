@@ -106,8 +106,8 @@ export default function IdeasInWebsite({ isBox = true }) {
               {t("Ние ще ви помогнем да стартирате кариера като")}
             </h2>
             <ul className="mt-2 ml-5 list-disc columns-2">
-              <li>{"Програмист"}</li>
-              <li>{"Дизайнер"}</li>
+              <li>{t("Програмист")}</li>
+              <li>{t("Дизайнер")}</li>
               <li>{t("Копирайтър")}</li>
               <li>{t("Маркетолог")}</li>
             </ul>
