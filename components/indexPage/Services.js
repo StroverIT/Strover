@@ -13,7 +13,7 @@ export default function Services() {
       <div className="text-white flex-center">
         <HeaderSpider title="Брандове" size="text-5xl" />
       </div>
-      <section className="flex  flex-col gap-y-10 md:gap-y-64 mt-10  md:pb-56 text-white zeroToXl:text-center   zeroToXl:gap-y-10">
+      <section className="flex flex-col mt-10 text-white gap-y-10 md:gap-y-64 md:pb-56 zeroToXl:text-center zeroToXl:gap-y-10">
         {/* Web container */}
 
         <Container
@@ -23,12 +23,12 @@ export default function Services() {
           btnColor="btn-web-bg-color"
           imageUrl="test-removebg.png"
         >
-          <section className="md:max-w-lg mt-2  text-left container flex-center flex-col max-md:px-10">
+          <section className="container flex-col mt-2 text-left md:max-w-lg flex-center max-md:px-10">
             {/* Нямате сайт? Не се тревожете! Ние ще създадем един за вас! */}
             {/* Анализираме, създаваме, поддържаме и развиваме всякакъв вид
             уебсайтове. */}
             <section className="mt-2">
-              <h2 className="font-semibold text-lg ">Изработка на сайт</h2>
+              <h2 className="text-lg font-semibold ">Изработка на сайт</h2>
               <p className="">
                 Изработка на сайт е основната дейност на Strover Company. Ние
                 сме специализирани в разработването и поддържането на сайтове,
@@ -37,8 +37,8 @@ export default function Services() {
               </p>
             </section>
             <section className="mt-2">
-              <h2 className="font-semibold text-lg ">
-                Технологийте за изработка на сайт
+              <h2 className="text-lg font-semibold ">
+                Технологиите за изработка на сайт
               </h2>
               <p className="">
                 Ние използваме най-новите технологии и инструменти за да
@@ -48,7 +48,7 @@ export default function Services() {
             </section>
 
             <section className="mt-2">
-              <h2 className="font-semibold text-lg ">Препоръчителни услуги</h2>
+              <h2 className="text-lg font-semibold ">Препоръчителни услуги</h2>
               <p className="">
                 Ние също така предлагаме SEO оптимизация, за да подобрим
                 видимостта на Вашия сайт в търсачките и да достигнем до повече
@@ -68,7 +68,7 @@ export default function Services() {
           imageUrl="test-social.png"
           delay={0.2}
         >
-          <section className="md:max-w-lg mt-4  text-left container flex-center flex-col max-md:px-10">
+          <section className="container flex-col mt-4 text-left md:max-w-lg flex-center max-md:px-10">
             <p>
               Дигиталният маркетинг е важен аспект за успешното развитие на
               вашия бизнес.
