@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Line from "./Line";
 import FadeFromBottom from "../layouts/animations/onView/FadeFromBottom";
 import { useTranslation } from "next-i18next";
+import TransText from "../layouts/TransText";
 
 const divVariant = {
   hidden: {
@@ -49,10 +50,12 @@ export default function AboutUs() {
           </FadeFromBottom>
           <FadeFromBottom duration={0.5} delay={0.1}>
             <p className="max-w-xl text-lg leading-8 text-white max-md:container max-md:text-justify hypens-auto ">
-              {t(`Ние сме Strover. Млади, амбициозни и креативни интернет паяци,
-              които са готови да се учат от всичко и всички. Плетем мрежата си
-              около онлайн търговията, уеб дизайна, онлайн маркетинга и SEO
-              оптимизацията, насочени към съществуващи и нови бизнеси.`)}
+              <TransText>
+                Ние сме Strover. Млади, амбициозни и креативни интернет паяци,
+                които са готови да се учат от всичко и всички. Плетем мрежата си
+                около онлайн търговията, уеб дизайна, онлайн маркетинга и SEO
+                оптимизацията, насочени към съществуващи и нови бизнеси.
+              </TransText>
             </p>
           </FadeFromBottom>
         </div>
@@ -70,10 +73,12 @@ export default function AboutUs() {
           </FadeFromBottom>
           <FadeFromBottom duration={0.5} delay={0.1}>
             <p className="max-w-xl text-lg leading-8 text-white max-md:container hypens-auto max-md:text-justify">
-              {t(`Комплексна услуга от хора, които са специалисти в съответните
-              сфери: дигиталния маркетинг, компютърните науки и онлайн
-              продажбите. Ние ще Ви предоставим цялостни дигитални решения за
-              развитието на бранда Ви и достигането му до ИДЕАЛНИТЕ КЛИЕНТИ.`)}
+              <TransText>
+                Комплексна услуга от хора, които са специалисти в съответните
+                сфери: дигиталния маркетинг, компютърните науки и онлайн
+                продажбите. Ние ще Ви предоставим цялостни дигитални решения за
+                развитието на бранда Ви и достигането му до ИДЕАЛНИТЕ КЛИЕНТИ.
+              </TransText>
             </p>
           </FadeFromBottom>
         </motion.div>
@@ -90,10 +95,12 @@ export default function AboutUs() {
           </FadeFromBottom>
           <FadeFromBottom duration={0.5} delay={0.1}>
             <p className="max-w-xl text-lg leading-8 text-white max-md:container max-md:text-justify hypens-auto">
-              {t(`Защото държим на индивидуалния подход към клиента, както и на
-              добрата комуникация по всеки един проект. Когато за него няма
-              нужда от сложни технически термини - просто не ги използваме. За
-              нас визията в интернет пространството е изключително важна.`)}
+              <TransText>
+                Защото държим на индивидуалния подход към клиента, както и на
+                добрата комуникация по всеки един проект. Когато за него няма
+                нужда от сложни технически термини - просто не ги използваме. За
+                нас визията в интернет пространството е изключително важна.
+              </TransText>
             </p>
           </FadeFromBottom>
         </motion.div>
