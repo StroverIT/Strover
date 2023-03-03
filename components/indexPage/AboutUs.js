@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 
 import Line from "./Line";
 import FadeFromBottom from "../layouts/animations/onView/FadeFromBottom";
+import { useTranslation } from "next-i18next";
+
 const divVariant = {
   hidden: {
     opacity: 0,
@@ -18,6 +20,8 @@ const divVariant = {
   },
 };
 export default function AboutUs() {
+  const { t } = useTranslation("home");
+
   // const [windowWidth, setWindowWidth] = useState(0);
   // const [secondCont, setSecondCont] = useState(false || windowWidth < 1280);
 
@@ -40,15 +44,15 @@ export default function AboutUs() {
         <div className="xl:flex-center flex-col xl:mr-10 xl:absolute xl:-top-28 xl:left-[350px]">
           <FadeFromBottom duration={0.5}>
             <h3 className="mb-2 text-xl font-medium md:text-3xl text-primaryBlue-450">
-              КОИ СМЕ НИЕ?
+              {t("КОИ СМЕ НИЕ?")}
             </h3>
           </FadeFromBottom>
           <FadeFromBottom duration={0.5} delay={0.1}>
             <p className="max-w-xl text-lg leading-8 text-white max-md:container max-md:text-justify hypens-auto ">
-              Ние сме Strover. Млади, амбициозни и креативни интернет паяци,
+              {t(`Ние сме Strover. Млади, амбициозни и креативни интернет паяци,
               които са готови да се учат от всичко и всички. Плетем мрежата си
               около онлайн търговията, уеб дизайна, онлайн маркетинга и SEO
-              оптимизацията, насочени към съществуващи и нови бизнеси.
+              оптимизацията, насочени към съществуващи и нови бизнеси.`)}
             </p>
           </FadeFromBottom>
         </div>
@@ -61,7 +65,7 @@ export default function AboutUs() {
         >
           <FadeFromBottom duration={0.5}>
             <h3 className="mb-2 text-xl font-medium md:text-3xl text-primaryBlue-450">
-              КАКВО ЩЕ ПОЛУЧИТЕ?
+              {t("КАКВО ЩЕ ПОЛУЧИТЕ?")}
             </h3>
           </FadeFromBottom>
           <FadeFromBottom duration={0.5} delay={0.1}>
@@ -81,15 +85,15 @@ export default function AboutUs() {
         >
           <FadeFromBottom duration={0.5}>
             <h3 className="mb-2 text-xl font-medium md:text-3xl text-primaryBlue-450">
-              ЗАЩО СМЕ РАЗЛИЧНИ?
+              {t("ЗАЩО СМЕ РАЗЛИЧНИ?")}
             </h3>
           </FadeFromBottom>
           <FadeFromBottom duration={0.5} delay={0.1}>
             <p className="max-w-xl text-lg leading-8 text-white max-md:container max-md:text-justify hypens-auto">
-              Защото държим на индивидуалния подход към клиента, както и на
+              {t(`Защото държим на индивидуалния подход към клиента, както и на
               добрата комуникация по всеки един проект. Когато за него няма
               нужда от сложни технически термини - просто не ги използваме. За
-              нас визията в интернет пространството е изключително важна.
+              нас визията в интернет пространството е изключително важна.`)}
             </p>
           </FadeFromBottom>
         </motion.div>

@@ -105,7 +105,7 @@ const FirmsContainer = ({
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Виж сайта
+                      {t(`Виж сайта`)}
                     </a>
                   </button>
                 </div>
