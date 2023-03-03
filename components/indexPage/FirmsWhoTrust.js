@@ -32,10 +32,10 @@ export default function FirmsWhoTrust() {
           isReverse={true}
         />
         <FirmsContainer
-          imageUrl="/firms/movexTest1.png"
-          title="Movex"
-          description={`Movex Bulgaria е фирма за хамалски и транспортни услуги с почти 10 години опит.`}
-          siteLink="https://movex.bg"
+          imageUrl="/firms/cargoMove.png"
+          title="Cargo Move"
+          description={`Cargo move е фирма за хамалски и транспортни услуги с почти 10 години опит.`}
+          siteLink="https://cargomove.bg"
           gridXl="xl:grid-cols-[40%50%]"
         />
       </section>

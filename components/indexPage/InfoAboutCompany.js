@@ -42,7 +42,7 @@ export default function IdeasInWebsite({ isBox = true }) {
             <ul className="mt-2 ml-5 list-disc">
               <li>Защо е нужен сайт</li>
               <li>Как той ще печели за вас</li>
-              <li>Как създаваме упешно печеливш сайт</li>
+              <li>Как създаваме успешно печеливш сайт</li>
             </ul>
             <div className="mt-5 md:mt-10 ">
               <Link href="/brands/web" scroll={false}>
