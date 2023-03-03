@@ -110,7 +110,7 @@ const icon4 = {
   },
 };
 export default function HeroSection() {
-  const { t } = useTranslation("common");
+  const { t } = useTranslation("home");
   return (
     <section
       className="container h-screen grid-cols-2 text-center flex-center md:text-left lg:grid "
@@ -155,7 +155,7 @@ export default function HeroSection() {
               whileTap={{ scale: 0.8 }}
               className="h-full px-8 py-3 text-lg font-semibold rounded-lg btn-bg-color"
             >
-              Научи повече
+              {t("Научи повече")}
             </motion.button>
           </a>
         </motion.div>
