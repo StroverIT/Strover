@@ -3,8 +3,11 @@ import React from "react";
 import Container from "./ServiceComp/Container";
 import HeaderSpider from "../HeaderSpider";
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
 
 export default function Services() {
+  const { t } = useTranslation("home");
+
   return (
     <section
       className="relative w-full bg-blue-300 bg-no-repeat py-28 box no-repeat"
