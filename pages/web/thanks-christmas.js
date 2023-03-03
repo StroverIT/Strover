@@ -1,3 +1,4 @@
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -113,3 +114,15 @@ Promotions.getLayout = (page) => (
 
 //             </section>
 //           </section>
+export const getServerSideProps = async ({ locale }) => {
+  // Wrapping in Promis.all is not necessary, I use it simply so that if there are any other asynchronous operations, then not to use them through await and not to block each other's work
+  const [translations] = await Promise.all([
+    serverSideTranslations(locale, ["thanksChristmas", "common", "footer"]),
+  ]);
+
+  return {
+    props: {
+      ...translations,
+    },
+  };
+};

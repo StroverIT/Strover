@@ -4,7 +4,6 @@ import TextAnimation from "../../libs/TextAnimation";
 
 import FadeIn from "../layouts/animations/onView/FadeIn";
 import HeaderSpider from "../HeaderSpider";
-import { useTranslation } from "next-i18next";
 
 export default function ListBrands({
   digital,

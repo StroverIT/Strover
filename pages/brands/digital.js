@@ -12,6 +12,7 @@ import Services from "../../components/digital/Services";
 import { digital as links } from "../../data/links";
 import Layout from "../../components/layouts/Layout";
 import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export default function Digital() {
   return (
@@ -68,3 +69,15 @@ export default function Digital() {
 Digital.getLayout = (page) => (
   <Layout useTranslation={useTranslation}>{page}</Layout>
 );
+export const getServerSideProps = async ({ locale }) => {
+  // Wrapping in Promis.all is not necessary, I use it simply so that if there are any other asynchronous operations, then not to use them through await and not to block each other's work
+  const [translations] = await Promise.all([
+    serverSideTranslations(locale, ["digital", "common", "footer"]),
+  ]);
+
+  return {
+    props: {
+      ...translations,
+    },
+  };
+};

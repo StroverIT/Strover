@@ -19,6 +19,7 @@ import { useRouter } from "next/router";
 import ContactUsTodayComp from "../../components/Banners/ContactUsTodayComp";
 import Layout from "../../components/layouts/Layout";
 import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export default function AboutUs() {
   const { asPath } = useRouter();
@@ -151,3 +152,16 @@ export default function AboutUs() {
 AboutUs.getLayout = (page) => (
   <Layout useTranslation={useTranslation}>{page}</Layout>
 );
+
+export const getServerSideProps = async ({ locale }) => {
+  // Wrapping in Promis.all is not necessary, I use it simply so that if there are any other asynchronous operations, then not to use them through await and not to block each other's work
+  const [translations] = await Promise.all([
+    serverSideTranslations(locale, ["aboutUs", "common", "footer"]),
+  ]);
+
+  return {
+    props: {
+      ...translations,
+    },
+  };
+};
