@@ -196,28 +196,28 @@ export default function Footer({ useTranslation }) {
                 <li className="cursor-default">
                   <Link href="/deals/offers" scroll={false}>
                     <span className="pb-1 border-b cursor-pointer border-border">
-                      Оферти
+                      {t("Оферти")}
                     </span>
                   </Link>
                 </li>
                 <li className="cursor-default">
                   <Link href="/legal/terms-and-conditions" scroll={false}>
                     <span className="pb-1 border-b cursor-pointer border-border">
-                      Условия за ползване
+                      {t("Условия за ползване")}
                     </span>
                   </Link>
                 </li>
                 <li className="cursor-default">
                   <Link href="/legal/privacy-policy" scroll={false}>
                     <span className="pb-1 border-b cursor-pointer border-border">
-                      Защита на лични данни
+                      {t("Защита на лични данни")}
                     </span>
                   </Link>
                 </li>
                 <li className="cursor-default">
                   <Link href="/legal/cookie-policy" scroll={false}>
                     <span className="pb-1 border-b cursor-pointer border-border">
-                      Политика за бисквитките
+                      {t("Политика за бисквитките")}
                     </span>
                   </Link>
                 </li>
@@ -226,7 +226,7 @@ export default function Footer({ useTranslation }) {
             <section className="">
               <div>
                 <h3 className="mt-5 text-lg font-semibold text-left">
-                  Контакти
+                  {t("Контакти")}
                 </h3>
                 <div className="ml-1 border-l border-border">
                   <ul className="pl-4 leading-8">
