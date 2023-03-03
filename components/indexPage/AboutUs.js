@@ -70,10 +70,10 @@ export default function AboutUs() {
           </FadeFromBottom>
           <FadeFromBottom duration={0.5} delay={0.1}>
             <p className="max-w-xl text-lg leading-8 text-white max-md:container hypens-auto max-md:text-justify">
-              Комплексна услуга от хора, които са специалисти в съответните
+              {t(`Комплексна услуга от хора, които са специалисти в съответните
               сфери: дигиталния маркетинг, компютърните науки и онлайн
               продажбите. Ние ще Ви предоставим цялостни дигитални решения за
-              развитието на бранда Ви и достигането му до ИДЕАЛНИТЕ КЛИЕНТИ.
+              развитието на бранда Ви и достигането му до ИДЕАЛНИТЕ КЛИЕНТИ.`)}
             </p>
           </FadeFromBottom>
         </motion.div>
