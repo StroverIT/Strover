@@ -59,7 +59,7 @@ const ChangeLanguage = ({ isMobile }) => {
   const changeLangHandler = (lang) => {
     setOpen(false);
 
-    router.push(router.asPath, router.asPath, { locale: lang });
+    router.push(router.asPath, undefined, { scroll: false, locale: lang });
   };
   return (
     <>
