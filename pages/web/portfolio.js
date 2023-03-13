@@ -82,7 +82,7 @@ const Forum = () => {
                   )}
                 </Paragraph>
                 <Price className="pt-2 ">
-                  300 <span className="text-gray-100">лв.</span>
+                  300 <span className="text-gray-100">{t("лв")}.</span>
                 </Price>
                 <Button
                   bgColor="bg-green"
@@ -107,7 +107,7 @@ const Forum = () => {
                 </Title>
                 <Paragraph>{t("Подходящ за средно съдържание.")}</Paragraph>
                 <Price className="pt-2 ">
-                  600 <span className="text-gray-100">лв.</span>
+                  600 <span className="text-gray-100">{t("лв")}.</span>
                 </Price>
                 <Button
                   bgColor="bg-red-200"
@@ -160,7 +160,7 @@ const Forum = () => {
                 </Title>
                 <Paragraph>{t("Подходящ за голямо съдържание.")}</Paragraph>
                 <Price className="pt-2 ">
-                  1200 <span className="text-gray-100">лв.</span>
+                  1200 <span className="text-gray-100">{t("лв")}.</span>
                 </Price>
                 <Button
                   bgColor="bg-primaryBlue"
