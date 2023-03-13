@@ -85,7 +85,7 @@ export default function ProcessAndServices() {
           <FadeFromBottom duration={0.5} delay={0.2}>
             <p className="max-w-sm mt-1 text-center max-lg:text-sm">
               {t(
-                "След като разберем почече за вашите цел и посока, започваме разботката на перфектия за ваш сайт."
+                "След като разберем повече за вашите цел и посока, започваме разработка на перфектният за ваш сайт."
               )}
             </p>
           </FadeFromBottom>
