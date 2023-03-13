@@ -27,6 +27,7 @@ module.exports = {
   browserLanguageDetection: true,
   serverLanguageDetection: true,
   defaultNS: "common",
+  fallbackNS: "common",
   defaultLanguage: "bg",
   otherLanguages: ["de, es, fr"],
   localeStructure: "{{lng}}/{{ns}}",
