@@ -3,20 +3,18 @@ import Image from "next/image";
 import TextAnimation from "../../libs/TextAnimation";
 import HeaderSpider from "../HeaderSpider";
 import FadeFromBottom from "../layouts/animations/onView/FadeFromBottom";
-
+import { useTranslation } from "next-i18next";
+import TransText from "../layouts/TransText";
 const dataServices = [
   {
     title: "Дизайн и брандинг",
-    text: `По-просто казано  - вашата визия в дигиталното пространство. 
-    Днес потребителите се доверяват най-много на визуалните си възприятия и дизайнът на вашите социални мрежи е от изключителна важност.
-    Звучи страшно, но нашите креативни STROVER паяци ще ви помогнат с тази задача. 
-`,
+    text: `По-просто казано - вашата визия в дигиталното пространство. Днес потребителите се доверяват най-много на визуалните си възприятия и дизайнът на вашите социални мрежи е от изключителна важност. Звучи страшно, но нашите креативни STROVER паяци ще ви помогнат с тази задача.`,
     lines: 4,
     link: "none",
     _id: "1sdfjkhdshjk18",
   },
   {
-    title: "Изготвяне на индивидуална стртегия.",
+    title: "Изготвяне на индивидуална стратегия.",
     text: `Дигиталната стратегия води до продажби, увеличаване на клиентската база и сигурен успех. Следването на ясен план ще ви донесе надеждни и трайни резултати.`,
     lines: 4,
 
@@ -25,7 +23,7 @@ const dataServices = [
   },
   {
     title: "Съдържание",
-    text: `Създаване на креативно и интерактивно съдържание, което отговаря на нуждите на Вашата потенцуална аудитория.`,
+    text: `Създаване на креативно и интерактивно съдържание, което отговаря на нуждите на Вашата потенциална аудитория.`,
     lines: 4,
 
     link: "none",
@@ -42,8 +40,7 @@ const dataServices = [
 
   {
     title: "Ежемесечен планинг за съдържанието, което ще публикуваме.",
-    text: `Календар с идеи и ясен план за дойствие. Поставяме си цели и ги постигаме с помощта на креативни публикации и кампании.
-`,
+    text: `Календар с идеи и ясен план за действие. Поставяме си цели и ги постигаме с помощта на креативни публикации и кампании.`,
     lines: 0,
 
     link: "none",
@@ -64,6 +61,7 @@ const boxVariant = {
 };
 
 export default function Services() {
+  const trans = "digital";
   return (
     <section className="mt-20 lg:mt-36" id="services">
       <section className="container items-center text-2xl font-semibold text-center lg:text-4xl">
@@ -72,6 +70,7 @@ export default function Services() {
             title="Процеса и услугите ни"
             size="max-lg:container text-4xl lg:text-5xl"
             lineColor="bg-pink-200"
+            trans={trans}
           />
         </div>
         {/* <TextAnimation
@@ -90,6 +89,7 @@ export default function Services() {
               lines={service.lines}
               title={service.title}
               text={service.text}
+              trans={trans}
             />
           );
         })}
@@ -97,7 +97,9 @@ export default function Services() {
     </section>
   );
 }
-function Service({ index, lines, title, text, link }) {
+function Service({ index, lines, title, text, link, trans }) {
+  const { t } = useTranslation(trans);
+
   boxVariant.animate.transition.delay = index / 10;
   let arr = [];
   for (let i = 0; i < lines; i++) {
@@ -126,10 +128,12 @@ function Service({ index, lines, title, text, link }) {
       </section>
       <section className="container lg:pt-16">
         <FadeFromBottom duration={0.5}>
-          <h2 className="text-lg font-semibold lg:text-2xl">{title}</h2>
+          <h2 className="text-lg font-semibold lg:text-2xl">{t(title)}</h2>
         </FadeFromBottom>
         <FadeFromBottom duration={0.5} delay={0.1}>
-          <p className="pt-1 max-lg:text-sm">{text}</p>
+          <p className="pt-1 max-lg:text-sm">
+            <TransText trans={trans}>{text}</TransText>
+          </p>
         </FadeFromBottom>
         {/* <motion.button
           variants={boxVariant}

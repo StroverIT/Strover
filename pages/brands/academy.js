@@ -8,8 +8,10 @@ import Link from "next/link";
 import Layout from "../../components/layouts/Layout";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-
+const trans = "academy";
 export default function Academy() {
+  const { t } = useTranslation(trans);
+
   const schnatszVariants = {
     initial: {},
     animate: {
@@ -32,8 +34,8 @@ export default function Academy() {
       <Navigation />
       <main className="h-[100vh] relative ">
         <div className="absolute z-10 flex-col py-2 text-white -translate-x-1/2 -translate-y-1/2 rounded-full left-1/2 top-1/2 flex-center">
-          <h1 className="px-6 text-5xl font-bold">Очаквайте скоро!</h1>
-          <h2 className="mt-2 text-2xl">Вижте и другите ни брандове</h2>
+          <h1 className="px-6 text-5xl font-bold">{t("Очаквайте скоро!")}</h1>
+          <h2 className="mt-2 text-2xl">{t("Вижте и другите ни брандове")}</h2>
           <div className="grid grid-cols-2 text-xl text-center underline">
             <div>
               <Link href="/brands/web">Web</Link>

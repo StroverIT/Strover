@@ -15,6 +15,7 @@ export default function FirmsWhoTrust() {
         <HeaderSpider
           title="Част от проектите ни"
           size="text-2xl  md:text-4xl"
+          trans="home"
         />
       </div>
       <section className="flex flex-col mt-20 md:mt-32 xl:container xl:gap-y-20">

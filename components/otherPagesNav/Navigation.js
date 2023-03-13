@@ -7,7 +7,8 @@ import WhiteSpider from "../svg-anim-comp/WhiteSpider";
 import { useRouter } from "next/router";
 import { IoLogoHackernews } from "react-icons/io";
 import Links from "./Links";
-
+import { useTranslation } from "next-i18next";
+import ChangeLanguage from "../ChangeLanguage";
 const hamburgerVariants = {
   animate: { transition: { staggerChildren: 0.1, delay: 1 } },
 };
@@ -26,6 +27,8 @@ const hamburgerList = {
   },
 };
 export default function Navigation({ links }) {
+  const { t } = useTranslation("common");
+
   const router = useRouter();
 
   const [isOpen, setOpen] = useState(false);
@@ -78,7 +81,7 @@ export default function Navigation({ links }) {
           <ul className="flex space-x-5">
             <li>
               <Link href="/" scroll={false}>
-                Начало
+                {t("Начало")}
               </Link>
             </li>
             <Links data={links} />
@@ -90,17 +93,18 @@ export default function Navigation({ links }) {
         <div>
           <ul className="flex items-center space-x-5">
             <Link href="/company/aboutUs" scroll={false}>
-              <li>За нас</li>
+              <li>{t("За нас")}</li>
             </Link>
             <Link href="/company/contactUs" scroll={false}>
-              <li>Контакти</li>
+              <li>{t("Контакти")}</li>
             </Link>
             <li
-              className="px-5 py-1 border cursor-pointer text-primaryBlue-150 border-primaryBlue-150"
+              className="px-5 py-1 border cursor-pointer text-primaryBlue-150 border-primaryBlue-150 uppercase"
               onClick={brandsHandler}
             >
-              БРАНДОВЕ
+              {t("Брандове")}
             </li>
+            <ChangeLanguage />
           </ul>
         </div>
       </section>
@@ -146,19 +150,19 @@ export default function Navigation({ links }) {
               >
                 <motion.li variants={hamburgerList}>
                   <Link href="/" scroll={false}>
-                    Начало
+                    {t("Начало")}
                   </Link>
                 </motion.li>
 
                 <motion.li variants={hamburgerList}>
                   <Link href="/company/aboutUs" scroll={false}>
-                    За нас
+                    {t("За нас")}
                   </Link>
                 </motion.li>
 
                 <motion.li variants={hamburgerList}>
                   <Link href="/company/contactUs" scroll={false}>
-                    Контакти
+                    {t("Контакти")}
                   </Link>
                 </motion.li>
 
@@ -169,8 +173,9 @@ export default function Navigation({ links }) {
                   onClick={brandsHandler}
                   className="px-5 py-1 border text-primaryBlue-150 border-primaryBlue-150"
                 >
-                  Брандове
+                  {t("Брандове")}
                 </motion.li>
+                <ChangeLanguage isMobile={true} />
               </motion.ul>
             </motion.div>
           )}

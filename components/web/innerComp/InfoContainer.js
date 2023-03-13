@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
 import HeaderSpider from "../../HeaderSpider";
-
 export default function InfoContainer({
   title,
   t1,
@@ -10,6 +9,7 @@ export default function InfoContainer({
   border,
   isNext,
   children,
+  trans,
 }) {
   return (
     <section
@@ -21,7 +21,7 @@ export default function InfoContainer({
         <div className="flex-col pt-5 pb-10 shadow-xl lg:py-10 flex-center max-lg:order-1">
           <section className=" flex-center">
             <div className="">
-              <HeaderSpider title={title} size="text-2xl" />
+              <HeaderSpider title={title} size="text-2xl" trans={trans} />
             </div>
           </section>
           <section className="max-w-xl px-10 pt-2">{children}</section>

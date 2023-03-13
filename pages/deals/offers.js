@@ -7,8 +7,10 @@ import Layout from "../../components/layouts/Layout";
 import Navigation from "../../components/otherPagesNav/OffersNav";
 import newsLetterSend from "../../fetches/newsletterSend";
 import { toastError, toastSuccess } from "../../libs/Notifications";
-
+const trans = "offers";
 export default function Offers() {
+  const { t } = useTranslation(trans);
+
   const [emailVal, setEmailVal] = useState("");
   const [isLoading, setLoading] = useState(false);
 
@@ -41,15 +43,16 @@ export default function Offers() {
 
       <section className="container my-36">
         <section>
-          <h1 className="text-3xl">ПРЕДЛОЖЕНИЯ И ОФЕРТИ</h1>
+          <h1 className="text-3xl">{t("ПРЕДЛОЖЕНИЯ И ОФЕРТИ")}</h1>
           <h2 className="text-2xl text-gray-150">
-            Възползвайте се от нашите сезонни кампании и активности за бизнеса
-            Ви
+            {t(
+              "Възползвайте се от нашите сезонни кампании и активности за бизнеса Ви"
+            )}
           </h2>
         </section>
         <section className="p-10 mt-10 bg-gray">
           <h1 className="mb-3 text-xl">
-            Абонирай се за последните ни новини и промоции
+            {t("Абонирай се за последните ни новини и промоции")}
           </h1>
           <div className="lg:grid lg:grid-cols-[40%20%]">
             <input
@@ -64,13 +67,15 @@ export default function Offers() {
               className="w-full text-white bg-blue-50 max-lg:py-2 max-lg:mt-2 flex-center"
               onClick={newsLetterHandler}
             >
-              {isLoading ? <div className="loader"></div> : "Абонирай ме!"}
+              {isLoading ? <div className="loader"></div> : t("Абонирай ме!")}
             </button>
           </div>
         </section>
         <section className="mt-5">
           <div className="container">
-            <h2 className="text-lg text-center">Няма създадени оферти!</h2>
+            <h2 className="text-lg text-center">
+              {t("Няма създадени оферти!")}
+            </h2>
           </div>
         </section>
       </section>

@@ -13,13 +13,15 @@ import { toastError, toastSuccess } from "../../libs/Notifications";
 import Layout from "../../components/layouts/Layout";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-
 const inputsInit = {
   name: "",
   email: "",
   message: "",
 };
+const trans = "contactUs";
 export default function ContactUsPage() {
+  const { t } = useTranslation(trans);
+
   const [inputs, setInputs] = useState(inputsInit);
   const [isLoading, setLoading] = useState(false);
 
@@ -65,7 +67,7 @@ export default function ContactUsPage() {
       <main className="bg-gray-200 py-36">
         <div className="container grid-cols-2 lg:grid gap-x-10">
           <section className="flex flex-col space-y-3 focus:border-transparent py-14 ">
-            <h1 className="text-lg">Контактна Информация</h1>
+            <h1 className="text-lg">{t("Контактна Информация")}</h1>
             <div className="flex items-center">
               <div className="text-2xl ">
                 <HiOutlineMail />
@@ -100,7 +102,9 @@ export default function ContactUsPage() {
             </div>
 
             <div className="pt-2">
-              <h2 className="text-lg">Намерете ни в Социалните мрежи:</h2>
+              <h2 className="text-lg">
+                {t("Намерете ни в Социалните мрежи:")}
+              </h2>
               <div className="flex mt-2 gap-x-5">
                 <a
                   aria-label="Strover Facebook"
@@ -140,11 +144,11 @@ export default function ContactUsPage() {
                   <span
                     className={`border-b-4 border-blue-50 pb-1 text-2xl font-semibold rounded-sm `}
                   >
-                    Свържи се с нас!
+                    {t("Свържи се с нас!")}
                   </span>
                 </h3>
                 <p className="pt-3 lg:max-w-[15rem]">
-                  Очакваме с нетърпение нашите общи проекти!
+                  {t("Очакваме с нетърпение нашите общи проекти!")}
                 </p>
                 <form
                   action=""
@@ -183,14 +187,14 @@ export default function ContactUsPage() {
                       className="absolute   -top-3.5 left-0 block mb-2 text-sm  text-gray-darker peer-placeholder-shown:text-base peer-placeholder-shown:px-6  peer-placeholder-shown:top-1.5 transition-all duration-300"
                       htmlFor="comment"
                     >
-                      Вашият коментар
+                      {t("Вашият коментар")}
                     </label>
                   </div>
                   <button
                     type="submit"
                     className={`flex-center bg-blue-50 px-10 py-1 mt-4`}
                   >
-                    {isLoading ? <div className="loader"></div> : "Изпрати"}
+                    {isLoading ? <div className="loader"></div> : t("Изпрати")}
                   </button>
                 </form>
               </section>

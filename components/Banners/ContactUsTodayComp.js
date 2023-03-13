@@ -5,8 +5,11 @@ import React, { useState } from "react";
 
 import FixedForm from "../form/FixedForm";
 import HeaderSpider from "../HeaderSpider";
-
+import { useTranslation } from "next-i18next";
 const ContactUsTodayComp = ({ typePage = "contact us page" }) => {
+  const trans = "common";
+  const { t } = useTranslation(trans);
+
   const [form, openForm] = useState(false);
 
   return (
@@ -14,7 +17,11 @@ const ContactUsTodayComp = ({ typePage = "contact us page" }) => {
       <section>
         <section className="">
           <div className="flex-center">
-            <HeaderSpider title="СВЪРЖИ СЕ С НАС ОЩЕ ДНЕС" size="text-3xl" />
+            <HeaderSpider
+              title="СВЪРЖИ СЕ С НАС ОЩЕ ДНЕС"
+              size="text-3xl"
+              trans={trans}
+            />
           </div>
         </section>
         <section className="grid mt-10 text-white md:px-10 md:grid-cols-2 xl:grid-cols-4 gap-y-10 gap-x-10">
@@ -25,12 +32,13 @@ const ContactUsTodayComp = ({ typePage = "contact us page" }) => {
                 <Image src="/icons/phone-call.png" alt="phone calling" fill />
               </div>
               <h3 className="container mt-5 text-lg text-center">
-                ОБАДИ НИ СЕ ЗА КОНСУЛТАЦИЯ
+                {t("ОБАДИ НИ СЕ ЗА КОНСУЛТАЦИЯ")}
               </h3>
               <hr className="w-10 bg-white " />
               <p className="max-w-sm mt-5 text-sm text-center">
-                Ние от Strover винаги сме готови да ти предоставим професионална
-                консултация.
+                {t(
+                  "Ние от Strover винаги сме готови да ти предоставим професионална консултация."
+                )}
               </p>
             </div>
           </Link>
@@ -43,13 +51,14 @@ const ContactUsTodayComp = ({ typePage = "contact us page" }) => {
               <Image src="/icons/mail.png" alt="phone calling" fill />
             </div>
             <h3 className="container mt-5 text-lg text-center">
-              Направи запитване по e-mail{" "}
+              {t("Направи запитване по e-mail")}
             </h3>
             <hr className="w-10 bg-white " />
 
             <p className="max-w-xs mt-5 text-sm text-center">
-              По-добър си в писането? Прекрасно и ние пишем бързо! Очакваме
-              запитването ти с нетърпение.
+              {t(
+                "По-добър си в писането? Прекрасно и ние пишем бързо! Очакваме запитването ти с нетърпение."
+              )}
             </p>
           </div>
           {/* third */}
@@ -63,12 +72,13 @@ const ContactUsTodayComp = ({ typePage = "contact us page" }) => {
                 />
               </div>
               <h3 className="container mt-5 text-lg text-center">
-                Разгледай актуалните ни предложения
+                {t("Разгледай актуалните ни предложения")}
               </h3>
               <hr className="w-10 bg-white " />
               <p className="max-w-sm mt-5 text-sm text-center ">
-                Винаги гледаме да предложим най-доброто на възможно най-евтината
-                цена.
+                {t(
+                  "Винаги гледаме да предложим най-доброто на възможно най-евтината цена."
+                )}
               </p>
             </div>
           </Link>
@@ -78,13 +88,14 @@ const ContactUsTodayComp = ({ typePage = "contact us page" }) => {
               <Image src="/icons/job.png" alt="phone calling" fill />
             </div>
             <h3 className="container mt-5 text-lg text-center">
-              Кандидатствай за работа{" "}
+              {t("Кандидатствай за работа")}
             </h3>
             <hr className="w-10 bg-white " />
 
             <p className="max-w-xs mt-5 text-sm text-center">
-              Ти си интересен, мотивиран и креативен човек? Значи си на
-              правилното място!
+              {t(
+                "Ти си интересен, мотивиран и креативен човек? Значи си на правилното място!"
+              )}
             </p>
           </div>
         </section>

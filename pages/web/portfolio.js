@@ -10,7 +10,11 @@ import HeaderSpider from "../../components/HeaderSpider";
 import Layout from "../../components/layouts/Layout";
 import Navigation from "../../components/web/pricingComp/Navigation";
 
+import TransText from "../../components/layouts/TransText";
+const trans = "portfolio";
 const Forum = () => {
+  const { t } = useTranslation(trans);
+
   const [form, openForm] = useState(false);
   const [typeForm, setTypeForm] = useState(null);
 
@@ -38,19 +42,22 @@ const Forum = () => {
           <section className="container">
             <div className="flex-col flex-center">
               <HeaderSpider
-                title="Изработка на персонален сайт - портфолио "
+                title="Изработка на персонален сайт - портфолио"
                 size="text-4xl"
+                trans={trans}
               />
             </div>
             <section className="flex-col pt-6 flex-center">
               <section className="max-w-2xl">
                 <p className="">
-                  Нашите интернет паяци, ще създават мостри от работата Ви за
-                  определени професионалисти, за да привлича повече клиенти,
-                  като крайната цел не е просто да има съдържание, което
-                  клиентите да видят, а да желаят да работят с Вас. Като ние ще
-                  се погрижими да представим Вашите качества в най-добрата Ви
-                  светлина.
+                  <TransText trans={trans}>
+                    Нашите интернет паяци, ще създават мостри от работата Ви за
+                    определени професионалисти, за да привлича повече клиенти,
+                    като крайната цел не е просто да има съдържание, което
+                    клиентите да видят, а да желаят да работят с Вас. Като ние
+                    ще се погрижим да представим Вашите качества в най-добрата
+                    Ви светлина.
+                  </TransText>
                   <br />
                 </p>
               </section>
@@ -58,15 +65,21 @@ const Forum = () => {
           </section>
           <section className="mt-10 max-lg:container lg:px-40">
             <div className="flex-col flex-center">
-              <HeaderSpider title="Пакетни услуги" size="text-4xl" />
+              <HeaderSpider
+                title="Пакетни услуги"
+                size="text-4xl"
+                trans={trans}
+              />
             </div>
             <section className="grid mt-10 xl:grid-cols-2 2xl:grid-cols-3 gap-x-7 gap-y-7">
               <Container>
                 <Title>
-                  <span className="text-green">BASIC</span> Пакет
+                  <span className="text-green">BASIC</span> {t("Пакет")}
                 </Title>
                 <Paragraph>
-                  Лесен и бърз старт в Интернет. Подходящ за малко съдържание.
+                  {t(
+                    "Лесен и бърз старт в Интернет. Подходящ за малко съдържание."
+                  )}
                 </Paragraph>
                 <Price className="pt-2 ">
                   300 <span className="text-gray-100">лв.</span>
@@ -77,22 +90,22 @@ const Forum = () => {
                 />
 
                 <Ul>
-                  <li>5 страници</li>
+                  <li>{t("5 страници")}</li>
 
-                  <li>Уникален дизайн</li>
-                  <li>Мобилна Версия</li>
+                  <li>{t("Уникален дизайн")}</li>
+                  <li>{t("Мобилна Версия")}</li>
 
-                  <li>1 и-мейл акаунта</li>
+                  <li>1 {t("и-мейл акаунта")}</li>
 
-                  <li>Facebook чат</li>
-                  <li>Контактна форма</li>
+                  <li>{t("Facebook чат")}</li>
+                  <li>{t("Контактна форма")}</li>
                 </Ul>
               </Container>
               <Container>
                 <Title>
-                  <span className="text-red-200">PRO</span> Пакет
+                  <span className="text-red-200">PRO</span> {t("Пакет")}
                 </Title>
-                <Paragraph>Подходящ за средно съдържание.</Paragraph>
+                <Paragraph>{t("Подходящ за средно съдържание.")}</Paragraph>
                 <Price className="pt-2 ">
                   600 <span className="text-gray-100">лв.</span>
                 </Price>
@@ -103,47 +116,49 @@ const Forum = () => {
 
                 <Ul>
                   <li>
-                    <span className="text-green-200">10 </span> страници
+                    <span className="text-green-200">10 </span> {t("страници")}
                   </li>
-                  <li>Уникален дизайн</li>
-                  <li>Мобилна Версия</li>
+                  <li>{t("Уникален дизайн")}</li>
+                  <li>{t("Мобилна Версия")}</li>
                   <li>
-                    <span className="text-green-200">3 </span> и-мейл акаунта
+                    <span className="text-green-200">3 </span>{" "}
+                    {t("и-мейл акаунта")}
                   </li>
-                  <li>Facebook чат</li>
-                  <li>Контактна форма</li>
+                  <li>{t("Facebook чат")}</li>
+                  <li>{t("Контактна форма")}</li>
                 </Ul>
                 <ul className="ml-5">
                   <li>
-                    <span className="pr-2 text-green-200">+ </span> Онлайн
-                    плащания
+                    <span className="pr-2 text-green-200">+ </span>{" "}
+                    {t("Онлайн плащания")}
                   </li>
                   <li>
-                    <span className="pr-2 text-green-200">+ </span> Админ Панел
+                    <span className="pr-2 text-green-200">+ </span>{" "}
+                    {t("Админ Панел")}
                   </li>
                   <li>
-                    <span className="pr-2 text-green-200">+ </span> SEO
-                    оптимизация
+                    <span className="pr-2 text-green-200">+ </span>{" "}
+                    {t("SEO оптимизация")}
                   </li>
                   <li>
-                    <span className="pr-2 text-green-200">+ </span> Безплатен
-                    хост за 6 месеца
+                    <span className="pr-2 text-green-200">+ </span>{" "}
+                    {t("Безплатен хост за 6 месеца")}
                   </li>
                   <li>
-                    <span className="pr-2 text-green-200">+ </span> Следене на
-                    трафика от потребители
+                    <span className="pr-2 text-green-200">+ </span>{" "}
+                    {t("Следене на трафика от потребители")}
                   </li>
                   <li>
-                    <span className="pr-2 text-green-200">+ </span> Индексиране
-                    във всички търсачки
+                    <span className="pr-2 text-green-200">+ </span>{" "}
+                    {t("Индексиране във всички търсачки")}
                   </li>
                 </ul>
               </Container>
               <Container>
                 <Title>
-                  <span className="text-primaryBlue">SPIDER</span> Пакет
+                  <span className="text-primaryBlue">SPIDER</span> {t("Пакет")}
                 </Title>
-                <Paragraph>Подходящ за голямо съдържание.</Paragraph>
+                <Paragraph>{t("Подходящ за голямо съдържание.")}</Paragraph>
                 <Price className="pt-2 ">
                   1200 <span className="text-gray-100">лв.</span>
                 </Price>
@@ -154,52 +169,53 @@ const Forum = () => {
 
                 <Ul>
                   <li>
-                    <span className="text-green-200">15 </span> страници
+                    <span className="text-green-200">15 </span> {t("страници")}
                   </li>
-                  <li>Уникален дизайн</li>
-                  <li>Мобилна Версия</li>
+                  <li>{t("Уникален дизайн")}</li>
+                  <li>{t("Мобилна Версия")}</li>
                   <li>
-                    <span className="text-green-200">5 </span> и-мейл акаунта
+                    <span className="text-green-200">5 </span>{" "}
+                    {t("и-мейл акаунта")}
                   </li>
-                  <li>Facebook чат</li>
-                  <li>Контактна форма</li>
+                  <li>{t("Facebook чат")}</li>
+                  <li>{t("Контактна форма")}</li>
 
-                  <li>Онлайн плащания</li>
+                  <li>{t("Онлайн плащания")}</li>
 
-                  <li>Админ Панел</li>
-                  <li>SEO оптимизация</li>
+                  <li>{t("Админ Панел")}</li>
+                  <li>{t("SEO оптимизация")}</li>
 
                   <li>
-                    Безплатен хост за
-                    <span className="text-green-200"> 1 година</span>
+                    {t("Безплатен хост за")}
+                    <span className="text-green-200"> 1 {t("година")}</span>
                   </li>
-                  <li>Следене на трафика от потребители</li>
-                  <li>Индексиране във всички търсачки</li>
+                  <li>{t("Следене на трафика от потребители")}</li>
+                  <li>{t("Индексиране във всички търсачки")}</li>
                 </Ul>
                 <ul className="ml-5">
                   <li>
-                    <span className="pr-2 text-green-200">+ </span>Възможност за
-                    многоезичност
+                    <span className="pr-2 text-green-200">+ </span>
+                    {t("Възможност за многоезичност")}
                   </li>
                   <li>
-                    <span className="pr-2 text-green-200">+ </span>Безплатен
-                    GDPR
+                    <span className="pr-2 text-green-200">+ </span>
+                    {t("Безплатен GDPR")}
                   </li>
                   <li>
-                    <span className="pr-2 text-green-200">+ </span>Безплатни
-                    юридически текстове
+                    <span className="pr-2 text-green-200">+ </span>
+                    {t("Безплатни юридически текстове")}
                   </li>
                   <li>
-                    <span className="pr-2 text-green-200">+ </span>Следене на
-                    трафика от потребители
+                    <span className="pr-2 text-green-200">+ </span>
+                    {t("Следене на трафика от потребители")}
                   </li>
                   <li>
-                    <span className="pr-2 text-green-200">+ </span>Индексиране
-                    във всички търсачки
+                    <span className="pr-2 text-green-200">+ </span>
+                    {t("Индексиране във всички търсачки")}
                   </li>
                   <li>
-                    <span className="pr-2 text-green-200">+ </span> Безплатен
-                    SSL Сертификат за 1 година
+                    <span className="pr-2 text-green-200">+ </span>{" "}
+                    {t("Безплатен SSL Сертификат за 1 година")}
                   </li>
                 </ul>
               </Container>
@@ -207,9 +223,10 @@ const Forum = () => {
           </section>
           <section className="mt-10 max-lg:container lg:px-40">
             <p>
-              * По-горе са изброени най-честите ни комбинации от услуги. Разбира
-              се, работим и спрямо нуждите Ви и можем да Ви създадем
-              индивидуални цени и услуги.
+              *{" "}
+              {t(
+                "По-горе са изброени най-честите ни комбинации от услуги. Разбира се, работим и спрямо нуждите Ви и можем да Ви създадем индивидуални цени и услуги."
+              )}
             </p>
           </section>
         </div>
@@ -255,7 +272,7 @@ function Button({ bgColor, onClick }) {
         className={`px-20 py-3 text-white rounded-full text-xl font-semibold ${bgColor} `}
         onClick={onClick}
       >
-        ПОРЪЧАЙ
+        <TransText trans={trans}>ПОРЪЧАЙ</TransText>
       </button>
     </div>
   );

@@ -103,7 +103,7 @@ export default function Footer({ useTranslation }) {
         <div className="flex flex-col-reverse xl:grid xl:grid-cols-[30%70%]  container text-white gap-x-28">
           <section>
             <h3 className="mt-5 mb-3 font-semibold uppercase ">
-              Абонирай се за нашите оферти
+              {t("Абонирай се за нашите оферти")}
             </h3>
             <input
               type="text"
@@ -117,10 +117,12 @@ export default function Footer({ useTranslation }) {
                 className={`${colors.button} w-full py-1 rounded-sm flex-center`}
                 onClick={newsLetterHandler}
               >
-                {isLoading ? <div className="loader"></div> : "Абонирай ме!"}
+                {isLoading ? <div className="loader"></div> : t("Абонирай ме!")}
               </button>
             </div>
-            <h3 className="mt-8 font-semibold uppercase">Социални мрежи</h3>
+            <h3 className="mt-8 font-semibold uppercase">
+              {t("Социални мрежи")}
+            </h3>
             <div className="flex mt-2 gap-x-5">
               <a
                 aria-label="Strover Facebook"
@@ -153,7 +155,7 @@ export default function Footer({ useTranslation }) {
 
           <div className="grid-cols-[20%40%40%] justify-center xl:grid ">
             <section>
-              <h3 className="mt-5 text-lg font-semibold">Брандове</h3>
+              <h3 className="mt-5 text-lg font-semibold">{t("Брандове")}</h3>
               <ul className={`list-disc  ${colors.markers} leading-8 ml-4`}>
                 <li className="cursor-default">
                   <Link href="/brands/web" scroll={false}>
@@ -184,7 +186,7 @@ export default function Footer({ useTranslation }) {
               </ul>
             </section>
             <section>
-              <h3 className="mt-5 text-lg font-semibold">За STROVER</h3>
+              <h3 className="mt-5 text-lg font-semibold">{t("За STROVER")}</h3>
               <ul className={`list-disc ${colors.markers} pb-1 leading-8 ml-4`}>
                 <li className="cursor-default">
                   <Link href="/company/aboutUs#team" scroll={false}>
@@ -264,7 +266,7 @@ export default function Footer({ useTranslation }) {
           <AiOutlineCopyright />
           2022 Stover
         </div>
-        <div className="sm:pl-1">Всички права запазени.</div>
+        <div className="sm:pl-1">{t("Всички права запазени.")}</div>
       </section>
     </footer>
   );

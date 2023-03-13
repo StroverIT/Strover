@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { FaSpider } from "react-icons/fa";
 import { motion, useAnimation, useInView } from "framer-motion";
+import { useTranslation } from "next-i18next";
 
 const lineVariants = {
   initial: { width: 0, opacity: 0 },
@@ -19,7 +20,10 @@ export default function HeaderSpider({
 
   lineColor = "bg-primaryBlue-200",
   typeHead = "h1",
+  trans,
 }) {
+  const { t } = useTranslation(trans);
+
   const section = useRef(null);
 
   const sectionView = useInView(section, { amount: 0.5 });
@@ -33,9 +37,9 @@ export default function HeaderSpider({
   return (
     <motion.div className="" ref={section} animate={sectionAnim}>
       {typeHead == "h1" ? (
-        <h1 className={`${size} text-center font-medium`}>{title}</h1>
+        <h1 className={`${size} text-center font-medium`}>{t(title)}</h1>
       ) : (
-        <h2 className={`${size} text-center font-medium`}>{title}</h2>
+        <h2 className={`${size} text-center font-medium`}>{t(title)}</h2>
       )}
 
       <div className="mt-2 flex-center">

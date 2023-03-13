@@ -3,15 +3,19 @@ import React, { useState } from "react";
 import TextAnimation from "../../libs/TextAnimation";
 import HeaderSpider from "../HeaderSpider";
 import FadeFromBottom from "../layouts/animations/onView/FadeFromBottom";
-
+import { useTranslation } from "next-i18next";
+import TransText from "../layouts/TransText";
 export default function MoreServices() {
+  const trans = "web";
+  const { t } = useTranslation(trans);
+
   const [showFirstText, setShowFirstText] = useState(false);
   const [showSecondText, setShowSecondText] = useState(false);
 
   return (
     <section className="container mt-24 lg:mt-20">
       <div className="text-xl font-semibold uppercase flex-center lg:text-4xl text-blue-50 ">
-        <HeaderSpider title="Допълнителни услуги" size="4xl" />
+        <HeaderSpider title="Допълнителни услуги" size="4xl" trans={trans} />
       </div>
       <section className="grid items-center justify-center mt-20 max-lg:text-center lg:grid-cols-2 gap-y-36 lg:mt-16 max-lg:gap-y-28">
         {/* <div className="flex-col flex-center ">
@@ -60,7 +64,7 @@ export default function MoreServices() {
 
           <FadeFromBottom duration={0.5} delay={0.1}>
             <h2 className="mt-3 text-lg font-semibold lg:text-2xl">
-              Редизайн{" "}
+              {t("Редизайн")}
             </h2>
           </FadeFromBottom>
 
@@ -70,13 +74,15 @@ export default function MoreServices() {
                 showSecondText ? "" : "card-preview-text "
               } max-lg:text-sm`}
             >
-              Това е в същността си основен ремонт, правещ значителна промяна на
-              елементи като кода, съдържанието, структурата и визуалните
-              елементи на текущия сайт. Ревизирането и променянето на съставните
-              елементи на дадения сайт имат за цел да подобрят визията,
-              функциите, потребителския опит и всички други параметри, засягащи
-              качественото представяне на сайта – пред потребителите и
-              алгоритмите на онлайн търсачките.
+              <TransText trans="web">
+                Това е в същността си основен ремонт, правещ значителна промяна
+                на елементи като кода, съдържанието, структурата и визуалните
+                елементи на текущия сайт. Ревизирането и променянето на
+                съставните елементи на дадения сайт имат за цел да подобрят
+                визията, функциите, потребителския опит и всички други
+                параметри, засягащи качественото представяне на сайта – пред
+                потребителите и алгоритмите на онлайн търсачките.
+              </TransText>
             </p>
           </FadeFromBottom>
 
@@ -85,7 +91,7 @@ export default function MoreServices() {
               className="px-10 py-2 mt-8 rounded-full bg-blue-50"
               onClick={() => setShowSecondText(!showSecondText)}
             >
-              {showSecondText ? "Скрий текста" : "Виж повече"}
+              {showSecondText ? "Скрий текста" : t("Виж повече")}
             </button>
           </FadeFromBottom>
         </div>
@@ -98,15 +104,17 @@ export default function MoreServices() {
 
           <FadeFromBottom duration={0.5} delay={0.1}>
             <h2 className="mt-3 text-xl font-semibold lg:text-2xl">
-              Ребрандиране
+              {t("Ребрандиране")}
             </h2>
           </FadeFromBottom>
 
           <FadeFromBottom duration={0.5} delay={0.2}>
             <p className="max-w-sm mt-1 text-center max-lg:text-sm">
-              При “Ребрандирането”, ние ще променим вече съществуващите елементи
-              с нови, като преди това проучим пазара и конкуренцията, за да
-              разберем какво търси вашата аудитория.
+              <TransText trans="web">
+                При “Ребрандирането”, ние ще променим вече съществуващите
+                елементи с нови, като преди това проучим пазара и конкуренцията,
+                за да разберем какво търси вашата аудитория.
+              </TransText>
             </p>
           </FadeFromBottom>
         </div>
@@ -125,8 +133,10 @@ export default function MoreServices() {
 
           <FadeFromBottom duration={0.5} delay={0.2}>
             <p className="max-w-sm mt-1 text-center max-lg:text-sm">
-              Желате по-бързо и по-лесно да достигнете до повече клиенти?
-              Услугата &quot;Google Ads&quot; предоставя точно това.
+              <TransText trans="web">
+                Желаете по-бързо и по-лесно да достигнете до повече клиенти?
+                Услугата &quot;Google Ads&quot; предоставя точно това.
+              </TransText>
             </p>
           </FadeFromBottom>
         </div>
@@ -139,14 +149,16 @@ export default function MoreServices() {
 
           <FadeFromBottom duration={0.5} delay={0.1}>
             <h2 className="mt-3 font-semibold text-md lg:text-2xl">
-              Създаване на снимки за сайт
+              {t("Създаване на снимки за сайт")}
             </h2>
           </FadeFromBottom>
 
           <FadeFromBottom duration={0.5} delay={0.2}>
             <p className="max-w-sm mt-1 text-center max-lg:text-sm">
-              Както всички знаем, красотата продават, затова е важно да имате
-              професионално направени снимки.
+              <TransText trans="web">
+                Както всички знаем, красотата продава, затова е важно да имате
+                професионално направени снимки.
+              </TransText>
             </p>
           </FadeFromBottom>
         </div>

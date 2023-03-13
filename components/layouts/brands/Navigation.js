@@ -7,6 +7,8 @@ import WhiteSpider from "../../svg-anim-comp/WhiteSpider";
 import { useRouter } from "next/router";
 import { IoLogoHackernews } from "react-icons/io";
 import LogoName from "../../svg-anim-comp/LogoName";
+import { useTranslation } from "next-i18next";
+import ChangeLanguage from "../../ChangeLanguage";
 
 const hamburgerVariants = {
   animate: { transition: { staggerChildren: 0.1, delay: 1 } },
@@ -26,6 +28,8 @@ const hamburgerList = {
   },
 };
 export default function Navigation({ bgColor, pageLinks, navColor }) {
+  const { t } = useTranslation("common");
+
   const router = useRouter();
 
   const [isOpen, setOpen] = useState(false);
@@ -90,19 +94,21 @@ export default function Navigation({ bgColor, pageLinks, navColor }) {
             <ul className="flex space-x-5">
               <li>
                 <Link href="/" scroll={false}>
-                  Начало
+                  {t("Начало")}
                 </Link>
               </li>
               {pageLinks.map((data) => {
                 return (
                   <li key={data.hash}>
-                    <a href={`#${data.hash}`}>{data.text}</a>
+                    <a href={`#${data.hash}`}>{t(data.text)}</a>
                   </li>
                 );
               })}
             </ul>
           </div>
-          <div className={`${offset <= 300 && "-mt-10"} flex-center`}>
+          <div
+            className={`${offset <= 300 && "-mt-10 -mr-[7.6rem]"} flex-center`}
+          >
             <div className="relative ">
               <WhiteSpider width="w-20" />
               <div
@@ -118,20 +124,21 @@ export default function Navigation({ bgColor, pageLinks, navColor }) {
             <ul className="flex items-center space-x-5">
               <li>
                 <Link href="/company/aboutUs" scroll={false}>
-                  За нас
+                  {t("За нас")}
                 </Link>
               </li>
               <li>
                 <Link href="/company/contactUs" scroll={false}>
-                  Контакти
+                  {t("Контакти")}
                 </Link>
               </li>
               <li
-                className="px-5 py-1 font-semibold tracking-[0.15rem] border-2 text-primaryBlue-150 border-primaryBlue-150 cursor-pointer"
+                className="px-5 py-1 font-semibold tracking-[0.15rem] border-2 text-primaryBlue-150 border-primaryBlue-150 cursor-pointer uppercase"
                 onClick={brandsHandler}
               >
-                БРАНДОВЕ
+                {t("Брандове")}
               </li>
+              <ChangeLanguage />
             </ul>
           </div>
         </section>
@@ -186,9 +193,9 @@ export default function Navigation({ bgColor, pageLinks, navColor }) {
                   className="flex flex-col items-center justify-center h-full text-3xl gap-y-10 "
                 >
                   <motion.li variants={hamburgerList}>
-                    <Link href="/">Начало</Link>
+                    <Link href="/">{t("Начало")}</Link>
                   </motion.li>
-                  {pageLinks
+                  {/* {pageLinks
                     .filter((link) => link.text != "")
                     .map((link) => {
                       return (
@@ -197,27 +204,28 @@ export default function Navigation({ bgColor, pageLinks, navColor }) {
                           variants={hamburgerList}
                           onClick={() => handleNav(`#${link.hash}`)}
                         >
-                          {link.text}
+                          {t(link.text)}
                         </motion.li>
                       );
-                    })}
+                    })} */}
                   <motion.li variants={hamburgerList}>
                     <Link href="/company/aboutUs" scroll={false}>
-                      За нас
+                      {t("За нас")}
                     </Link>
                   </motion.li>
                   <motion.li variants={hamburgerList}>
                     <Link href="/company/contactUs" scroll={false}>
-                      Контакти
+                      {t("Контакти")}
                     </Link>
                   </motion.li>
                   <motion.li
                     variants={hamburgerList}
                     onClick={brandsHandler}
-                    className="px-5 py-1 font-semibold tracking-[0.15rem] border-2 text-primaryBlue-150 border-primaryBlue-150"
+                    className="px-5 py-1 font-semibold tracking-[0.15rem] border-2 text-primaryBlue-150 border-primaryBlue-150 uppercase"
                   >
-                    Брандове
+                    {t("Брандове")}
                   </motion.li>
+                  <ChangeLanguage isMobile={true} />
                 </motion.ul>
               </motion.div>
             )}

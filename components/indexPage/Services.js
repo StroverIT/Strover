@@ -7,7 +7,8 @@ import { useTranslation } from "next-i18next";
 import TransText from "../layouts/TransText";
 
 export default function Services() {
-  const { t } = useTranslation("home");
+  const trans = "home";
+  const { t } = useTranslation(trans);
 
   return (
     <section
@@ -15,7 +16,7 @@ export default function Services() {
       id="services"
     >
       <div className="text-white flex-center">
-        <HeaderSpider title="Брандове" size="text-5xl" />
+        <HeaderSpider title="Брандове" size="text-5xl" trans={trans} />
       </div>
       <section className="flex flex-col mt-10 text-white gap-y-10 md:gap-y-64 md:pb-56 zeroToXl:text-center zeroToXl:gap-y-10">
         {/* Web container */}

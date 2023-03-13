@@ -20,6 +20,7 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export default function Web() {
+  const trans = "web";
   return (
     <>
       <Head>
@@ -34,7 +35,7 @@ export default function Web() {
         <link rel="canonical" href="https://strover.bg/brands/web" />
       </Head>
       <main className="relative text-white ">
-        <section className="bg-[url('/web/bgHeroV3.svg')] bg-no-repeat w-full h-full  absolute -z-10  top-[-550px] lg:top-[-150px] left-0"></section>
+        {/* <section className="bg-[url('/web/bgHeroV3.svg')] bg-no-repeat w-full h-full  absolute -z-10  top-[-550px] lg:top-[-150px] left-0"></section> */}
         <Navigation
           navColor="nav-bg-color"
           bgColor="bg-blue"
@@ -54,7 +55,7 @@ export default function Web() {
         <MoreServices />
         <Pricing />
         <section className="-mt-16">
-          <IdeasInWebsite />
+          <IdeasInWebsite trans={trans} />
         </section>
         <Questions />
         {/* Here must be the pricing or packages to choose */}
@@ -87,7 +88,13 @@ Web.getLayout = (page) => (
 export const getServerSideProps = async ({ locale }) => {
   // Wrapping in Promis.all is not necessary, I use it simply so that if there are any other asynchronous operations, then not to use them through await and not to block each other's work
   const [translations] = await Promise.all([
-    serverSideTranslations(locale, ["web", "common", "footer"]),
+    serverSideTranslations(locale, [
+      "common",
+      "web",
+      "footer",
+      "brands",
+      "contactForm",
+    ]),
   ]);
 
   return {

@@ -1,7 +1,10 @@
 import React from "react";
 import CodeTextAnim from "../../libs/CodeTextAnim";
+import { useTranslation } from "next-i18next";
 
 export default function HeroSection() {
+  const { t } = useTranslation("web");
+
   return (
     <section className="max-sm:mt-10 flex items-center    max-lg:flex-center text-center lg:left-1/2 lg:-translate-x-1/2 z-30  h-[70vh]  lg:absolute lg:-translate-y-[4rem] md:top-28">
       <section className="relative z-30 ">
@@ -15,8 +18,9 @@ export default function HeroSection() {
         {/* </div> */}
         <div className="flex-center">
           <p className="max-w-xl mt-3 text-center text-md md:font-medium max-md:container">
-            В Strover Web ще научите всичко необходимо за изработване на уеб
-            сайт
+            {t(
+              "В Strover Web ще научите всичко необходимо за изработване на уеб сайт"
+            )}
           </p>
         </div>
         {/* <p className="container max-w-xl mt-3 text-justify text-md hypens-auto">
@@ -27,7 +31,7 @@ export default function HeroSection() {
         <div className="mt-10">
           <a href="#services" className="inline-flex">
             <button className="px-8 py-3 text-lg font-semibold rounded-lg btn-bg-color">
-              Научи повече
+              {t("Научи повече")}
             </button>
           </a>
         </div>

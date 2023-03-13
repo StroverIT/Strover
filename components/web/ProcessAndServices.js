@@ -3,13 +3,21 @@ import React from "react";
 import TextAnimation from "../../libs/TextAnimation";
 import HeaderSpider from "../HeaderSpider";
 import FadeFromBottom from "../layouts/animations/onView/FadeFromBottom";
-
+import { useTranslation } from "next-i18next";
+import TransText from "../layouts/TransText";
 export default function ProcessAndServices() {
+  const trans = "web";
+  const { t } = useTranslation("web");
+
   return (
     <section className="mt-20 max-lg:container md:mt-20" id="services">
       <section className="flex-col text-center flex-center">
         <div className="font-semibold uppercase text-blue-50 flex-center">
-          <HeaderSpider title="Процеса и услугите ни" size="text-4xl" />
+          <HeaderSpider
+            title="Процеса и услугите ни"
+            trans={trans}
+            size="text-4xl"
+          />
         </div>
 
         <div className="hidden mt-2 lg:flex">
@@ -20,10 +28,11 @@ export default function ProcessAndServices() {
                 text: "Нашият процес чрез който изграждаме успешен уеб сайт.",
               },
             ]}
+            trans={trans}
           />
         </div>
         <p className="mt-2 text-sm lg:hidden">
-          Нашият процес чрез който изграждаме успешен уеб сайт.
+          {t("Нашият процес чрез който изграждаме успешен уеб сайт.")}
         </p>
       </section>
       <section className="relative max-3xl:flex max-3xl:flex-wrap max-3xl:items-center max-3xl:justify-center mt-14 max-3xl:gap-y-20 sm:gap-y-10 sm:gap-x-40">
@@ -46,13 +55,14 @@ export default function ProcessAndServices() {
 
           <FadeFromBottom duration={0.5} delay={0.1}>
             <h2 className="mt-3 text-lg font-semibold lg:text-2xl">
-              Анализ и консултация
+              {t("Анализ и консултация")}
             </h2>
           </FadeFromBottom>
           <FadeFromBottom duration={0.5} delay={0.2}>
             <p className="max-w-sm mt-1 text-center max-lg:text-sm">
-              Най-напред извършваме консултация, където ще поговорим за вашите
-              идеи и как ние можем да ви помогнем.
+              {t(
+                "Най-напред извършваме консултация, където ще поговорим за вашите идеи и как ние можем да ви помогнем."
+              )}
             </p>
           </FadeFromBottom>
         </div>
@@ -69,13 +79,14 @@ export default function ProcessAndServices() {
           </FadeFromBottom>
           <FadeFromBottom duration={0.5} delay={0.1}>
             <h2 className="mt-3 text-lg font-semibold lg:text-2xl">
-              Изработка нa сайт
+              {t("Изработка нa сайт")}
             </h2>
           </FadeFromBottom>
           <FadeFromBottom duration={0.5} delay={0.2}>
             <p className="max-w-sm mt-1 text-center max-lg:text-sm">
-              След като разберем почече за вашите цел и посока, започваме
-              разботката на перфектия за ваш сайт.
+              {t(
+                "След като разберем почече за вашите цел и посока, започваме разботката на перфектия за ваш сайт."
+              )}
             </p>
           </FadeFromBottom>
         </div>
@@ -88,14 +99,16 @@ export default function ProcessAndServices() {
           </FadeFromBottom>
           <FadeFromBottom duration={0.5} delay={0.1}>
             <h2 className="mt-3 text-xl font-semibold lg:text-2xl">
-              SEO оптимизация
+              {t("SEO оптимизация")}
             </h2>
           </FadeFromBottom>
           <FadeFromBottom duration={0.5} delay={0.2}>
             <p className="max-w-sm mt-1 text-center max-lg:text-sm">
-              Когато е завършен уейбсайта, се пристъпва към намирането на
-              потребители и потенциални клиенти. Това се извършва, чрез
-              търсачките или т.н. SEO (Search Engine Optimization)
+              <TransText trans="web">
+                Когато е завършен уейбсайта, се пристъпва към намирането на
+                потребители и потенциални клиенти. Това се извършва, чрез
+                търсачките или т.н. SEO (Search Engine Optimization)
+              </TransText>
             </p>
           </FadeFromBottom>
         </div>
@@ -112,14 +125,16 @@ export default function ProcessAndServices() {
           </FadeFromBottom>
           <FadeFromBottom duration={0.5} delay={0.1}>
             <h2 className="mt-3 text-lg font-semibold text-center lg:text-2xl">
-              Онлайн добавяне на продукти
+              {t("Онлайн добавяне на продукти")}
             </h2>
           </FadeFromBottom>
           <FadeFromBottom duration={0.5} delay={0.2}>
             <p className="mt-1 text-center lg:max-w-sm max-lg:text-sm">
-              С услугата “Онлайн добавяне на продукти”, ние ще добавим вашите
-              дигитални продукти, чрез Admin Panel, който е изработен от нас за
-              вас.
+              <TransText trans="web">
+                С услугата “Онлайн добавяне на продукти”, ние ще добавим вашите
+                дигитални продукти, чрез Admin Panel, който е изработен от нас
+                за вас.
+              </TransText>
             </p>
           </FadeFromBottom>
         </div>
@@ -132,26 +147,30 @@ export default function ProcessAndServices() {
           </FadeFromBottom>
           <FadeFromBottom duration={0.5} delay={0.1}>
             <h2 className="mt-3 text-xl font-semibold lg:text-2xl">
-              Поддръжка и развитие
+              {t("Поддръжка и развитие")}
             </h2>
           </FadeFromBottom>
           <FadeFromBottom duration={0.5} delay={0.2}>
             <p className="max-w-sm mt-1 text-center max-lg:text-sm">
-              Когато сайтът Ви има техническа поддръжка, той е винаги актуален,
-              винаги защитен от атаки и винаги в изправност и готов да достигне
-              до нови висоти.
+              <TransText trans="web">
+                Когато сайтът Ви има техническа поддръжка, той е винаги
+                актуален, винаги защитен от атаки и винаги в изправност и готов
+                да достигне до нови висоти.
+              </TransText>
             </p>
           </FadeFromBottom>
         </div>
       </section>
-      <section className="container mt-20 lg:mt-80">
+      <section className="container mt-20 lg:mt-80 flex">
+        <span className="pr-1">*</span>
         <TextAnimation
           placeholderText={[
             {
               type: "paragraph",
-              text: "* Всяка услуга изброена по-горе, може да бъде поръчана поотделно",
+              text: "Всяка услуга изброена по-горе, може да бъде поръчана поотделно",
             },
           ]}
+          trans={trans}
         />
       </section>
     </section>

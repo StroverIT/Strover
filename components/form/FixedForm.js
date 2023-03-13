@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { toastSuccess, toastError } from "../../libs/Notifications";
 import sendMesage from "../../fetches/sendingMessage";
 import { useRouter } from "next/router";
-
+import { useTranslation } from "next-i18next";
 const inputsInit = {
   name: "",
   email: "",
@@ -25,6 +25,8 @@ export default function FixedForm({
   typePage,
   redirect = false,
 }) {
+  const { t } = useTranslation("common");
+
   const router = useRouter();
   const [inputs, setInputs] = useState(inputsInit);
   const [isLoading, setLoading] = useState(false);
@@ -117,7 +119,7 @@ export default function FixedForm({
               <HeaderSpider title="Свържи се с нас!" size="text-2xl" />
 
               <p className="pt-3 text-center">
-                Очакваме с нетърпение нашите общи проекти!
+                {t("Очакваме с нетърпение нашите общи проекти!")}
               </p>
               <form
                 action=""
@@ -146,7 +148,7 @@ export default function FixedForm({
                   <textarea
                     className={`w-full h-10 px-6 py-2 leading-tight placeholder-transparent bg-transparent border-b appearance-none placeholder:pl-10 peer text-gray-darker focus:outline-none focus:shadow-outline scrollbar ${scrollBarThumb} ${scrollBarTrack}`}
                     id="message"
-                    placeholder="Вашият коментар"
+                    placeholder={t("Вашият коментар")}
                     name="message"
                     value={inputs.message}
                     onChange={handler}
@@ -155,14 +157,14 @@ export default function FixedForm({
                     className="absolute   -top-3.5 left-0 block mb-2 text-sm  text-gray-darker peer-placeholder-shown:text-base peer-placeholder-shown:px-6  peer-placeholder-shown:top-1.5 transition-all duration-300"
                     htmlFor="comment"
                   >
-                    Вашият коментар
+                    {t("Вашият коментар")}
                   </label>
                 </div>
 
                 <button
                   className={`${btnColor} px-10 py-1 mt-4 text-white flex-center`}
                 >
-                  {isLoading ? <div className="loader"></div> : "Изпрати"}
+                  {isLoading ? <div className="loader"></div> : t("Изпрати")}
                 </button>
               </form>
             </section>

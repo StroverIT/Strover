@@ -19,6 +19,7 @@ export default function TextAnimation({
   durationAnim = 0.75,
   durationHid = 0.85,
   isShowed = true,
+  trans,
 }) {
   const [start, setStart] = useState(isShowed);
 
@@ -57,6 +58,7 @@ export default function TextAnimation({
               durationAnim={durationAnim}
               durationHid={durationHid}
               spanPaddingBottom={spanPaddingBottom}
+              trans={trans}
             />
           );
         })}

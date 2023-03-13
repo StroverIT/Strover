@@ -6,6 +6,9 @@ import { useRouter } from "next/router";
 import MenuBrands from "../Brands/MenuBrands";
 import Link from "next/link";
 import LogoName from "../svg-anim-comp/LogoName";
+import { RiGlobalFill } from "react-icons/ri";
+import ChangeLanguage from "../ChangeLanguage";
+import { useTranslation } from "next-i18next";
 
 const listsVariants = {
   animate: { transition: { staggerChildre: 4 } },
@@ -44,6 +47,8 @@ const hamburgerList = {
 };
 
 export default function Navigation() {
+  const { t } = useTranslation("common");
+
   const router = useRouter();
 
   const listsAnim = useAnimation();
@@ -125,14 +130,14 @@ export default function Navigation() {
                 initial="hidden"
                 animate="visible"
               >
-                <a href="#index">Начало</a>
+                <a href="#index">{t("Начало")}</a>
               </motion.li>
               <motion.li
                 variants={listVariant}
                 initial="hidden"
                 animate="visible"
               >
-                <a href="#services">Услуги</a>
+                <a href="#services">{t("Услуги")}</a>
               </motion.li>
               <motion.li
                 variants={listVariant}
@@ -140,7 +145,7 @@ export default function Navigation() {
                 animate="visible"
               >
                 <Link href="/company/contactUs" scroll={false}>
-                  Контакти
+                  {t("Контакти")}
                 </Link>
               </motion.li>
               <motion.li
@@ -149,7 +154,7 @@ export default function Navigation() {
                 animate="visible"
               >
                 <Link href="/company/aboutUs" scroll={false}>
-                  За нас
+                  {t("За нас")}
                 </Link>
               </motion.li>
               <motion.li
@@ -157,10 +162,11 @@ export default function Navigation() {
                 initial="hidden"
                 animate="visible"
                 onClick={brandsHandler}
-                className="px-5 py-1 font-semibold tracking-[0.15rem] border-2 text-primaryBlue-150 border-primaryBlue-150 cursor-pointer"
+                className="px-5 py-1 font-semibold tracking-[0.15rem] border-2 text-primaryBlue-150 border-primaryBlue-150 cursor-pointer uppercase"
               >
-                Брандове
+                {t("Брандове")}
               </motion.li>
+              <ChangeLanguage />
             </motion.ul>
           </div>
           <div className="md:hidden flex-center">
@@ -206,31 +212,32 @@ export default function Navigation() {
                       variants={hamburgerList}
                       onClick={() => handleNav("#index")}
                     >
-                      Начало
+                      {t("Начало")}
                     </motion.li>
                     <motion.li
                       variants={hamburgerList}
                       onClick={() => handleNav("#services")}
                     >
-                      Услуги
+                      {t("Услуги")}
                     </motion.li>
                     <motion.li variants={hamburgerList}>
                       <Link href="/company/contactUs" scroll={false}>
-                        Контакти
+                        {t("Контакти")}
                       </Link>
                     </motion.li>
                     <motion.li variants={hamburgerList}>
                       <Link href="/company/aboutUs" scroll={false}>
-                        За нас
+                        {t("За нас")}
                       </Link>
                     </motion.li>
                     <motion.li
                       variants={hamburgerList}
                       onClick={brandsHandler}
-                      className="px-5 py-1 font-semibold tracking-[0.15rem] border-2 text-primaryBlue-150 border-primaryBlue-150"
+                      className="px-5 py-1 font-semibold tracking-[0.15rem] border-2 text-primaryBlue-150 border-primaryBlue-150 uppercase"
                     >
-                      Брандове
+                      {t("Брандове")}
                     </motion.li>
+                    <ChangeLanguage isMobile={true} />
                   </motion.ul>
                 </motion.div>
               )}

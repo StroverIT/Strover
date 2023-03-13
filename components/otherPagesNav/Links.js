@@ -2,8 +2,10 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { HiX } from "react-icons/hi";
 import { AnimatePresence, motion } from "framer-motion";
-
+import { useTranslation } from "next-i18next";
 export default function Links({ data, hambSetOpen, hambOpen }) {
+  const { t } = useTranslation("common");
+
   const router = useRouter();
 
   const [open, setOpen] = useState(false);
@@ -51,7 +53,7 @@ export default function Links({ data, hambSetOpen, hambOpen }) {
   return (
     <li>
       <nav className="cursor-pointer" onClick={() => setOpen(true)}>
-        Съдържание
+        {t("Съдържание")}
       </nav>
       <AnimatePresence mode="wait">
         {open && (
@@ -92,7 +94,7 @@ export default function Links({ data, hambSetOpen, hambOpen }) {
                     return (
                       <li key={data.key} className="cursor-pointer">
                         <a onClick={() => handleNav(data.link)}>
-                          {index + 1}. {data.text}
+                          {index + 1}. {t(data.text)}
                         </a>
                       </li>
                     );

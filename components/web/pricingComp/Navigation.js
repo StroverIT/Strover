@@ -7,7 +7,7 @@ import WhiteSpider from "../../svg-anim-comp/WhiteSpider";
 import { useRouter } from "next/router";
 import { IoLogoHackernews } from "react-icons/io";
 import LogoName from "../../svg-anim-comp/LogoName";
-
+import { useTranslation } from "next-i18next";
 const hamburgerVariants = {
   animate: { transition: { staggerChildren: 0.1, delay: 1 } },
 };
@@ -26,6 +26,8 @@ const hamburgerList = {
   },
 };
 export default function Navigation({ bgColor, pageLinks, navColor }) {
+  const { t } = useTranslation("common");
+
   const router = useRouter();
 
   const [isOpen, setOpen] = useState(false);
@@ -92,7 +94,7 @@ export default function Navigation({ bgColor, pageLinks, navColor }) {
             <ul className="flex space-x-5">
               <li>
                 <Link href="/" scroll={false}>
-                  Начало
+                  {t("Начало")}
                 </Link>
               </li>
             </ul>
@@ -117,19 +119,19 @@ export default function Navigation({ bgColor, pageLinks, navColor }) {
             <ul className="flex items-center space-x-5">
               <li>
                 <Link href="/company/aboutUs" scroll={false}>
-                  За нас
+                  {t("За нас")}
                 </Link>
               </li>
               <li>
                 <Link href="/company/contactUs" scroll={false}>
-                  Контакти
+                  {t("Контакти")}
                 </Link>
               </li>
               <li
-                className="px-5 py-1 font-semibold tracking-[0.15rem] border-2 text-primaryBlue-150 border-primaryBlue-150 cursor-pointer"
+                className="px-5 py-1 font-semibold tracking-[0.15rem] border-2 text-primaryBlue-150 border-primaryBlue-150 cursor-pointer uppercase"
                 onClick={brandsHandler}
               >
-                БРАНДОВЕ
+                {t("Брандове")}
               </li>
             </ul>
           </div>
@@ -178,7 +180,7 @@ export default function Navigation({ bgColor, pageLinks, navColor }) {
                   className="flex flex-col items-center justify-center h-full text-3xl gap-y-10 "
                 >
                   <motion.li variants={hamburgerList}>
-                    <Link href="/">Начало</Link>
+                    <Link href="/">{t("Начало")}</Link>
                   </motion.li>
                   {pageLinks
                     .filter((link) => link.text != "")
@@ -195,12 +197,12 @@ export default function Navigation({ bgColor, pageLinks, navColor }) {
                     })}
                   <motion.li variants={hamburgerList}>
                     <Link href="/company/aboutUs" scroll={false}>
-                      За нас
+                      {t("За нас")}
                     </Link>
                   </motion.li>
                   <motion.li variants={hamburgerList}>
                     <Link href="/company/contactUs" scroll={false}>
-                      Контакти
+                      {t("Контакти")}
                     </Link>
                   </motion.li>
                   <motion.li

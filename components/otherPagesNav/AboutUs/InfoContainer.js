@@ -1,8 +1,17 @@
 import Image from "next/image";
 import React from "react";
 import HeaderSpider from "../../HeaderSpider";
+import { useTranslation } from "next-i18next";
+export default function InfoContainer({
+  title,
+  p,
+  image,
+  border,
+  isNext,
+  trans,
+}) {
+  const { t } = useTranslation(trans);
 
-export default function InfoContainer({ title, p, image, border, isNext }) {
   return (
     <section
       className={` ${
@@ -27,10 +36,10 @@ export default function InfoContainer({ title, p, image, border, isNext }) {
         </div>
         <div className="flex-col pt-5 pb-10 max-lg:container flex-center">
           <section className="container flex-center ">
-            <HeaderSpider title={title} size="text-2xl" />
+            <HeaderSpider title={title} size="text-2xl" trans={trans} />
           </section>
           <h3 className="text-4xl font-medium text-center"></h3>
-          <p className="mt-4 lg:px-56 max-lg:container">{p}</p>
+          <p className="mt-4 lg:px-56 max-lg:container">{t(p)}</p>
         </div>
       </section>
     </section>

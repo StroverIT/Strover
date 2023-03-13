@@ -10,8 +10,12 @@ import { AiOutlinePlus } from "react-icons/ai";
 import { questionData } from "./questionComp/questionData";
 import BlueLine from "./questionComp/BlueLine";
 import HeaderSpider from "../HeaderSpider";
-
+import { useTranslation } from "next-i18next";
+import TransText from "../layouts/TransText";
 export default function Questions() {
+  const trans = "web";
+  const { t } = useTranslation(trans);
+
   return (
     <section>
       <section className="relative w-full -mt-[5.6rem] bg-blue-200  pb-28 box">
@@ -21,18 +25,20 @@ export default function Questions() {
               className="hidden text-4xl font-semibold text-blue-50 lg:flex"
               id="questions"
             >
-              <HeaderSpider title="ЧЕСТО ЗАДАВАНИ ВЪПРОСИ" />
+              <HeaderSpider title="ЧЕСТО ЗАДАВАНИ ВЪПРОСИ" trans={trans} />
             </div>
 
             <div
               className="text-xl font-semibold lg:text-4xl text-blue-50 max-lg:text-center lg:hidden"
               id="questions"
             >
-              ЧЕСТО ЗАДАВАНИ ВЪПРОСИ
+              {t("ЧЕСТО ЗАДАВАНИ ВЪПРОСИ")}
             </div>
             <p className="max-w-xl mt-1 text-center max-lg:text-sm ">
-              Какви са най-често задаваните въпроси, които вълнуват нашите
-              клиенти преди да започнем съвместната си работа
+              <TransText trans={trans}>
+                Какви са най-често задаваните въпроси, които вълнуват нашите
+                клиенти преди да започнем съвместната си работа
+              </TransText>
             </p>
           </div>
         </section>
@@ -73,6 +79,9 @@ const iconVariants = {
   },
 };
 function Question({ title, text, isBorder = true, index }) {
+  const trans = "web";
+  const { t } = useTranslation(trans);
+
   console.log(index);
   const [isOpen, setOpen] = useState(index == 0 ? true : false);
 
@@ -81,7 +90,7 @@ function Question({ title, text, isBorder = true, index }) {
       <div onClick={() => setOpen(!isOpen)} className="cursor-pointer">
         <div className="flex items-center justify-between">
           <h2 className="font-semibold uppercase text-md lg:text-lg">
-            {title}
+            <TransText trans={trans}>{title}</TransText>
           </h2>
           <motion.div
             animate={isOpen ? "open" : "closed"}
@@ -109,7 +118,7 @@ function Question({ title, text, isBorder = true, index }) {
                 }}
                 className="mt-1 max-lg:text-sm"
               >
-                {text}
+                <TransText trans={trans}>{text}</TransText>
               </motion.p>
             )}
           </AnimatePresence>

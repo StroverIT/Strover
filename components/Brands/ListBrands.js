@@ -14,14 +14,15 @@ export default function ListBrands({
   totalLen = 2,
   rounded,
 }) {
-  const duration = 1.5;
+  const trans = "brands";
 
+  const duration = 1.5;
   return (
     <section className={`${py} ${bg} box  relative z-20 -mb-16`}>
       <section className="mb-10 text-white">
         <FadeIn duration={0.8}>
           <div className="flex-center">
-            <HeaderSpider title="Брандове" size="text-5xl" />
+            <HeaderSpider title="Брандове" size="text-5xl" trans={trans} />
           </div>
         </FadeIn>
         <div className="mt-2 text-center">
@@ -32,6 +33,7 @@ export default function ListBrands({
                 text: "И повече информация за тях",
               },
             ]}
+            trans={trans}
           />
         </div>
       </section>

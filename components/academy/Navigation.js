@@ -6,7 +6,7 @@ import MenuBrands from "../Brands/MenuBrands";
 import WhiteSpider from "../svg-anim-comp/WhiteSpider";
 import { useRouter } from "next/router";
 import LogoName from "../svg-anim-comp/LogoName";
-
+import { useTranslation } from "next-i18next";
 const hamburgerVariants = {
   animate: { transition: { staggerChildren: 0.1, delay: 1 } },
 };
@@ -25,6 +25,8 @@ const hamburgerList = {
   },
 };
 export default function Navigation() {
+  const { t } = useTranslation("common");
+
   const router = useRouter();
 
   const [isOpen, setOpen] = useState(false);
@@ -77,11 +79,11 @@ export default function Navigation() {
           <ul className="flex space-x-5">
             <li>
               <Link href="/" scroll={false}>
-                Начало
+                {t("Начало")}
               </Link>
             </li>
             <li className="invisible">
-              <a href="#services">Услуги</a>
+              <a href="#services">{t("Услуги")}</a>
             </li>
             <li className="invisible">
               <a href="#questions">Въпроси</a>
@@ -103,21 +105,21 @@ export default function Navigation() {
           <ul className="flex items-center space-x-5">
             <li>
               <Link href="/company/aboutUs" scroll={false}>
-                За нас
+                {t("За нас")}
               </Link>
             </li>
 
             <li className="">
               <Link href="/company/contactUs" scroll={false}>
-                Контакти
+                {t("Контакти")}
               </Link>
             </li>
 
             <li
-              className="px-5 py-1 font-semibold tracking-[0.15rem] border-2 text-red-150 border-red-150 cursor-pointer"
+              className="uppercase px-5 py-1 font-semibold tracking-[0.15rem] border-2 text-red-150 border-red-150 cursor-pointer"
               onClick={brandsHandler}
             >
-              БРАНДОВЕ
+              {t("Брандове")}
             </li>
           </ul>
         </div>
@@ -167,28 +169,28 @@ export default function Navigation() {
                 className="flex flex-col items-center justify-center h-full text-3xl gap-y-10 "
               >
                 <motion.li variants={hamburgerList}>
-                  <Link href="/">Начало</Link>
+                  <Link href="/">{t("Начало")}</Link>
                 </motion.li>
 
                 <motion.li
                   variants={hamburgerList}
                   onClick={() => handleNav("#aboutUs")}
                 >
-                  За нас
+                  {t("За нас")}
                 </motion.li>
 
                 <motion.li variants={hamburgerList}>
                   <Link href="/company/contactUs" scroll={false}>
-                    Контакти
+                    {t("Контакти")}
                   </Link>
                 </motion.li>
 
                 <motion.li
                   variants={hamburgerList}
                   onClick={brandsHandler}
-                  className="px-5 py-1 font-semibold tracking-[0.15rem] border-2 text-red-150 border-red-150"
+                  className="px-5 py-1 font-semibold tracking-[0.15rem] border-2 text-red-150 border-red-150 uppercase"
                 >
-                  Брандове
+                  {t("Брандове")}
                 </motion.li>
               </motion.ul>
             </motion.div>

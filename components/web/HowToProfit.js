@@ -6,6 +6,9 @@ import TextAnimation from "../../libs/TextAnimation";
 import { motion, useAnimation, useInView } from "framer-motion";
 import FadeIn from "../layouts/animations/onView/FadeIn";
 
+import { useTranslation } from "next-i18next";
+import TransText from "../layouts/TransText";
+
 const sectionVariant = {
   animate: {
     transition: { staggerChildren: 0.3 },
@@ -13,6 +16,9 @@ const sectionVariant = {
 };
 
 export default function HowToProfit() {
+  const trans = "web";
+  const { t } = useTranslation(trans);
+
   const section = useRef(null);
   const sectionView = useInView(section, { amount: 0.2 });
 
@@ -34,10 +40,11 @@ export default function HowToProfit() {
                 text: "как вашият уеб сайт печели за вас",
               },
             ]}
+            trans={trans}
           />
         </div>
         <h1 className="text-3xl font-semibold uppercase text-blue-50 lg:hidden">
-          как вашият уеб сайт печели за вас
+          {t("как вашият уеб сайт печели за вас")}
         </h1>
         <FadeIn duration={0.85} delay={0.4}>
           <div className="max-w-3xl text-lg max-lg:mt-2 ">
@@ -61,13 +68,15 @@ export default function HowToProfit() {
             </div>
           </div>
           <h2 className="mt-5 text-lg font-semibold lg:text-xl">
-            Денонощно вашият уеб сайт работи
+            {t("Вашият уеб сайт работи денонощно")}
           </h2>
           <p className="mt-2">
-            За разлика от нас хората, сайта няма нужда от почивка. Той ще
-            представя бизнеса Ви денонощно, за да може до Вас винаги да достигат
-            повече потребители и потенциални клиенти, които се интересуват от
-            вашите услуги или продукти.
+            <TransText trans="web">
+              За разлика от нас хората, сайта няма нужда от почивка. Той ще
+              представя бизнеса Ви денонощно, за да може до Вас винаги да
+              достигат повече потребители и потенциални клиенти, които се
+              интересуват от вашите услуги или продукти.
+            </TransText>
           </p>
         </FadeIn>
         <FadeIn duration={0.85} delay={0.2} className="">
@@ -78,13 +87,15 @@ export default function HowToProfit() {
               </div>
             </div>
             <h2 className="mt-5 text-lg font-semibold">
-              Изграждане на доверието в клиентите Ви
+              {t("Изграждане на доверието в клиентите Ви")}
             </h2>
             <p className="mt-2">
-              Всеки ваш потенциален клиент, ще желае да види така наречената
-              “дигитална следа”, това ще рече социални мрежи и Уеб сайт. Защо
-              ли? Вече никой не се доверява “на сляпо”, всеки иска да провери с
-              кого ще работи.
+              <TransText trans="web">
+                Всеки ваш потенциален клиент, ще желае да види така наречената
+                “дигитална следа”, това ще рече социални мрежи и Уеб сайт. Защо
+                ли? Вече никой не се доверява “на сляпо”, всеки иска да провери
+                с кого ще работи.
+              </TransText>
             </p>
           </div>
         </FadeIn>
@@ -96,12 +107,14 @@ export default function HowToProfit() {
               </div>
             </div>
             <h2 className="mt-5 text-lg font-semibold">
-              Разширяване обхвата на бизнеса Ви
+              {t("Разширяване обхвата на бизнеса Ви")}
             </h2>
             <p className="mt-2">
-              Забравете вече за териториалните ограничения, вие разполагате с
-              целият интернет. Сайтът Ви има възможността да се срещне с
-              неограничен брой хора и достигане до повече клиенти.
+              <TransText trans="web">
+                Забравете вече за териториалните ограничения, вие разполагате с
+                целият интернет. Сайтът Ви има възможността да се срещне с
+                неограничен брой хора и достигане до повече клиенти.
+              </TransText>
             </p>
           </div>
         </FadeIn>

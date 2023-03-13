@@ -10,7 +10,7 @@ import { motion, useAnimation } from "framer-motion";
 import { toastSuccess, toastError } from "../libs/Notifications";
 import sendMesage from "../fetches/sendingMessage";
 import FadeFromBottom from "./layouts/animations/onView/FadeFromBottom";
-
+import { useTranslation } from "next-i18next";
 const inputsInit = {
   name: "",
   email: "",
@@ -25,6 +25,10 @@ export default function ContactUs({
   scrollBarTrack,
   typePage,
 }) {
+  const trans = "common";
+
+  const { t } = useTranslation(trans);
+
   const [inputs, setInputs] = useState(inputsInit);
 
   const [isLoading, setLoading] = useState(false);
@@ -71,11 +75,11 @@ export default function ContactUs({
             <span
               className={`border-b-4 ${color} pb-1 text-2xl font-semibold rounded-sm `}
             >
-              Свържи се с нас!
+              {t("Свържи се с нас!")}
             </span>
           </h1>
           <p className="pt-3 lg:max-w-[15rem]">
-            Очакваме с нетърпение нашите общи проекти!
+            {t("Очакваме с нетърпение нашите общи проекти!")}
           </p>
           <form
             action=""
@@ -83,14 +87,14 @@ export default function ContactUs({
             onSubmit={submitHandler}
           >
             <Input
-              placeholder="Вашето име"
+              placeholder={t("Вашето име")}
               id="name"
               val={inputs.name}
               onChange={handler}
               iconType="name"
             />
             <Input
-              placeholder="Вашият и-мейл"
+              placeholder={t("Вашият и-мейл")}
               id="email"
               val={inputs.email}
               onChange={handler}
@@ -105,7 +109,7 @@ export default function ContactUs({
               <textarea
                 className={`w-full h-10 px-6 py-2 leading-tight placeholder-transparent bg-transparent border-b appearance-none placeholder:pl-10 peer text-gray-darker focus:outline-none focus:shadow-outline scrollbar z-10  relative ${scrollBarThumb} ${scrollBarTrack}`}
                 id="message"
-                placeholder="Вашият коментар"
+                placeholder={t("Вашият коментар")}
                 name="message"
                 value={inputs.message}
                 onChange={handler}
@@ -114,14 +118,14 @@ export default function ContactUs({
                 className="absolute   -top-3.5 left-0 block mb-2 text-sm  text-gray-darker peer-placeholder-shown:text-base peer-placeholder-shown:px-6  peer-placeholder-shown:top-1.5 transition-all duration-300"
                 htmlFor="comment"
               >
-                Вашият коментар
+                {t("Вашият коментар")}
               </label>
             </div>
             <button
               className={`${btnColor} px-10 py-1 mt-4 flex-center`}
               type="submit"
             >
-              {isLoading ? <div className="loader"></div> : "Изпрати"}
+              {isLoading ? <div className="loader"></div> : t("Изпрати")}
             </button>
           </form>
         </section>

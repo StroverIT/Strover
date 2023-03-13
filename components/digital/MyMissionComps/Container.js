@@ -1,8 +1,10 @@
 import Image from "next/image";
 import React from "react";
 import FadeFromBottom from "../../layouts/animations/onView/FadeFromBottom";
+import { useTranslation } from "next-i18next";
+export default function Container({ imageUrl, text, isRev = false, trans }) {
+  const { t } = useTranslation(trans);
 
-export default function Container({ imageUrl, text, isRev = false }) {
   return (
     <div className={` grid gap-y-10 lg:grid-cols-2 container`}>
       <div
@@ -12,7 +14,7 @@ export default function Container({ imageUrl, text, isRev = false }) {
       >
         <FadeFromBottom duration={0.5}>
           <div>
-            <p>{text}</p>
+            <p>{t(text)}</p>
           </div>
         </FadeFromBottom>
       </div>

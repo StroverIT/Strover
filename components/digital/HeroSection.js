@@ -1,7 +1,8 @@
 import Image from "next/image";
 import React from "react";
-
+import { useTranslation } from "next-i18next";
 import { motion } from "framer-motion";
+import TransText from "../layouts/TransText";
 const titleBoxVariants = {
   animate: { transition: { staggerChildren: 0.2 } },
 };
@@ -17,6 +18,9 @@ const boxVariants = {
   },
 };
 export default function HeroSection() {
+  const trans = "digital";
+  const { t } = useTranslation(trans);
+
   return (
     <section className="flex items-center max-lg:justify-center max-lg:mt-10 container h-screen lg:h-[90vh] relative">
       <motion.section
@@ -29,9 +33,11 @@ export default function HeroSection() {
           Strover Digital
         </motion.h1>
         <motion.p variants={boxVariants} className="max-w-xl mt-3 md:text-lg">
-          предлага услуги в областта на дигиталният маркетинг, цялостно
-          интегриране на бизнеса ви в желаните от Вас социални мрежи и достигане
-          до повече клиенти.
+          <TransText trans={trans}>
+            предлага услуги в областта на дигиталният маркетинг, цялостно
+            интегриране на бизнеса ви в желаните от Вас социални мрежи и
+            достигане до повече клиенти.
+          </TransText>
         </motion.p>
         <div className="mt-10 ">
           <a href="#services" className="inline-flex">
@@ -39,7 +45,7 @@ export default function HeroSection() {
               variants={boxVariants}
               className="px-16 py-2 font-bold bg-pink-100 border border-white rounded-lg "
             >
-              Виж повече
+              {t("Виж повече")}
             </motion.button>
           </a>
         </div>

@@ -4,6 +4,8 @@ import Link from "next/link";
 import FadeIn from "../../layouts/animations/onView/FadeIn";
 import Image from "next/image";
 
+import { useTranslation } from "next-i18next";
+
 export default function Container({
   title,
   children,
@@ -13,6 +15,8 @@ export default function Container({
   titleColor,
   imageUrl,
 }) {
+  const { t } = useTranslation("common");
+
   return (
     <FadeIn delay={delay} duration={0.8}>
       <div className=" grid md:grid-cols-2 relative md:h-96  ">
@@ -22,7 +26,7 @@ export default function Container({
           <div className="mt-5 md:mt-5 ">
             <Link href={link} scroll={false}>
               <button className={`px-10 py-2  rounded-lg ${btnColor}`}>
-                Научи повече
+                {t("Научи повече")}
               </button>
             </Link>
           </div>

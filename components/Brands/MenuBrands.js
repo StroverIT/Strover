@@ -75,7 +75,6 @@ export default function MenuBrands({ brandsOpen, setOpenBrands, bgColor }) {
                     <div
                       className={`${style.Menu_list_item} `}
                       data-offset="20"
-                      onclick
                     >
                       WEB
                       <span className={style.Mask}>
@@ -97,7 +96,6 @@ export default function MenuBrands({ brandsOpen, setOpenBrands, bgColor }) {
                     <div
                       className={`${style.Menu_list_item} `}
                       data-offset="20"
-                      onclick
                     >
                       digital
                       <span className={style.Mask}>
@@ -119,7 +117,6 @@ export default function MenuBrands({ brandsOpen, setOpenBrands, bgColor }) {
                     <div
                       className={`${style.Menu_list_item} `}
                       data-offset="20"
-                      onclick
                     >
                       academy
                       <span className={style.Mask}>
