@@ -79,7 +79,7 @@ const Business = () => {
                   )}
                 </Paragraph>
                 <Price className="pt-2 ">
-                  300 <span className="text-gray-100">{t("лв")}.</span>
+                  300 <span className="text-gray-100">{t("лв.")}</span>
                 </Price>
                 <Button
                   bgColor="bg-green"
@@ -104,7 +104,7 @@ const Business = () => {
                 </Title>
                 <Paragraph>{t("Подходящ за средно съдържание.")}</Paragraph>
                 <Price className="pt-2 ">
-                  800 <span className="text-gray-100">{t("лв")}.</span>
+                  800 <span className="text-gray-100">{t("лв.")}</span>
                 </Price>
                 <Button
                   bgColor="bg-red-200"
@@ -157,7 +157,7 @@ const Business = () => {
                 </Title>
                 <Paragraph>{t("Подходящ за за голямо съдържание.")}</Paragraph>
                 <Price className="pt-2 ">
-                  1200 <span className="text-gray-100">{t("лв.")}</span>
+                  1200 <span className="text-gray-100">{t("лв..")}</span>
                 </Price>
                 <Button
                   bgColor="bg-primaryBlue"

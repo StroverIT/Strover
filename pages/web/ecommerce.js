@@ -159,7 +159,7 @@ const Ecommerce = () => {
                   )}
                 </Paragraph>
                 <Price className="pt-2 ">
-                  600 <span className="text-gray-100">{t("лв")}.</span>
+                  600 <span className="text-gray-100">{t("лв.")}</span>
                 </Price>
                 <Button
                   bgColor="bg-green"
@@ -192,7 +192,7 @@ const Ecommerce = () => {
                   )}
                 </Paragraph>
                 <Price className="pt-2 ">
-                  1000 <span className="text-gray-100">{t("лв")}.</span>
+                  1000 <span className="text-gray-100">{t("лв.")}</span>
                 </Price>
                 <Button
                   bgColor="bg-red-200"
@@ -260,7 +260,7 @@ const Ecommerce = () => {
                   )}
                 </Paragraph>
                 <Price className="pt-2 ">
-                  1500 <span className="text-gray-100">{t("лв")}.</span>
+                  1500 <span className="text-gray-100">{t("лв.")}</span>
                 </Price>
                 <Button
                   bgColor="bg-primaryBlue"

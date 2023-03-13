@@ -52,7 +52,7 @@ export default function Pricing() {
             </li>
           </ul>
           <p className="pt-4 text-lg font-semibold text-center">
-            {t("Цена от")} 600 {t("лв")}.
+            {t("Цена от")} 600 {t("лв.")}
           </p>
           <SeeMore link="ecommerce" />
         </InfoContainer>
@@ -91,7 +91,7 @@ export default function Pricing() {
             <li>{t("призив за действие за съвместна работа")}</li>
           </ul>
           <p className="pt-4 text-lg font-semibold text-center">
-            {t("Цена от")} 300 {t("лв")}.
+            {t("Цена от")} 300 {t("лв.")}
           </p>
           <SeeMore link="business" />
         </InfoContainer>
@@ -118,7 +118,7 @@ export default function Pricing() {
             <li>{t("Призив за действие за съвместна работа")}</li>
           </ul>
           <p className="pt-4 text-lg font-semibold text-center">
-            {t("Цена от")} 300 {t("лв")}.
+            {t("Цена от")} 300 {t("лв.")}
           </p>
           <SeeMore link="portfolio" />
         </InfoContainer>
@@ -142,7 +142,7 @@ export default function Pricing() {
             <li>шлюзове за плащане и възможности за сметка, ако е приложимо</li>
           </ul>
           <p className="pt-4 text-lg font-semibold text-center">
-            Цена: 1 500 - 12 000 лв.
+            Цена: 1 500 - 12 000 лв..
           </p>
           <SeeMore link="blog" />
         </InfoContainer> */}
@@ -177,7 +177,7 @@ export default function Pricing() {
             </li>
           </ul>
           <p className="pt-4 text-lg font-semibold text-center">
-            Цена от 1 000 лв.
+            Цена от 1 000 лв..
           </p>
           <SeeMore link="forum" />
         </InfoContainer> */}
@@ -194,7 +194,7 @@ export default function Pricing() {
             {t("SEO оптимизация - спрямо големината на сайта и типът на сайта")}
           </section>
           <section>
-            {t("Поддръжка и развитие на сайта")}: 100 - 1000 {t("лв")}/
+            {t("Поддръжка и развитие на сайта")}: 100 - 1000 {t("лв..")}/
             {t("месец")}
           </section>
         </section>
