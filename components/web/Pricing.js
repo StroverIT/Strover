@@ -52,7 +52,7 @@ export default function Pricing() {
             </li>
           </ul>
           <p className="pt-4 text-lg font-semibold text-center">
-            Цена от 600 лв.
+            {t("Цена от")} 600 {t("лв")}.
           </p>
           <SeeMore link="ecommerce" />
         </InfoContainer>
@@ -91,7 +91,7 @@ export default function Pricing() {
             <li>{t("призив за действие за съвместна работа")}</li>
           </ul>
           <p className="pt-4 text-lg font-semibold text-center">
-            Цена от 300 лв.
+            {t("Цена от")} 300 {t("лв")}.
           </p>
           <SeeMore link="business" />
         </InfoContainer>
@@ -118,7 +118,7 @@ export default function Pricing() {
             <li>{t("Призив за действие за съвместна работа")}</li>
           </ul>
           <p className="pt-4 text-lg font-semibold text-center">
-            Цена от 300 лв.
+            {t("Цена от")} 300 {t("лв")}.
           </p>
           <SeeMore link="portfolio" />
         </InfoContainer>
