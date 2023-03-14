@@ -4,11 +4,15 @@ import React, { useEffect, useState } from "react";
 
 import { BsCheckLg } from "react-icons/bs";
 import { AnimatePresence, motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const Cookie = ({ setIsCookie, isCookie }) => {
+  const { t } = useTranslation("common");
+
   const router = useRouter();
   const [styles, setStyles] = useState("");
   const [btnStyle, setBtnStyle] = useState("bg-green-150");
+
   useEffect(() => {
     setStyles("bg-primaryBlue");
     if (
@@ -62,19 +66,21 @@ const Cookie = ({ setIsCookie, isCookie }) => {
           <section className="flex items-center justify-between px-5 py-10 lg:container max-lg:flex-col md:px-14 gap-y-10">
             <section>
               <h1 className="text-2xl font-semibold text-white">
-                Вашата поверителност
+                {t("Вашата поверителност")}
               </h1>
               <p className="text-white">
-                Ние използваме бисквитки, за да подобрим изживяването ви на
-                нашия сайт и да ви покажем подходящи реклами.
+                {t(
+                  "Ние използваме бисквитки, за да подобрим изживяването ви на нашия сайт и да ви покажем подходящи реклами."
+                )}
               </p>
               <p className="text-white">
-                За да научите повече, прочетете нашата{" "}
-                <Link href="/legal/privacy-policy" className="pr-1 underline">
-                  политика за поверителност
+                {t("За да научите повече, прочетете нашата")}
+                <Link href="/legal/privacy-policy" className="pl-1 underline">
+                  {t("политика за поверителност")}
                 </Link>
+                <span className="px-1">{t("и")}</span>
                 <Link href="/legal/cookie-policy" className="underline">
-                  и политика за бисквитки
+                  {t("политика за бисквитки")}
                 </Link>
               </p>
             </section>
@@ -90,7 +96,7 @@ const Cookie = ({ setIsCookie, isCookie }) => {
                 <span>
                   <BsCheckLg />
                 </span>
-                <span className="pl-1 font-semibold">Разбрах</span>
+                <span className="pl-1 font-semibold">{t("Разбрах")}</span>
               </button>
             </section>
           </section>

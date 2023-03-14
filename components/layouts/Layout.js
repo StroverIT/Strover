@@ -123,7 +123,11 @@ export default function Layout({ children, useTranslation }) {
         </motion.div>
       </AnimatePresence>
       <ToastContainer />
-      <Cookie setIsCookie={cookieHandler} isCookie={isCookie} />
+      <Cookie
+        setIsCookie={cookieHandler}
+        isCookie={isCookie}
+        useTranslation={useTranslation}
+      />
     </>
   );
 }
