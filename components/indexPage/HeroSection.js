@@ -124,7 +124,7 @@ export default function HeroSection() {
           animate="visible"
           className="text-6xl font-bold md:text-7xl"
         >
-          Strovers test&apos;
+          Strovers&apos;
         </motion.div>
         <motion.div
           variants={header2}
