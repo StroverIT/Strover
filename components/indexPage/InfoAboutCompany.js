@@ -30,8 +30,8 @@ export default function IdeasInWebsite({ isBox = true }) {
             {t("В Strover ще разберете за...")}
           </h1>
         </div>
-        <section className="grid pt-10 lg:grid-cols-3 lg:px-20 gap-x-5 max-lg:container gap-y-10">
-          <div className="mx-auto">
+        <section className="grid pt-10 sm:grid-cols-2 lg:grid-cols-3 lg:px-20 gap-x-5 max-lg:container gap-y-10">
+          <div className="lg:mx-auto">
             <div className="flex items-center">
               <div className="relative w-10 h-10 text-xl font-semibold lg:w-12 lg:h-12">
                 <Image
@@ -59,7 +59,7 @@ export default function IdeasInWebsite({ isBox = true }) {
               </Link>
             </div>
           </div>
-          <div className="mx-auto">
+          <div className="lg:mx-auto">
             <div className="flex items-center">
               <div className="relative w-12 h-12 text-xl font-semibold">
                 <Image
@@ -91,7 +91,7 @@ export default function IdeasInWebsite({ isBox = true }) {
               </Link>
             </div>
           </div>
-          <div className="mx-auto">
+          <div className="lg:mx-auto">
             <div className="flex items-center">
               <div className="relative w-10 h-10 text-xl font-semibold">
                 <Image
