@@ -4,6 +4,7 @@ import React from "react";
 
 import { motion } from "framer-motion";
 import { useTranslation } from "next-i18next";
+import ButtonAnim from "../form/ButtonAnim";
 const header1 = {
   hidden: {
     opacity: 0,
@@ -123,7 +124,7 @@ export default function HeroSection() {
           animate="visible"
           className="text-6xl font-bold md:text-7xl"
         >
-          Strovers&apos;
+          Strovers test&apos;
         </motion.div>
         <motion.div
           variants={header2}
@@ -143,20 +144,14 @@ export default function HeroSection() {
           ниша. */}
           {t("Всичко което Ви трябва за достигане до следващо ниво - онлайн")}
         </motion.p>
-        <motion.div
-          variants={button}
-          initial="hidden"
-          animate="visible"
-          className="mt-10"
-        >
+        <motion.div className="mt-10">
           <a href="#services" className="inline-flex h-full">
-            <motion.button
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.8 }}
+            <ButtonAnim
               className="h-full px-8 py-3 text-lg font-semibold rounded-lg btn-bg-color"
+              color={"#179de8"}
             >
               {t("Научи повече")}
-            </motion.button>
+            </ButtonAnim>
           </a>
         </motion.div>
       </div>

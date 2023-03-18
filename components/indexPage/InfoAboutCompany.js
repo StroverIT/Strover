@@ -3,6 +3,7 @@ import { motion, useScroll } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
+import ButtonAnim from "../form/ButtonAnim";
 
 export default function IdeasInWebsite({ isBox = true }) {
   const { t } = useTranslation("home");
@@ -49,11 +50,12 @@ export default function IdeasInWebsite({ isBox = true }) {
             </ul>
             <div className="mt-5 md:mt-10 ">
               <Link href="/brands/web" scroll={false}>
-                <button
+                <ButtonAnim
                   className={`px-10 py-2 text-xs sm:text-sm rounded-lg btn-web-bg-color`}
+                  color="#179de8"
                 >
                   {t("Научи повече")}
-                </button>
+                </ButtonAnim>
               </Link>
             </div>
           </div>
@@ -79,12 +81,13 @@ export default function IdeasInWebsite({ isBox = true }) {
               </li>
             </ul>
             <div className="mt-5 md:mt-10 ">
-              <Link href="/brands/digital" scroll={false}>
-                <button
+              <Link href="/brands/web" scroll={false}>
+                <ButtonAnim
                   className={`px-10 py-2 text-xs sm:text-sm rounded-lg btn-digital-bg-color`}
+                  color="#f26ab5"
                 >
                   {t("Научи повече")}
-                </button>
+                </ButtonAnim>
               </Link>
             </div>
           </div>
@@ -112,12 +115,13 @@ export default function IdeasInWebsite({ isBox = true }) {
               <li>{t("Маркетолог")}</li>
             </ul>
             <div className="mt-5 md:mt-10 ">
-              <Link href="/brands/academy" scroll={false}>
-                <button
+              <Link href="/brands/web" scroll={false}>
+                <ButtonAnim
                   className={`px-10 py-2 text-xs sm:text-sm rounded-lg btn-academy-bg-color`}
+                  color="#e60000"
                 >
                   {t("Научи повече")}
-                </button>
+                </ButtonAnim>
               </Link>
             </div>
           </div>
