@@ -13,7 +13,6 @@ const listVariant = {
     y: 0,
     transition: {
       duration: 1,
-      delay: 0.4,
     },
   },
 };
@@ -26,7 +25,6 @@ const flagsVariants = {
       type: "spring",
       duration: 0.5,
       bounce: 0.3,
-      delay: 0.4,
     },
   },
 };
@@ -43,7 +41,6 @@ const flagVariant = {
       type: "spring",
       duration: 0.5,
       bounce: 0.3,
-      delay: 0.4,
     },
   },
 };
