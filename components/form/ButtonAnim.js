@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 const ButtonAnim = ({ className, color, children }) => {
-  const boxShadowStyle = `0 0 0 3px #FFFFFF, 0 0 0 6px ${color}`;
+  const boxShadowStyle = `0 0 0 3px rgb(255,255,255, 0.5), 0 0 0 6px ${color}`;
 
   return (
     <div className="relative">
@@ -9,7 +9,7 @@ const ButtonAnim = ({ className, color, children }) => {
         className={`${className} relative`}
         whileHover={{
           boxShadow: boxShadowStyle,
-          transition: { type: "spring", stiffness: 300, duration: 2 },
+          transition: { type: "spring", stiffness: 300, duration: 1 },
         }}
       >
         <div
