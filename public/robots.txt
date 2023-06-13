@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://strover.bg
+
+# Sitemaps
+Sitemap: https://strover.bg/sitemap.xml
