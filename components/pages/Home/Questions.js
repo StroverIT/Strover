@@ -4,7 +4,7 @@ import QuestionImage from "../../Animated/QuestionImage"
 
 const Questions = () => {
     return (
-        <section className="relative z-10 flex flex-col justify-center min-h-[80vh] px-48  break-words min-w-screen ">
+        <section className="relative z-10 flex flex-col justify-center min-h-[80vh] px-48 ml-24 break-words min-w-screen ">
          <QuestionImage/>
         <div className="py-10 text-center ">
           <h2 className="text-4xl font-medium">Често задавани въпроси</h2>

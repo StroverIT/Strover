@@ -37,7 +37,7 @@ export default function IdeasInWebsite({ isBox = true, title, btnText,bigImg, bi
               {btnText}
             </motion.button>
           </motion.div>
-          <div className="absolute top-10 z-20 -left-5 rotate-[54deg]">
+          <div className="absolute top-10 z-20 left-20 rotate-[54deg]">
             <div className="relative w-24 h-24"><Image src="/homeIcons/idea.png" alt="Превърнете идеите си в сайт" fill/></div>
           </div>
           <div className={`absolute z-20 ${bigImgPos}`}>

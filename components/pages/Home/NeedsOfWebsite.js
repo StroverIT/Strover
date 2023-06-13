@@ -26,11 +26,11 @@ const NeedsOfWebsite = () => {
 }, [isInView])
 
   return (
-    <section className="container relative z-10 min-h-screen break-words py-28 min-w-screen bg-primary-390">
+    <section className="relative z-10 min-h-screen px-48 ml-24 break-words py-28 min-w-screen bg-primary-390">
 <h2 className="text-3xl font-bold text-center uppercase text-dark">
   Как вашият онлайн магазин печели за вас
 </h2>
-<div ref={container} className="grid w-full grid-cols-3 gap-20 mt-20">
+<div ref={container} className="grid grid-cols-3 gap-20 mt-20">
   <CardText
     index={1}
     title="Увеличен обхват"

@@ -1,7 +1,5 @@
-import "../styles/globals.css";
-
 import Layout from "../components/layout/Layout";
-
+import "../styles/globals.css";
 
 // Components
 
@@ -17,8 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="bg">
       <body className="h-screen min-h-screen">
           <Layout>{children}</Layout>
-          
-      </body> 
+      </body>
     </html>
   );
 }

@@ -441,7 +441,9 @@ a {
 .text-shadow {
   text-shadow: 1px 1px 2px rgb(0 0 0 / 60%);
 }
-
+.Toastify__toast-container--top-right {
+  top: 6rem !important;
+}
 @media screen and (min-width: 1280px) {
   html {
     scroll-padding-top: 12.5rem;
@@ -536,29 +538,4 @@ a {
 }
 .change-to-blue{
   filter: invert(47%) sepia(80%) saturate(1555%) hue-rotate(158deg) brightness(93%) contrast(102%);
-}
-
-
-
-.Toastify__toast-container--top-right {
-  top: 8rem !important;
-}
-.glasmorphism-bg{
-
-/* From https://css.glass */
-background: rgba(23, 124, 217, 0.74);
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(8.2px);
--webkit-backdrop-filter: blur(8.2px);
-}
-
-.glasmorphism-bg-fill{
-  fill: linear-gradient(
-    0deg,
-    #77d8e3 20%,
-    #4b9dd7 100%
-  );
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-/* backdrop-filter: blur(8.2px); */
-/* -webkit-backdrop-filter: blur(8.2px); */
 }

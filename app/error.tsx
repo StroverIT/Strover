@@ -15,7 +15,7 @@ export default function Error({
   }, [error]);
 
   return (
-    <div className='flex-col flex-center min-h-screen'>
+    <div className='flex-col flex-center'>
         <h2 className='text-xl'>Нещо се обърка!</h2>
         <button
           onClick={

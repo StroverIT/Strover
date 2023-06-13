@@ -12,11 +12,7 @@ const securityHeaders = [
 ];
 
 const nextConfig = {
-  experimental: {
-    serverActions: true,
-  },
   reactStrictMode: true,
-
   swcMinify: true,
   i18n: {
     locales: ["bg"],

@@ -15,7 +15,7 @@ export default function PrivacyPolicy() {
         <InitText text="Защита на данните" />
    
       {/* <Navigation links={links} /> */}
-      <section className="container text-black">
+      <section className="container text-black mt-36">
         <div>
           <div className="flex items-center mb-10 text-sm">
             <div className="mr-1 text-lg">

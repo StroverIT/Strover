@@ -10,7 +10,7 @@ const DropDown = ({
     listValue,
     listHandler,
     listNameOnly,
-    name,
+  
     color,
 }) => {
     const [dropOpen, setDropOpen] = useState(false);
@@ -34,7 +34,6 @@ const DropDown = ({
                 style={{ backgroundColor: color }}
                 onClick={setDropHandler}
               >
-                <input  name={name} value={listValue.listValue || listValue.name} className='hidden'/>
                 {listValue.listValue || listValue.name}
                 {!listNameOnly && (
                   <svg

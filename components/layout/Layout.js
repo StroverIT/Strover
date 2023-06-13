@@ -2,9 +2,6 @@
 
 import React from "react";
 import HomeNavigation from "./HomeNavigation";
-import HomeNavLinks from "./HomeNavLinks";
-import Footer from "./Footer"
-
 import { usePathname } from "next/navigation";
 import { TextContextProvider } from "../../app/Context/text";
 
@@ -13,26 +10,18 @@ const Layout = ({ children, route }) => {
 
   return (
     <TextContextProvider>
-      <main className="relative z-50">
-        {router != "/brands" && (
-          <>
-            <HomeNavLinks />
-            <div
-              className={`grid  items-start  ${
-                router != "/" || router != "/brands"
-                  ? "grid-cols-2 "
-                  : "md:grid-cols-[8%92%] lg:grid-cols-[5%95%]"
-              }`}
-            >
-              <HomeNavigation />
-              {(router != "/" && router != "/brands") ? <div className={`${router != "/contactUs" && "mt-36"}`}>{children} </div> : children  }
-            </div>
-          </>
-        )}
-        {router == "/brands" && children}
-      <Footer/>
-
-      </main>
+      {router != "/brands" && <div
+        className={`grid h-screen  ${
+          router != "/" || router != "/brands"
+            ? "grid-cols-2 overlow-hidden"
+            : "md:grid-cols-[8%92%] lg:grid-cols-[5%95%]"
+        }`}
+      >
+        <HomeNavigation />
+        {(router != "/" ) && <div className="overflow-auto">{children}</div>}
+        {(router == "/" ) && children}
+      </div>}
+      {router == "/brands" && children}
     </TextContextProvider>
   );
 };

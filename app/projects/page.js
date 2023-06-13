@@ -14,7 +14,7 @@ const Page = async () => {
     <>
         <InitText text="Проекти" />
 
-      <main className="grid grid-cols-2 gap-10 mx-12">
+      <main className="grid grid-cols-2 gap-10 mx-12 mt-14">
         {data?.map(project=>{
           return  <Container key={project._id} title={project.title} type={project.type} imageUrl={project.imageUrl} _id={project._id}/>
         })}
@@ -29,7 +29,7 @@ export default Page;
 const Container = ({title, type, imageUrl, _id}) => {
   
   return (
-    <div className="flex-col w-full shadow-xl h-[24rem] rounded-2xl ">
+    <div className="flex-col w-full shadow-xl h-[24rem] rounded-2xl">
       <Link href={`/projects/${_id}`}>
         <div className="relative w-full h-60 flex-center">
           <Image

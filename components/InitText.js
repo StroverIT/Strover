@@ -5,9 +5,10 @@ import { useGlolContext } from '../app/Context/text';
 const InitText = ({text}) => {
   const {setText} = useGlolContext()
 
-
+  useEffect(()=>{
 
     setText(text)
+  },[])
     
     return 
 }

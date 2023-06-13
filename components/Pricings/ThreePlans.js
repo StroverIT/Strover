@@ -5,7 +5,6 @@ import { useAnimate, useInView } from "framer-motion";
 
 import { AiOutlineCheck } from "react-icons/ai";
 import { BsArrowRight } from "react-icons/bs";
-import Link from "next/link";
 
 const ThreePlans = () => {
 
@@ -90,14 +89,14 @@ const ThreePlans = () => {
             </span>
           </p>
 
-          <Link href="/plan/test" className="">
+          <a href="#" className="">
             <p className="w-full py-4 mt-8 text-white flex-center bg-blue rounded-xl ">
               <span className="font-medium">Избери плана</span>
               <span className="pl-2 text-lg align-middle">
                 <BsArrowRight />
               </span>
             </p>
-          </Link>
+          </a>
         </div>
       </div>
       {/* <!-- Middle Card --> */}
@@ -154,14 +153,14 @@ const ThreePlans = () => {
             </span>
           </p>
 
-          <Link href="/plan/test" className="">
+          <a href="#" className="">
             <p className="w-full py-4 mt-8 text-white flex-center bg-blue rounded-xl ">
               <span className="font-medium">Избери плана</span>
               <span className="pl-2 text-lg align-middle">
                 <BsArrowRight />
               </span>
             </p>
-          </Link>
+          </a>
         </div>
         <div className="absolute -top-1 -right-4">
           <p className="px-4 py-1 text-xs font-semibold uppercase rounded-full bg-primary-400 ">
@@ -221,14 +220,14 @@ const ThreePlans = () => {
               <span className="text-black">Уникален</span> дизайн
             </span>
           </p>
-          <Link href="/plan/test"  className="">
+          <a href="#" className="">
             <p className="w-full py-4 mt-8 text-white flex-center bg-blue rounded-xl ">
               <span className="font-medium">Избери плана</span>
               <span className="pl-2 text-lg align-middle">
                 <BsArrowRight />
               </span>
             </p>
-          </Link>
+          </a>
         </div>
       </div>
     </div>
