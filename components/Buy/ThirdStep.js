@@ -17,7 +17,7 @@ const SecondStep = ({ valueChanger, inputs, setInputs,inputsInit,setCurrStep,cur
       <Container>
         <h2 className="mt-4 text-2xl">Лични данни</h2>
         <p className="mt-2">
-          За да имаме възможност да се свържем с вас, ще ни трябват вашите две
+          За да имаме възможност да се свържем с вас, ще ни трябват вашите лични данни
           имена
         </p>
         <div className="mt-5">

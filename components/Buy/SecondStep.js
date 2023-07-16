@@ -43,15 +43,16 @@ const SecondStep = ({
     <>
       <div className=" border-b border-[#d8d4dc]">
         <Container>
-          <h2 className="text-2xl ">Информация</h2>
+          <h2 className="text-2xl ">Услуги</h2>
           <p className="mt-2">
-            Изберете медота по който ще ви е най-удобно да комуникираме.
-            <br />
-            <span className="text-sm">
-              * Не се тревожете от избора сега, в бъдеще ще имате възможността
-              да промените избора си
-            </span>
+            По-долу сме показали допълнителни услуги които може да ползвате.
           </p>
+          <p className="mt-2">
+            Ако имате въпроси или не сте сигурни дали са Ви нужни някои от услугите. 
+            <br/>
+            Не се колебайте и звъннете на номер: <strong> 087 623 7725</strong> или на и-мейл: <strong>stroverbg@gmail.com</strong>
+          </p>
+          
           <motion.div
             className="grid mt-5 "
             variants={boxVariants}

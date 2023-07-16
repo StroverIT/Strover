@@ -26,15 +26,28 @@ const FirstStep = ({ valueChanger, inputs,setCurrStep, valueCheckerChanger, data
     <>
     <div className=" border-b border-[#d8d4dc]">
         <Container>
-          <h2 className="text-2xl ">Информация</h2>
-          <p className="mt-2">
-            Изберете медота по който ще ви е най-удобно да комуникираме.
-            <br />
-            <span className="text-sm">
-              * Не се тревожете от избора сега, в бъдеще ще имате възможността да
-              промените избора си
-            </span>
-          </p>
+        {inputs.typeService != "maintance" &&  <>
+            <h2 className="text-2xl ">Информация за бизнеса</h2>
+            <p className="mt-2">
+             За да изградим най-подходящият дизайн и най-добрата маргетингова стратегия, ще ни е нужна сферата на бизнеса
+             {/* <br />
+              <span className="text-sm">
+                * Не се тревожете от избора сега, в бъдеще ще имате възможността да
+                промените избора си
+              </span> */}
+            </p>
+          </>}
+          {inputs.typeService == "maintance" &&  <>
+            <h2 className="text-2xl ">Типа на сайта</h2>
+            <p className="mt-2">
+             Изберете какъв е типа на сайта.
+             {/* <br />
+              <span className="text-sm">
+                * Не се тревожете от избора сега, в бъдеще ще имате възможността да
+                промените избора си
+              </span> */}
+            </p>
+          </>}
           <motion.div
             className="grid mt-5 "
             variants={boxVariants}
