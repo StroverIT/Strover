@@ -18,7 +18,7 @@ const Small = ({smallBusiness, data, menuController, type}) => {
               <AiOutlineCheck />
             </span>
             <span className="pl-2">
-              <span className="text-black">{data.small.products}</span> продукта
+            {data.small.products && <><span className="text-black">{data.small.products}</span> продукта</> } {data.small.products && data.small.pages && "/"} {data.small.pages && ` ${data.small.pages} странци`}
             </span>
           </p>
          {data.small.includes.map((include,index)=>{

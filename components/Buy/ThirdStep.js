@@ -8,9 +8,10 @@ import { orderPlan } from "../../API/orderPlan";
 import { toastError } from "../../libs/notifications";
 import { useRouter } from "next/navigation";
 import Container from "./Container";
+import { useGlolContext } from "../../app/Context/text";
 
-const SecondStep = ({ valueChanger, inputs,setCurrStep }) => {
-  const [isOpen, setIsOpen]= useState(false)
+const SecondStep = ({ valueChanger, inputs, setInputs,inputsInit,setCurrStep,currMoney,productsMoney }) => {
+  const [modalIsOpen, modalSetOpen]= useState(false)
   return (
     <>
       <Container>
@@ -37,13 +38,13 @@ const SecondStep = ({ valueChanger, inputs,setCurrStep }) => {
           <div className="mt-5">
             <GoogleInputs
               placeholder="Телефон"
-              name="telephone"
+              name="phoneNumber"
               onChange={valueChanger}
-              value={inputs.telephone}
+              value={inputs.phoneNumber}
             />
           </div>
         </div>
-        <div class="grid grid-cols-2 gap-5">
+        <div class="grid lg:grid-cols-2 gap-x-5 gap-y-2">
           <GlowBtn
                 theme="red"
                 text="Предишна стъпка"
@@ -54,42 +55,50 @@ const SecondStep = ({ valueChanger, inputs,setCurrStep }) => {
                 theme="green"
                 text="Потвърди поръчката"
                 className="w-full py-2 mt-4"
-                onClick={() => setCurrStep(3)}
+                onClick={() => modalSetOpen(true)}
               />
         </div>
       </Container>
-      <Modal isOpen={isOpen} setIsOpen={setIsOpen} inputs={inputs} />
+      <Modal modalIsOpen={modalIsOpen} setInputs={setInputs} inputsInit={inputsInit} modalSetOpen={modalSetOpen} inputs={inputs} currMoney={currMoney} productsMoney={productsMoney}/>
     </>
   );
 };
 
 export default SecondStep;
-function Modal({ isOpen, setIsOpen, inputs }) {
+function Modal({  modalIsOpen,  modalSetOpen, inputs,setInputs, inputsInit, currMoney, productsMoney}) {
+  console.log(inputs);
+  const { setOpen } = useGlolContext();
+
   const [isLoading, setLoading] = useState(false);
 
   const { push } = useRouter();
 
   function closeModal() {
-    setIsOpen(false);
+    modalSetOpen(false);
   }
   const orderPlanCall = () => {
     setLoading(true);
 
-    orderPlan({ inputs }).then((res) => {
-      if (res.message)
+    orderPlan({ inputs, currMoney, productsMoney}).then((res) => {
+      if (res.message){
         push(
           `/checkout-thanks?name=${inputs.fullName}${
-            inputs.email && `&email=${inputs.email}`
-          }${inputs.telephone && `&telephone=${inputs.telephone}`}`
+            inputs.email && `&email=${inputs.email}&telephone=${inputs.phoneNumber}`
+          }`
         );
+        modalSetOpen(false)
+        setOpen(false)
+        setInputs(inputsInit)
+      }
+        
       if (res.error) toastError(res.error);
       setLoading(false);
     });
   };
   return (
     <>
-      <Transition appear show={isOpen} as={Fragment}>
-        <Dialog as="div" className="relative z-50" onClose={closeModal}>
+      <Transition appear show={modalIsOpen} as={Fragment}>
+        <Dialog as="div" className="relative z-[999]" onClose={closeModal}>
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -129,8 +138,10 @@ function Modal({ isOpen, setIsOpen, inputs }) {
                   <div className="mt-5">
                     <ul>
                       <li>Две имена: {inputs.fullName}</li>
-                      {inputs.email && <li>И-мейл: {inputs.email}</li>}
-                      {inputs.telephone && <li>Телефон: {inputs.telephone}</li>}
+                       <li>И-мейл: {inputs.email}</li>
+                     <li>Телефон: {inputs.phoneNumber}</li>
+                     <li>Крайна сума: {currMoney + productsMoney} лв.</li>
+
                     </ul>
                   </div>
 

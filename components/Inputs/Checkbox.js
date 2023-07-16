@@ -11,8 +11,8 @@ const Checkbox = ({ children, name = "checkbox",onChange, value}) => {
           type="checkbox"
           name={name}
           className="w-5 h-5 -mb-1 border-[#c1c1c1] border checked:p-2  duration-300 rounded outline-none  transition-colors  appearance-none cursor-pointer text-primary-600 checked:border-blue-50  checked:bg-blue-50 "
-          value={value}
           onChange={onChange}
+          checked={value}
         />
       </span>
       <label

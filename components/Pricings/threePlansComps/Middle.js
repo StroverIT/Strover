@@ -17,7 +17,7 @@ const Middle = ({middle, data, menuController, type}) => {
                 <AiOutlineCheck />
               </span>
               <span className="pl-2">
-                <span className="text-white">{data.middle.products} продукта</span>
+              {data.middle.products && <><span className="">{data.middle.products}</span> продукта</> } {data.middle.products && data.middle.pages && "/"} {data.middle.pages && ` ${data.middle.pages} странци`}
               </span>
             </p>
            {data.middle.includes.map((include,index)=>{

@@ -3,7 +3,7 @@ import Check from "../components/Animated/Check"
 
 const  Steps = ({ currStep, setCurrStep }) => {
   return (
-    <section className="flex max-xl:grid max-xl:grid-cols-3 max-xl:gap-x-4 ">
+    <section className="flex items-center justify-center max-xl:grid max-xl:grid-cols-2 max-xl:gap-4 max-lg:mt-4 max-lg:px-4">
       {/* First quadrant */}
       <div className="w-full max-xl:border  border-y border-l border-[#d8d4dc] h-full max-xl:py-3 xl:h-20 relative max-xl:text-sm flex max-xl:justify-center items-center max-xl:rounded-md rounded-l-md xl:pl-4">
         {currStep == "1" && <CurrentStep num="01" text="Малък бизнес" />}
@@ -32,7 +32,7 @@ export default Steps;
 
 const CurrentStep = ({ text, num, isLast = false }) => {
   return (
-    <section className="flex items-center max-xl:flex-col max-xl:text-center">
+    <section className="flex items-center max-xl:flex-col max-xl:text-center ">
       <div className="relative w-8 h-8 border-2 rounded-full max-xl:absolute max-xl:-top-4 max-xl:-left-4 max-xl:text-sm xl:w-12 xl:h-12 border-blue-50 flex-center max-xl:bg-blue-50 max-xl:text-white xl:text-blue-50 ">
         <div className="">{num}</div>
       </div>

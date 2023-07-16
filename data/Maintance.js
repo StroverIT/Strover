@@ -2,6 +2,7 @@ export const smallFull = {
     oldPrice: 800,
     newPrice: 90,
     products: 30,
+    pages: 6    ,
     includes: [
         "Техническа възможност за неограничен брой страници",
         "Мобилна версия",
@@ -20,7 +21,9 @@ export const smallFull = {
 }
 export const middleFull = {
     oldPrice: 950,
-    newPrice: 130,
+    newPrice: 234,
+    pages: 8,
+
     products: 40 + smallFull.products,
     includes: smallFull.includes.concat([
         "Безплатен Домейн",
@@ -32,7 +35,9 @@ export const middleFull = {
 }
 export const corporateFull = {
     oldPrice: 1400,
-    newPrice: 200,
+    newPrice: 350,
+    pages: 15,
+
     products: 60 + middleFull.products,
     includes: middleFull.includes.concat([
         "SEO оптимизран / По-голям ранк в търсачките",
@@ -43,16 +48,30 @@ export const corporateFull = {
   
 }
 
+const smallIncludes = [
+    "До 24 часа време за реакция при заявка в работни дни",
 
+    "Техническа поддръжка на функционалностти",
+    "Поддръжка и конфигурация на SSL сертификат",
+]
+const middleInlcudes = [
+    `Услугите от "Малък бизнес"`,
+    "Периодичен анализ и препоръки за подобрение",
+    "До 12 часа време за реакция при заявка в работни дни",
+
+]
+const corpIncludes =  [
+    `Услугите от "Среден бизнес"`,
+    "Оптимизация на скоростта на сайта",
+    "Разрешаване на спешни проблеми",
+
+]
 export const small = {
     oldPrice: smallFull.oldPrice,
     newPrice: smallFull.newPrice,
     products: smallFull.products,
-    includes: [
-        "Техническа поддръжка на функционалностти",
-        "До 24 часа време за реакция при заявка в работни дни",
-        "Поддръжка и конфигурация на SSL сертификат",
-    ],
+    pages: smallFull.pages,
+    includes: smallIncludes,
     isPromo: false,
 }
 
@@ -60,23 +79,30 @@ export const middle = {
     oldPrice: middleFull.oldPrice,
     newPrice: middleFull.newPrice,
     products: middleFull.products,
-    includes: [
-        `Услугите от "Малък бизнес"`,
-        "Периодичен анализ и препоръки за подобрение",
-        "До 12 часа време за реакция при заявка в работни дни",
+    pages: middleFull.pages,
+    includes: middleInlcudes,
+    includesWithPrevPlan: small.includes.slice(1).concat(middleInlcudes.slice(1)),
 
-    ],
     isPromo: false,
 }
 export const corp = {
     oldPrice: corporateFull.oldPrice,
     newPrice: corporateFull.newPrice,
     products: corporateFull.products,
-    includes: [
-        `Услугите от "Среден бизнес"`,
-        "Разрешаване на спешни проблеми",
-        "Оптимизация на скоростта на сайта",
-    ],
+    pages: corporateFull.pages,
+    includes: corpIncludes,
+    includesWithPrevPlan: middle.includesWithPrevPlan.concat(
+        corpIncludes.slice(1)
+      ),
     isPromo: false,
 }
 
+export const services = [
+    { name: "seo", price: 125, text: "Желаете ли да оптимизараме търсачките за вашият сайт?" },
+    { name: "analyze", price: 52, text: "Периодичен анализ и препоръки за подобрение" },
+
+    { name: "twelveHours", price: 52, text: "До 12 часа време за реакция при заявка в работни дни." },
+    { name: "speed", price: 20, text: "Оптимизация на скоростта на сайта" },
+
+    { name: "urgent", price: 36, text: "Разрешаване на спешни проблеми" },
+  ];

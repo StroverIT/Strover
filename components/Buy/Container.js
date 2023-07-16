@@ -2,7 +2,7 @@ import React from 'react';
 
 const Container = ({children}) => {
     return (
-        <section className='container px-20 my-8'>
+        <section className='container my-8 lg:px-20'>
             {children}
         </section>
     );

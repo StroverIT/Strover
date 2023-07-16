@@ -21,7 +21,7 @@ const Corporate = ({corporate, data, menuController, type}) => {
               <AiOutlineCheck />
             </span>
             <span className="pl-2">
-              <span className="text-black">{data.corp.products}</span> продукта
+              {data.corp.products && <><span className="text-black">{data.corp.products}</span> продукта</> } {data.corp.products && data.corp.pages && "/"} {data.corp.pages && ` ${data.corp.pages} странци`}
             </span>
           </p>
     

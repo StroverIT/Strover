@@ -4,7 +4,7 @@ import GoogleInputs from "../Inputs/GoogleInputs";
 import GlowBtn from "../Buttons/GlowBtn";
 import { motion } from "framer-motion";
 import Checkbox from "../Inputs/Checkbox";
-import Container from "./Container"
+import Container from "./Container";
 
 const boxVariants = {
   initial: { x: "20vw", opacity: 0 },
@@ -14,7 +14,31 @@ const boxVariants = {
     transition: { staggerChildren: 0.4, ease: "easeInOut", duration: 1 },
   },
 };
-const SecondStep = ({ valueChanger, inputs,setCurrStep, valueCheckerChanger }) => {
+const SecondStep = ({
+  inputs,
+  setCurrStep,
+  valueCheckerChanger,
+  currProducts,
+  setCurrentProducts,
+  services,
+  maintanceType
+ 
+}) => {
+  const productsHandler = (e) => {
+    if(e.target.value <= 0 ) e.target.value = 1
+    setCurrentProducts(Number.parseInt(e.target.value));
+   
+  };
+  const specificProductHandler = (type) => {
+    if(type == "minus"){
+    
+      setCurrentProducts(prevState => prevState - 1  <= 0 ? 1 : prevState - 1);
+    }
+    if(type == "plus"){
+     
+      setCurrentProducts(prevState => prevState + 1);
+    }
+  };
   return (
     <>
       <div className=" border-b border-[#d8d4dc]">
@@ -24,8 +48,8 @@ const SecondStep = ({ valueChanger, inputs,setCurrStep, valueCheckerChanger }) =
             Изберете медота по който ще ви е най-удобно да комуникираме.
             <br />
             <span className="text-sm">
-              * Не се тревожете от избора сега, в бъдеще ще имате възможността да
-              промените избора си
+              * Не се тревожете от избора сега, в бъдеще ще имате възможността
+              да промените избора си
             </span>
           </p>
           <motion.div
@@ -35,85 +59,59 @@ const SecondStep = ({ valueChanger, inputs,setCurrStep, valueCheckerChanger }) =
             animate="animate"
           >
             <motion.div variants={boxVariants}>
-              <GoogleInputs
-                placeholder="Сферата на бизнеса"
-                name="businessSphere"
-                onChange={valueChanger}
-                value={inputs.businessSphere}
-              />
               <div className="mt-5">
-                <Checkbox name="customProducts" onChange={valueCheckerChanger}>
+               {maintanceType == "ecommerce" && <Checkbox name="customProducts" onChange={valueCheckerChanger} value={inputs.customProducts}>
                   <span className="text-lg cursor-pointer">
-                Желаете ли повече или по-малко продукти?
+                    {inputs.typeService == "ecommerce" && "Желаете ли създадем определен брой продукти?"}
+                      {inputs.typeService == "maintance" && "Имате ли определен брой продукти за поддръжка?"}
                   </span>
-                </Checkbox>
-                { inputs.customProducts && <GoogleInputs
-                placeholder="Сферата на бизнеса"
-                name="businessSphere"
-                onChange={valueChanger}
-                value={inputs.businessSphere}
-              />}
+                </Checkbox>}
+                {maintanceType == "website" && inputs.typeService != "ecommerce" && 
+                 <Checkbox name="customProducts" onChange={valueCheckerChanger} value={inputs.customProducts}>
+                 <span className="text-lg cursor-pointer">
+                  Имате ли определен брой страници за поддръжка?
+                 </span>
+               </Checkbox>
+                }
+                {inputs.customProducts && (
+                  <div className="flex items-center gap-x-5">
+                    <div className="flex my-4 ml-2">
+                    <button className="px-4 text-3xl text-white bg-red-100" onClick={() => specificProductHandler("minus")}>
+                        -
+                      </button>
+                      
+                      <GoogleInputs
+                        placeholder={maintanceType == "website" ? "Брой страници" : "Брой продукти"}
+                        name="businessSphere"
+                        onChange={productsHandler}
+                        value={currProducts}
+                      />
+                     <button
+                        className="px-4 text-3xl text-white bg-green"
+                        onClick={() => specificProductHandler("plus")}
+                      >
+                        +
+                      </button>
+                    </div>
+                    {/* <div className="text-lg font-semibold">Цена: </div> */}
+                  </div>
+                )}
               </div>
-              <div className="mt-1">
-                <Checkbox name="uniqueDesign" onChange={valueCheckerChanger}>
-                  <span className="text-lg">
-                  Уникален дизайн?
-                  </span>
-                </Checkbox>
-              </div>
-              <div className="mt-1">
-                <Checkbox name="domain" onChange={valueCheckerChanger}>
-                  <span className="text-lg">
-                  Имате домейн?
-                  </span>
-                </Checkbox>
-              </div>
-              <div className="mt-1">
-                <Checkbox name="seo" onChange={valueCheckerChanger}>
-                  <span className="text-lg">
-                  Желаете ли да оптимизараме тързачките за вашият сайт?
-                  </span>
-                </Checkbox>
-              </div>
-              <div className="mt-1">
-                <Checkbox name="chat" onChange={valueCheckerChanger}>
-                  <span className="text-lg">
-                  Желаете ли чат на живо с клиентите?
-                  </span>
-                </Checkbox>
-              </div>
-              <div className="mt-1">
-                <Checkbox name="onlinePayment" onChange={valueCheckerChanger}>
-                  <span className="text-lg">
-                  Магазина ще има ли онлайн плащани?
-                  </span>
-                </Checkbox>
-              </div>
-              <div className="mt-1">
-                <Checkbox name="promoCodes" onChange={valueCheckerChanger}>
-                  <span className="text-lg">
-                  Промо кодове?
-                  </span>
-                </Checkbox>
-              </div>
-              <div className="mt-1">
-                <Checkbox name="specialPromo" onChange={valueCheckerChanger}>
-                  <span className="text-lg">
-                  Лични промоции за спефицични клиентите?
-                  </span>
-                </Checkbox>
-              </div>
-              <div className="mt-1">
-                <Checkbox name="facebookShop" onChange={valueCheckerChanger}>
-                  <span className="text-lg">
-                  Желаете ли допълнител Facebook Магазин?
-                  </span>
-                </Checkbox>
-              </div>
+             
+             {services.map((service,index)=>{
+              return  <div className="mt-1" key={index}>
+              <Checkbox name={service.name} onChange={(e)=>valueCheckerChanger(e, service.price)} value={inputs[service.name]}>
+                <span className="text-lg">
+                  {service.text}
+                </span>
+              </Checkbox>
+            </div>
+             })}
+             
             </motion.div>
           </motion.div>
-          <div class="grid grid-cols-2 gap-5">
-          <GlowBtn
+          <div class="grid lg:grid-cols-2 gap-x-5 gap-y-2">
+            <GlowBtn
               theme="red"
               text="Предишна стъпка"
               className="w-full py-2 mt-4"
@@ -127,9 +125,7 @@ const SecondStep = ({ valueChanger, inputs,setCurrStep, valueCheckerChanger }) =
             />
           </div>
         </Container>
-     
-       
-        </div>
+      </div>
     </>
   );
 };

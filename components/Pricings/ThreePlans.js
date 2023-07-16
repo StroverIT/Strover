@@ -22,13 +22,13 @@ const ThreePlans = ({type}) => {
   
   const menuController = (isOpen, plan)=>{
 
-  const planData = getData({type, isFullData: true, plan})
+  const planData = getData({type,  plan})
 
    setOpen(isOpen)
     setData({
       typeService: type,
       typePlan: plan,
-      planData
+      planData,
     })
   }
     const container = useRef(null)

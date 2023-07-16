@@ -2,14 +2,29 @@ import { Schema, model, models } from "mongoose";
 
 const OrderSchema = new Schema({
 
-  email: String,
-  fullName: String,
-  typePlan: String,
-  telephone: String,
-  typeOfPayment: String,
-  typeContact: String,
+  money: Number,
   
-  typeOfSphere: String,
+  typeService: String,
+  typePlan: String,
+
+
+  businessSphere: String,
+  isImages: Boolean,
+  isFullDescription: Boolean,
+
+  uniqueDesign: Boolean,
+  domain: Boolean,
+  seo: Boolean,
+  chat: Boolean,
+  onlinePayment: Boolean,
+  promoCodes: Boolean,
+  specialPromo: Boolean,
+  facebookShop: Boolean,
+
+  fullName: String,
+  email: String,
+  phoneNumber: String,
+
 
   isCreated: {
     type: Boolean,
