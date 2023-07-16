@@ -5,7 +5,7 @@ import WhyChooseUs from './WhyChooseUs';
 import FreeThings from './FreeThings';
 import PayedThings from './PayedThings';
 import WhySiteIsNeeded from './WhySiteIsNeeded';
-import WhatIsIncluded from './WhatIsIncluded';
+import Plans from './Plans';
 
 
 const Website = () => {
@@ -16,7 +16,7 @@ const Website = () => {
             <WhatWeAreSelling/>
             <WhySiteIsNeeded/>
             <WhyChooseUs/>
-            <WhatIsIncluded/>
+            <Plans/>
             <FreeThings/>
             <PayedThings/>
         </section>  
@@ -24,4 +24,3 @@ const Website = () => {
 }
 
 export default Website;
-

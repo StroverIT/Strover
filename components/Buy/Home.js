@@ -29,6 +29,11 @@ const inputsInit = {
   twelveHours: false,
   speed: false,
   urgent: false,
+
+  blog: false,
+  gallery: false,
+  calendar: false,
+  reservation: false,
   
   fullName: "",
   email: "",
@@ -44,7 +49,7 @@ const Home = () => {
   const [productsMoney, setProductsMoney] = useState(0);
 
 
-  const [maintanceType, setMaintanceType] = useState("ecommerce")
+  const [maintanceType, setMaintanceType] = useState(data.typeService == "ecommerce" || data.typeService == "maintance" ? "ecommerce" : "website" )
   
   const [inputs, setInputs] = useState(null);
   const valueChanger = (e) => {
@@ -101,7 +106,12 @@ const Home = () => {
     let count, price
 
     if(maintanceType == "website"){
-      price = 3.2
+        if(data.typeService == "website"){
+            price = 10
+        }
+        if(data.typeService == "maintance"){
+            price = 3.2
+        }
       count = data.planData.pages
     }
     if(maintanceType == "ecommerce"){

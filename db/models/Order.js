@@ -21,6 +21,16 @@ const OrderSchema = new Schema({
   specialPromo: Boolean,
   facebookShop: Boolean,
 
+  analyze: Boolean,
+  twelveHours: Boolean,
+  speed: Boolean,
+  urgent: Boolean,
+
+  blog: false,
+  gallery: false,
+  calendar: false,
+  reservation: false,
+
   fullName: String,
   email: String,
   phoneNumber: String,
