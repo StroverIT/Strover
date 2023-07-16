@@ -27,10 +27,10 @@ const FreeAnalyzeInputs = () => {
       setLoading(false)
       
     })}>
-     
-        <GoogleInputs placeholder="Уебсайт линк" name="websiteLink" />
-        <GoogleInputs placeholder="И-мейл" name="email"/>
-      <GlowBtn text="Заяви сега" type="submit" className="lg:col-span-2 p-4 mt-4" isLoading={isLoading} onClick={()=>setLoading(true) } />
+       
+          <GoogleInputs placeholder="Уебсайт линк" name="websiteLink" />
+          <GoogleInputs placeholder="И-мейл" name="email"/>
+        <GlowBtn text="Заяви сега" type="submit" className="p-4 mt-4 lg:col-span-2" isLoading={isLoading} onClick={()=>setLoading(true) } />
 
      
       
